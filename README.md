@@ -3,12 +3,14 @@
 
 
 现在已经加入的feature: 
+
         1. 增加pomelo的bind, C层和Lua层。
         2. 增加FileData的cache.加速spine的创建。
         3. 增加SpriteBuilder for quick 的 runtime, 已完成基本的UI组件和UI动画功能。
         地址：https://github.com/tangyiyang/spritebuilder-lua
 
 将要增加的feature:
+
         引擎:
             .增加valgrind做内存检测。
             .继承Lua unit test模块。
@@ -23,12 +25,9 @@
 
         音效：
             集成fmod，增加Lua接口。同时还是保留原来的simpleAudio engine.
-
-        Lua：
+        Lua:
             集成luajit-v2.1，统一android和ios。
-
         示例：
             优化makefile，做一个更好的项目模板。
-
         Android:
             优化CCEditBox, 做一个和iOS一样的输入法。
