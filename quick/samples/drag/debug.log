@@ -1,0 +1,127 @@
+
+{
+	gl.supports_vertex_array_object: true
+	cocos2d.x.version: quick-cocos2d-x 3.3
+	gl.vendor: NVIDIA Corporation
+	gl.supports_PVRTC: false
+	gl.renderer: NVIDIA GeForce GT 650M OpenGL Engine
+	cocos2d.x.compiled_with_profiler: false
+	gl.max_texture_size: 16384
+	gl.supports_ETC1: false
+	gl.supports_BGRA8888: false
+	cocos2d.x.build_type: DEBUG
+	gl.supports_discard_framebuffer: false
+	gl.supports_NPOT: true
+	gl.supports_S3TC: true
+	gl.version: 2.1 NVIDIA-8.26.28 310.40.55b01
+	gl.supports_ATITC: false
+	gl.max_texture_units: 16
+	cocos2d.x.compiled_with_gl_state_cache: true
+}
+
+
+Quick-Cocos2d-x C++ support ready.
+------------------------------------------------
+LOAD LUA FILE: /Users/sleepers/opensource_projects/v3quick/quick/samples/drag/src/main.lua
+------------------------------------------------
+can not get file data of src/app/MyApp.lua
+can not get file data of src/config.lua
+can not get file data of src/framework/init.lua
+===========================================================
+              LOAD QUICK FRAMEWORK
+===========================================================
+can not get file data of src/framework/debug.lua
+can not get file data of src/framework/functions.lua
+can not get file data of src/framework/cocos2dx.lua
+can not get file data of src/framework/cocos2dx/Cocos2dConstants.lua
+can not get file data of src/framework/cocos2dx/OpenglConstants.lua
+can not get file data of src/framework/cocos2dx/Cocos2d.lua
+can not get file data of src/framework/cocos2dx/StudioConstants.lua
+can not get file data of src/framework/cocos2dx/Event.lua
+can not get file data of src/framework/cocos2dx/ActionEx.lua
+can not get file data of src/framework/cocos2dx/NodeEx.lua
+can not get file data of src/framework/cocos2dx/SceneEx.lua
+can not get file data of src/framework/cocos2dx/SpriteEx.lua
+can not get file data of src/framework/cocos2dx/DrawNodeEx.lua
+[INFO] 
+[INFO] # DEBUG                        = 1
+[INFO] #
+can not get file data of src/framework/device.lua
+[INFO] # device.platform              = mac
+[INFO] # device.model                 = unknown
+[INFO] # device.language              = cn
+[INFO] # device.writablePath          = /Users/sleepers/opensource_projects/v3quick/quick/samples/drag/
+[INFO] # device.directorySeparator    = /
+[INFO] # device.pathSeparator         = :
+[INFO] #
+can not get file data of src/framework/transition.lua
+can not get file data of src/framework/display.lua
+libpng warning: iCCP: known incorrect sRGB profile
+[INFO] # CONFIG_SCREEN_AUTOSCALE      = FIXED_WIDTH
+[INFO] # CONFIG_SCREEN_WIDTH          = 960.00
+[INFO] # CONFIG_SCREEN_HEIGHT         = 640.00
+[INFO] # display.widthInPixels        = 960.00
+[INFO] # display.heightInPixels       = 640.00
+[INFO] # display.contentScaleFactor   = 1.00
+[INFO] # display.width                = 960.00
+[INFO] # display.height               = 640.00
+[INFO] # display.cx                   = 480.00
+[INFO] # display.cy                   = 320.00
+[INFO] # display.left                 = 0.00
+[INFO] # display.right                = 960.00
+[INFO] # display.top                  = 640.00
+[INFO] # display.bottom               = 0.00
+[INFO] # display.c_left               = -480.00
+[INFO] # display.c_right              = 480.00
+[INFO] # display.c_top                = 320.00
+[INFO] # display.c_bottom             = -320.00
+[INFO] #
+can not get file data of src/framework/filter.lua
+can not get file data of src/framework/audio.lua
+can not get file data of src/framework/network.lua
+can not get file data of src/framework/crypto.lua
+can not get file data of src/framework/json.lua
+can not get file data of src/framework/platform/mac.lua
+can not get file data of src/cocos/cocos2d/luaoc.lua
+can not get file data of src/framework/cc/init.lua
+can not get file data of src/framework/cc/Registry.lua
+can not get file data of src/framework/cc/GameObject.lua
+can not get file data of src/framework/cc/EventProxy.lua
+can not get file data of src/framework/cc/components/Component.lua
+can not get file data of src/framework/cc/components/behavior/StateMachine.lua
+can not get file data of src/framework/cc/components/behavior/EventProtocol.lua
+can not get file data of src/framework/cc/components/ui/BasicLayoutProtocol.lua
+can not get file data of src/framework/cc/components/ui/LayoutProtocol.lua
+can not get file data of src/framework/cc/components/ui/DraggableProtocol.lua
+can not get file data of src/framework/cc/mvc/init.lua
+can not get file data of src/framework/cc/mvc/AppBase.lua
+can not get file data of src/framework/cc/mvc/ModelBase.lua
+can not get file data of src/framework/cc/ui/init.lua
+can not get file data of src/framework/cc/ui/UIGroup.lua
+can not get file data of src/framework/cc/ui/UIBoxLayout.lua
+can not get file data of src/framework/cc/ui/UILayout.lua
+can not get file data of src/framework/cc/ui/UIStretch.lua
+can not get file data of src/framework/cc/ui/UIImage.lua
+can not get file data of src/framework/cc/ui/UIPushButton.lua
+can not get file data of src/framework/cc/ui/UIButton.lua
+can not get file data of src/framework/cc/ui/UICheckBoxButton.lua
+can not get file data of src/framework/cc/ui/UICheckBoxButtonGroup.lua
+can not get file data of src/framework/cc/ui/UIInput.lua
+can not get file data of src/framework/cc/ui/UILabel.lua
+can not get file data of src/framework/cc/ui/UISlider.lua
+can not get file data of src/framework/cc/ui/UIScrollView.lua
+can not get file data of src/framework/cc/ui/UIListView.lua
+can not get file data of src/framework/cc/ui/UIListViewItem.lua
+can not get file data of src/framework/cc/ui/UIPageView.lua
+can not get file data of src/framework/cc/ui/UIPageViewItem.lua
+can not get file data of src/framework/cc/ui/UILoadingBar.lua
+can not get file data of src/framework/cc/uiloader/init.lua
+can not get file data of src/framework/cc/uiloader/uiloader.lua
+can not get file data of src/framework/cc/uiloader/UILoaderUtilitys.lua
+can not get file data of src/framework/cc/uiloader/CCSUILoader.lua
+can not get file data of src/framework/cc/uiloader/CCSSceneLoader.lua
+can not get file data of src/framework/shortcodes.lua
+can not get file data of src/app/Utility.lua
+can not get file data of src/app/widget/UIDrag.lua
+can not get file data of src/app/scenes/DragScene.lua
+libpng warning: iCCP: known incorrect sRGB profile

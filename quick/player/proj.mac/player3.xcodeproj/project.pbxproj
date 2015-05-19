@@ -1,0 +1,805 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D5B4E1E1ACE8D5B00FB263F /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5B4E1D1ACE8D5B00FB263F /* libuv.a */; };
+		4D5B4E201ACE8D5E00FB263F /* libjansson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5B4E1F1ACE8D5E00FB263F /* libjansson.a */; };
+		4D9B77FB1A47141A00CF525C /* PomeloClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B77F81A47141A00CF525C /* PomeloClient.cpp */; };
+		4DA5A2551B0B84CB00B9E188 /* libpomelo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA5A2461B0B847C00B9E188 /* libpomelo.a */; };
+		4DCAED831AE898BF0031C513 /* PomeloClient_luabinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DCAED811AE898BF0031C513 /* PomeloClient_luabinding.cpp */; };
+		9F05A0CF194EC0FA003CFA1F /* PlayerMessageBoxServiceMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F05A0CE194EC0FA003CFA1F /* PlayerMessageBoxServiceMac.mm */; };
+		9F05A101194EF319003CFA1F /* ConsoleWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F05A0FE194EF319003CFA1F /* ConsoleWindow.xib */; };
+		9F05A102194EF319003CFA1F /* ConsoleWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F05A100194EF319003CFA1F /* ConsoleWindowController.m */; };
+		9F05A10A194EF988003CFA1F /* NSApplication+SheetAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F05A109194EF988003CFA1F /* NSApplication+SheetAdditions.m */; };
+		9F19C52919580A5800CA020E /* PlayerUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F19C52719580A5800CA020E /* PlayerUtils.cpp */; };
+		9F1C8D33194DE61E0068C99B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1C8D32194DE61E0068C99B /* Cocoa.framework */; };
+		9F1C8D78194DEB430068C99B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F1C8D77194DEB430068C99B /* MainMenu.xib */; };
+		9F1C8D7D194DECD70068C99B /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C8D7C194DECD70068C99B /* AppController.mm */; };
+		9F1C8D81194DECE80068C99B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F1C8D7E194DECE80068C99B /* Info.plist */; };
+		9F1C8D82194DECE80068C99B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C8D7F194DECE80068C99B /* main.m */; };
+		9F1C8D9B194DEE040068C99B /* PlayerProtocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C8D97194DEE040068C99B /* PlayerProtocol.cpp */; };
+		9F1C8D9C194DEE040068C99B /* PlayerServiceProtocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C8D99194DEE040068C99B /* PlayerServiceProtocol.cpp */; };
+		9F1C8DA1194DEFE40068C99B /* PlayerFileDialogServiceMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C8D9E194DEFE40068C99B /* PlayerFileDialogServiceMac.mm */; };
+		9F1C8DA2194DEFE40068C99B /* PlayerMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C8DA0194DEFE40068C99B /* PlayerMac.mm */; };
+		9F1C8DA4194E7B290068C99B /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9F1C8DA3194E7B290068C99B /* Icon.icns */; };
+		9F1CF4011998A82D00497F21 /* PlayerMenuServiceMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F1CF4001998A82D00497F21 /* PlayerMenuServiceMac.mm */; };
+		9F1CF4091998C6BA00497F21 /* PlayerMenuServiceProtocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F1CF4061998C6BA00497F21 /* PlayerMenuServiceProtocol.cpp */; };
+		9F1CF40A1998C6BA00497F21 /* PlayerSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F1CF4071998C6BA00497F21 /* PlayerSettings.cpp */; };
+		9F30789619A58E85007B7B03 /* PlayerTaskServiceProtocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F30789319A58E85007B7B03 /* PlayerTaskServiceProtocol.cpp */; };
+		9F3078BB19A58E9F007B7B03 /* PlayerTaskServiceMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F3078BA19A58E9F007B7B03 /* PlayerTaskServiceMac.mm */; };
+		9F3BF72C194E91380072B3D0 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F3BF72A194E91380072B3D0 /* AppDelegate.cpp */; };
+		9F3BF72E194E91900072B3D0 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3BF72D194E91900072B3D0 /* libcurl.dylib */; };
+		9F3BF730194E91960072B3D0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3BF72F194E91960072B3D0 /* libz.dylib */; };
+		9F3BF732194E919C0072B3D0 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3BF731194E919C0072B3D0 /* IOKit.framework */; };
+		9F3BF733194E91A40072B3D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1C8D37194DE61E0068C99B /* Foundation.framework */; };
+		9F3BF735194E91AA0072B3D0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3BF734194E91AA0072B3D0 /* AudioToolbox.framework */; };
+		9F3BF737194E91C80072B3D0 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3BF736194E91C80072B3D0 /* ApplicationServices.framework */; };
+		9F3BF739194E91D10072B3D0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3BF738194E91D10072B3D0 /* OpenAL.framework */; };
+		9F3BF73B194E91D70072B3D0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3BF73A194E91D70072B3D0 /* QuartzCore.framework */; };
+		9F3BF73D194E91E10072B3D0 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3BF73C194E91E10072B3D0 /* OpenGL.framework */; };
+		9F5D865819E696D70075F386 /* PlayerLuaCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D865619E696D70075F386 /* PlayerLuaCore.cpp */; };
+		9F5D865E19E7A6A50075F386 /* PlayerLuaCoreManual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D865C19E7A6A50075F386 /* PlayerLuaCoreManual.cpp */; };
+		9F6667CC19D9663000B5DA44 /* NumberFormater.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6667CB19D9663000B5DA44 /* NumberFormater.m */; };
+		9F6D88E61959647800B36BA2 /* player3.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9F1C8D2F194DE61E0068C99B /* player3.app */; };
+		9FCDC2BB196D2DD9005CB55E /* PlayerEditBoxServiceMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDC2B9196D2DD9005CB55E /* PlayerEditBoxServiceMac.mm */; };
+		DAB2BFC619595AE800ADD4E0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB2BFC519595AE800ADD4E0 /* SystemConfiguration.framework */; };
+		F4E0C0D5196BA4870053EFD7 /* liblibquick.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E0B1FB196B9C3C0053EFD7 /* liblibquick.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4D5B4E1A1ACE8D2400FB263F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4E0B1F6196B9C3C0053EFD7 /* libquick.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F4E0B1C2196B9B740053EFD7;
+			remoteInfo = libquick;
+		};
+		4DA5A2451B0B847C00B9E188 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DA5A2351B0B847C00B9E188 /* pomelo_mac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07390FDF2C637EBD093867CC;
+			remoteInfo = libpomelo;
+		};
+		4DA5A2471B0B847C00B9E188 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DA5A2351B0B847C00B9E188 /* pomelo_mac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FAED8970A57B163CCFC87ECA;
+			remoteInfo = destroy;
+		};
+		4DA5A2491B0B847C00B9E188 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DA5A2351B0B847C00B9E188 /* pomelo_mac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7FA2AD8C43CA89DDC8D3986C;
+			remoteInfo = notify;
+		};
+		4DA5A24B1B0B847C00B9E188 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DA5A2351B0B847C00B9E188 /* pomelo_mac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CA1D6E61B836B3AD372F7877;
+			remoteInfo = request;
+		};
+		4DA5A24D1B0B847C00B9E188 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DA5A2351B0B847C00B9E188 /* pomelo_mac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2BDD63FDC40DE1D64114B19B;
+			remoteInfo = echo;
+		};
+		4DA5A24F1B0B847C00B9E188 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DA5A2351B0B847C00B9E188 /* pomelo_mac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 640F5DADDBEA0250854F2CBF;
+			remoteInfo = echo2;
+		};
+		4DA5A2511B0B847C00B9E188 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DA5A2351B0B847C00B9E188 /* pomelo_mac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 39C460917C27E012DBF26365;
+			remoteInfo = test_protobuf;
+		};
+		4DA5A2531B0B847C00B9E188 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DA5A2351B0B847C00B9E188 /* pomelo_mac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6201BA87C25025417F3AE79F;
+			remoteInfo = robot_chat;
+		};
+		F4E0B1FA196B9C3C0053EFD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4E0B1F6196B9C3C0053EFD7 /* libquick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F4E0B1C3196B9B740053EFD7;
+			remoteInfo = libquick;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9F6D88E31959645800B36BA2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SRCROOT)/../../..";
+			dstSubfolderSpec = 0;
+			files = (
+				9F6D88E61959647800B36BA2 /* player3.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4D5B4E1D1ACE8D5B00FB263F /* libuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libuv.a; path = ../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Default/libuv.a; sourceTree = "<group>"; };
+		4D5B4E1F1ACE8D5E00FB263F /* libjansson.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjansson.a; path = ../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Default/libjansson.a; sourceTree = "<group>"; };
+		4D9B77F81A47141A00CF525C /* PomeloClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PomeloClient.cpp; sourceTree = "<group>"; };
+		4D9B77F91A47141A00CF525C /* PomeloClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PomeloClient.h; sourceTree = "<group>"; };
+		4DA5A2351B0B847C00B9E188 /* pomelo_mac.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pomelo_mac.xcodeproj; path = ../../../external/libpomelo/pomelo_mac.xcodeproj; sourceTree = "<group>"; };
+		4DCAED811AE898BF0031C513 /* PomeloClient_luabinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PomeloClient_luabinding.cpp; sourceTree = "<group>"; };
+		4DCAED821AE898BF0031C513 /* PomeloClient_luabinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PomeloClient_luabinding.h; sourceTree = "<group>"; };
+		9F05A0CC194EB080003CFA1F /* PlayerMenuServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMenuServiceProtocol.h; sourceTree = "<group>"; };
+		9F05A0CD194EC0DB003CFA1F /* PlayerMessageBoxServiceMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerMessageBoxServiceMac.h; sourceTree = SOURCE_ROOT; };
+		9F05A0CE194EC0FA003CFA1F /* PlayerMessageBoxServiceMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlayerMessageBoxServiceMac.mm; sourceTree = SOURCE_ROOT; };
+		9F05A0FE194EF319003CFA1F /* ConsoleWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsoleWindow.xib; sourceTree = SOURCE_ROOT; };
+		9F05A0FF194EF319003CFA1F /* ConsoleWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsoleWindowController.h; sourceTree = SOURCE_ROOT; };
+		9F05A100194EF319003CFA1F /* ConsoleWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsoleWindowController.m; sourceTree = SOURCE_ROOT; };
+		9F05A108194EF988003CFA1F /* NSApplication+SheetAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSApplication+SheetAdditions.h"; sourceTree = SOURCE_ROOT; };
+		9F05A109194EF988003CFA1F /* NSApplication+SheetAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+SheetAdditions.m"; sourceTree = SOURCE_ROOT; };
+		9F19C52719580A5800CA020E /* PlayerUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerUtils.cpp; sourceTree = "<group>"; };
+		9F19C52819580A5800CA020E /* PlayerUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerUtils.h; sourceTree = "<group>"; };
+		9F1C8D2F194DE61E0068C99B /* player3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = player3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F1C8D32194DE61E0068C99B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		9F1C8D35194DE61E0068C99B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		9F1C8D36194DE61E0068C99B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9F1C8D37194DE61E0068C99B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9F1C8D77194DEB430068C99B /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = SOURCE_ROOT; };
+		9F1C8D7B194DECD70068C99B /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = SOURCE_ROOT; };
+		9F1C8D7C194DECD70068C99B /* AppController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppController.mm; sourceTree = SOURCE_ROOT; };
+		9F1C8D7E194DECE80068C99B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		9F1C8D7F194DECE80068C99B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		9F1C8D80194DECE80068C99B /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = SOURCE_ROOT; };
+		9F1C8D95194DEE040068C99B /* PlayerFileDialogServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerFileDialogServiceProtocol.h; sourceTree = "<group>"; };
+		9F1C8D96194DEE040068C99B /* PlayerMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMacros.h; sourceTree = "<group>"; };
+		9F1C8D97194DEE040068C99B /* PlayerProtocol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerProtocol.cpp; sourceTree = "<group>"; };
+		9F1C8D98194DEE040068C99B /* PlayerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerProtocol.h; sourceTree = "<group>"; };
+		9F1C8D99194DEE040068C99B /* PlayerServiceProtocol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerServiceProtocol.cpp; sourceTree = "<group>"; };
+		9F1C8D9A194DEE040068C99B /* PlayerServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerServiceProtocol.h; sourceTree = "<group>"; };
+		9F1C8D9D194DEFE40068C99B /* PlayerFileDialogServiceMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerFileDialogServiceMac.h; sourceTree = SOURCE_ROOT; };
+		9F1C8D9E194DEFE40068C99B /* PlayerFileDialogServiceMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlayerFileDialogServiceMac.mm; sourceTree = SOURCE_ROOT; };
+		9F1C8D9F194DEFE40068C99B /* PlayerMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMac.h; sourceTree = SOURCE_ROOT; };
+		9F1C8DA0194DEFE40068C99B /* PlayerMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlayerMac.mm; sourceTree = SOURCE_ROOT; };
+		9F1C8DA3194E7B290068C99B /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = SOURCE_ROOT; };
+		9F1C8DA5194E7CF00068C99B /* PlayerMessageBoxServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMessageBoxServiceProtocol.h; sourceTree = "<group>"; };
+		9F1CF3FF1998A82D00497F21 /* PlayerMenuServiceMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMenuServiceMac.h; sourceTree = SOURCE_ROOT; };
+		9F1CF4001998A82D00497F21 /* PlayerMenuServiceMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlayerMenuServiceMac.mm; sourceTree = SOURCE_ROOT; };
+		9F1CF4061998C6BA00497F21 /* PlayerMenuServiceProtocol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerMenuServiceProtocol.cpp; sourceTree = "<group>"; };
+		9F1CF4071998C6BA00497F21 /* PlayerSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerSettings.cpp; sourceTree = "<group>"; };
+		9F1CF4081998C6BA00497F21 /* PlayerSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSettings.h; sourceTree = "<group>"; };
+		9F30789319A58E85007B7B03 /* PlayerTaskServiceProtocol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerTaskServiceProtocol.cpp; sourceTree = "<group>"; };
+		9F30789419A58E85007B7B03 /* PlayerTaskServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerTaskServiceProtocol.h; sourceTree = "<group>"; };
+		9F3078B919A58E9F007B7B03 /* PlayerTaskServiceMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerTaskServiceMac.h; sourceTree = SOURCE_ROOT; };
+		9F3078BA19A58E9F007B7B03 /* PlayerTaskServiceMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlayerTaskServiceMac.mm; sourceTree = SOURCE_ROOT; };
+		9F3BF72A194E91380072B3D0 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
+		9F3BF72B194E91380072B3D0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9F3BF72D194E91900072B3D0 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = usr/lib/libcurl.dylib; sourceTree = SDKROOT; };
+		9F3BF72F194E91960072B3D0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		9F3BF731194E919C0072B3D0 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		9F3BF734194E91AA0072B3D0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		9F3BF736194E91C80072B3D0 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		9F3BF738194E91D10072B3D0 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		9F3BF73A194E91D70072B3D0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9F3BF73C194E91E10072B3D0 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		9F5D865619E696D70075F386 /* PlayerLuaCore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerLuaCore.cpp; sourceTree = "<group>"; };
+		9F5D865719E696D70075F386 /* PlayerLuaCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerLuaCore.h; sourceTree = "<group>"; };
+		9F5D865C19E7A6A50075F386 /* PlayerLuaCoreManual.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerLuaCoreManual.cpp; sourceTree = "<group>"; };
+		9F5D865D19E7A6A50075F386 /* PlayerLuaCoreManual.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PlayerLuaCoreManual.hpp; sourceTree = "<group>"; };
+		9F6667CA19D9663000B5DA44 /* NumberFormater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberFormater.h; sourceTree = SOURCE_ROOT; };
+		9F6667CB19D9663000B5DA44 /* NumberFormater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberFormater.m; sourceTree = SOURCE_ROOT; };
+		9FCDC2B7196D2C7D005CB55E /* PlayerEditBoxServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerEditBoxServiceProtocol.h; sourceTree = "<group>"; };
+		9FCDC2B9196D2DD9005CB55E /* PlayerEditBoxServiceMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlayerEditBoxServiceMac.mm; sourceTree = SOURCE_ROOT; };
+		9FCDC2BC196D2E08005CB55E /* PlayerEditBoxServiceMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerEditBoxServiceMac.h; sourceTree = SOURCE_ROOT; };
+		DAB2BFC519595AE800ADD4E0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F4E0B1F6196B9C3C0053EFD7 /* libquick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libquick.xcodeproj; path = ../../lib/proj.mac/libquick.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F1C8D2C194DE61E0068C99B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA5A2551B0B84CB00B9E188 /* libpomelo.a in Frameworks */,
+				4D5B4E201ACE8D5E00FB263F /* libjansson.a in Frameworks */,
+				4D5B4E1E1ACE8D5B00FB263F /* libuv.a in Frameworks */,
+				F4E0C0D5196BA4870053EFD7 /* liblibquick.a in Frameworks */,
+				DAB2BFC619595AE800ADD4E0 /* SystemConfiguration.framework in Frameworks */,
+				9F3BF73D194E91E10072B3D0 /* OpenGL.framework in Frameworks */,
+				9F3BF73B194E91D70072B3D0 /* QuartzCore.framework in Frameworks */,
+				9F3BF739194E91D10072B3D0 /* OpenAL.framework in Frameworks */,
+				9F3BF737194E91C80072B3D0 /* ApplicationServices.framework in Frameworks */,
+				9F3BF735194E91AA0072B3D0 /* AudioToolbox.framework in Frameworks */,
+				9F3BF733194E91A40072B3D0 /* Foundation.framework in Frameworks */,
+				9F3BF732194E919C0072B3D0 /* IOKit.framework in Frameworks */,
+				9F3BF730194E91960072B3D0 /* libz.dylib in Frameworks */,
+				9F3BF72E194E91900072B3D0 /* libcurl.dylib in Frameworks */,
+				9F1C8D33194DE61E0068C99B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D9B77F51A47141A00CF525C /* pomelobind */ = {
+			isa = PBXGroup;
+			children = (
+				4DCAED811AE898BF0031C513 /* PomeloClient_luabinding.cpp */,
+				4DCAED821AE898BF0031C513 /* PomeloClient_luabinding.h */,
+				4D9B77F81A47141A00CF525C /* PomeloClient.cpp */,
+				4D9B77F91A47141A00CF525C /* PomeloClient.h */,
+			);
+			path = pomelobind;
+			sourceTree = "<group>";
+		};
+		4DA5A2361B0B847C00B9E188 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DA5A2461B0B847C00B9E188 /* libpomelo.a */,
+				4DA5A2481B0B847C00B9E188 /* destroy */,
+				4DA5A24A1B0B847C00B9E188 /* notify */,
+				4DA5A24C1B0B847C00B9E188 /* request */,
+				4DA5A24E1B0B847C00B9E188 /* echo */,
+				4DA5A2501B0B847C00B9E188 /* echo2 */,
+				4DA5A2521B0B847C00B9E188 /* test_protobuf */,
+				4DA5A2541B0B847C00B9E188 /* robot_chat */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F1C8D26194DE61E0068C99B = {
+			isa = PBXGroup;
+			children = (
+				4DA5A2351B0B847C00B9E188 /* pomelo_mac.xcodeproj */,
+				F4E0B1F6196B9C3C0053EFD7 /* libquick.xcodeproj */,
+				9F1C8D94194DEE040068C99B /* src */,
+				9F1C8D38194DE61E0068C99B /* mac */,
+				9F1C8D31194DE61E0068C99B /* Frameworks */,
+				9F1C8D30194DE61E0068C99B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9F1C8D30194DE61E0068C99B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F1C8D2F194DE61E0068C99B /* player3.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F1C8D31194DE61E0068C99B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D5B4E1F1ACE8D5E00FB263F /* libjansson.a */,
+				4D5B4E1D1ACE8D5B00FB263F /* libuv.a */,
+				DAB2BFC519595AE800ADD4E0 /* SystemConfiguration.framework */,
+				9F3BF73C194E91E10072B3D0 /* OpenGL.framework */,
+				9F3BF73A194E91D70072B3D0 /* QuartzCore.framework */,
+				9F3BF738194E91D10072B3D0 /* OpenAL.framework */,
+				9F3BF736194E91C80072B3D0 /* ApplicationServices.framework */,
+				9F3BF734194E91AA0072B3D0 /* AudioToolbox.framework */,
+				9F3BF731194E919C0072B3D0 /* IOKit.framework */,
+				9F3BF72F194E91960072B3D0 /* libz.dylib */,
+				9F3BF72D194E91900072B3D0 /* libcurl.dylib */,
+				9F1C8D32194DE61E0068C99B /* Cocoa.framework */,
+				9F1C8D34194DE61E0068C99B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F1C8D34194DE61E0068C99B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F1C8D35194DE61E0068C99B /* AppKit.framework */,
+				9F1C8D36194DE61E0068C99B /* CoreData.framework */,
+				9F1C8D37194DE61E0068C99B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		9F1C8D38194DE61E0068C99B /* mac */ = {
+			isa = PBXGroup;
+			children = (
+				9F3078B919A58E9F007B7B03 /* PlayerTaskServiceMac.h */,
+				9F3078BA19A58E9F007B7B03 /* PlayerTaskServiceMac.mm */,
+				9F1C8D7B194DECD70068C99B /* AppController.h */,
+				9F1C8D7C194DECD70068C99B /* AppController.mm */,
+				9F05A0FE194EF319003CFA1F /* ConsoleWindow.xib */,
+				9F05A0FF194EF319003CFA1F /* ConsoleWindowController.h */,
+				9F05A100194EF319003CFA1F /* ConsoleWindowController.m */,
+				9F05A108194EF988003CFA1F /* NSApplication+SheetAdditions.h */,
+				9F05A109194EF988003CFA1F /* NSApplication+SheetAdditions.m */,
+				9FCDC2BC196D2E08005CB55E /* PlayerEditBoxServiceMac.h */,
+				9FCDC2B9196D2DD9005CB55E /* PlayerEditBoxServiceMac.mm */,
+				9F6667CA19D9663000B5DA44 /* NumberFormater.h */,
+				9F6667CB19D9663000B5DA44 /* NumberFormater.m */,
+				9F1C8D9D194DEFE40068C99B /* PlayerFileDialogServiceMac.h */,
+				9F1C8D9E194DEFE40068C99B /* PlayerFileDialogServiceMac.mm */,
+				9F1C8D9F194DEFE40068C99B /* PlayerMac.h */,
+				9F1C8DA0194DEFE40068C99B /* PlayerMac.mm */,
+				9F1CF3FF1998A82D00497F21 /* PlayerMenuServiceMac.h */,
+				9F1CF4001998A82D00497F21 /* PlayerMenuServiceMac.mm */,
+				9F05A0CD194EC0DB003CFA1F /* PlayerMessageBoxServiceMac.h */,
+				9F05A0CE194EC0FA003CFA1F /* PlayerMessageBoxServiceMac.mm */,
+				9F1C8D39194DE61E0068C99B /* Supporting Files */,
+			);
+			name = mac;
+			path = "quick-x-player";
+			sourceTree = "<group>";
+		};
+		9F1C8D39194DE61E0068C99B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F1C8DA3194E7B290068C99B /* Icon.icns */,
+				9F1C8D77194DEB430068C99B /* MainMenu.xib */,
+				9F1C8D7E194DECE80068C99B /* Info.plist */,
+				9F1C8D7F194DECE80068C99B /* main.m */,
+				9F1C8D80194DECE80068C99B /* Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F1C8D94194DEE040068C99B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4D9B77F51A47141A00CF525C /* pomelobind */,
+				9F5D865619E696D70075F386 /* PlayerLuaCore.cpp */,
+				9F5D865719E696D70075F386 /* PlayerLuaCore.h */,
+				9F5D865C19E7A6A50075F386 /* PlayerLuaCoreManual.cpp */,
+				9F5D865D19E7A6A50075F386 /* PlayerLuaCoreManual.hpp */,
+				9F30789319A58E85007B7B03 /* PlayerTaskServiceProtocol.cpp */,
+				9F30789419A58E85007B7B03 /* PlayerTaskServiceProtocol.h */,
+				9F3BF72A194E91380072B3D0 /* AppDelegate.cpp */,
+				9F3BF72B194E91380072B3D0 /* AppDelegate.h */,
+				9FCDC2B7196D2C7D005CB55E /* PlayerEditBoxServiceProtocol.h */,
+				9F1C8D95194DEE040068C99B /* PlayerFileDialogServiceProtocol.h */,
+				9F1C8D96194DEE040068C99B /* PlayerMacros.h */,
+				9F1CF4061998C6BA00497F21 /* PlayerMenuServiceProtocol.cpp */,
+				9F05A0CC194EB080003CFA1F /* PlayerMenuServiceProtocol.h */,
+				9F1C8DA5194E7CF00068C99B /* PlayerMessageBoxServiceProtocol.h */,
+				9F1C8D97194DEE040068C99B /* PlayerProtocol.cpp */,
+				9F1C8D98194DEE040068C99B /* PlayerProtocol.h */,
+				9F1C8D99194DEE040068C99B /* PlayerServiceProtocol.cpp */,
+				9F1C8D9A194DEE040068C99B /* PlayerServiceProtocol.h */,
+				9F1CF4071998C6BA00497F21 /* PlayerSettings.cpp */,
+				9F1CF4081998C6BA00497F21 /* PlayerSettings.h */,
+				9F19C52719580A5800CA020E /* PlayerUtils.cpp */,
+				9F19C52819580A5800CA020E /* PlayerUtils.h */,
+			);
+			name = src;
+			path = ../src;
+			sourceTree = "<group>";
+		};
+		F4E0B1F7196B9C3C0053EFD7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4E0B1FB196B9C3C0053EFD7 /* liblibquick.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F1C8D2E194DE61E0068C99B /* player3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F1C8D60194DE61E0068C99B /* Build configuration list for PBXNativeTarget "player3" */;
+			buildPhases = (
+				9F1C8D2B194DE61E0068C99B /* Sources */,
+				9F1C8D2C194DE61E0068C99B /* Frameworks */,
+				9F1C8D2D194DE61E0068C99B /* Resources */,
+				9F6D88E31959645800B36BA2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D5B4E1B1ACE8D2400FB263F /* PBXTargetDependency */,
+			);
+			name = player3;
+			productName = "quick-x-player";
+			productReference = 9F1C8D2F194DE61E0068C99B /* player3.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F1C8D27194DE61E0068C99B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = quick;
+				TargetAttributes = {
+					9F1C8D2E194DE61E0068C99B = {
+						DevelopmentTeam = U7E7529TA5;
+					};
+				};
+			};
+			buildConfigurationList = 9F1C8D2A194DE61E0068C99B /* Build configuration list for PBXProject "player3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F1C8D26194DE61E0068C99B;
+			productRefGroup = 9F1C8D30194DE61E0068C99B /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F4E0B1F7196B9C3C0053EFD7 /* Products */;
+					ProjectRef = F4E0B1F6196B9C3C0053EFD7 /* libquick.xcodeproj */;
+				},
+				{
+					ProductGroup = 4DA5A2361B0B847C00B9E188 /* Products */;
+					ProjectRef = 4DA5A2351B0B847C00B9E188 /* pomelo_mac.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				9F1C8D2E194DE61E0068C99B /* player3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4DA5A2461B0B847C00B9E188 /* libpomelo.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libpomelo.a;
+			remoteRef = 4DA5A2451B0B847C00B9E188 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DA5A2481B0B847C00B9E188 /* destroy */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = destroy;
+			remoteRef = 4DA5A2471B0B847C00B9E188 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DA5A24A1B0B847C00B9E188 /* notify */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = notify;
+			remoteRef = 4DA5A2491B0B847C00B9E188 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DA5A24C1B0B847C00B9E188 /* request */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = request;
+			remoteRef = 4DA5A24B1B0B847C00B9E188 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DA5A24E1B0B847C00B9E188 /* echo */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = echo;
+			remoteRef = 4DA5A24D1B0B847C00B9E188 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DA5A2501B0B847C00B9E188 /* echo2 */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = echo2;
+			remoteRef = 4DA5A24F1B0B847C00B9E188 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DA5A2521B0B847C00B9E188 /* test_protobuf */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = test_protobuf;
+			remoteRef = 4DA5A2511B0B847C00B9E188 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DA5A2541B0B847C00B9E188 /* robot_chat */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = robot_chat;
+			remoteRef = 4DA5A2531B0B847C00B9E188 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F4E0B1FB196B9C3C0053EFD7 /* liblibquick.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liblibquick.a;
+			remoteRef = F4E0B1FA196B9C3C0053EFD7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F1C8D2D194DE61E0068C99B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F1C8DA4194E7B290068C99B /* Icon.icns in Resources */,
+				9F05A101194EF319003CFA1F /* ConsoleWindow.xib in Resources */,
+				9F1C8D81194DECE80068C99B /* Info.plist in Resources */,
+				9F1C8D78194DEB430068C99B /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F1C8D2B194DE61E0068C99B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F1CF4091998C6BA00497F21 /* PlayerMenuServiceProtocol.cpp in Sources */,
+				4DCAED831AE898BF0031C513 /* PomeloClient_luabinding.cpp in Sources */,
+				9F1C8DA2194DEFE40068C99B /* PlayerMac.mm in Sources */,
+				9F05A10A194EF988003CFA1F /* NSApplication+SheetAdditions.m in Sources */,
+				9FCDC2BB196D2DD9005CB55E /* PlayerEditBoxServiceMac.mm in Sources */,
+				9F1C8D82194DECE80068C99B /* main.m in Sources */,
+				9F5D865E19E7A6A50075F386 /* PlayerLuaCoreManual.cpp in Sources */,
+				9F19C52919580A5800CA020E /* PlayerUtils.cpp in Sources */,
+				9F5D865819E696D70075F386 /* PlayerLuaCore.cpp in Sources */,
+				9F1C8DA1194DEFE40068C99B /* PlayerFileDialogServiceMac.mm in Sources */,
+				9F1C8D7D194DECD70068C99B /* AppController.mm in Sources */,
+				9F3BF72C194E91380072B3D0 /* AppDelegate.cpp in Sources */,
+				4D9B77FB1A47141A00CF525C /* PomeloClient.cpp in Sources */,
+				9F1C8D9C194DEE040068C99B /* PlayerServiceProtocol.cpp in Sources */,
+				9F6667CC19D9663000B5DA44 /* NumberFormater.m in Sources */,
+				9F3078BB19A58E9F007B7B03 /* PlayerTaskServiceMac.mm in Sources */,
+				9F05A102194EF319003CFA1F /* ConsoleWindowController.m in Sources */,
+				9F1CF40A1998C6BA00497F21 /* PlayerSettings.cpp in Sources */,
+				9F1C8D9B194DEE040068C99B /* PlayerProtocol.cpp in Sources */,
+				9F05A0CF194EC0FA003CFA1F /* PlayerMessageBoxServiceMac.mm in Sources */,
+				9F1CF4011998A82D00497F21 /* PlayerMenuServiceMac.mm in Sources */,
+				9F30789619A58E85007B7B03 /* PlayerTaskServiceProtocol.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4D5B4E1B1ACE8D2400FB263F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libquick;
+			targetProxy = 4D5B4E1A1ACE8D2400FB263F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9F1C8D5E194DE61E0068C99B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					CC_TARGET_OS_MAC,
+					"COCOS2D_DEBUG=1",
+					USE_FILE32API,
+					"CC_ENABLE_CHIPMUNK_INTEGRATION=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(QUICK_V3_ROOT)",
+					"$(QUICK_V3_ROOT)/cocos",
+					"$(QUICK_V3_ROOT)/cocos/editor-support",
+					"$(QUICK_V3_ROOT)/extensions",
+					"$(QUICK_V3_ROOT)/external",
+					"$(QUICK_V3_ROOT)/external/chipmunk/include/chipmunk",
+					"$(QUICK_V3_ROOT)/cocos/audio/include",
+					"$(QUICK_V3_ROOT)/quick/lib/extra",
+					"$(QUICK_V3_ROOT)/quick/lib",
+					"$(QUICK_V3_ROOT)/quick/lib/lua_bindings/manual",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9F1C8D5F194DE61E0068C99B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					USE_FILE32API,
+					"COCOS2D_DEBUG=1",
+					"CC_ENABLE_CHIPMUNK_INTEGRATION=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(QUICK_V3_ROOT)",
+					"$(QUICK_V3_ROOT)/cocos",
+					"$(QUICK_V3_ROOT)/cocos/editor-support",
+					"$(QUICK_V3_ROOT)/extensions",
+					"$(QUICK_V3_ROOT)/external",
+					"$(QUICK_V3_ROOT)/external/chipmunk/include/chipmunk",
+					"$(QUICK_V3_ROOT)/cocos/audio/include",
+					"$(QUICK_V3_ROOT)/quick/lib/extra",
+					"$(QUICK_V3_ROOT)/quick/lib",
+					"$(QUICK_V3_ROOT)/quick/lib/lua_bindings/manual",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9F1C8D61194DE61E0068C99B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					GLFW_EXPOSE_NATIVE_COCOA,
+					GLFW_EXPOSE_NATIVE_NSGL,
+					CC_TARGET_OS_MAC,
+					"COCOS2D_DEBUG=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(QUICK_V3_ROOT)/cocos",
+					"$(QUICK_V3_ROOT)/cocos/audio/include",
+					"$(QUICK_V3_ROOT)/cocos/platform/mac",
+					"$(QUICK_V3_ROOT)/external",
+					"$(QUICK_V3_ROOT)/external/freetype2/include/mac",
+					"$(QUICK_V3_ROOT)/external/glfw3/include/mac",
+					"$(QUICK_V3_ROOT)/external/unzip",
+					"$(QUICK_V3_ROOT)/quick/lib",
+					"$(QUICK_V3_ROOT)/quick/lib/lua_bindings/auto",
+					"$(QUICK_V3_ROOT)/quick/lib/lua_bindings/manual",
+					"$(QUICK_V3_ROOT)/quick/lib/lua_bindings/luajit/include",
+					"$(QUICK_V3_ROOT)/quick/lib/lua_bindings/tolua",
+					"$(QUICK_V3_ROOT)/external/libpomelo/deps/uv/include",
+					"$(QUICK_V3_ROOT)/external/libpomelo/deps/jansson/src",
+					"$(QUICK_V3_ROOT)/external/libpomelo/include",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Build/Products/Default",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_LDFLAGS = (
+					"-pagezero_size",
+					10000,
+					"-image_base",
+					100000000,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9F1C8D62194DE61E0068C99B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					GLFW_EXPOSE_NATIVE_COCOA,
+					GLFW_EXPOSE_NATIVE_NSGL,
+					CC_TARGET_OS_MAC,
+					"COCOS2D_DEBUG=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(QUICK_V3_ROOT)/cocos",
+					"$(QUICK_V3_ROOT)/cocos/audio/include",
+					"$(QUICK_V3_ROOT)/cocos/platform/mac",
+					"$(QUICK_V3_ROOT)/external",
+					"$(QUICK_V3_ROOT)/external/freetype2/include/mac",
+					"$(QUICK_V3_ROOT)/external/glfw3/include/mac",
+					"$(QUICK_V3_ROOT)/external/unzip",
+					"$(QUICK_V3_ROOT)/quick/lib",
+					"$(QUICK_V3_ROOT)/quick/lib/lua_bindings/auto",
+					"$(QUICK_V3_ROOT)/quick/lib/lua_bindings/manual",
+					"$(QUICK_V3_ROOT)/quick/lib/lua_bindings/luajit/include",
+					"$(QUICK_V3_ROOT)/quick/lib/lua_bindings/tolua",
+					"$(QUICK_V3_ROOT)/external/libpomelo/deps/uv/include",
+					"$(QUICK_V3_ROOT)/external/libpomelo/deps/jansson/src",
+					"$(QUICK_V3_ROOT)/external/libpomelo/include",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Build/Products/Default",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_LDFLAGS = (
+					"-pagezero_size",
+					10000,
+					"-image_base",
+					100000000,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F1C8D2A194DE61E0068C99B /* Build configuration list for PBXProject "player3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F1C8D5E194DE61E0068C99B /* Debug */,
+				9F1C8D5F194DE61E0068C99B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F1C8D60194DE61E0068C99B /* Build configuration list for PBXNativeTarget "player3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F1C8D61194DE61E0068C99B /* Debug */,
+				9F1C8D62194DE61E0068C99B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F1C8D27194DE61E0068C99B /* Project object */;
+}

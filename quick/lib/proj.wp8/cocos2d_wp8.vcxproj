@@ -1,0 +1,1797 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B5AF91B3-64EA-44E1-84B0-D759E93758FB}</ProjectGuid>
+    <RootNamespace>cocos2d-x.win32</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ProjectName>libquickx</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="cocos2d_wp8_headers.props" />
+    <Import Project="cocos2dx.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Import Project="cocos2d_wp8_headers.props" />
+    <Import Project="cocos2dx.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="cocos2d_wp8_headers.props" />
+    <Import Project="cocos2dx.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Import Project="cocos2d_wp8_headers.props" />
+    <Import Project="cocos2dx.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <OutDir>$(SolutionDir)$(Configuration)\$(MSBuildProjectName)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>$(QUICK_V3_ROOT)\quick\lib\lua_extensions;$(QUICK_V3_ROOT)\quick\lib;$(QUICK_V3_ROOT)external\sqlite3\include;$(QUICK_V3_ROOT)external\unzip;$(QUICK_V3_ROOT)external\edtaa3func;$(QUICK_V3_ROOT)external\tinyxml2;$(QUICK_V3_ROOT)external\png\include\wp8;$(QUICK_V3_ROOT)external\jpeg\include\wp8;$(QUICK_V3_ROOT)external\curl\include\wp8;$(QUICK_V3_ROOT)external\curl\include\wp8\curl;$(QUICK_V3_ROOT)external\tiff\include\wp8;$(QUICK_V3_ROOT)external\freetype2\include\wp8;$(QUICK_V3_ROOT)external\wp8-specific\zlib\include;$(QUICK_V3_ROOT)external\chipmunk\include\chipmunk;$(QUICK_V3_ROOT)external\websockets\include\wp8;$(QUICK_V3_ROOT)extensions;$(QUICK_V3_ROOT)quick\lib\extra;$(QUICK_V3_ROOT)quick\lib\lua_bindings\auto;$(QUICK_V3_ROOT)quick\lib\lua_bindings\tolua;$(QUICK_V3_ROOT)quick\lib\lua_bindings\lua;$(QUICK_V3_ROOT)quick\lib\lua_bindings\manual;$(QUICK_V3_ROOT)external\xxhash;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WP8;_LIB;_DEBUG;COCOS2D_DEBUG=1;CC_LUA_ENGINE_ENABLED=1;__STRICT_ANSI__;SQLITE_OS_WINRT;SQLITE_OMIT_WAL;CC_USE_JSON=1;CC_USE_CURL=1;CC_USE_CCS_ARMATURE=1;CC_USE_EXTRA_FILTERS=1;CC_USE_WEBSOCKET=1;CC_USE_TGA=1;CC_USE_SQLITE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <AdditionalOptions>/Zm200 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;</IgnoreSpecificDefaultLibraries>
+      <AdditionalDependencies>d3d11.lib;xaudio2.lib;libEGL_phone.lib;libGLESv2_phone.lib;freetype.lib;libpng.lib;libjpeg.lib;libtiff.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QUICK_V3_ROOT)\external\wp8-specific\angle\prebuilt\$(Platform);$(QUICK_V3_ROOT)\external\wp8-specific\zlib\prebuilt\$(Platform);$(QUICK_V3_ROOT)\external\png\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)\external\jpeg\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)\external\tiff\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)\external\freetype2\prebuilt\wp8\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Lib>
+      <AdditionalOptions>/IGNORE:4264 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>zlib.lib;libpng.lib;libjpeg.lib;libtiff.lib;freetype.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QUICK_V3_ROOT)external\wp8-specific\zlib\prebuilt\$(Platform);$(QUICK_V3_ROOT)external\png\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)external\jpeg\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)external\tiff\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)external\freetype2\prebuilt\wp8\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>$(QUICK_V3_ROOT)external\sqlite3\include;$(QUICK_V3_ROOT)external\unzip;$(QUICK_V3_ROOT)external\edtaa3func;$(QUICK_V3_ROOT)external\tinyxml2;$(QUICK_V3_ROOT)external\png\include\wp8;$(QUICK_V3_ROOT)external\jpeg\include\wp8;$(QUICK_V3_ROOT)external\curl\include\wp8;$(QUICK_V3_ROOT)external\curl\include\wp8\curl;$(QUICK_V3_ROOT)external\tiff\include\wp8;$(QUICK_V3_ROOT)external\freetype2\include\wp8;$(QUICK_V3_ROOT)external\wp8-specific\zlib\include;$(QUICK_V3_ROOT)external\chipmunk\include\chipmunk;$(QUICK_V3_ROOT)external\xxhash;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WP8;_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <AdditionalOptions>/Zm200 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;</IgnoreSpecificDefaultLibraries>
+      <AdditionalDependencies>d3d11.lib;xaudio2.lib;libEGL_phone.lib;libGLESv2_phone.lib;freetype.lib;libpng.lib;libjpeg.lib;libtiff.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QUICK_V3_ROOT)\external\wp8-specific\angle\prebuilt\$(Platform);$(QUICK_V3_ROOT)\external\wp8-specific\zlib\prebuilt\$(Platform);$(QUICK_V3_ROOT)\external\png\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)\external\jpeg\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)\external\tiff\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)\external\freetype2\prebuilt\wp8\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Lib>
+      <AdditionalOptions>/IGNORE:4264 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>zlib.lib;libpng.lib;libjpeg.lib;libtiff.lib;freetype.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QUICK_V3_ROOT)external\wp8-specific\zlib\prebuilt\$(Platform);$(QUICK_V3_ROOT)external\png\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)external\jpeg\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)external\tiff\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)external\freetype2\prebuilt\wp8\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <PreprocessorDefinitions>_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>$(QUICK_V3_ROOT)\quick\lib\lua_extensions;$(QUICK_V3_ROOT)\quick\lib;$(QUICK_V3_ROOT)external\sqlite3\include;$(QUICK_V3_ROOT)external\unzip;$(QUICK_V3_ROOT)external\edtaa3func;$(QUICK_V3_ROOT)external\tinyxml2;$(QUICK_V3_ROOT)external\png\include\wp8;$(QUICK_V3_ROOT)external\jpeg\include\wp8;$(QUICK_V3_ROOT)external\curl\include\wp8;$(QUICK_V3_ROOT)external\curl\include\wp8\curl;$(QUICK_V3_ROOT)external\tiff\include\wp8;$(QUICK_V3_ROOT)external\freetype2\include\wp8;$(QUICK_V3_ROOT)external\wp8-specific\zlib\include;$(QUICK_V3_ROOT)external\chipmunk\include\chipmunk;$(QUICK_V3_ROOT)external\websockets\include\wp8;$(QUICK_V3_ROOT)extensions;$(QUICK_V3_ROOT)quick\lib\extra;$(QUICK_V3_ROOT)quick\lib\lua_bindings\auto;$(QUICK_V3_ROOT)quick\lib\lua_bindings\tolua;$(QUICK_V3_ROOT)quick\lib\lua_bindings\lua;$(QUICK_V3_ROOT)quick\lib\lua_bindings\manual;$(QUICK_V3_ROOT)external\xxhash;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WP8;_LIB;_DEBUG;COCOS2D_DEBUG=1;CC_LUA_ENGINE_ENABLED=1;__STRICT_ANSI__;SQLITE_OS_WINRT;SQLITE_OMIT_WAL;CC_USE_JSON=1;CC_USE_CURL=1;CC_USE_CCS_ARMATURE=1;CC_USE_EXTRA_FILTERS=1;CC_USE_WEBSOCKET=1;CC_USE_TGA=1;CC_USE_SQLITE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <AdditionalOptions>/Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;</IgnoreSpecificDefaultLibraries>
+      <AdditionalDependencies>d3d11.lib;xaudio2.lib;libEGL_phone.lib;libGLESv2_phone.lib;freetype.lib;libpng.lib;libjpeg.lib;libtiff.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QUICK_V3_ROOT)\external\wp8-specific\angle\prebuilt\$(Platform);$(QUICK_V3_ROOT)\external\wp8-specific\zlib\prebuilt\$(Platform);$(QUICK_V3_ROOT)\external\png\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)\external\jpeg\prebuilt\wp8\$(Platform);.$(QUICK_V3_ROOT)\external\tiff\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)\external\freetype2\prebuilt\wp8\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Lib>
+      <AdditionalOptions>/IGNORE:4264 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>zlib.lib;libpng.lib;libjpeg.lib;libtiff.lib;freetype.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QUICK_V3_ROOT)external\wp8-specific\zlib\prebuilt\$(Platform);$(QUICK_V3_ROOT)external\png\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)external\jpeg\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)external\tiff\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)external\freetype2\prebuilt\wp8\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <ClCompile>
+      <PreprocessorDefinitions>_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>$(QUICK_V3_ROOT)external\sqlite3\include;$(QUICK_V3_ROOT)external\unzip;$(QUICK_V3_ROOT)external\edtaa3func;$(QUICK_V3_ROOT)external\tinyxml2;$(QUICK_V3_ROOT)external\png\include\wp8;$(QUICK_V3_ROOT)external\jpeg\include\wp8;$(QUICK_V3_ROOT)external\curl\include\wp8;$(QUICK_V3_ROOT)external\curl\include\wp8\curl;$(QUICK_V3_ROOT)external\tiff\include\wp8;$(QUICK_V3_ROOT)external\freetype2\include\wp8;$(QUICK_V3_ROOT)external\wp8-specific\zlib\include;$(QUICK_V3_ROOT)external\chipmunk\include\chipmunk;$(QUICK_V3_ROOT)external\xxhash;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WP8;_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <AdditionalOptions>/Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;</IgnoreSpecificDefaultLibraries>
+      <AdditionalDependencies>d3d11.lib;xaudio2.lib;libEGL_phone.lib;libGLESv2_phone.lib;freetype.lib;libpng.lib;libjpeg.lib;libtiff.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QUICK_V3_ROOT)\external\wp8-specific\angle\prebuilt\$(Platform);$(QUICK_V3_ROOT)\external\wp8-specific\zlib\prebuilt\$(Platform);$(QUICK_V3_ROOT)\external\png\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)\external\jpeg\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)\external\tiff\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)\external\freetype2\prebuilt\wp8\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Lib>
+      <AdditionalOptions>/IGNORE:4264 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>zlib.lib;libpng.lib;libjpeg.lib;libtiff.lib;freetype.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QUICK_V3_ROOT)external\wp8-specific\zlib\prebuilt\$(Platform);$(QUICK_V3_ROOT)external\png\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)external\jpeg\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)external\tiff\prebuilt\wp8\$(Platform);$(QUICK_V3_ROOT)external\freetype2\prebuilt\wp8\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="Windows">
+      <IsWinMDFile>true</IsWinMDFile>
+    </Reference>
+    <Reference Include="platform.winmd">
+      <IsWinMDFile>true</IsWinMDFile>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsPhone\v$(TargetPlatformVersion)\Microsoft.Cpp.WindowsPhone.$(TargetPlatformVersion).targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="$(QUICK_V3_ROOT)\extensions\GUI\CCControlExtension\CCControl.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\extensions\GUI\CCControlExtension\CCControlButton.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\extensions\GUI\CCControlExtension\CCControlUtils.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\extensions\GUI\CCControlExtension\CCInvocation.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\extensions\GUI\CCControlExtension\CCScale9Sprite.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\extensions\GUI\CCEditBox\CCEditBox.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\extensions\GUI\CCEditBox\CCEditBoxImplWp8.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\chipmunk.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\constraints\cpConstraint.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\constraints\cpDampedRotarySpring.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\constraints\cpDampedSpring.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\constraints\cpGearJoint.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\constraints\cpGrooveJoint.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\constraints\cpPinJoint.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\constraints\cpPivotJoint.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\constraints\cpRatchetJoint.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\constraints\cpRotaryLimitJoint.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\constraints\cpSimpleMotor.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\constraints\cpSlideJoint.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpArbiter.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpArray.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpBB.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpBBTree.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpBody.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpCollision.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpHashSet.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpPolyShape.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpShape.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpSpace.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpSpaceComponent.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpSpaceHash.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpSpaceQuery.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpSpaceStep.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpSpatialIndex.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpSweep1D.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpVect.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4068;4996;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\ConvertUTF\ConvertUTF.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\ConvertUTF\ConvertUTFWrapper.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\edtaa3func\edtaa3func.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\tinyxml2\tinyxml2.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\unzip\ioapi.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\unzip\ioapi_mem.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\unzip\unzip.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\xxhash\xxhash.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">NotUsing</PrecompiledHeader>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\xxtea\xxtea.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\event\CCScriptEventDispatcher.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\event\CCTouchTargetNode.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\event\ScriptEventCenter.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\extra\apptools\HelperFunc.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\extra\crypto\base64\libbase64.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Use</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">pch.h</ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\extra\crypto\CCCrypto.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\extra\crypto\md5\md5.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</CompileAs>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\extra\luabinding\cocos2dx_extra_luabinding.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\extra\luabinding\HelperFunc_luabinding.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\extra\network\CCHTTPRequest.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\extra\network\CCNetwork.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\extra\platform\wp8\CCCryptoWP8.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\extra\platform\wp8\CCNativeWP8.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\extra\platform\wp8\CCNetworkWP8.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\auto\lua_cocos2dx_auto.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\auto\lua_cocos2dx_extension_auto.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\auto\lua_cocos2dx_extension_filter_auto.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\auto\lua_cocos2dx_studio_auto.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\auto\lua_cocos2dx_physics_auto.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lapi.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lauxlib.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lbaselib.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lcode.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\ldblib.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\ldebug.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\ldo.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\ldump.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lfunc.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lgc.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\linit.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\liolib.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\llex.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lmathlib.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lmem.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\loadlib.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lobject.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lopcodes.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\loslib.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lparser.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lstate.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lstring.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lstrlib.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\ltable.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\ltablib.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\ltm.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lundump.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lvm.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lzio.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\print.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\CCLuaBridge.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\CCLuaEngine.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\CCLuaStack.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\CCLuaValue.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\Cocos2dxLuaLoader.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\LuaBasicConversions.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\LuaScriptHandlerMgr.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\lua_cocos2dx_extension_manual.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\lua_cocos2dx_manual.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\lua_cocos2dx_physics_manual.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\lua_cocos2dx_coco_studio_manual.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\Lua_web_socket.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\tolua_fix.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\tolua\tolua_event.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\tolua\tolua_is.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\tolua\tolua_map.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\tolua\tolua_push.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\tolua\tolua_to.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\cjson\fpconv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</CompileAs>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\cjson\lua_cjson.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</CompileAs>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\cjson\strbuf.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</CompileAs>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\debugger\debugger.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\filesystem\lfs.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\lpack\lpack.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\lsqlite3\lsqlite3.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\lsqlite3\sqlite3.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\lua_extensions.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\zlib\lua_zlib.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\ProjectConfig\SimulatorConfig.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\3d\CCAnimate3D.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\3d\CCAnimation3D.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\3d\CCBundle3D.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\3d\CCBundleReader.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\3d\CCMesh.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\3d\CCMeshSkin.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\3d\CCObjLoader.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\3d\CCSprite3D.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\3d\CCSprite3DMaterial.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\audio\wp8\Audio.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\audio\wp8\MediaStreamer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\audio\wp8\SimpleAudioEngine.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\atitc.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\base64.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCAutoreleasePool.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\ccCArray.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCConfiguration.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCConsole.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCData.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCDirector.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEvent.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventAcceleration.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventCustom.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventDispatcher.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventFocus.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventKeyboard.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventListener.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerAcceleration.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerCustom.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerFocus.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerKeyboard.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerMouse.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerTouch.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventMouse.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventTouch.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\ccFPSImages.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCIMEDispatcher.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCNS.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCProfiling.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCRef.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCScheduler.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCScriptSupport.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCTouch.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\ccTypes.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCUserDefault.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\ccUTF8.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\ccUtils.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCValue.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\etc1.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\ObjectFactory.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\s3tc.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\TGAlib.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\ZipUtils.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\cocos2d.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\math\CCAffineTransform.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\math\CCGeometry.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\math\CCVertex.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\math\Mat4.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\math\MathUtil.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\math\Quaternion.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\math\TransformUtils.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\math\Vec2.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\math\Vec3.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\math\Vec4.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\network\WebSocket.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCArmature.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCArmatureAnimation.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCArmatureDataManager.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCArmatureDefine.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCBone.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCColliderDetector.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCDataReaderHelper.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCDatas.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCDecorativeDisplay.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCDisplayFactory.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCDisplayManager.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCProcessBase.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCSkin.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCSpriteFrameCacheHelper.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCTransformHelp.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCTween.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCUtilMath.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CocoLoader.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\DictionaryHelper.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\physics\CCPhysicsBody.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\physics\CCPhysicsContact.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\physics\CCPhysicsJoint.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\physics\CCPhysicsShape.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\physics\CCPhysicsWorld.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\physics\chipmunk\CCPhysicsBodyInfo_chipmunk.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\physics\chipmunk\CCPhysicsContactInfo_chipmunk.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\physics\chipmunk\CCPhysicsJointInfo_chipmunk.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\physics\chipmunk\CCPhysicsShapeInfo_chipmunk.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\physics\chipmunk\CCPhysicsWorldInfo_chipmunk.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\CCFileUtils.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\CCGLViewProtocol.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\CCImage.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\CCSAXParser.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\CCThread.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCApplication.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCCommon.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCDevice.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCFileUtilsWinRT.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCFreeTypeFont.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCPrecompiledShaders.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCPThreadWinRT.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCStdC.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCWinRTUtils.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\inet_ntop_winrt.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\InputEvent.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\sha1.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\wp8\CCGLView.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\wp8\Direct3DBase.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\wp8\DirectXBase.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\wp8\pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCBatchCommand.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCCustomCommand.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCGLProgram.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCGLProgramCache.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCGLProgramState.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCGLProgramStateCache.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\ccGLStateCache.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCGroupCommand.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCMeshCommand.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCQuadCommand.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCRenderCommand.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCRenderer.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\ccShaders.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCTexture2D.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCTextureAtlas.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCTextureCache.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCAction.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionCamera.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionCatmullRom.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionEase.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionGrid.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionGrid3D.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionInstant.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionInterval.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionManager.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionPageTurn3D.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionProgressTimer.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionTiledGrid.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionTween.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCAnimation.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCAnimationCache.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCAtlasNode.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCClippingNode.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCClippingRegionNode.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCComponent.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCComponentContainer.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCDrawingPrimitives.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCDrawNode.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCFastTMXLayer.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCFastTMXTiledMap.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCFont.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCFontAtlas.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCFontAtlasCache.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCFontCharMap.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCFontFNT.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCFontFreeType.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCGLBufferedNode.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCGrabber.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCGrid.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCLabel.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCLabelAtlas.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCLabelBMFont.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCLabelTextFormatter.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCLabelTTF.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCLayer.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCMotionStreak.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCNode.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCNodeGrid.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCParallaxNode.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCParticleBatchNode.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCParticleExamples.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCParticleSystem.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCParticleSystemQuad.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCProgressTimer.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCRenderTexture.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCScene.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCSprite.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCSpriteBatchNode.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCSpriteFrame.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCSpriteFrameCache.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCTextFieldTTF.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCTileMapAtlas.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCTMXLayer.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCTMXObjectGroup.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCTMXTiledMap.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCTMXXMLParser.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCTransition.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCTransitionPageTurn.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCTransitionProgress.cpp" />
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCTweenFunction.cpp" />
+    <ClCompile Include="..\..\..\extensions\GUI\CCTextField\UITextField.cpp" />
+    <ClCompile Include="..\extra\filters\filters\CCBlurFilter.cpp" />
+    <ClCompile Include="..\extra\filters\filters\CCBrightnessFilter.cpp" />
+    <ClCompile Include="..\extra\filters\filters\CCContrastFilter.cpp" />
+    <ClCompile Include="..\extra\filters\filters\CCCustomFilter.cpp" />
+    <ClCompile Include="..\extra\filters\filters\CCDropShadowFilter.cpp" />
+    <ClCompile Include="..\extra\filters\filters\CCExposureFilter.cpp" />
+    <ClCompile Include="..\extra\filters\filters\CCFilter.cpp" />
+    <ClCompile Include="..\extra\filters\filters\CCGammaFilter.cpp" />
+    <ClCompile Include="..\extra\filters\filters\CCGrayFilter.cpp" />
+    <ClCompile Include="..\extra\filters\filters\CCHazeFilter.cpp" />
+    <ClCompile Include="..\extra\filters\filters\CCHueFilter.cpp" />
+    <ClCompile Include="..\extra\filters\filters\CCMaskFilter.cpp" />
+    <ClCompile Include="..\extra\filters\filters\CCRGBFilter.cpp" />
+    <ClCompile Include="..\extra\filters\filters\CCSaturationFilter.cpp" />
+    <ClCompile Include="..\extra\filters\filters\CCSepiaFilter.cpp" />
+    <ClCompile Include="..\extra\filters\filters\CCSharpenFilter.cpp" />
+    <ClCompile Include="..\extra\filters\filters\CCTestFilter.cpp" />
+    <ClCompile Include="..\extra\filters\nodes\CCFilteredSprite.cpp" />
+    <ClCompile Include="..\extra\filters\shaders\ccFilterShaders.cpp" />
+    <ClCompile Include="..\extra\filters\shaders\FilterShaders.cpp" />
+    <ClCompile Include="..\lua_bindings\manual\snapshot.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\ProjectConfig\ProjectConfig.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(QUICK_V3_ROOT)\extensions\cocos-ext.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\extensions\ExtensionMacros.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\extensions\GUI\CCControlExtension\CCControl.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\extensions\GUI\CCControlExtension\CCControlButton.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\extensions\GUI\CCControlExtension\CCControlExtensions.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\extensions\GUI\CCControlExtension\CCControlUtils.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\extensions\GUI\CCControlExtension\CCInvocation.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\extensions\GUI\CCControlExtension\CCScale9Sprite.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\extensions\GUI\CCEditBox\CCEditBox.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\extensions\GUI\CCEditBox\CCEditBoxImpl.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\extensions\GUI\CCEditBox\CCEditBoxImplWp8.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\chipmunk.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\chipmunk_ffi.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\chipmunk_private.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\chipmunk_types.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\chipmunk_unsafe.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\cpConstraint.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\cpDampedRotarySpring.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\cpDampedSpring.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\cpGearJoint.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\cpGrooveJoint.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\cpPinJoint.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\cpPivotJoint.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\cpRatchetJoint.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\cpRotaryLimitJoint.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\cpSimpleMotor.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\cpSlideJoint.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\util.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\cpArbiter.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\cpBB.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\cpBody.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\cpPolyShape.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\cpShape.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\cpSpace.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\cpSpatialIndex.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\cpVect.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\src\prime.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\ConvertUTF\ConvertUTF.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\edtaa3func\edtaa3func.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\tinyxml2\tinyxml2.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\unzip\ioapi.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\unzip\ioapi_mem.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\unzip\unzip.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\xxhash\xxhash.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\xxtea\xxtea.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\event\CCScriptEventDispatcher.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\event\CCTouch.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\event\CCTouchDelegateProtocol.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\event\CCTouchDispatcher.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\event\CCTouchHandler.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\event\CCTouchTargetNode.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\event\ScriptEventCenter.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\extra\apptools\HelperFunc.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\extra\cocos2dx_extra.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\extra\crypto\base64\libbase64.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\extra\crypto\CCCrypto.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\extra\crypto\md5\md5.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\extra\luabinding\cocos2dx_extra_luabinding.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\extra\luabinding\HelperFunc_luabinding.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\extra\network\CCHTTPRequest.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\extra\network\CCHTTPRequestDelegate.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\extra\network\CCNetwork.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\auto\lua_cocos2dx_auto.hpp" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\auto\lua_cocos2dx_extension_auto.hpp" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\auto\lua_cocos2dx_extension_filter_auto.hpp" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\auto\lua_cocos2dx_studio_auto.hpp" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\auto\lua_cocos2dx_physics_auto.hpp" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lapi.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lauxlib.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lcode.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\ldebug.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\ldo.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lfunc.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lgc.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\llex.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\llimits.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lmem.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lobject.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lopcodes.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lparser.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lstate.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lstring.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\ltable.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\ltm.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lua.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\luaconf.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lualib.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lundump.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lvm.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lzio.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\CCLuaBridge.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\CCLuaEngine.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\CCLuaStack.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\CCLuaValue.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\Cocos2dxLuaLoader.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\LuaBasicConversions.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\LuaScriptHandlerMgr.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\lua_cocos2dx_extension_manual.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\lua_cocos2dx_manual.hpp" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\lua_cocos2dx_physics_manual.hpp" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\Lua_web_socket.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\tolua_fix.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\tolua\tolua++.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\tolua\tolua_event.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\cjson\fpconv.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\cjson\lua_cjson.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\cjson\strbuf.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\debugger\debugger.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\filesystem\lfs.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\lpack\lpack.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\lsqlite3\lsqlite3.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\lsqlite3\sqlite3.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\lua_extensions.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\zlib\lua_zlib.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\ProjectConfig\SimulatorConfig.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\3d\CCAnimate3D.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\3d\CCAnimation3D.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\3d\CCAnimationCurve.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\3d\CCBundle3D.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\3d\CCBundle3DData.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\3d\CCBundleReader.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\3d\CCMesh.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\3d\CCMeshSkin.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\3d\CCObjLoader.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\3d\CCSprite3D.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\3d\CCSprite3DMaterial.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\audio\include\Export.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\audio\include\SimpleAudioEngine.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\audio\wp8\Audio.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\audio\wp8\MediaStreamer.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\atitc.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\base64.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCAutoreleasePool.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\ccCArray.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\ccConfig.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCConfiguration.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCConsole.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCData.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCDirector.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEvent.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventAcceleration.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventCustom.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventDispatcher.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventFocus.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventKeyboard.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventListener.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerAcceleration.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerCustom.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerFocus.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerKeyboard.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerMouse.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerTouch.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventMouse.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventTouch.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventType.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\ccFPSImages.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCIMEDelegate.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCIMEDispatcher.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\ccMacros.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCMap.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCNS.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCPlatformConfig.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCPlatformMacros.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCProfiling.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCProtocols.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCRef.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCRefPtr.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCScheduler.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCScriptSupport.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCTouch.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\ccTypes.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCUserDefault.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\ccUTF8.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\ccUtils.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCValue.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCVector.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\etc1.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\firePngData.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\ObjectFactory.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\s3tc.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\TGAlib.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\uthash.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\utlist.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\ZipUtils.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\CCAffineTransform.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\CCGeometry.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\CCMath.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\CCMathBase.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\CCVertex.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\Mat4.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\MathUtil.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\Quaternion.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\TransformUtils.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\Vec2.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\Vec3.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\Vec4.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\network\WebSocket.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCArmature.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCArmatureAnimation.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCArmatureDataManager.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCArmatureDefine.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCBatchNode.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCBone.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCColliderDetector.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCDataReaderHelper.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCDatas.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCDecorativeDisplay.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCDisplayFactory.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCDisplayManager.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCProcessBase.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCSkin.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCSpriteFrameCacheHelper.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCTransformHelp.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCTween.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCUtilMath.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CocoLoader.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\DictionaryHelper.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\physics\CCPhysicsBody.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\physics\CCPhysicsContact.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\physics\CCPhysicsJoint.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\physics\CCPhysicsShape.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\physics\CCPhysicsWorld.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\physics\chipmunk\CCPhysicsBodyInfo_chipmunk.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\physics\chipmunk\CCPhysicsContactInfo_chipmunk.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\physics\chipmunk\CCPhysicsHelper_chipmunk.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\physics\chipmunk\CCPhysicsJointInfo_chipmunk.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\physics\chipmunk\CCPhysicsShapeInfo_chipmunk.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\physics\chipmunk\CCPhysicsWorldInfo_chipmunk.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\CCApplicationProtocol.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\CCCommon.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\CCDevice.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\CCFileUtils.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\CCGLViewProtocol.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\CCImage.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\CCSAXParser.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\CCThread.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCApplication.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCFileUtilsWinRT.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCFreeTypeFont.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCGL.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCGL_Angle.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCPlatformDefine.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCPrecompiledShaders.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCPThreadWinRT.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCStdC.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCWinRTUtils.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\DirectXHelper.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\inet_ntop_winrt.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\InputEvent.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\InputEventTypes.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\sha1.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\wp8\CCGLView.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\wp8\Direct3DBase.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\wp8\DirectXBase.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\wp8\pch.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCBatchCommand.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCCustomCommand.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCGLProgram.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCGLProgramCache.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCGLProgramState.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCGLProgramStateCache.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\ccGLStateCache.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCGroupCommand.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCMeshCommand.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCQuadCommand.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCRenderCommand.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCRenderCommandPool.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCRenderer.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\ccShaders.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCTexture2D.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCTextureAtlas.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCTextureCache.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCAction.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionCamera.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionCatmullRom.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionEase.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionGrid.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionGrid3D.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionInstant.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionInterval.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionManager.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionPageTurn3D.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionProgressTimer.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionTiledGrid.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionTween.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCAnimation.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCAnimationCache.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCAtlasNode.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCClippingNode.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCClippingRegionNode.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCComponent.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCComponentContainer.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCDrawingPrimitives.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCDrawNode.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCFastTMXLayer.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCFastTMXTiledMap.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCFont.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCFontAtlas.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCFontAtlasCache.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCFontCharMap.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCFontFNT.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCFontFreeType.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCGLBufferedNode.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCGrabber.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCGrid.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCLabel.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCLabelAtlas.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCLabelBMFont.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCLabelTextFormatter.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCLabelTTF.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCLayer.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCMotionStreak.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCNode.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCNodeGrid.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCParallaxNode.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCParticleBatchNode.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCParticleExamples.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCParticleSystem.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCParticleSystemQuad.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCProgressTimer.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCRenderTexture.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCScene.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCSprite.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCSpriteBatchNode.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCSpriteFrame.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCSpriteFrameCache.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCTextFieldTTF.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCTileMapAtlas.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCTMXLayer.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCTMXObjectGroup.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCTMXTiledMap.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCTMXXMLParser.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCTransition.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCTransitionPageTurn.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCTransitionProgress.h" />
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCTweenFunction.h" />
+    <ClInclude Include="..\..\..\cocos\platform\wp8\shaders\precompiledshaders.h" />
+    <ClInclude Include="..\..\..\extensions\GUI\CCTextField\UITextField.h" />
+    <ClInclude Include="..\extra\filters\cocos2dFilters.h" />
+    <ClInclude Include="..\extra\filters\filters\CCBlurFilter.h" />
+    <ClInclude Include="..\extra\filters\filters\CCBrightnessFilter.h" />
+    <ClInclude Include="..\extra\filters\filters\CCContrastFilter.h" />
+    <ClInclude Include="..\extra\filters\filters\CCCustomFilter.h" />
+    <ClInclude Include="..\extra\filters\filters\CCDropShadowFilter.h" />
+    <ClInclude Include="..\extra\filters\filters\CCExposureFilter.h" />
+    <ClInclude Include="..\extra\filters\filters\CCFilter.h" />
+    <ClInclude Include="..\extra\filters\filters\CCGammaFilter.h" />
+    <ClInclude Include="..\extra\filters\filters\CCGrayFilter.h" />
+    <ClInclude Include="..\extra\filters\filters\CCHazeFilter.h" />
+    <ClInclude Include="..\extra\filters\filters\CCHueFilter.h" />
+    <ClInclude Include="..\extra\filters\filters\CCMaskFilter.h" />
+    <ClInclude Include="..\extra\filters\filters\CCRGBFilter.h" />
+    <ClInclude Include="..\extra\filters\filters\CCSaturationFilter.h" />
+    <ClInclude Include="..\extra\filters\filters\CCSepiaFilter.h" />
+    <ClInclude Include="..\extra\filters\filters\CCSharpenFilter.h" />
+    <ClInclude Include="..\extra\filters\filters\CCTestFilter.h" />
+    <ClInclude Include="..\extra\filters\nodes\CCFilteredSprite.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShaders.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_blur_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_brightness_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_colorramp_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_contrast_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_drop_shadow_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_drop_shadow_vert.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_embossmov_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_emboss_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_exposure_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_gamma_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_gaussian_blur_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_gaussian_hblur_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_gaussian_vblur_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_grass_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_gray_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_haze_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_hblur_vert.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_hue_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_motion_blur_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_motion_blur_vert.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_rgb_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_saturation_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_sepia_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_sharpen_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_sharpen_vert.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_test_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_test_vert.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_vblur_vert.h" />
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_zoom_blur_frag.h" />
+    <ClInclude Include="..\extra\filters\shaders\FilterShaders.h" />
+    <ClInclude Include="..\lua_bindings\manual\snapshot.h" />
+    <ClInclude Include="..\ProjectConfig\ProjectConfig.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(QUICK_V3_ROOT)cocos\math\Mat4.inl" />
+    <None Include="$(QUICK_V3_ROOT)cocos\math\MathUtil.inl" />
+    <None Include="$(QUICK_V3_ROOT)cocos\math\MathUtilNeon.inl" />
+    <None Include="$(QUICK_V3_ROOT)cocos\math\Quaternion.inl" />
+    <None Include="$(QUICK_V3_ROOT)cocos\math\Vec2.inl" />
+    <None Include="$(QUICK_V3_ROOT)cocos\math\Vec3.inl" />
+    <None Include="$(QUICK_V3_ROOT)cocos\math\Vec4.inl" />
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_Label.vert" />
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_Label_df.frag" />
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_Label_df_glow.frag" />
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_Label_normal.frag" />
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_Label_outline.frag" />
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionColor.frag" />
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionColor.vert" />
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionColorLengthTexture.frag" />
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionColorLengthTexture.vert" />
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionTexture.frag" />
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionTexture.vert" />
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionTextureA8Color.frag" />
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionTextureA8Color.vert" />
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionTextureColor.frag" />
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionTextureColor.vert" />
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionTextureColorAlphaTest.frag" />
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionTextureColor_noMVP.frag" />
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionTextureColor_noMVP.vert" />
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionTexture_uColor.frag" />
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionTexture_uColor.vert" />
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_Position_uColor.frag" />
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_Position_uColor.vert" />
+    <None Include="..\extra\filters\shaders\example_bloom.fsh" />
+    <None Include="..\extra\filters\shaders\example_Blur.fsh" />
+    <None Include="..\extra\filters\shaders\example_celShading.fsh" />
+    <None Include="..\extra\filters\shaders\example_ColorBars.fsh" />
+    <None Include="..\extra\filters\shaders\example_ColorBars.vsh" />
+    <None Include="..\extra\filters\shaders\example_edgeDetection.fsh" />
+    <None Include="..\extra\filters\shaders\example_Flower.fsh" />
+    <None Include="..\extra\filters\shaders\example_greyScale.fsh" />
+    <None Include="..\extra\filters\shaders\example_Heart.fsh" />
+    <None Include="..\extra\filters\shaders\example_HorizontalColor.fsh" />
+    <None Include="..\extra\filters\shaders\example_Julia.fsh" />
+    <None Include="..\extra\filters\shaders\example_lensFlare.fsh" />
+    <None Include="..\extra\filters\shaders\example_Mandelbrot.fsh" />
+    <None Include="..\extra\filters\shaders\example_Monjori.fsh" />
+    <None Include="..\extra\filters\shaders\example_MultiTexture.fsh" />
+    <None Include="..\extra\filters\shaders\example_MultiTexture.vsh" />
+    <None Include="..\extra\filters\shaders\example_Noisy.fsh" />
+    <None Include="..\extra\filters\shaders\example_normal.fsh" />
+    <None Include="..\extra\filters\shaders\example_outline.fsh" />
+    <None Include="..\extra\filters\shaders\example_Plasma.fsh" />
+    <None Include="..\extra\filters\shaders\example_sepia.fsh" />
+    <None Include="..\extra\filters\shaders\example_Twist.fsh" />
+    <None Include="..\extra\filters\shaders\shadertoy_FireBall.fsh" />
+    <None Include="..\extra\filters\shaders\shadertoy_Glow.fsh" />
+    <None Include="..\extra\filters\shaders\shadertoy_LensFlare.fsh" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(QUICK_V3_ROOT)cocos\renderer\CMakeLists.txt" />
+  </ItemGroup>
+</Project>

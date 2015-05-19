@@ -1,0 +1,44 @@
+
+{
+	gl.supports_vertex_array_object: true
+	cocos2d.x.version: quick-cocos2d-x 3.3
+	gl.vendor: NVIDIA Corporation
+	gl.supports_PVRTC: false
+	gl.renderer: NVIDIA GeForce GT 650M OpenGL Engine
+	cocos2d.x.compiled_with_profiler: false
+	gl.max_texture_size: 16384
+	gl.supports_ETC1: false
+	gl.supports_BGRA8888: false
+	cocos2d.x.build_type: DEBUG
+	gl.supports_discard_framebuffer: false
+	gl.supports_NPOT: true
+	gl.supports_S3TC: true
+	gl.version: 2.1 NVIDIA-8.26.28 310.40.55b01
+	gl.supports_ATITC: false
+	gl.max_texture_units: 16
+	cocos2d.x.compiled_with_gl_state_cache: true
+}
+
+
+Quick-Cocos2d-x C++ support ready.
+------------------------------------------------
+LOAD LUA FILE: /Users/sleepers/opensource_projects/v3quick/quick/samples/websockets/src/main.lua
+------------------------------------------------
+can not get file data of src/game.lua
+can not get file data of src/config.lua
+can not get file data of src/framework/init.lua
+[LUA ERROR] /Users/sleepers/opensource_projects/v3quick/quick/samples/websockets/src/game.lua:3: module 'framework.init' not found:
+	no field package.preload['framework.init']
+	no file './framework/init.lua'
+	no file '/usr/local/share/lua/5.1/framework/init.lua'
+	no file '/usr/local/share/lua/5.1/framework/init/init.lua'
+	no file '/usr/local/lib/lua/5.1/framework/init.lua'
+	no file '/usr/local/lib/lua/5.1/framework/init/init.lua'
+	no file '/Users/sleepers/opensource_projects/v3quick/quick/samples/websockets/src/framework/init.lua'
+	no file 'src/'
+	no file './framework/init.so'
+	no file '/usr/local/lib/lua/5.1/framework/init.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+	no file './framework.so'
+	no file '/usr/local/lib/lua/5.1/framework.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'

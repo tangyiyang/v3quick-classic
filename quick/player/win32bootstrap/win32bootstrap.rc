@@ -1,0 +1,7 @@
+/* Wedit generated resource file */
+#ifdef __LCC__
+#include <windows.h>
+#endif
+#include "win32bootstrapres.h"
+
+IDI_BOOTSTRAP ICON "player3.ico"

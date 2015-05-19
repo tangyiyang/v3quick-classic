@@ -1,0 +1,39 @@
+cocos2d: lua_loadChunksFromZIP() - load zip file: /Users/sleepers/opensource_projects/v3quick/quick/lib/framework_precompiled/framework_precompiled.zip
+cocos2d: lua_loadChunksFromZIP() - loaded chunks count: 77
+cocos2d: ------------------------------------------------
+cocos2d: LOAD LUA FILE: /Users/sleepers/opensource_projects/v3quick/quick/samples/coinflip/src/main.lua
+cocos2d: ------------------------------------------------
+cocos2d: ===========================================================
+cocos2d:               LOAD QUICK FRAMEWORK
+cocos2d: ===========================================================
+cocos2d: [INFO] 
+cocos2d: [INFO] # DEBUG                        = 1
+cocos2d: [INFO] #
+cocos2d: [INFO] # device.platform              = mac
+cocos2d: [INFO] # device.model                 = unknown
+cocos2d: [INFO] # device.language              = cn
+cocos2d: [INFO] # device.writablePath          = /Users/sleepers/opensource_projects/v3quick/quick/samples/coinflip/
+cocos2d: [INFO] # device.directorySeparator    = /
+cocos2d: [INFO] # device.pathSeparator         = :
+cocos2d: [INFO] #
+libpng warning: iCCP: known incorrect sRGB profile
+cocos2d: [INFO] # CONFIG_SCREEN_AUTOSCALE      = FIXED_WIDTH
+cocos2d: [INFO] # CONFIG_SCREEN_WIDTH          = 640.00
+cocos2d: [INFO] # CONFIG_SCREEN_HEIGHT         = 960.00
+cocos2d: [INFO] # display.widthInPixels        = 640.00
+cocos2d: [INFO] # display.heightInPixels       = 960.00
+cocos2d: [INFO] # display.contentScaleFactor   = 1.00
+cocos2d: [INFO] # display.width                = 640.00
+cocos2d: [INFO] # display.height               = 960.00
+cocos2d: [INFO] # display.cx                   = 320.00
+cocos2d: [INFO] # display.cy                   = 480.00
+cocos2d: [INFO] # display.left                 = 0.00
+cocos2d: [INFO] # display.right                = 640.00
+cocos2d: [INFO] # display.top                  = 960.00
+cocos2d: [INFO] # display.bottom               = 0.00
+cocos2d: [INFO] # display.c_left               = -320.00
+cocos2d: [INFO] # display.c_right              = 320.00
+cocos2d: [INFO] # display.c_top                = 480.00
+cocos2d: [INFO] # display.c_bottom             = -480.00
+cocos2d: [INFO] #
+cocos2d: cocos2d: padding: 0,0,0,0

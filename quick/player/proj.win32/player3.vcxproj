@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D59C3C47-22EA-4EBA-B40C-A587FF80E766}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>player</RootNamespace>
+    <ProjectName>player3</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '11.0'">v110</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '11.0'">v110</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;GL_GLEXT_PROTOTYPES;COCOS2D_DEBUG=1;CC_LUA_ENGINE_ENABLED=1;GLFW_EXPOSE_NATIVE_WIN32;GLFW_EXPOSE_NATIVE_WGL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(QUICK_V3_ROOT)cocos;$(QUICK_V3_ROOT)cocos\editor-support;$(QUICK_V3_ROOT)cocos\platform\win32;$(QUICK_V3_ROOT)cocos\platform\desktop;$(QUICK_V3_ROOT)cocos\audio\include;$(QUICK_V3_ROOT)extensions;$(QUICK_V3_ROOT)external;$(QUICK_V3_ROOT)external\chipmunk\include\chipmunk;$(QUICK_V3_ROOT)external\ConvertUTF;$(QUICK_V3_ROOT)external\curl\include\win32;$(QUICK_V3_ROOT)external\edtaa3func;$(QUICK_V3_ROOT)external\freetype2\include\win32;$(QUICK_V3_ROOT)external\glfw3\include\win32;$(QUICK_V3_ROOT)external\jpeg\include\win32;$(QUICK_V3_ROOT)external\json;$(QUICK_V3_ROOT)external\png\include\win32;$(QUICK_V3_ROOT)external\sqlite3\include;$(QUICK_V3_ROOT)external\tiff\include\win32;$(QUICK_V3_ROOT)external\tinyxml2;$(QUICK_V3_ROOT)external\unzip;$(QUICK_V3_ROOT)external\webp\include\win32;$(QUICK_V3_ROOT)external\websockets\include\win32;$(QUICK_V3_ROOT)external\win32-specific\gles\include\OGLES;$(QUICK_V3_ROOT)external\win32-specific\icon\include;$(QUICK_V3_ROOT)external\win32-specific\zlib\include;$(QUICK_V3_ROOT)external\xxhash;$(QUICK_V3_ROOT)external\xxtea;$(QUICK_V3_ROOT)quick\lib;$(QUICK_V3_ROOT)quick\lib\event;$(QUICK_V3_ROOT)quick\lib\extra;$(QUICK_V3_ROOT)quick\lib\lua_bindings\auto;$(QUICK_V3_ROOT)quick\lib\lua_bindings\manual;$(QUICK_V3_ROOT)quick\lib\lua_bindings\luajit\include;$(QUICK_V3_ROOT)quick\lib\lua_bindings\tolua;$(QUICK_V3_ROOT)quick\lib\lua_extensions;$(QUICK_V3_ROOT)quick\lib\codeide\protobuf-lite;$(QUICK_V3_ROOT)quick\lib\codeide;$(ProjectDir)..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244;4800;4056;4018</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libcurl_imp.lib;freetype250.lib;glfw3.lib;libjpeg.lib;libpng.lib;sqlite3.lib;libtiff.lib;libwebp.lib;websockets.lib;glew32.lib;libiconv.lib;libzlib.lib;lua51.lib;libquick.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;wsock32.lib;ws2_32.lib;opengl32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(QUICK_V3_ROOT)\external\curl\prebuilt\win32;$(QUICK_V3_ROOT)\external\freetype2\prebuilt\win32;$(QUICK_V3_ROOT)\external\glfw3\prebuilt\win32;$(QUICK_V3_ROOT)\external\jpeg\prebuilt\win32;$(QUICK_V3_ROOT)\external\png\prebuilt\win32;$(QUICK_V3_ROOT)\external\sqlite3\libraries\win32;$(QUICK_V3_ROOT)\external\tiff\prebuilt\win32;$(QUICK_V3_ROOT)\external\webp\prebuilt\win32;$(QUICK_V3_ROOT)\external\websockets\prebuilt\win32;$(QUICK_V3_ROOT)\external\win32-specific\gles\prebuilt;$(QUICK_V3_ROOT)\external\win32-specific\icon\prebuilt;$(QUICK_V3_ROOT)\external\win32-specific\zlib\prebuilt;$(QUICK_V3_ROOT)\quick\lib\lua_bindings\luajit\win32</AdditionalLibraryDirectories>
+    </Link>
+    <Manifest>
+      <AdditionalManifestFiles>DeclareDPIAware.manifest</AdditionalManifestFiles>
+    </Manifest>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <PostBuildEvent>
+      <Command>copy $(QUICK_V3_ROOT)\external\curl\prebuilt\win32\*.dll $(OutDir)
+copy $(QUICK_V3_ROOT)\external\sqlite3\libraries\win32\*.dll $(OutDir)
+copy $(QUICK_V3_ROOT)\external\tiff\prebuilt\win32\*.dll $(OutDir)
+copy $(QUICK_V3_ROOT)\external\websockets\prebuilt\win32\*.dll $(OutDir)
+copy $(QUICK_V3_ROOT)\external\win32-specific\gles\prebuilt\*.dll $(OutDir)
+copy $(QUICK_V3_ROOT)\external\win32-specific\icon\prebuilt\*.dll $(OutDir)
+copy $(QUICK_V3_ROOT)\external\win32-specific\zlib\prebuilt\*.dll $(OutDir)
+
+copy $(OutDir)*.dll $(OutDir)..\bin\
+copy $(OutDir)*.exe $(OutDir)..\bin\
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\AppDelegate.h" />
+    <ClInclude Include="..\src\PlayerEditBoxServiceProtocol.h" />
+    <ClInclude Include="..\src\PlayerFileDialogServiceProtocol.h" />
+    <ClInclude Include="..\src\PlayerLuaCore.h" />
+    <ClInclude Include="..\src\PlayerLuaCoreManual.hpp" />
+    <ClInclude Include="..\src\PlayerMacros.h" />
+    <ClInclude Include="..\src\PlayerMenuServiceProtocol.h" />
+    <ClInclude Include="..\src\PlayerMessageBoxServiceProtocol.h" />
+    <ClInclude Include="..\src\PlayerProtocol.h" />
+    <ClInclude Include="..\src\PlayerServiceProtocol.h" />
+    <ClInclude Include="..\src\PlayerSettings.h" />
+    <ClInclude Include="..\src\PlayerTaskServiceProtocol.h" />
+    <ClInclude Include="..\src\PlayerUtils.h" />
+    <ClInclude Include="PlayerEditBoxServiceWin.h" />
+    <ClInclude Include="PlayerFileDialogServiceWin.h" />
+    <ClInclude Include="PlayerMenuServiceWin.h" />
+    <ClInclude Include="PlayerTaskServiceWin.h" />
+    <ClInclude Include="PlayerWin.h" />
+    <ClInclude Include="PlayerMessageBoxServiceWin.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\AppDelegate.cpp" />
+    <ClCompile Include="..\src\PlayerLuaCore.cpp" />
+    <ClCompile Include="..\src\PlayerLuaCoreManual.cpp" />
+    <ClCompile Include="..\src\PlayerMenuServiceProtocol.cpp" />
+    <ClCompile Include="..\src\PlayerProtocol.cpp" />
+    <ClCompile Include="..\src\PlayerServiceProtocol.cpp" />
+    <ClCompile Include="..\src\PlayerSettings.cpp" />
+    <ClCompile Include="..\src\PlayerTaskServiceProtocol.cpp" />
+    <ClCompile Include="..\src\PlayerUtils.cpp" />
+    <ClCompile Include="PlayerEditBoxServiceWin.cpp" />
+    <ClCompile Include="PlayerFileDialogServiceWin.cpp" />
+    <ClCompile Include="PlayerMenuServiceWin.cpp" />
+    <ClCompile Include="PlayerTaskServiceWin.cpp" />
+    <ClCompile Include="PlayerWin.cpp" />
+    <ClCompile Include="PlayerMessageBoxServiceWin.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="player3.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="player3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\lib\proj.win32\libquick.vcxproj">
+      <Project>{b366c69e-671d-4de5-bac2-f064abfed392}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

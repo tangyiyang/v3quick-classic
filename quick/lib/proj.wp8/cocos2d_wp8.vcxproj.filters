@@ -1,0 +1,2560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="libquick">
+      <UniqueIdentifier>{eff6c83e-5c51-4613-b94e-7b5a3fe2e852}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\event">
+      <UniqueIdentifier>{37225610-a569-48e4-b052-042d0f661b2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cocos">
+      <UniqueIdentifier>{0ee4a066-c82f-4f6e-8a93-92d0dfac03b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cocos\2d">
+      <UniqueIdentifier>{fdee8fd3-05f9-46a1-aa15-6ceb16358145}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cocos\3d">
+      <UniqueIdentifier>{f3673af7-9bbd-463b-a3a9-a081e67248d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cocos\base">
+      <UniqueIdentifier>{fbaf3e74-09dc-4f89-9d5a-0e7ccabbfbff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cocos\network">
+      <UniqueIdentifier>{e4d3ef7d-a210-4f9c-87ff-8dc880a00771}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cocos\audio">
+      <UniqueIdentifier>{fb942e7f-3ef5-4320-a121-eb21e70b36e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cocos\audio\include">
+      <UniqueIdentifier>{519f0da2-ea33-47d7-ac05-25d276b1b421}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cocos\audio\wp8">
+      <UniqueIdentifier>{068ecfff-4a3a-468e-9bd4-74b328c464ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cocos\math">
+      <UniqueIdentifier>{41c1aef6-86c9-42e3-b68c-6da3107ff587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cocos\physics">
+      <UniqueIdentifier>{08593631-5bf5-46aa-9436-62595c4f7bf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cocos\physics\chipmunk">
+      <UniqueIdentifier>{aeadfa95-9c89-4212-98ae-89ad57db596a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cocos\platform">
+      <UniqueIdentifier>{926fc31c-8742-4984-9940-c972dd02fc8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cocos\platform\wp8">
+      <UniqueIdentifier>{d7ac4e48-57dd-4b9e-95de-2a973b22b1ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cocos\platform\winrt">
+      <UniqueIdentifier>{14e6de7a-f7ef-4249-9141-abf17033d9c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cocos\renderer">
+      <UniqueIdentifier>{cba0f362-878c-438b-ad0f-43d287516357}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cocos\renderer\shaders">
+      <UniqueIdentifier>{a03a9ca0-013a-4082-bb45-43f024ff0f4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external">
+      <UniqueIdentifier>{0e7c99cb-0b41-4120-9773-49c31345d829}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\tinyxml2">
+      <UniqueIdentifier>{729473cd-a9e2-4133-b78e-37a6c3687550}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\unzip">
+      <UniqueIdentifier>{54949861-d861-4eea-89bf-0498ef3c338c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\edtaa">
+      <UniqueIdentifier>{64846670-6658-45f9-84cf-29e013870c37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\ConvertUTF">
+      <UniqueIdentifier>{026f880b-7918-49f8-8f0d-00f7593ce326}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\xxhash">
+      <UniqueIdentifier>{a36c6808-a8d6-43f4-bfb0-e08ee2747a21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="extensions">
+      <UniqueIdentifier>{83a021fd-f6cb-463c-a891-d86c6d964ba6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="extensions\GUI">
+      <UniqueIdentifier>{7cc6be11-8f92-4dde-8f91-d5f4725b07b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="extensions\GUI\CCControlExtension">
+      <UniqueIdentifier>{4e0080fc-6a21-4067-9d5e-42e149d96c7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="extensions\GUI\CCEditBox">
+      <UniqueIdentifier>{27a717b9-2f06-4c40-9242-da2ded617126}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\chipmunk">
+      <UniqueIdentifier>{3bc311fe-bb45-43a1-95c4-6dac9cb5d406}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\chipmunk\include">
+      <UniqueIdentifier>{8bc50a57-21d8-48a1-ab9a-68ab586b64eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\chipmunk\include\constraints">
+      <UniqueIdentifier>{3d72a889-359e-47e8-9d9e-ea12ce4c5adb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\chipmunk\src">
+      <UniqueIdentifier>{afddbe0a-5f17-4ec2-8bb8-5be3f8f06616}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\chipmunk\src\constraints">
+      <UniqueIdentifier>{dc1e3dca-7579-4a74-a1ba-0ab35a11d2e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\ProjectConfig">
+      <UniqueIdentifier>{596028f7-0eea-45b7-ab1f-a1c081a88cc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\lua_bindings">
+      <UniqueIdentifier>{ca0bc64f-b0c3-405f-8958-5c17c0e8237b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\lua_bindings\manual">
+      <UniqueIdentifier>{70f56958-7154-4603-9161-008399289f20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\lua_bindings\tolua">
+      <UniqueIdentifier>{c7f7d419-a696-41cd-b51c-a6d77689266d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\lua_bindings\auto">
+      <UniqueIdentifier>{38c10414-cf8b-446c-aea2-1347c3fa5c05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\lua_bindings\lua">
+      <UniqueIdentifier>{b466300c-20e4-4989-98e9-80394acb0b9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\extra">
+      <UniqueIdentifier>{8001cacc-753c-4904-9235-c999fd6a4a14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\extra\luabinding">
+      <UniqueIdentifier>{685b66cd-1e39-40b8-9d2c-41ecc4675a1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\extra\apptools">
+      <UniqueIdentifier>{a4b7d606-f8ba-44a4-9c25-ca32177196ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\extra\crypto">
+      <UniqueIdentifier>{2773afcd-744f-4cab-bba8-cafe8260752d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\extra\crypto\base64">
+      <UniqueIdentifier>{70b3a51f-0478-431f-ad9d-8fcfec7588f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\extra\crypto\md5">
+      <UniqueIdentifier>{85c1502b-d46a-4da2-ab77-7eabbcbbeb1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\extra\native">
+      <UniqueIdentifier>{d2ada5c2-0e7c-4d6e-bce3-7bbe990ef7e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\extra\network">
+      <UniqueIdentifier>{e3c66f70-7bee-4107-89cc-edf2ce0565ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\xxtea">
+      <UniqueIdentifier>{ac3b5f4d-d282-46e1-b3a2-01268024eeb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\lua_extensions">
+      <UniqueIdentifier>{12d02d7f-8fc5-4117-af83-657fbc71b638}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\lua_extensions\cjson">
+      <UniqueIdentifier>{40568a56-e9e7-4161-b0d1-417406b83db9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\lua_extensions\debugger">
+      <UniqueIdentifier>{aae2c576-d82b-4513-ad5a-6bb79b7f39ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\lua_extensions\filesystem">
+      <UniqueIdentifier>{5998e999-f359-4b6c-8efc-3bf8efa2a9f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\lua_extensions\lpack">
+      <UniqueIdentifier>{3c85971c-b2ee-43a4-a582-e3b0768bab8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\lua_extensions\lsqlite3">
+      <UniqueIdentifier>{43d1e4e7-5bf0-48bc-bd16-76d41492686c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\lua_extensions\zlib">
+      <UniqueIdentifier>{23d95399-7e33-4d7f-8e9f-520bc060f50a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cocos\editor-support">
+      <UniqueIdentifier>{d1d40374-6c48-4956-8ce7-9191e7007b6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cocos\editor-support\cocostudio">
+      <UniqueIdentifier>{2c39cfe1-6749-471e-93ff-39d17dd33281}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\extra\filters">
+      <UniqueIdentifier>{37951f81-c347-4dcf-9926-acf20d60e9a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\extra\filters\filters">
+      <UniqueIdentifier>{4c05122e-2804-4975-8124-3313814c726f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\extra\filters\nodes">
+      <UniqueIdentifier>{ce20d72b-cdd6-4ef9-96b3-dc292a526c3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\extra\filters\shaders">
+      <UniqueIdentifier>{3d1e116a-c0f0-4825-b527-9463d2e10f25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cocos\platform\wp8\shaders">
+      <UniqueIdentifier>{b046ed4e-f914-4b64-bcba-b3d4b634b39f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="extensions\GUI\CCTextField">
+      <UniqueIdentifier>{64f64705-b704-4cb6-8115-e49f3f88833b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\physics\CCPhysicsBody.cpp">
+      <Filter>cocos\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\physics\CCPhysicsContact.cpp">
+      <Filter>cocos\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\physics\CCPhysicsJoint.cpp">
+      <Filter>cocos\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\physics\CCPhysicsShape.cpp">
+      <Filter>cocos\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\physics\CCPhysicsWorld.cpp">
+      <Filter>cocos\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\physics\chipmunk\CCPhysicsBodyInfo_chipmunk.cpp">
+      <Filter>cocos\physics\chipmunk</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\physics\chipmunk\CCPhysicsContactInfo_chipmunk.cpp">
+      <Filter>cocos\physics\chipmunk</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\physics\chipmunk\CCPhysicsJointInfo_chipmunk.cpp">
+      <Filter>cocos\physics\chipmunk</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\physics\chipmunk\CCPhysicsShapeInfo_chipmunk.cpp">
+      <Filter>cocos\physics\chipmunk</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\physics\chipmunk\CCPhysicsWorldInfo_chipmunk.cpp">
+      <Filter>cocos\physics\chipmunk</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\xxhash\xxhash.c">
+      <Filter>external\xxhash</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\ConvertUTF\ConvertUTF.c">
+      <Filter>external\ConvertUTF</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\ConvertUTF\ConvertUTFWrapper.cpp">
+      <Filter>external\ConvertUTF</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCAction.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionCamera.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionCatmullRom.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionEase.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionGrid.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionGrid3D.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionInstant.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionInterval.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionManager.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionPageTurn3D.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionProgressTimer.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionTiledGrid.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCActionTween.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCAnimation.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCAnimationCache.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCAtlasNode.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCClippingNode.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCComponent.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCComponentContainer.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCDrawingPrimitives.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCDrawNode.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCFont.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCFontAtlas.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCFontAtlasCache.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCFontCharMap.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCFontFNT.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCFontFreeType.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCGLBufferedNode.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCGrabber.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCGrid.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCLabel.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCLabelAtlas.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCLabelBMFont.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCLabelTextFormatter.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCLabelTTF.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCLayer.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCMotionStreak.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCNode.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCNodeGrid.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCParallaxNode.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCParticleBatchNode.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCParticleExamples.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCParticleSystem.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCParticleSystemQuad.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCProgressTimer.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCRenderTexture.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCScene.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCSprite.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCSpriteBatchNode.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCSpriteFrame.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCSpriteFrameCache.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCTextFieldTTF.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCTileMapAtlas.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCTMXLayer.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCTMXObjectGroup.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCTMXTiledMap.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCTMXXMLParser.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCTransition.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCTransitionPageTurn.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCTransitionProgress.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCTweenFunction.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\math\CCAffineTransform.cpp">
+      <Filter>cocos\math</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\math\CCGeometry.cpp">
+      <Filter>cocos\math</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\math\CCVertex.cpp">
+      <Filter>cocos\math</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\math\Mat4.cpp">
+      <Filter>cocos\math</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\math\MathUtil.cpp">
+      <Filter>cocos\math</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\math\Quaternion.cpp">
+      <Filter>cocos\math</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\math\TransformUtils.cpp">
+      <Filter>cocos\math</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\math\Vec2.cpp">
+      <Filter>cocos\math</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\math\Vec3.cpp">
+      <Filter>cocos\math</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\math\Vec4.cpp">
+      <Filter>cocos\math</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\ccShaders.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCTexture2D.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCTextureAtlas.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCTextureCache.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCBatchCommand.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCCustomCommand.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCGLProgram.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCGLProgramCache.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCGLProgramState.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCGLProgramStateCache.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\ccGLStateCache.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCGroupCommand.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCQuadCommand.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCRenderCommand.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCRenderer.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\tinyxml2\tinyxml2.cpp">
+      <Filter>external\tinyxml2</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\unzip\ioapi.cpp">
+      <Filter>external\unzip</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\unzip\unzip.cpp">
+      <Filter>external\unzip</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\edtaa3func\edtaa3func.cpp">
+      <Filter>external\edtaa</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\atitc.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\base64.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCAutoreleasePool.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\ccCArray.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCConfiguration.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCConsole.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCData.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCDirector.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEvent.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventAcceleration.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventCustom.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventDispatcher.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventFocus.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventKeyboard.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventListener.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerAcceleration.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerCustom.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerFocus.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerKeyboard.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerMouse.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerTouch.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventMouse.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCEventTouch.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\ccFPSImages.c">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCNS.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCProfiling.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCRef.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCScheduler.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCScriptSupport.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCTouch.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\ccTypes.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCUserDefault.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\ccUTF8.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\ccUtils.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCValue.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\etc1.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\s3tc.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\TGAlib.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\ZipUtils.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\CCFileUtils.cpp">
+      <Filter>cocos\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\CCGLViewProtocol.cpp">
+      <Filter>cocos\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\CCImage.cpp">
+      <Filter>cocos\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\CCSAXParser.cpp">
+      <Filter>cocos\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\CCThread.cpp">
+      <Filter>cocos\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\wp8\CCGLView.cpp">
+      <Filter>cocos\platform\wp8</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\wp8\Direct3DBase.cpp">
+      <Filter>cocos\platform\wp8</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\wp8\DirectXBase.cpp">
+      <Filter>cocos\platform\wp8</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCApplication.cpp">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCCommon.cpp">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCDevice.cpp">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCFileUtilsWinRT.cpp">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCFreeTypeFont.cpp">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCPrecompiledShaders.cpp">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCPThreadWinRT.cpp">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCStdC.cpp">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCWinRTUtils.cpp">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\inet_ntop_winrt.cpp">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\InputEvent.cpp">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\winrt\sha1.cpp">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\CCIMEDispatcher.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\3d\CCMesh.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\3d\CCObjLoader.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\3d\CCSprite3D.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\renderer\CCMeshCommand.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\base\ObjectFactory.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\3d\CCAnimate3D.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\3d\CCAnimation3D.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\3d\CCBundle3D.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\3d\CCMeshSkin.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\3d\CCSprite3DMaterial.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\3d\CCBundleReader.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCFastTMXLayer.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCFastTMXTiledMap.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\event\CCScriptEventDispatcher.cpp">
+      <Filter>libquick\event</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\event\CCTouchTargetNode.cpp">
+      <Filter>libquick\event</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\event\ScriptEventCenter.cpp">
+      <Filter>libquick\event</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\audio\wp8\SimpleAudioEngine.cpp">
+      <Filter>cocos\audio\wp8</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\audio\wp8\Audio.cpp">
+      <Filter>cocos\audio\wp8</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\audio\wp8\MediaStreamer.cpp">
+      <Filter>cocos\audio\wp8</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\network\WebSocket.cpp">
+      <Filter>cocos\network</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\cocos2d.cpp">
+      <Filter>cocos</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\platform\wp8\pch.cpp">
+      <Filter>cocos</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\extensions\GUI\CCControlExtension\CCControl.cpp">
+      <Filter>extensions\GUI\CCControlExtension</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\extensions\GUI\CCControlExtension\CCControlButton.cpp">
+      <Filter>extensions\GUI\CCControlExtension</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\extensions\GUI\CCControlExtension\CCControlUtils.cpp">
+      <Filter>extensions\GUI\CCControlExtension</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\extensions\GUI\CCControlExtension\CCInvocation.cpp">
+      <Filter>extensions\GUI\CCControlExtension</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\extensions\GUI\CCControlExtension\CCScale9Sprite.cpp">
+      <Filter>extensions\GUI\CCControlExtension</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\extensions\GUI\CCEditBox\CCEditBox.cpp">
+      <Filter>extensions\GUI\CCEditBox</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\extensions\GUI\CCEditBox\CCEditBoxImplWp8.cpp">
+      <Filter>extensions\GUI\CCEditBox</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\chipmunk.c">
+      <Filter>external\chipmunk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpArbiter.c">
+      <Filter>external\chipmunk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpArray.c">
+      <Filter>external\chipmunk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpBB.c">
+      <Filter>external\chipmunk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpBBTree.c">
+      <Filter>external\chipmunk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpBody.c">
+      <Filter>external\chipmunk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpCollision.c">
+      <Filter>external\chipmunk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpHashSet.c">
+      <Filter>external\chipmunk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpPolyShape.c">
+      <Filter>external\chipmunk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpShape.c">
+      <Filter>external\chipmunk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpSpace.c">
+      <Filter>external\chipmunk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpSpaceComponent.c">
+      <Filter>external\chipmunk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpSpaceHash.c">
+      <Filter>external\chipmunk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpSpaceQuery.c">
+      <Filter>external\chipmunk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpSpaceStep.c">
+      <Filter>external\chipmunk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpSpatialIndex.c">
+      <Filter>external\chipmunk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpSweep1D.c">
+      <Filter>external\chipmunk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\cpVect.c">
+      <Filter>external\chipmunk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\constraints\cpConstraint.c">
+      <Filter>external\chipmunk\src\constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\constraints\cpDampedRotarySpring.c">
+      <Filter>external\chipmunk\src\constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\constraints\cpDampedSpring.c">
+      <Filter>external\chipmunk\src\constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\constraints\cpGearJoint.c">
+      <Filter>external\chipmunk\src\constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\constraints\cpGrooveJoint.c">
+      <Filter>external\chipmunk\src\constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\constraints\cpPinJoint.c">
+      <Filter>external\chipmunk\src\constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\constraints\cpPivotJoint.c">
+      <Filter>external\chipmunk\src\constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\constraints\cpRatchetJoint.c">
+      <Filter>external\chipmunk\src\constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\constraints\cpRotaryLimitJoint.c">
+      <Filter>external\chipmunk\src\constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\constraints\cpSimpleMotor.c">
+      <Filter>external\chipmunk\src\constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\chipmunk\src\constraints\cpSlideJoint.c">
+      <Filter>external\chipmunk\src\constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\ProjectConfig\SimulatorConfig.cpp">
+      <Filter>libquick\ProjectConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\CCLuaBridge.cpp">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\CCLuaEngine.cpp">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\CCLuaStack.cpp">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\CCLuaValue.cpp">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\Cocos2dxLuaLoader.cpp">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\lua_cocos2dx_extension_manual.cpp">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\lua_cocos2dx_manual.cpp">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\lua_cocos2dx_physics_manual.cpp">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\lua_cocos2dx_coco_studio_manual.cpp">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\Lua_web_socket.cpp">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\LuaBasicConversions.cpp">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\LuaScriptHandlerMgr.cpp">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\tolua_fix.cpp">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lapi.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lauxlib.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lbaselib.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lcode.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\ldblib.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\ldebug.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\ldo.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\ldump.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lfunc.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lgc.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\linit.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\liolib.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\llex.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lmathlib.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lmem.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\loadlib.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lobject.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lopcodes.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\loslib.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lparser.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lstate.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lstring.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lstrlib.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\ltable.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\ltablib.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\ltm.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lundump.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lvm.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lzio.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\print.c">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\tolua\tolua_event.c">
+      <Filter>libquick\lua_bindings\tolua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\tolua\tolua_is.c">
+      <Filter>libquick\lua_bindings\tolua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\tolua\tolua_map.c">
+      <Filter>libquick\lua_bindings\tolua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\tolua\tolua_push.c">
+      <Filter>libquick\lua_bindings\tolua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\tolua\tolua_to.c">
+      <Filter>libquick\lua_bindings\tolua</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\auto\lua_cocos2dx_auto.cpp">
+      <Filter>libquick\lua_bindings\auto</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\auto\lua_cocos2dx_extension_auto.cpp">
+      <Filter>libquick\lua_bindings\auto</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\auto\lua_cocos2dx_physics_auto.cpp">
+      <Filter>libquick\lua_bindings\auto</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\auto\lua_cocos2dx_extension_filter_auto.cpp">
+      <Filter>libquick\lua_bindings\auto</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\auto\lua_cocos2dx_studio_auto.cpp">
+      <Filter>libquick\lua_bindings\auto</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\extra\luabinding\cocos2dx_extra_luabinding.cpp">
+      <Filter>libquick\extra\luabinding</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\extra\luabinding\HelperFunc_luabinding.cpp">
+      <Filter>libquick\extra\luabinding</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\extra\apptools\HelperFunc.cpp">
+      <Filter>libquick\extra\apptools</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\extra\crypto\base64\libbase64.c">
+      <Filter>libquick\extra\crypto\base64</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\extra\crypto\CCCrypto.cpp">
+      <Filter>libquick\extra\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\extra\crypto\md5\md5.c">
+      <Filter>libquick\extra\crypto\md5</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\extra\network\CCHTTPRequest.cpp">
+      <Filter>libquick\extra\network</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\extra\network\CCNetwork.cpp">
+      <Filter>libquick\extra\network</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\xxtea\xxtea.cpp">
+      <Filter>external\xxtea</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\extra\platform\wp8\CCCryptoWP8.cpp">
+      <Filter>libquick\extra\native</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\extra\platform\wp8\CCNativeWP8.cpp">
+      <Filter>libquick\extra\native</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\2d\CCClippingRegionNode.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\extra\platform\wp8\CCNetworkWP8.cpp">
+      <Filter>libquick\extra\native</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\external\unzip\ioapi_mem.cpp">
+      <Filter>external\unzip</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\lua_extensions.c">
+      <Filter>libquick\lua_extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\cjson\fpconv.c">
+      <Filter>libquick\lua_extensions\cjson</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\cjson\lua_cjson.c">
+      <Filter>libquick\lua_extensions\cjson</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\cjson\strbuf.c">
+      <Filter>libquick\lua_extensions\cjson</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\debugger\debugger.c">
+      <Filter>libquick\lua_extensions\debugger</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\filesystem\lfs.c">
+      <Filter>libquick\lua_extensions\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\lpack\lpack.c">
+      <Filter>libquick\lua_extensions\lpack</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\lsqlite3\lsqlite3.c">
+      <Filter>libquick\lua_extensions\lsqlite3</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\lsqlite3\sqlite3.c">
+      <Filter>libquick\lua_extensions\lsqlite3</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\zlib\lua_zlib.c">
+      <Filter>libquick\lua_extensions\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCArmature.cpp">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCArmatureAnimation.cpp">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCArmatureDataManager.cpp">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCArmatureDefine.cpp">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCBone.cpp">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCColliderDetector.cpp">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCDataReaderHelper.cpp">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCDatas.cpp">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCDecorativeDisplay.cpp">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCDisplayFactory.cpp">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCDisplayManager.cpp">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCProcessBase.cpp">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCSkin.cpp">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCSpriteFrameCacheHelper.cpp">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCTransformHelp.cpp">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCTween.cpp">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CCUtilMath.cpp">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\CocoLoader.cpp">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostudio\DictionaryHelper.cpp">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\filters\filters\CCBlurFilter.cpp">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\filters\filters\CCBrightnessFilter.cpp">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\filters\filters\CCContrastFilter.cpp">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\filters\filters\CCCustomFilter.cpp">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\filters\filters\CCDropShadowFilter.cpp">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\filters\filters\CCExposureFilter.cpp">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\filters\filters\CCFilter.cpp">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\filters\filters\CCGammaFilter.cpp">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\filters\filters\CCGrayFilter.cpp">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\filters\filters\CCHazeFilter.cpp">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\filters\filters\CCHueFilter.cpp">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\filters\filters\CCMaskFilter.cpp">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\filters\filters\CCRGBFilter.cpp">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\filters\filters\CCSaturationFilter.cpp">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\filters\filters\CCSepiaFilter.cpp">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\filters\filters\CCSharpenFilter.cpp">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\filters\filters\CCTestFilter.cpp">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\filters\shaders\ccFilterShaders.cpp">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\filters\shaders\FilterShaders.cpp">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\filters\nodes\CCFilteredSprite.cpp">
+      <Filter>libquick\extra\filters\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ProjectConfig\ProjectConfig.cpp">
+      <Filter>libquick\ProjectConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\extensions\GUI\CCTextField\UITextField.cpp">
+      <Filter>extensions\GUI\CCTextField</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lua_bindings\manual\snapshot.c">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\physics\CCPhysicsBody.h">
+      <Filter>cocos\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\physics\CCPhysicsContact.h">
+      <Filter>cocos\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\physics\CCPhysicsJoint.h">
+      <Filter>cocos\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\physics\CCPhysicsShape.h">
+      <Filter>cocos\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\physics\CCPhysicsWorld.h">
+      <Filter>cocos\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\physics\chipmunk\CCPhysicsBodyInfo_chipmunk.h">
+      <Filter>cocos\physics\chipmunk</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\physics\chipmunk\CCPhysicsContactInfo_chipmunk.h">
+      <Filter>cocos\physics\chipmunk</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\physics\chipmunk\CCPhysicsHelper_chipmunk.h">
+      <Filter>cocos\physics\chipmunk</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\physics\chipmunk\CCPhysicsJointInfo_chipmunk.h">
+      <Filter>cocos\physics\chipmunk</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\physics\chipmunk\CCPhysicsShapeInfo_chipmunk.h">
+      <Filter>cocos\physics\chipmunk</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\physics\chipmunk\CCPhysicsWorldInfo_chipmunk.h">
+      <Filter>cocos\physics\chipmunk</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\xxhash\xxhash.h">
+      <Filter>external\xxhash</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\ConvertUTF\ConvertUTF.h">
+      <Filter>external\ConvertUTF</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCAction.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionCamera.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionCatmullRom.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionEase.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionGrid.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionGrid3D.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionInstant.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionInterval.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionManager.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionPageTurn3D.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionProgressTimer.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionTiledGrid.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCActionTween.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCAnimation.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCAnimationCache.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCAtlasNode.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCClippingNode.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCComponent.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCComponentContainer.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCDrawingPrimitives.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCDrawNode.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCFont.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCFontAtlas.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCFontAtlasCache.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCFontCharMap.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCFontFNT.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCFontFreeType.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCGLBufferedNode.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCGrabber.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCGrid.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCLabel.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCLabelAtlas.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCLabelBMFont.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCLabelTextFormatter.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCLabelTTF.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCLayer.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCMotionStreak.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCNode.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCNodeGrid.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCParallaxNode.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCParticleBatchNode.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCParticleExamples.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCParticleSystem.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCParticleSystemQuad.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCProgressTimer.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCRenderTexture.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCScene.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCSprite.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCSpriteBatchNode.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCSpriteFrame.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCSpriteFrameCache.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCTextFieldTTF.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCTileMapAtlas.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCTMXLayer.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCTMXObjectGroup.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCTMXTiledMap.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCTMXXMLParser.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCTransition.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCTransitionPageTurn.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCTransitionProgress.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCTweenFunction.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\CCAffineTransform.h">
+      <Filter>cocos\math</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\CCGeometry.h">
+      <Filter>cocos\math</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\CCMath.h">
+      <Filter>cocos\math</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\CCMathBase.h">
+      <Filter>cocos\math</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\CCVertex.h">
+      <Filter>cocos\math</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\Mat4.h">
+      <Filter>cocos\math</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\MathUtil.h">
+      <Filter>cocos\math</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\Quaternion.h">
+      <Filter>cocos\math</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\TransformUtils.h">
+      <Filter>cocos\math</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\Vec2.h">
+      <Filter>cocos\math</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\Vec3.h">
+      <Filter>cocos\math</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\math\Vec4.h">
+      <Filter>cocos\math</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\ccShaders.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCTexture2D.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCTextureAtlas.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCTextureCache.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCBatchCommand.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCCustomCommand.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCGLProgram.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCGLProgramCache.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCGLProgramState.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCGLProgramStateCache.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\ccGLStateCache.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCGroupCommand.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCQuadCommand.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCRenderCommand.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCRenderCommandPool.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCRenderer.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\tinyxml2\tinyxml2.h">
+      <Filter>external\tinyxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\unzip\ioapi.h">
+      <Filter>external\unzip</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\unzip\unzip.h">
+      <Filter>external\unzip</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\edtaa3func\edtaa3func.h">
+      <Filter>external\edtaa</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\atitc.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\base64.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCAutoreleasePool.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\ccCArray.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\ccConfig.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCConfiguration.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCConsole.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCData.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCDirector.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEvent.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventAcceleration.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventCustom.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventDispatcher.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventFocus.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventKeyboard.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventListener.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerAcceleration.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerCustom.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerFocus.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerKeyboard.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerMouse.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventListenerTouch.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventMouse.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventTouch.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCEventType.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\ccFPSImages.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\ccMacros.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCMap.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCNS.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCPlatformConfig.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCPlatformMacros.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCProfiling.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCProtocols.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCRef.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCRefPtr.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCScheduler.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCScriptSupport.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCTouch.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\ccTypes.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCUserDefault.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\ccUTF8.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\ccUtils.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCValue.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCVector.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\etc1.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\firePngData.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\s3tc.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\TGAlib.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\uthash.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\utlist.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\ZipUtils.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\CCApplicationProtocol.h">
+      <Filter>cocos\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\CCCommon.h">
+      <Filter>cocos\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\CCDevice.h">
+      <Filter>cocos\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\CCFileUtils.h">
+      <Filter>cocos\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\CCGLViewProtocol.h">
+      <Filter>cocos\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\CCImage.h">
+      <Filter>cocos\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\CCSAXParser.h">
+      <Filter>cocos\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\CCThread.h">
+      <Filter>cocos\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\wp8\DirectXBase.h">
+      <Filter>cocos\platform\wp8</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\wp8\CCGLView.h">
+      <Filter>cocos\platform\wp8</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\wp8\Direct3DBase.h">
+      <Filter>cocos\platform\wp8</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCApplication.h">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCFileUtilsWinRT.h">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCFreeTypeFont.h">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCGL.h">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCGL_Angle.h">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCPlatformDefine.h">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCPrecompiledShaders.h">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCPThreadWinRT.h">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCStdC.h">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\CCWinRTUtils.h">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\DirectXHelper.h">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\inet_ntop_winrt.h">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\InputEvent.h">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\InputEventTypes.h">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\winrt\sha1.h">
+      <Filter>cocos\platform\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCIMEDelegate.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\CCIMEDispatcher.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\3d\CCMesh.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\3d\CCObjLoader.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\3d\CCSprite3D.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\renderer\CCMeshCommand.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\base\ObjectFactory.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\3d\CCAnimate3D.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\3d\CCAnimation3D.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\3d\CCAnimationCurve.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\3d\CCBundle3D.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\3d\CCBundle3DData.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\3d\CCMeshSkin.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\3d\CCSprite3DMaterial.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\3d\CCBundleReader.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCFastTMXLayer.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCFastTMXTiledMap.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\event\CCScriptEventDispatcher.h">
+      <Filter>libquick\event</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\event\CCTouch.h">
+      <Filter>libquick\event</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\event\CCTouchDelegateProtocol.h">
+      <Filter>libquick\event</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\event\CCTouchDispatcher.h">
+      <Filter>libquick\event</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\event\CCTouchHandler.h">
+      <Filter>libquick\event</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\event\CCTouchTargetNode.h">
+      <Filter>libquick\event</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\event\ScriptEventCenter.h">
+      <Filter>libquick\event</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\audio\include\SimpleAudioEngine.h">
+      <Filter>cocos\audio\include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\audio\include\Export.h">
+      <Filter>cocos\audio\include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\audio\wp8\Audio.h">
+      <Filter>cocos\audio\wp8</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\audio\wp8\MediaStreamer.h">
+      <Filter>cocos\audio\wp8</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\network\WebSocket.h">
+      <Filter>cocos\network</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\platform\wp8\pch.h">
+      <Filter>cocos</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\extensions\ExtensionMacros.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\extensions\cocos-ext.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\extensions\GUI\CCControlExtension\CCControl.h">
+      <Filter>extensions\GUI\CCControlExtension</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\extensions\GUI\CCControlExtension\CCControlButton.h">
+      <Filter>extensions\GUI\CCControlExtension</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\extensions\GUI\CCControlExtension\CCControlExtensions.h">
+      <Filter>extensions\GUI\CCControlExtension</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\extensions\GUI\CCControlExtension\CCControlUtils.h">
+      <Filter>extensions\GUI\CCControlExtension</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\extensions\GUI\CCControlExtension\CCInvocation.h">
+      <Filter>extensions\GUI\CCControlExtension</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\extensions\GUI\CCControlExtension\CCScale9Sprite.h">
+      <Filter>extensions\GUI\CCControlExtension</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\extensions\GUI\CCEditBox\CCEditBox.h">
+      <Filter>extensions\GUI\CCEditBox</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\extensions\GUI\CCEditBox\CCEditBoxImpl.h">
+      <Filter>extensions\GUI\CCEditBox</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\extensions\GUI\CCEditBox\CCEditBoxImplWp8.h">
+      <Filter>extensions\GUI\CCEditBox</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\chipmunk.h">
+      <Filter>external\chipmunk\include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\chipmunk_ffi.h">
+      <Filter>external\chipmunk\include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\chipmunk_private.h">
+      <Filter>external\chipmunk\include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\chipmunk_types.h">
+      <Filter>external\chipmunk\include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\chipmunk_unsafe.h">
+      <Filter>external\chipmunk\include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\cpArbiter.h">
+      <Filter>external\chipmunk\include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\cpBB.h">
+      <Filter>external\chipmunk\include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\cpBody.h">
+      <Filter>external\chipmunk\include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\cpPolyShape.h">
+      <Filter>external\chipmunk\include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\cpShape.h">
+      <Filter>external\chipmunk\include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\cpSpace.h">
+      <Filter>external\chipmunk\include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\cpSpatialIndex.h">
+      <Filter>external\chipmunk\include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\cpVect.h">
+      <Filter>external\chipmunk\include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\cpConstraint.h">
+      <Filter>external\chipmunk\include\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\cpDampedRotarySpring.h">
+      <Filter>external\chipmunk\include\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\cpDampedSpring.h">
+      <Filter>external\chipmunk\include\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\cpGearJoint.h">
+      <Filter>external\chipmunk\include\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\cpGrooveJoint.h">
+      <Filter>external\chipmunk\include\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\cpPinJoint.h">
+      <Filter>external\chipmunk\include\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\cpPivotJoint.h">
+      <Filter>external\chipmunk\include\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\cpRatchetJoint.h">
+      <Filter>external\chipmunk\include\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\cpRotaryLimitJoint.h">
+      <Filter>external\chipmunk\include\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\cpSimpleMotor.h">
+      <Filter>external\chipmunk\include\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\cpSlideJoint.h">
+      <Filter>external\chipmunk\include\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\include\chipmunk\constraints\util.h">
+      <Filter>external\chipmunk\include\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\chipmunk\src\prime.h">
+      <Filter>external\chipmunk\src</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\ProjectConfig\SimulatorConfig.h">
+      <Filter>libquick\ProjectConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\CCLuaBridge.h">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\CCLuaEngine.h">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\CCLuaStack.h">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\CCLuaValue.h">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\Cocos2dxLuaLoader.h">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\lua_cocos2dx_extension_manual.h">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\lua_cocos2dx_manual.hpp">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\lua_cocos2dx_physics_manual.hpp">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\Lua_web_socket.h">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\LuaBasicConversions.h">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\LuaScriptHandlerMgr.h">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\manual\tolua_fix.h">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lapi.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lauxlib.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lcode.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\ldebug.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\ldo.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lfunc.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lgc.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\llex.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\llimits.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lmem.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lobject.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lopcodes.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lparser.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lstate.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lstring.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\ltable.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\ltm.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lua.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\luaconf.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lualib.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lundump.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lvm.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\lua\lzio.h">
+      <Filter>libquick\lua_bindings\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\tolua\tolua_event.h">
+      <Filter>libquick\lua_bindings\tolua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\tolua\tolua++.h">
+      <Filter>libquick\lua_bindings\tolua</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\auto\lua_cocos2dx_auto.hpp">
+      <Filter>libquick\lua_bindings\auto</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\auto\lua_cocos2dx_extension_auto.hpp">
+      <Filter>libquick\lua_bindings\auto</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\auto\lua_cocos2dx_studio_auto.hpp">
+      <Filter>libquick\lua_bindings\auto</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\auto\lua_cocos2dx_extension_filter_auto.hpp">
+      <Filter>libquick\lua_bindings\auto</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_bindings\auto\lua_cocos2dx_physics_auto.hpp">
+      <Filter>libquick\lua_bindings\auto</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\extra\luabinding\cocos2dx_extra_luabinding.h">
+      <Filter>libquick\extra\luabinding</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\extra\luabinding\HelperFunc_luabinding.h">
+      <Filter>libquick\extra\luabinding</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\extra\apptools\HelperFunc.h">
+      <Filter>libquick\extra\apptools</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\extra\crypto\base64\libbase64.h">
+      <Filter>libquick\extra\crypto\base64</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\extra\crypto\CCCrypto.h">
+      <Filter>libquick\extra\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\extra\crypto\md5\md5.h">
+      <Filter>libquick\extra\crypto\md5</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\extra\network\CCHTTPRequest.h">
+      <Filter>libquick\extra\network</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\extra\network\CCHTTPRequestDelegate.h">
+      <Filter>libquick\extra\network</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\extra\network\CCNetwork.h">
+      <Filter>libquick\extra\network</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\extra\cocos2dx_extra.h">
+      <Filter>libquick\extra</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\xxtea\xxtea.h">
+      <Filter>external\xxtea</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\2d\CCClippingRegionNode.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\external\unzip\ioapi_mem.h">
+      <Filter>external\unzip</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\lua_extensions.h">
+      <Filter>libquick\lua_extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\cjson\fpconv.h">
+      <Filter>libquick\lua_extensions\cjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\cjson\lua_cjson.h">
+      <Filter>libquick\lua_extensions\cjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\cjson\strbuf.h">
+      <Filter>libquick\lua_extensions\cjson</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\debugger\debugger.h">
+      <Filter>libquick\lua_extensions\debugger</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\filesystem\lfs.h">
+      <Filter>libquick\lua_extensions\filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\lpack\lpack.h">
+      <Filter>libquick\lua_extensions\lpack</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\lsqlite3\lsqlite3.h">
+      <Filter>libquick\lua_extensions\lsqlite3</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\lsqlite3\sqlite3.h">
+      <Filter>libquick\lua_extensions\lsqlite3</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)\quick\lib\lua_extensions\zlib\lua_zlib.h">
+      <Filter>libquick\lua_extensions\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCArmature.h">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCArmatureAnimation.h">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCArmatureDataManager.h">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCArmatureDefine.h">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCBatchNode.h">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCBone.h">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCColliderDetector.h">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCDataReaderHelper.h">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCDatas.h">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCDecorativeDisplay.h">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCDisplayFactory.h">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCDisplayManager.h">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCProcessBase.h">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCSkin.h">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCSpriteFrameCacheHelper.h">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCTransformHelp.h">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCTween.h">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CCUtilMath.h">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\CocoLoader.h">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(QUICK_V3_ROOT)cocos\editor-support\cocostduio\DictionaryHelper.h">
+      <Filter>cocos\editor-support\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\cocos2dFilters.h">
+      <Filter>libquick\extra\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\filters\CCBlurFilter.h">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\filters\CCBrightnessFilter.h">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\filters\CCContrastFilter.h">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\filters\CCCustomFilter.h">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\filters\CCDropShadowFilter.h">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\filters\CCExposureFilter.h">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\filters\CCFilter.h">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\filters\CCGammaFilter.h">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\filters\CCGrayFilter.h">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\filters\CCHazeFilter.h">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\filters\CCHueFilter.h">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\filters\CCMaskFilter.h">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\filters\CCRGBFilter.h">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\filters\CCSaturationFilter.h">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\filters\CCSepiaFilter.h">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\filters\CCSharpenFilter.h">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\filters\CCTestFilter.h">
+      <Filter>libquick\extra\filters\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_blur_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_brightness_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_colorramp_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_contrast_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_drop_shadow_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_drop_shadow_vert.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_emboss_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_embossmov_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_exposure_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_gamma_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_gaussian_blur_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_gaussian_hblur_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_gaussian_vblur_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_grass_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_gray_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_haze_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_hblur_vert.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_hue_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_motion_blur_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_motion_blur_vert.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_rgb_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_saturation_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_sepia_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_sharpen_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_sharpen_vert.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_test_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_test_vert.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_vblur_vert.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShader_zoom_blur_frag.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\ccFilterShaders.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\shaders\FilterShaders.h">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\filters\nodes\CCFilteredSprite.h">
+      <Filter>libquick\extra\filters\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\platform\wp8\shaders\precompiledshaders.h">
+      <Filter>cocos\platform\wp8\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ProjectConfig\ProjectConfig.h">
+      <Filter>libquick\ProjectConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extensions\GUI\CCTextField\UITextField.h">
+      <Filter>extensions\GUI\CCTextField</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lua_bindings\manual\snapshot.h">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(QUICK_V3_ROOT)cocos\math\Mat4.inl">
+      <Filter>cocos\math</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\math\MathUtil.inl">
+      <Filter>cocos\math</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\math\MathUtilNeon.inl">
+      <Filter>cocos\math</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\math\Quaternion.inl">
+      <Filter>cocos\math</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\math\Vec2.inl">
+      <Filter>cocos\math</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\math\Vec3.inl">
+      <Filter>cocos\math</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\math\Vec4.inl">
+      <Filter>cocos\math</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_Label.vert">
+      <Filter>cocos\renderer\shaders</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_Label_df.frag">
+      <Filter>cocos\renderer\shaders</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_Label_df_glow.frag">
+      <Filter>cocos\renderer\shaders</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_Label_normal.frag">
+      <Filter>cocos\renderer\shaders</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_Label_outline.frag">
+      <Filter>cocos\renderer\shaders</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_Position_uColor.frag">
+      <Filter>cocos\renderer\shaders</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_Position_uColor.vert">
+      <Filter>cocos\renderer\shaders</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionColor.frag">
+      <Filter>cocos\renderer\shaders</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionColor.vert">
+      <Filter>cocos\renderer\shaders</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionColorLengthTexture.frag">
+      <Filter>cocos\renderer\shaders</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionColorLengthTexture.vert">
+      <Filter>cocos\renderer\shaders</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionTexture.frag">
+      <Filter>cocos\renderer\shaders</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionTexture.vert">
+      <Filter>cocos\renderer\shaders</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionTexture_uColor.frag">
+      <Filter>cocos\renderer\shaders</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionTexture_uColor.vert">
+      <Filter>cocos\renderer\shaders</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionTextureA8Color.frag">
+      <Filter>cocos\renderer\shaders</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionTextureA8Color.vert">
+      <Filter>cocos\renderer\shaders</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionTextureColor.frag">
+      <Filter>cocos\renderer\shaders</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionTextureColor.vert">
+      <Filter>cocos\renderer\shaders</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionTextureColor_noMVP.frag">
+      <Filter>cocos\renderer\shaders</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionTextureColor_noMVP.vert">
+      <Filter>cocos\renderer\shaders</Filter>
+    </None>
+    <None Include="$(QUICK_V3_ROOT)cocos\renderer\ccShader_PositionTextureColorAlphaTest.frag">
+      <Filter>cocos\renderer\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\example_bloom.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\example_Blur.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\example_celShading.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\example_ColorBars.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\example_ColorBars.vsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\example_edgeDetection.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\example_Flower.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\example_greyScale.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\example_Heart.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\example_HorizontalColor.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\example_Julia.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\example_lensFlare.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\example_Mandelbrot.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\example_Monjori.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\example_MultiTexture.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\example_MultiTexture.vsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\example_Noisy.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\example_normal.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\example_outline.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\example_Plasma.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\example_sepia.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\example_Twist.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\shadertoy_FireBall.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\shadertoy_Glow.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+    <None Include="..\extra\filters\shaders\shadertoy_LensFlare.fsh">
+      <Filter>libquick\extra\filters\shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(QUICK_V3_ROOT)cocos\renderer\CMakeLists.txt">
+      <Filter>cocos\renderer</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{ebfae752-00fd-4f6a-ac89-7f565a8a5a52}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Cocos2dRenderer.cpp" />
+    <ClCompile Include="Direct3DContentProvider.cpp" />
+    <ClCompile Include="Direct3DInterop.cpp" />
+    <ClCompile Include="DirectXBase.cpp" />
+    <ClCompile Include="EditBoxEvent.cpp" />
+    <ClCompile Include="..\..\native\AppDelegate.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Cocos2dRenderer.h" />
+    <ClInclude Include="Direct3DContentProvider.h" />
+    <ClInclude Include="Direct3DInterop.h" />
+    <ClInclude Include="DirectXBase.h" />
+    <ClInclude Include="DirectXHelper.h" />
+    <ClInclude Include="EditBoxEvent.h" />
+    <ClInclude Include="..\..\native\AppDelegate.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(QUICK_V3_ROOT)\external\wp8-specific\angle\prebuilt\Win32\libGLESv2_phone.dll" />
+    <None Include="$(QUICK_V3_ROOT)\external\wp8-specific\angle\prebuilt\Win32\libEGL_phone.dll" />
+    <None Include="$(QUICK_V3_ROOT)\external\curl\prebuilt\wp8\win32\libeay32.dll" />
+    <None Include="$(QUICK_V3_ROOT)\external\curl\prebuilt\wp8\win32\ssleay32.dll" />
+    <None Include="$(QUICK_V3_ROOT)\external\wp8-specific\angle\prebuilt\ARM\libEGL_phone.dll" />
+    <None Include="$(QUICK_V3_ROOT)\external\wp8-specific\angle\prebuilt\ARM\libGLESv2_phone.dll" />
+    <None Include="$(QUICK_V3_ROOT)\external\websockets\prebuilt\wp8\win32\libwebsockets.dll" />
+    <None Include="$(QUICK_V3_ROOT)\external\websockets\prebuilt\wp8\arm\libwebsockets.dll" />
+    <None Include="$(QUICK_V3_ROOT)\external\curl\prebuilt\wp8\arm\libeay32.dll" />
+    <None Include="$(QUICK_V3_ROOT)\external\curl\prebuilt\wp8\arm\ssleay32.dll" />
+    <None Include="$(QUICK_V3_ROOT)\external\curl\prebuilt\wp8\arm\libcurl.dll" />
+    <None Include="$(QUICK_V3_ROOT)\external\curl\prebuilt\wp8\win32\libcurl.dll" />
+  </ItemGroup>
+</Project>

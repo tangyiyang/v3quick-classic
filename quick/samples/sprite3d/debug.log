@@ -1,0 +1,37 @@
+cocos2d: ------------------------------------------------
+cocos2d: LOAD LUA FILE: /Users/sleepers/opensource_projects/v3quick/quick/samples/sprite3d/src/main.lua
+cocos2d: ------------------------------------------------
+cocos2d: ===========================================================
+cocos2d:               LOAD QUICK FRAMEWORK
+cocos2d: ===========================================================
+cocos2d: [INFO] 
+cocos2d: [INFO] # DEBUG                        = 1
+cocos2d: [INFO] #
+cocos2d: [INFO] # device.platform              = mac
+cocos2d: [INFO] # device.model                 = unknown
+cocos2d: [INFO] # device.language              = cn
+cocos2d: [INFO] # device.writablePath          = /Users/sleepers/opensource_projects/v3quick/quick/samples/sprite3d/
+cocos2d: [INFO] # device.directorySeparator    = /
+cocos2d: [INFO] # device.pathSeparator         = :
+cocos2d: [INFO] #
+libpng warning: iCCP: known incorrect sRGB profile
+cocos2d: [INFO] # CONFIG_SCREEN_AUTOSCALE      = FIXED_HEIGHT
+cocos2d: [INFO] # CONFIG_SCREEN_WIDTH          = 960.00
+cocos2d: [INFO] # CONFIG_SCREEN_HEIGHT         = 640.00
+cocos2d: [INFO] # display.widthInPixels        = 960.00
+cocos2d: [INFO] # display.heightInPixels       = 640.00
+cocos2d: [INFO] # display.contentScaleFactor   = 1.00
+cocos2d: [INFO] # display.width                = 960.00
+cocos2d: [INFO] # display.height               = 640.00
+cocos2d: [INFO] # display.cx                   = 480.00
+cocos2d: [INFO] # display.cy                   = 320.00
+cocos2d: [INFO] # display.left                 = 0.00
+cocos2d: [INFO] # display.right                = 960.00
+cocos2d: [INFO] # display.top                  = 640.00
+cocos2d: [INFO] # display.bottom               = 0.00
+cocos2d: [INFO] # display.c_left               = -480.00
+cocos2d: [INFO] # display.c_right              = 480.00
+cocos2d: [INFO] # display.c_top                = 320.00
+cocos2d: [INFO] # display.c_bottom             = -320.00
+cocos2d: [INFO] #
+cocos2d: cocos2d: padding: 0,0,0,0
