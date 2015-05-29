@@ -482,4 +482,12 @@ void ClippingNode::onAfterVisit()
     s_layer--;
 }
 
+void ClippingNode::setCameraMask(unsigned short mask, bool applyChildren)
+{
+    Node::setCameraMask(mask, applyChildren);
+    
+    if (_stencil)
+        _stencil->setCameraMask(mask, applyChildren);
+}
+
 NS_CC_END

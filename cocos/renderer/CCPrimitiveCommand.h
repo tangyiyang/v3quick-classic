@@ -22,63 +22,73 @@
  THE SOFTWARE.
  ****************************************************************************/
 
-#ifndef _CC_QUADCOMMAND_H_
-#define _CC_QUADCOMMAND_H_
+#ifndef _CC_PRIMITIVE_COMMAND_H__
+#define _CC_PRIMITIVE_COMMAND_H__
 
+#include "renderer/CCPrimitive.h"
 #include "renderer/CCRenderCommand.h"
-#include "renderer/CCGLProgramState.h"
-#include "renderer/CCRenderCommandPool.h"
+
+/**
+ * @addtogroup support
+ * @{
+ */
 
 NS_CC_BEGIN
-
-/** Command used to render one or more Quads */
-class QuadCommand : public RenderCommand
+class GLProgramState;
+/**
+ Command used to render primitive, similar to QuadCommand.
+ Every QuadCommand will have generate material ID by give textureID, glProgramState, Blend function. 
+ However, primitive command could not be batched.
+ */
+class CC_DLL PrimitiveCommand : public RenderCommand
 {
 public:
-    static const int MATERIAL_ID_DO_NOT_BATCH = 0;
-
-    QuadCommand();
-    ~QuadCommand();
+    /**@{
+     Constructor and Destructor.
+     */
+    PrimitiveCommand();
+    ~PrimitiveCommand();
+    
+    /**@}*/
     
     /** Initializes the command.
      @param globalOrder GlobalZOrder of the command.
      @param textureID The openGL handle of the used texture.
-     @param shader The specified glProgram and its uniform.
+     @param glProgramState The specified glProgram and its uniform.
      @param blendType Blend function for the command.
-     @param quads Rendered quads for the command.
-     @param quadCount The number of quads when rendering.
+     @param primitive Rendered primitive for the command.
      @param mv ModelView matrix for the command.
      @param flags to indicate that the command is using 3D rendering or not.
      */
-    void init(float globalOrder, GLuint textureID, GLProgramState* shader, const BlendFunc& blendType, V3F_C4B_T2F_Quad* quads, ssize_t quadCount,
-              const Mat4& mv, uint32_t flags);
-
-    /**Deprecated function, the params is similar as the upper init function, with flags equals 0.*/
-    CC_DEPRECATED_ATTRIBUTE void init(float globalOrder, GLuint textureID, GLProgramState* shader, const BlendFunc& blendType, V3F_C4B_T2F_Quad* quads, ssize_t quadCount,
-              const Mat4& mv);
-
-    void useMaterial() const;
-
+    void init(float globalOrder, GLuint textureID, GLProgramState* glProgramState, BlendFunc blendType, Primitive* primitive, const Mat4& mv, uint32_t flags);
+    CC_DEPRECATED_ATTRIBUTE void init(float globalOrder, GLuint textureID, GLProgramState* glProgramState, BlendFunc blendType, Primitive* primitive,const Mat4& mv);
+    
+    /**Get the generated material ID.*/
     inline uint32_t getMaterialID() const { return _materialID; }
+    /**Get the texture ID used for drawing.*/
     inline GLuint getTextureID() const { return _textureID; }
-    inline V3F_C4B_T2F_Quad* getQuads() const { return _quads; }
-    inline ssize_t getQuadCount() const { return _quadsCount; }
+    /**Get the glprogramstate used for drawing.*/
     inline GLProgramState* getGLProgramState() const { return _glProgramState; }
+    /**Get the blend funcion for drawing.*/
     inline BlendFunc getBlendType() const { return _blendType; }
+    /**Get the modelview matrix when draw the primtive.*/
     inline const Mat4& getModelView() const { return _mv; }
-
+    /**Execute and draw the commmand, called by renderer.*/
+    void execute() const;
 protected:
-    void generateMaterialID();
-
+    
     uint32_t _materialID;
     GLuint _textureID;
     GLProgramState* _glProgramState;
     BlendFunc _blendType;
-    V3F_C4B_T2F_Quad* _quads;
-    ssize_t _quadsCount;
+    Primitive* _primitive;
     Mat4 _mv;
 };
 
 NS_CC_END
 
-#endif //_CC_QUADCOMMAND_H_
+/**
+ end of support group
+ @}
+ */
+#endif //_CC_PRIMITIVE_COMMAND_H__

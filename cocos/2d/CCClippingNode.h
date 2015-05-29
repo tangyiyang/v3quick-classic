@@ -114,6 +114,8 @@ CC_CONSTRUCTOR_ACCESS:
      The stencil node will be retained, and its parent will be set to this clipping node.
      */
     virtual bool init(Node *stencil);
+    
+    void setCameraMask(unsigned short mask, bool applyChildren);
 
 protected:
     /**draw fullscreen quad to clear stencil bits

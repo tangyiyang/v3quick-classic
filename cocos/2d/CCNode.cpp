@@ -40,6 +40,8 @@ THE SOFTWARE.
 #include "base/CCEventTouch.h"
 #include "base/ccCArray.h"
 #include "2d/CCGrid.h"
+
+#include "2d/CCCamera.h"
 #include "2d/CCActionManager.h"
 #include "base/CCScriptSupport.h"
 #include "2d/CCScene.h"
@@ -143,14 +145,15 @@ Node::Node(void)
 , _usingNormalizedPosition(false)
 , _name("")
 , _hashOfName(0)
+, _cameraMask(1)
 {
     // set default scheduler and actionManager
-    Director *director = Director::getInstance();
-    _actionManager = director->getActionManager();
+	_director = Director::getInstance();
+    _actionManager = _director->getActionManager();
     _actionManager->retain();
-    _scheduler = director->getScheduler();
+    _scheduler = _director->getScheduler();
     _scheduler->retain();
-    _eventDispatcher = director->getEventDispatcher();
+    _eventDispatcher = _director->getEventDispatcher();
     _eventDispatcher->retain();
     
 #if CC_ENABLE_SCRIPT_BINDING
@@ -758,11 +761,18 @@ GLProgram * Node::getGLProgram() const
 
 Scene* Node::getScene() const
 {
-    if(!_parent)
+    if (!_parent)
         return nullptr;
     
-    return _parent->getScene();
+    auto sceneNode = _parent;
+    while (sceneNode->_parent)
+    {
+        sceneNode = sceneNode->_parent;
+    }
+    
+    return dynamic_cast<Scene*>(sceneNode);
 }
+
 
 Rect Node::getBoundingBox() const
 {
@@ -1267,7 +1277,7 @@ void Node::sortAllChildren()
 
 void Node::draw()
 {
-    auto renderer = Director::getInstance()->getRenderer();
+    auto renderer = _director->getRenderer();
     draw(renderer, _modelViewTransform, true);
 }
 
@@ -1278,8 +1288,8 @@ void Node::draw(Renderer* renderer, const Mat4 &transform, uint32_t flags)
 void Node::visit()
 {
     m_drawOrder = ++g_drawOrder;
-   auto renderer = Director::getInstance()->getRenderer();
-    Mat4 parentTransform = Director::getInstance()->getMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
+   auto renderer = _director->getRenderer();
+    Mat4 parentTransform = _director->getMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
     visit(renderer, parentTransform, true);
 }
 
@@ -1306,6 +1316,13 @@ uint32_t Node::processParentFlags(const Mat4& parentTransform, uint32_t parentFl
     return flags;
 }
 
+bool Node::isVisitableByVisitingCamera() const
+{
+    auto camera = Camera::getVisitingCamera();
+    bool visibleByCamera = camera ? ((unsigned short)camera->getCameraFlag() & _cameraMask) != 0 : true;
+    return visibleByCamera;
+}
+
 void Node::visit(Renderer* renderer, const Mat4 &parentTransform, uint32_t parentFlags)
 {
     m_drawOrder = ++g_drawOrder;
@@ -1321,9 +1338,10 @@ void Node::visit(Renderer* renderer, const Mat4 &parentTransform, uint32_t paren
     // IMPORTANT:
     // To ease the migration to v3.0, we still support the Mat4 stack,
     // but it is deprecated and your code should not rely on it
-    Director* director = Director::getInstance();
-    director->pushMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
-    director->loadMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW, _modelViewTransform);
+    _director->pushMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
+    _director->loadMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW, _modelViewTransform);
+    
+    bool visibleByCamera = isVisitableByVisitingCamera();
 
     int i = 0;
 
@@ -1341,17 +1359,18 @@ void Node::visit(Renderer* renderer, const Mat4 &parentTransform, uint32_t paren
                 break;
         }
         // self draw
-        this->draw(renderer, _modelViewTransform, flags);
+        if (visibleByCamera)
+            this->draw(renderer, _modelViewTransform, flags);
 
         for(auto it=_children.cbegin()+i; it != _children.cend(); ++it)
             (*it)->visit(renderer, _modelViewTransform, flags);
     }
-    else
+    else if (visibleByCamera)
     {
         this->draw(renderer, _modelViewTransform, flags);
     }
 
-    director->popMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
+    _director->popMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
     
     // FIX ME: Why need to set _orderOfArrival to 0??
     // Please refer to https://github.com/cocos2d/cocos2d-x/pull/6920
@@ -2606,6 +2625,17 @@ void Node::onAcceleration(Acceleration* acc, Event* unused_event)
 #endif
 }
 
+void Node::setCameraMask(unsigned short mask, bool applyChildren)
+{
+    _cameraMask = mask;
+    if (applyChildren)
+    {
+        for (const auto& child : _children)
+        {
+            child->setCameraMask(mask, applyChildren);
+        }
+    }
+}
 
 __NodeRGBA::__NodeRGBA()
 {
