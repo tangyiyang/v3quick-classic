@@ -34,6 +34,7 @@ extern "C" {
 
 #include "cocos2d.h"
 #include "LuaScriptHandlerMgr.h"
+#include "event/CCScriptEventDispatcher.h"
 
 NS_CC_BEGIN
 class LuaEventListenerCustom

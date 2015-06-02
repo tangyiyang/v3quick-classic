@@ -238,6 +238,7 @@ THE SOFTWARE.
 #include "2d/CCSpriteBatchNode.h"
 #include "2d/CCSpriteFrame.h"
 #include "2d/CCSpriteFrameCache.h"
+#include "2d/CCCamera.h"
 
 // text_input_node
 #include "2d/CCTextFieldTTF.h"
