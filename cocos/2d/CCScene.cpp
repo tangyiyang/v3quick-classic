@@ -28,8 +28,6 @@ THE SOFTWARE.
 #include "2d/CCScene.h"
 #include "base/CCDirector.h"
 #include "2d/CCCamera.h"
-#include "2d/CCLayer.h"
-#include "2d/CCSprite.h"
 #include "base/CCEventDispatcher.h"
 #include "base/CCEventListenerCustom.h"
 #include "renderer/CCRenderer.h"
@@ -46,8 +44,6 @@ Scene::Scene()
 {
     _ignoreAnchorPointForPosition = true;
     setAnchorPoint(Vec2(0.5f, 0.5f));
-    
-    _cameraOrderDirty = true;
     
     //create default camera
     _defaultCamera = Camera::create();
@@ -126,26 +122,26 @@ static bool camera_cmp(const Camera* a, const Camera* b)
     return a->getDepth() < b->getDepth();
 }
 
+void Scene::removeAllChildren()
+{
+    if (_defaultCamera)
+        _defaultCamera->retain();
+    
+    Node::removeAllChildren();
+}
+
 void Scene::render(Renderer* renderer)
 {
     auto director = Director::getInstance();
     Camera* defaultCamera = nullptr;
     const auto& transform = getNodeToParentTransform();
-    if (_cameraOrderDirty)
-    {
-        stable_sort(_cameras.begin(), _cameras.end(), camera_cmp);
-        _cameraOrderDirty = false;
-    }
-    
     for (const auto& camera : _cameras)
     {
-        if (!camera->isVisible())
-            continue;
-        
         Camera::_visitingCamera = camera;
         if (Camera::_visitingCamera->getCameraFlag() == CameraFlag::DEFAULT)
         {
             defaultCamera = Camera::_visitingCamera;
+            continue;
         }
         
         director->pushMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION);
@@ -157,22 +153,20 @@ void Scene::render(Renderer* renderer)
         
         director->popMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION);
     }
-
-    Camera::_visitingCamera = nullptr;
-}
-
-void Scene::removeAllChildren()
-{
-    if (_defaultCamera)
-        _defaultCamera->retain();
-    
-    Node::removeAllChildren();
-    
-    if (_defaultCamera)
+    //draw with default camera
+    if (defaultCamera)
     {
-        addChild(_defaultCamera);
-        _defaultCamera->release();
+        Camera::_visitingCamera = defaultCamera;
+        director->pushMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION);
+        director->loadMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION, Camera::_visitingCamera->getViewProjectionMatrix());
+        
+        //visit the scene
+        visit(renderer, transform, 0);
+        renderer->render();
+        
+        director->popMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION);
     }
+    Camera::_visitingCamera = nullptr;
 }
 
 #if CC_USE_PHYSICS
