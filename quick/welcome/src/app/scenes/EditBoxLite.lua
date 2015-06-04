@@ -63,7 +63,7 @@ function EditBoxLite:ctor(params)
 
     -- 用一个 clipNode 把 Label 裁剪, 不然内容过长
     local rect = cc.rect(0, 0, width, height)
-    self.clipnode_ = display.newClippingRegionNode(rect)
+    self.clipnode_ = display.newClippingNode(rect)
     self.clipnode_:addTo(self)
 
     self.label_ =

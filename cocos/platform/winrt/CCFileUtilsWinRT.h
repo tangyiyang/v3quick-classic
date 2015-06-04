@@ -29,7 +29,7 @@
 #include <vector>
 
 #include "platform/CCFileUtils.h"
-#include "base/CCPlatformMacros.h"
+#include "platform/CCPlatformMacros.h"
 #include "base/ccTypes.h"
 
 NS_CC_BEGIN
@@ -56,7 +56,6 @@ public:
 
 private:
     virtual bool isFileExistInternal(const std::string& strFilePath) const;
-	virtual bool isDirectoryExistInternal(const std::string& dirname) const;
 };
 
 // end of platform group

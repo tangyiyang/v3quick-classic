@@ -19,7 +19,7 @@ function TestUIPageViewScene:createPageView()
         viewRect = cc.rect(80, 80, 780, 480),
         column = 3, row = 3,
         padding = {left = 20, right = 20, top = 20, bottom = 20},
-        columnSpace = 10, rowSapce = 10}
+        columnSpace = 10, rowSpace = 10}
         :onTouch(handler(self, self.touchListener))
         :addTo(self)
 
@@ -33,7 +33,7 @@ function TestUIPageViewScene:createPageView()
         --             size = 20,
         --             align = cc.ui.TEXT_ALIGN_CENTER,
         --             color = display.COLOR_BLACK})
-        content = display.newColorLayer(
+        content = cc.LayerColor:create(
             cc.c4b(math.random(250),
                 math.random(250),
                 math.random(250),
@@ -44,6 +44,16 @@ function TestUIPageViewScene:createPageView()
         self.pv:addItem(item)        
     end
     self.pv:reload()
+
+    -- clone Test code
+    -- local clonePV
+    -- clonePV = self.pv:clone()
+    -- if clonePV then
+    --     clonePV:reload()
+    --     clonePV:addTo(self)
+    --     self.pv:removeSelf()
+    -- end
+
 end
 
 function TestUIPageViewScene:touchListener(event)

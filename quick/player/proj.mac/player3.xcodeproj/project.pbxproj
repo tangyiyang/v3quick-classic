@@ -12,6 +12,7 @@
 		4D9B77FB1A47141A00CF525C /* PomeloClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B77F81A47141A00CF525C /* PomeloClient.cpp */; };
 		4DC8F6E81B0B980400808C84 /* libpomelo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC8F6E71B0B980400808C84 /* libpomelo.a */; };
 		4DCAED831AE898BF0031C513 /* PomeloClient_luabinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DCAED811AE898BF0031C513 /* PomeloClient_luabinding.cpp */; };
+		4DCF3C911B1F32F80043BCD7 /* liblibquick.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E0B1FB196B9C3C0053EFD7 /* liblibquick.a */; };
 		9F05A0CF194EC0FA003CFA1F /* PlayerMessageBoxServiceMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F05A0CE194EC0FA003CFA1F /* PlayerMessageBoxServiceMac.mm */; };
 		9F05A101194EF319003CFA1F /* ConsoleWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F05A0FE194EF319003CFA1F /* ConsoleWindow.xib */; };
 		9F05A102194EF319003CFA1F /* ConsoleWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F05A100194EF319003CFA1F /* ConsoleWindowController.m */; };
@@ -48,7 +49,6 @@
 		9F6D88E61959647800B36BA2 /* player3.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9F1C8D2F194DE61E0068C99B /* player3.app */; };
 		9FCDC2BB196D2DD9005CB55E /* PlayerEditBoxServiceMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDC2B9196D2DD9005CB55E /* PlayerEditBoxServiceMac.mm */; };
 		DAB2BFC619595AE800ADD4E0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB2BFC519595AE800ADD4E0 /* SystemConfiguration.framework */; };
-		F4E0C0D5196BA4870053EFD7 /* liblibquick.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E0B1FB196B9C3C0053EFD7 /* liblibquick.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,10 +216,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DCF3C911B1F32F80043BCD7 /* liblibquick.a in Frameworks */,
 				4DC8F6E81B0B980400808C84 /* libpomelo.a in Frameworks */,
 				4D5B4E201ACE8D5E00FB263F /* libjansson.a in Frameworks */,
 				4D5B4E1E1ACE8D5B00FB263F /* libuv.a in Frameworks */,
-				F4E0C0D5196BA4870053EFD7 /* liblibquick.a in Frameworks */,
 				DAB2BFC619595AE800ADD4E0 /* SystemConfiguration.framework in Frameworks */,
 				9F3BF73D194E91E10072B3D0 /* OpenGL.framework in Frameworks */,
 				9F3BF73B194E91D70072B3D0 /* QuartzCore.framework in Frameworks */,

@@ -26,7 +26,7 @@ THE SOFTWARE.
 #ifndef __CC_COMMON_H__
 #define __CC_COMMON_H__
 
-#include "base/CCPlatformMacros.h"
+#include "platform/CCPlatformMacros.h"
 
 NS_CC_BEGIN
 
@@ -34,6 +34,11 @@ NS_CC_BEGIN
  * @addtogroup platform
  * @{
  */
+
+/**
+ * lua can not deal with ...
+ */
+void CC_DLL LuaLog(const char * format);
 
 /**
 @brief Pop out a message box

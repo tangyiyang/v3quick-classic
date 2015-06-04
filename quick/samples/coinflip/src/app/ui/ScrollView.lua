@@ -1,7 +1,7 @@
 
 local ScrollView = class("ScrollView", function(rect)
     if not rect then rect = cc.rect(0, 0, 0, 0) end
-    local node = display.newClippingRegionNode(rect)
+    local node = display.newClippingNode(rect)
     node:setNodeEventEnabled(true)
     cc(node):addComponent("components.behavior.EventProtocol"):exportMethods()
     return node

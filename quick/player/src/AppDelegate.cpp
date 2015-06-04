@@ -46,6 +46,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
    
+    glview->setDesignResolutionSize(960, 640, ResolutionPolicy::SHOW_ALL);
     // register lua engine
     auto engine = LuaEngine::getInstance();
     ScriptEngineManager::getInstance()->setScriptEngine(engine);
@@ -57,7 +58,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     {
         auto scene = Scene::create();
         auto label = Label::createWithSystemFont("WAITING FOR CONNECT TO DEBUGGER...", "Arial", 32);
-        const Size winSize = director->getWinSize();
+        const cocos2d::Size winSize = director->getWinSize();
         label->setPosition(winSize.width / 2, winSize.height / 2);
         scene->addChild(label);
         director->runWithScene(scene);

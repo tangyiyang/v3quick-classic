@@ -22,6 +22,9 @@ THE SOFTWARE.
 
 ]]
 
+--------------------------------
+-- @module ui
+
 --[[--
 
 创建和管理用户界面
@@ -39,6 +42,14 @@ ui.TEXT_ALIGN_RIGHT   = cc.TEXT_ALIGNMENT_RIGHT
 ui.TEXT_VALIGN_TOP    = cc.VERTICAL_TEXT_ALIGNMENT_TOP
 ui.TEXT_VALIGN_CENTER = cc.VERTICAL_TEXT_ALIGNMENT_CENTER
 ui.TEXT_VALIGN_BOTTOM = cc.VERTICAL_TEXT_ALIGNMENT_BOTTOM
+
+-- start --
+
+--------------------------------
+-- 创建一个文字输入框，并返回 EditBox 对象。
+-- @function [parent=#ui] newEditBox
+-- @param table params 参数表格对象
+-- @return EditBox#EditBox  文字输入框
 
 --[[--
 
@@ -102,11 +113,9 @@ end
 
 ~~~
 
-@param table params 参数表格对象
-
-@return EditBox 文字输入框
-
 ]]
+-- end --
+
 function ui.newEditBox(params)
     PRINT_DEPRECATED(string.format("%s() is deprecated, please use %s()", "ui.newEditBox", "cc.ui.UIInput"))
 
@@ -127,6 +136,14 @@ function ui.newTextField(params)
     end
     return cc.ui.UIInput.new(params)
 end
+
+-- start --
+
+--------------------------------
+-- 用位图字体创建文本显示对象，并返回 LabelBMFont 对象。
+-- @function [parent=#ui] newBMFontLabel
+-- @param table params 参数表格对象
+-- @return LabelBMFont#LabelBMFont  LabelBMFont对象
 
 --[[--
 
@@ -150,16 +167,22 @@ local label = ui.newBMFontLabel({
 
 ~~~
 
-@param table params 参数表格对象
-
-@return LabelBMFont LabelBMFont对象
-
 ]]
+-- end --
+
 function ui.newBMFontLabel(params)
     PRINT_DEPRECATED(string.format("%s() is deprecated, please use %s()", "ui.newBMFontLabel", "cc.ui.UILabel"))
 
     return cc.ui.UILabel.newBMFontLabel_(params)
 end
+
+-- start --
+
+--------------------------------
+-- 使用 TTF 字体创建文字显示对象，并返回 LabelTTF 对象。
+-- @function [parent=#ui] newTTFLabel
+-- @param table params 参数表格对象
+-- @return LabelTTF#LabelTTF  LabelTTF对象
 
 --[[--
 
@@ -208,16 +231,22 @@ local label = ui.newTTFLabel({
 
 ~~~
 
-@param table params 参数表格对象
-
-@return LabelTTF LabelTTF对象
-
 ]]
+-- end --
+
 function ui.newTTFLabel(params)
     PRINT_DEPRECATED(string.format("%s() is deprecated, please use %s()", "ui.newTTFLabel", "cc.ui.UILabel"))
 
     return cc.ui.UILabel.newTTFLabel_(params)
 end
+
+-- start --
+
+--------------------------------
+-- 创建带阴影的 TTF 文字显示对象，并返回 LabelTTF 对象。
+-- @function [parent=#ui] newTTFLabelWithShadow
+-- @param table params 参数表格对象
+-- @return LabelTTF#LabelTTF  LabelTTF对象
 
 --[[--
 
@@ -227,11 +256,9 @@ end
 
 -   shadowColor: 阴影颜色（可选），用 cc.c4b() 指定，默认为黑色
 
-@param table params 参数表格对象
-
-@return LabelTTF LabelTTF对象
-
 ]]
+-- end --
+
 function ui.newTTFLabelWithShadow(params)
     PRINT_DEPRECATED(string.format("%s() is deprecated, please use %s()", "ui.newTTFLabelWithShadow", "cc.ui.UILabel"))
 
@@ -241,6 +268,14 @@ function ui.newTTFLabelWithShadow(params)
     return label
 end
 
+-- start --
+
+--------------------------------
+-- 创建带描边效果的 TTF 文字显示对象，并返回 LabelTTF 对象。
+-- @function [parent=#ui] newTTFLabelWithOutline
+-- @param table params 参数表格对象
+-- @return LabelTTF#LabelTTF  LabelTTF对象
+
 --[[--
 
 创建带描边效果的 TTF 文字显示对象，并返回 LabelTTF 对象。
@@ -249,11 +284,9 @@ end
 
     outlineColor: 描边颜色（可选），用 cc.c4b() 指定，默认为黑色
 
-@param table params 参数表格对象
-
-@return LabelTTF LabelTTF对象
-
 ]]
+-- end --
+
 function ui.newTTFLabelWithOutline(params)
     PRINT_DEPRECATED(string.format("%s() is deprecated, please use %s()", "ui.newTTFLabelWithOutline", "cc.ui.UILabel"))
     

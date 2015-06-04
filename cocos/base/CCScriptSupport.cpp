@@ -30,10 +30,10 @@
 #include "base/CCScheduler.h"
 #include "2d/CCNode.h"
 
-bool CC_DLL cc_assert_script_compatible(const char *msg)
+bool CC_DLL cc_assert_script_compatible(const char *msg, const char *cond, const char *file, int line)
 {
     cocos2d::ScriptEngineProtocol* engine = cocos2d::ScriptEngineManager::getInstance()->getScriptEngine();
-    if (engine && engine->handleAssert(msg))
+    if (engine && engine->handleAssert(msg, cond, file, line))
     {
         return true;
     }
@@ -57,6 +57,7 @@ ScriptHandlerEntry::~ScriptHandlerEntry(void)
     if (_handler != 0 )
     {
         ScriptEngineManager::getInstance()->getScriptEngine()->removeScriptHandler(_handler);
+        LUALOG("[LUA] Remove event handler: %d", _handler);
         _handler = 0;
     }
 }
@@ -77,12 +78,14 @@ bool SchedulerScriptHandlerEntry::init(float interval, bool paused)
     _timer = new TimerScriptHandler();
     _timer->initWithScriptHandler(_handler, interval);
     _paused = paused;
+    LUALOG("[LUA] ADD script schedule: %d, entryID: %d", _handler, _entryId);
     return true;
 }
 
 SchedulerScriptHandlerEntry::~SchedulerScriptHandlerEntry(void)
 {
     _timer->release();
+    LUALOG("[LUA] DEL script schedule %d, entryID: %d", _handler, _entryId);
 }
 
 

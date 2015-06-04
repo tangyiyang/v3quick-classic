@@ -49,13 +49,13 @@ PrimitiveCommand::~PrimitiveCommand()
 {
 }
 
-void PrimitiveCommand::init(float globalOrder, GLuint textureID, GLProgramState* glProgramState, BlendFunc blendType, Primitive* primitive, const Mat4& mv, uint32_t flags)
+void PrimitiveCommand::init(float globalOrder, GLuint textureID, GLProgramState* glProgramState, BlendFunc blendType, Primitive* primitive,const Mat4& mv)
 {
     CCASSERT(glProgramState, "Invalid GLProgramState");
     CCASSERT(glProgramState->getVertexAttribsFlags() == 0, "No custom attributes are supported in PrimitiveCommand");
     CCASSERT(primitive != nullptr, "Could not render null primitive");
     
-    RenderCommand::init(globalOrder, mv, flags);
+    _globalOrder = globalOrder;
     
     _primitive = primitive;
     
@@ -68,11 +68,6 @@ void PrimitiveCommand::init(float globalOrder, GLuint textureID, GLProgramState*
         _glProgramState = glProgramState;
         
     }
-}
-
-void PrimitiveCommand::init(float globalOrder, GLuint textureID, GLProgramState* glProgramState, BlendFunc blendType, Primitive* primitive,const Mat4& mv)
-{
-    init(globalOrder, textureID, glProgramState, blendType, primitive, mv, 0);
 }
 
 void PrimitiveCommand::execute() const

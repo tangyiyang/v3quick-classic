@@ -7,7 +7,7 @@ local EditBoxLite = import(".EditBoxLite")
 local eventDispatcher = cc.Director:getInstance():getEventDispatcher()
 
 local CreateProjectUI = class("CreateProjectUI", function()
-        return cc.LayerColor:create(cc.c4b(56, 56, 56, 250))
+        return display.newColorLayer(cc.c4b(56, 56, 56, 250))
     end)
 
 -- settings
@@ -105,13 +105,13 @@ function CreateProjectUI:onEnter()
     :align(display.LEFT_CENTER, 40, display.top - 255)
     :addTo(self)
 
-    local portaitCheckBox =
+    local portraitCheckBox =
     cc.ui.UICheckBoxButton.new(checkboxImages)
-        :setButtonLabel(cc.ui.UILabel.new({text = "Portait", size = fontSize,  color = display.COLOR_WHITE}))
+        :setButtonLabel(cc.ui.UILabel.new({text = "Portrait", size = fontSize,  color = display.COLOR_WHITE}))
         :setButtonLabelOffset(30, 0)
         :setButtonLabelAlignment(display.LEFT_CENTER)
         :align(display.LEFT_CENTER, 40, display.cy)
-        :onButtonClicked(function() self.landscapeCheckBox:setButtonSelected(not self.portaitCheckBox:isButtonSelected()) end)
+        :onButtonClicked(function() self.landscapeCheckBox:setButtonSelected(not self.portraitCheckBox:isButtonSelected()) end)
         :addTo(self)
 
     local landscapeCheckBox =
@@ -120,12 +120,22 @@ function CreateProjectUI:onEnter()
         :setButtonLabelOffset(30, 0)
         :setButtonLabelAlignment(display.LEFT_CENTER)
         :align(display.LEFT_CENTER, 230, display.cy)
-        :onButtonClicked(function() self.portaitCheckBox:setButtonSelected(not self.landscapeCheckBox:isButtonSelected()) end)
+        :onButtonClicked(function() self.portraitCheckBox:setButtonSelected(not self.landscapeCheckBox:isButtonSelected()) end)
         :addTo(self)
 
-    portaitCheckBox:setButtonSelected(true)
-    self.portaitCheckBox = portaitCheckBox
+    portraitCheckBox:setButtonSelected(true)
+    self.portraitCheckBox = portraitCheckBox
     self.landscapeCheckBox = landscapeCheckBox
+
+
+    -- copy source if
+    self.copySourceCB_ = cc.ui.UICheckBoxButton.new(checkboxImages)
+        :setButtonLabel(cc.ui.UILabel.new({text = "Copy Source Files", size = fontSize,  color = display.COLOR_WHITE}))
+        :setButtonLabelOffset(30, 0)
+        :setButtonLabelAlignment(display.LEFT_CENTER)
+        :align(display.LEFT_CENTER, 40, display.cy - 50)
+        :addTo(self)
+        :setButtonSelected(true)
 
 
     -- ok or cancel
@@ -160,7 +170,7 @@ function CreateProjectUI:onEnter()
             if string.len(locationEditbox:getText()) > 0 and string.len(packageEditbox:getText()) > 0 then
                 createProjectbutton:setButtonLabelString("normal", "Processing ...")
                 local t = packageEditbox:getText():splitBySep('.')
-                self.projectFolder = locationEditbox:getText() .. '/' .. t[#t]
+                self.projectFolder = locationEditbox:getText() .. device.directorySeparator .. t[#t]
 
                 local projectConfig = ProjectConfig:new()
                 projectConfig:setProjectDir(self.projectFolder)
@@ -177,8 +187,32 @@ function CreateProjectUI:onEnter()
                     projectConfig:changeFrameOrientationToLandscape()
                     screenDirection = " -r landscape "
                 end
-                local arguments = " -p " .. packageEditbox:getText() .. " -f " .. " -o " .. self.projectFolder .. screenDirection
+                local copySource = ""
+                if not self.copySourceCB_:isButtonSelected() then
+                    copySource = " -lt "
+                end
+                local arguments = " -p " .. packageEditbox:getText() .. " -f " .. " -o " .. self.projectFolder .. screenDirection .. copySource
                 local taskId = tostring(os.time())
+
+                -- local scriptPath = cc.player.quickRootPath .. "cocos new"
+
+                -- local screenDirection = "-r portrait"
+                -- if self.landscapeCheckBox:isButtonSelected() then
+                --     projectConfig:changeFrameOrientationToLandscape()
+                --     screenDirection = "-r landscape"
+                -- end
+
+                -- local cmds = {}
+                -- table.insert(cmds, "-l lua")
+                -- table.insert(cmds, "-t quick")
+                -- table.insert(cmds, "-d " .. self.projectFolder)
+                -- table.insert(cmds, "-p " .. packageEditbox:getText())
+                -- table.insert(cmds, screenDirection)
+
+                -- local arguments = table.concat(cmds, " ")
+                -- arguments = " " .. arguments
+                
+                print("Create Cmd:" .. scriptPath .. " " .. arguments)
                 local task = PlayerProtocol:getInstance():getTaskService():createTask(taskId, scriptPath, arguments)
                 eventDispatcher:addEventListenerWithFixedPriority(cc.EventListenerCustom:create(taskId,
                             function()
@@ -192,7 +226,12 @@ function CreateProjectUI:onEnter()
                                 end
                             end),
                            1)
-                task:run()
+                task:runInTerminal()
+
+                createProjectbutton:setButtonLabelString("normal", "Open ...")
+                createProjectbutton.currState = 2
+                local messageBox = PlayerProtocol:getInstance():getMessageBoxService()
+                messageBox:showMessageBox("player v3", "Please wait create success and then click Open")
             else
                 local messageBox = PlayerProtocol:getInstance():getMessageBoxService()
                 messageBox:showMessageBox("player v3", "please fill all infomation..")

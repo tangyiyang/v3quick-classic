@@ -724,7 +724,7 @@ public:
         IPlabel->setAnchorPoint(Vec2(0,0));
         int spaceSizex = 72;
         int spaceSizey = 200;
-        IPlabel->setPosition( Point(VisibleRect::leftTop().x+spaceSizex, VisibleRect::top().y -spaceSizey) );
+        IPlabel->setPosition( cocos2d::Point(VisibleRect::leftTop().x+spaceSizex, VisibleRect::top().y -spaceSizey) );
         addChild(IPlabel, 9001);
 
         _transferTip = "waiting for file transfer ...";
@@ -738,12 +738,12 @@ public:
         verLable->setAnchorPoint(Vec2(0,0));
         int width = verLable->getBoundingBox().size.width;
         int height = verLable->getBoundingBox().size.height;
-        verLable->setPosition( Point(VisibleRect::right().x-width, VisibleRect::rightBottom().y) );
+        verLable->setPosition( cocos2d::Point(VisibleRect::right().x-width, VisibleRect::rightBottom().y) );
         verLable->setAlignment(TextHAlignment::LEFT);
         addChild(verLable, 9002);
         _labelUploadFile = Label::createWithSystemFont(_transferTip,"",36);
         _labelUploadFile->setAnchorPoint(Vec2(0,0));
-        _labelUploadFile->setPosition( Point(VisibleRect::leftTop().x+spaceSizex, IPlabel->getPositionY()-spaceSizex) );
+        _labelUploadFile->setPosition( cocos2d::Point(VisibleRect::leftTop().x+spaceSizex, IPlabel->getPositionY()-spaceSizex) );
         _labelUploadFile->setAlignment(TextHAlignment::LEFT);
         addChild(_labelUploadFile, 9003);
 
@@ -758,7 +758,7 @@ public:
         listener->onTouchBegan = [](Touch* touch, Event  *event)->bool{
             auto target = static_cast<Sprite*>(event->getCurrentTarget());
             Vec2 point = target->convertToNodeSpace(Director::getInstance()->convertToGL(touch->getLocationInView()));
-            auto rect = Rect(0, 0, target->getContentSize().width, target->getContentSize().height);
+            auto rect = cocos2d::Rect(0, 0, target->getContentSize().width, target->getContentSize().height);
             if (!rect.containsPoint(point)) return false;
             target->stopAllActions();
             target->runAction(Sequence::createWithTwoActions(ScaleBy::create(0.05f, 0.9f),ScaleTo::create(0.125f, 1)));
@@ -767,7 +767,7 @@ public:
         listener->onTouchEnded = [](Touch* touch, Event  *event){
             auto target = static_cast<Sprite*>(event->getCurrentTarget());
             Vec2 point = target->convertToNodeSpace(Director::getInstance()->convertToGL(touch->getLocationInView()));
-            auto rect = Rect(0, 0, target->getContentSize().width, target->getContentSize().height);
+            auto rect = cocos2d::Rect(0, 0, target->getContentSize().width, target->getContentSize().height);
             if (!rect.containsPoint(point)) return;
             startScript("");
         };

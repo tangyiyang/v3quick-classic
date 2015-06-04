@@ -6,7 +6,7 @@
 using namespace std;
 
 #include "base/CCRef.h"
-#include "CCApplication.h"
+#include "platform/CCApplication.h"
 #include "ProjectConfig/ProjectConfig.h"
 #include "ProjectConfig/SimulatorConfig.h"
 

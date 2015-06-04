@@ -36,7 +36,7 @@ local CCObjectTypes = {
     "CatmullRomTo",
     "CircleShape",
     "ClippingNode",
-    "ClippingRegionNode",
+    "ClippingRectangleNode",
     "Component",
     "Configuration",
     "Control",

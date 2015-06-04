@@ -1,0 +1,54 @@
+libpng warning: iCCP: known incorrect sRGB profile
+------------------------------------------------
+LOAD LUA FILE: /Users/sleepers/opensource_projects/v3quick-classic/quick/samples/bytearray/src/main.lua
+------------------------------------------------
+===========================================================
+              LOAD QUICK FRAMEWORK
+===========================================================
+[INFO] 
+[INFO] # DEBUG                        = 2
+[INFO] #
+[INFO] # device.platform              = mac
+[INFO] # device.model                 = unknown
+[INFO] # device.language              = cn
+[INFO] # device.writablePath          = /Users/sleepers/opensource_projects/v3quick-classic/quick/samples/bytearray/
+[INFO] # device.directorySeparator    = /
+[INFO] # device.pathSeparator         = :
+[INFO] #
+libpng warning: iCCP: known incorrect sRGB profile
+[INFO] # CONFIG_SCREEN_AUTOSCALE      = FIXED_HEIGHT
+[INFO] # CONFIG_SCREEN_WIDTH          = 960.00
+[INFO] # CONFIG_SCREEN_HEIGHT         = 640.00
+[INFO] # display.widthInPixels        = 960.00
+[INFO] # display.heightInPixels       = 640.00
+[INFO] # display.contentScaleFactor   = 1.00
+[INFO] # display.width                = 960.00
+[INFO] # display.height               = 640.00
+[INFO] # display.cx                   = 480.00
+[INFO] # display.cy                   = 320.00
+[INFO] # display.left                 = 0.00
+[INFO] # display.right                = 960.00
+[INFO] # display.top                  = 640.00
+[INFO] # display.bottom               = 0.00
+[INFO] # display.c_left               = -480.00
+[INFO] # display.c_right              = 480.00
+[INFO] # display.c_top                = 320.00
+[INFO] # display.c_bottom             = -320.00
+[INFO] #
+[INFO] userdata: 0x13e7d920 [EventProtocol] addEventListener() - event: CLICKED_EVENT, handle: 1, tag: 
+[INFO] userdata: 0x13e83c18 [EventProtocol] addEventListener() - event: CLICKED_EVENT, handle: 1, tag: 
+[INFO] userdata: 0x13e88bd0 [EventProtocol] addEventListener() - event: CLICKED_EVENT, handle: 1, tag: 
+[INFO] userdata: 0x13e83c18 [EventProtocol] dispatchEvent() - event PRESSED_EVENT
+[INFO] userdata: 0x13e83c18 [EventProtocol] dispatchEvent() - event RELEASE_EVENT
+[INFO] userdata: 0x13e83c18 [EventProtocol] dispatchEvent() - event CLICKED_EVENT
+[INFO] userdata: 0x13e83c18 [EventProtocol] dispatchEvent() - dispatching event CLICKED_EVENT to listener 1
+test2
+00 00 00 22 	4
+buf all bytes:00 00 00 22 , 4
+[INFO] userdata: 0x13e83c18 [EventProtocol] dispatchEvent() - event PRESSED_EVENT
+[INFO] userdata: 0x13e83c18 [EventProtocol] dispatchEvent() - event RELEASE_EVENT
+[INFO] userdata: 0x13e83c18 [EventProtocol] dispatchEvent() - event CLICKED_EVENT
+[INFO] userdata: 0x13e83c18 [EventProtocol] dispatchEvent() - dispatching event CLICKED_EVENT to listener 1
+test2
+00 00 00 22 	4
+buf all bytes:00 00 00 22 , 4

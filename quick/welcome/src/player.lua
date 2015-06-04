@@ -57,16 +57,6 @@ function string:splitBySep(sep)
     return fields
 end
 
--- cjson
-local cjson
-local function safeLoad()
-    cjson = require("cjson")
-end
-
-if not pcall(safeLoad) then
-    cjson = nil
-end
-
 --
 -- save player setting to ~/.quick_player.lua
 --
@@ -165,7 +155,7 @@ function player:buildUI()
                       {title = "iPhone 4",  w=640,h=960},
                       {title = "iPhone 5",  w=640,h=1136},
                       {title = "iPad",      w=768,h=1024},
-                      {title = "iPad Retina", w=1436,h=2048},
+                      {title = "iPad Retina", w=1536,h=2048},
                       {title = "Android",   w=480,h=800},
                       {title = "Android",   w=480,h=854},
                       {title = "Android",   w=540,h=960},
@@ -192,9 +182,9 @@ function player:buildUI()
 
     -- direction
     menuBar:addItem("DIRECTION_MENU_SEP", "-", "VIEW_MENU")
-    local portait = menuBar:addItem("DIRECTION_PORTAIT_MENU", "Portait", "VIEW_MENU")
-    portait.type  = "portait"
-    if self.projectConfig_:isPortraitFrame() then portait:setChecked(true) end
+    local portrait = menuBar:addItem("DIRECTION_PORTRAIT_MENU", "Portrait", "VIEW_MENU")
+    portrait.type  = "portrait"
+    if self.projectConfig_:isPortraitFrame() then portrait:setChecked(true) end
 
     local landscape = menuBar:addItem("DIRECTION_LANDSCAPE_MENU", "Landscape", "VIEW_MENU")
     landscape.type  = "landscape"
@@ -228,9 +218,9 @@ function player:registerEventHandler()
     -- for app event
     local eventDispatcher = cc.Director:getInstance():getEventDispatcher()
     local event = function(e)
-        local status, data = pcall(cjson.decode, e:getDataString())
-        if not status then return end
+        if not json then return end
 
+        data = json.decode(e:getDataString())
         if data.name == "menuClicked" then
             self:onMenuClicked(data)
         end
@@ -276,13 +266,20 @@ function player:onScreenChangeFrameSize(sender)
 
     self.projectConfig_:setFrameSize(w, h)
     self.projectConfig_:setFrameScale(1.0)
-    PlayerProtocol:getInstance():openProjectWithProjectConfig(self.projectConfig_)
+    
+    local player = PlayerProtocol:getInstance()
+    if player.getPositionX then
+        print(player:getPositionX(), player:getPositionY())
+        self.projectConfig_:setWindowOffset(player:getPositionX(), player:getPositionY())
+    end
+
+    player:openProjectWithProjectConfig(self.projectConfig_)
 end
 
 function player:onScreenChangeDirection(sender)
     if sender:isChecked() then return end
 
-    if sender.type == "portait" then
+    if sender.type == "portrait" then
         self.projectConfig_:changeFrameOrientationToPortait()
     elseif sender.type == "landscape" then
         self.projectConfig_:changeFrameOrientationToLandscape()

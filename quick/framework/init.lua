@@ -22,6 +22,9 @@ THE SOFTWARE.
 
 ]]
 
+--------------------------------
+-- @module init
+
 --[[--
 
 quick framework 初始化
@@ -102,8 +105,12 @@ local CURRENT_MODULE_NAME = ...
 
 cc = cc or {}
 cc.PACKAGE_NAME = string.sub(CURRENT_MODULE_NAME, 1, -6)
-cc.VERSION = "3.2 RC"
+cc.VERSION = "3.3"
 cc.FRAMEWORK_NAME = "quick-cocos2d-x"
+
+if cc.Node.removeTouchEvent then
+    cc.bPlugin_ = true
+end
 
 require(cc.PACKAGE_NAME .. ".debug")
 require(cc.PACKAGE_NAME .. ".functions")
@@ -120,7 +127,13 @@ filter     = require(cc.PACKAGE_NAME .. ".filter")
 audio      = require(cc.PACKAGE_NAME .. ".audio")
 network    = require(cc.PACKAGE_NAME .. ".network")
 crypto     = require(cc.PACKAGE_NAME .. ".crypto")
-json       = require(cc.PACKAGE_NAME .. ".json")
+
+local cjson = require(cc.PACKAGE_NAME .. ".json")
+if cjson then
+    json = cjson
+else
+    require("cocos.cocos2d.json")
+end
 
 if device.platform == "android" then
     require(cc.PACKAGE_NAME .. ".platform.android")

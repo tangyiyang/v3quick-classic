@@ -31,7 +31,7 @@ function WelcomeScene:createLogo(node)
         :addTo(node)
 
     local label = cc.ui.UILabel.new({
-        UILabelType = 2,
+		UILabelType = 2,
         text = cc.FRAMEWORK_NAME,
         size = 38,
         color = display.COLOR_WHITE,
@@ -43,7 +43,7 @@ function WelcomeScene:createLogo(node)
 
 
     label = cc.ui.UILabel.new({
-        UILabelType = 2,
+		UILabelType = 2,
         text = "v" .. cc.VERSION,
         size = 14,
         color = cc.c3b(243,156,18),
@@ -69,7 +69,7 @@ function WelcomeScene:createButtons(node)
     cc.ui.UIPushButton.new(images, {scale9 = true})
     :setButtonSize(buttonWidth, buttonHeight)
     :setButtonLabel("normal", cc.ui.UILabel.new({
-            UILabelType = 2,
+		    UILabelType = 2,
             text = "打开",
             size = 18,
         }))
@@ -93,7 +93,7 @@ function WelcomeScene:createButtons(node)
     cc.ui.UIPushButton.new({normal="#RedButtonNormal.png", pressed="#RedButtonPressed.png", disabled = "#ButtonDisabled.png",}, {scale9 = true})
     :setButtonSize(buttonWidth, buttonHeight)
     :setButtonLabel("normal", cc.ui.UILabel.new({
-            UILabelType = 2,
+		    UILabelType = 2,
             text = "移除",
             size = 18,
         }))
@@ -113,12 +113,28 @@ function WelcomeScene:createButtons(node)
         self.localProjectListView_:setCurrentIndex(index)
     end)
 
-
-    top = top - 180-68
+    top = top - 68
     cc.ui.UIPushButton.new(images, {scale9 = true})
     :setButtonSize(buttonWidth, buttonHeight)
     :setButtonLabel("normal", cc.ui.UILabel.new({
             UILabelType = 2,
+            text = "编译",
+            size = 18,
+        }))
+    :pos(display.width-padding, top)
+    :addTo(node)
+    :onButtonClicked(function()
+        local index = self.localProjectListView_:getCurrentIndex()
+        local projSetting = cc.player.settings.PLAYER_OPEN_RECENTS[index]
+        require("app.scenes.BuildProjectUI").new({projDir = projSetting and projSetting.title})
+        :addTo(self)
+    end)
+
+    top = top - 180
+    cc.ui.UIPushButton.new(images, {scale9 = true})
+    :setButtonSize(buttonWidth, buttonHeight)
+    :setButtonLabel("normal", cc.ui.UILabel.new({
+		    UILabelType = 2,
             text = "新建项目",
             size = 18,
         }))
@@ -133,7 +149,7 @@ function WelcomeScene:createButtons(node)
     cc.ui.UIPushButton.new(images, {scale9 = true})
     :setButtonSize(buttonWidth, buttonHeight)
     :setButtonLabel("normal", cc.ui.UILabel.new({
-            UILabelType = 2,
+		    UILabelType = 2,
             text = "导入项目",
             size = 18,
         }))
@@ -301,7 +317,7 @@ function WelcomeScene:createCopyright(node)
     node:addChild(bg)
 
     local label = cc.ui.UILabel.new({
-        UILabelType = 2,
+		UILabelType = 2,
         text = "Copyright (c) 2012-2014 chukong-inc.com, Powered by quick-cocos2d-x.",
         size = 15,
         color = cc.c3b(128, 128, 128),
@@ -312,7 +328,7 @@ function WelcomeScene:createCopyright(node)
     node:addChild(label)
 
     label = cc.ui.UILabel.new({
-        UILabelType = 2,
+		UILabelType = 2,
         text = "Code Less, Play More",
         size = 15,
         color = cc.c3b(128, 128, 128),
@@ -440,7 +456,7 @@ end
 
 function WelcomeScene:createDemoTitle(sample)
     local label = cc.ui.UILabel.new({
-        UILabelType = 2,
+		UILabelType = 2,
         text = sample.title,
         align = cc.ui.TEXT_ALIGNMENT_CENTER,
         color = cc.c3b(144,144,144),

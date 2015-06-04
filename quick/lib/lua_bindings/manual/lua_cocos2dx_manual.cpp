@@ -32,6 +32,7 @@
 #include <sys/socket.h>
 #endif
 
+using namespace cocos2d;
 static int tolua_cocos2d_Scheduler_scheduleScriptFunc(lua_State* tolua_S)
 {
     if (NULL == tolua_S)
@@ -402,7 +403,7 @@ int tolua_cocos2d_Node_setContentSize(lua_State* tolua_S)
         if (!ok)
             return 0;
         
-        cobj->setContentSize(Size(width, height));
+        cobj->setContentSize(cocos2d::Size(width, height));
         return 0;
     }
     

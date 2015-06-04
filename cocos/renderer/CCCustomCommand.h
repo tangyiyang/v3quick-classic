@@ -27,29 +27,18 @@
 #define _CC_CUSTOMCOMMAND_H_
 
 #include "renderer/CCRenderCommand.h"
-#include "renderer/CCRenderCommandPool.h"
 
 NS_CC_BEGIN
 
-class CustomCommand : public RenderCommand
+class CC_DLL CustomCommand : public RenderCommand
 {
 public:
     CustomCommand();
     ~CustomCommand();
     
 public:
-	/**
-	Init function.
-	@param globalZOrder GlobalZOrder of the render command.
-	@param modelViewTransform When in 3D mode, depth sorting needs modelViewTransform.
-	@param flags Use to identify that the render command is 3D mode or not.
-	*/
-    void init(float globalZOrder, const Mat4& modelViewTransform, uint32_t flags);
-    /**
-    Init function. The render command will be in 2D mode.
-    @param globalZOrder GlobalZOrder of the render command.
-    */
-    void init(float globalZOrder);
+
+    void init(float depth);
 
     void execute();
 

@@ -22,6 +22,9 @@ THE SOFTWARE.
 
 ]]
 
+--------------------------------
+-- @module cocos2dx
+
 --[[--
 
 针对 cocos2d-x 的一些封装和扩展
@@ -47,12 +50,16 @@ THE SOFTWARE.
 
 local p = cc.PACKAGE_NAME .. ".cocos2dx."
 
+if not cc.p then
+-- cc.p exist, so the cocos.init have loaded
 require(p .. "Cocos2dConstants")
 require(p .. "OpenglConstants")
 require(p .. "Cocos2d")
 require(p .. "StudioConstants")
+end
 
 require(p .. "Event")
+require(p .. "ActionEx")
 require(p .. "NodeEx")
 require(p .. "SceneEx")
 require(p .. "SpriteEx")

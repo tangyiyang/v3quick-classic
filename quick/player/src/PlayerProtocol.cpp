@@ -62,7 +62,8 @@ static void glfwDropFunc(GLFWwindow *window, int count, const char **files)
 void PlayerProtocol::registerGLFWEvents()
 {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_MAC)
-    glfwSetDropCallback(cocos2d::Director::getInstance()->getOpenGLView()->getWindow(), glfwDropFunc);
+    GLFWwindow* window = (GLFWwindow*)cocos2d::Director::getInstance()->getOpenGLView()->getCocoaWindow();
+    glfwSetDropCallback(window, glfwDropFunc);
 #endif
 }
 

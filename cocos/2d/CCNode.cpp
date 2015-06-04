@@ -56,6 +56,8 @@ THE SOFTWARE.
 #include "base/CCEventAcceleration.h"
 #include "platform/CCDevice.h"
 #include "base/CCEventListenerAcceleration.h"
+#include "event/ScriptEventCenter.h"
+#include "physics/CCPhysicsWorld.h"
 
 #if CC_USE_PHYSICS
 #include "physics/CCPhysicsBody.h"
@@ -890,7 +892,8 @@ void Node::cleanup()
 
 std::string Node::getDescription() const
 {
-    return StringUtils::format("<Node | Tag = %d", _tag);
+    return "Node";
+//    return StringUtils::format("<Node | Tag = %d", _tag);
 }
 
 // lazy allocs

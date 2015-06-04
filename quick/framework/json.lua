@@ -22,6 +22,9 @@ THE SOFTWARE.
 
 ]]
 
+--------------------------------
+-- @module json
+
 --[[--
 
 JSON 编码与解码
@@ -37,6 +40,14 @@ end
 if not pcall(safeLoad) then 
     cjson = nil
 end
+
+-- start --
+
+--------------------------------
+-- 将表格数据编码为 JSON 字符串
+-- @function [parent=#json] encode
+-- @param table 表格对象
+-- @return string#string ret (return value: string)  json字符串
 
 --[[--
 
@@ -69,11 +80,9 @@ echo(str) -- [null,null,2,null,3]
 
 ~~~
 
-@param table 表格对象
-
-@return string json字符串
-
 ]]
+-- end --
+
 function json.encode(var)
     local status, result = pcall(cjson.encode, var)
     if status then return result end
@@ -82,13 +91,21 @@ function json.encode(var)
     end
 end
 
+-- start --
+
+--------------------------------
+-- 将 JSON 字符串解码为表格对象
+-- @function [parent=#json] decode
+-- @param string json字符串
+-- @return table#table ret (return value: table)  表格对象
+
 --[[--
 
 将 JSON 字符串解码为表格对象
 
 ~~~ lua
 
-local json = require("framework.shared.json")
+local json = require("framework.json")
 local tb = json.decode('{"a":1,"b":"ss","c":{"c1":1,"c2":2},"d":[10,11],"1":100}')
 dump(tb) --[ [
 - "<var>" = {
@@ -120,11 +137,9 @@ dump(tb) --[ [
 
 ~~~
 
-@param string json字符串
-
-@return table 表格对象
-
 ]]
+-- end --
+
 function json.decode(text)
     local status, result = pcall(cjson.decode, text)
     if status then return result end
@@ -133,6 +148,10 @@ function json.decode(text)
     end
 end
 
-if cjson then json.null = cjson.null end
+if cjson then
+    json.null = cjson.null
+else
+    json = nil
+end
 
 return json

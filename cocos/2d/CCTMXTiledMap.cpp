@@ -24,12 +24,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ****************************************************************************/
-#include "CCTMXTiledMap.h"
-#include "CCTMXXMLParser.h"
-#include "CCTMXLayer.h"
+#include "2d/CCTMXTiledMap.h"
+#include "2d/CCTMXXMLParser.h"
+#include "2d/CCTMXLayer.h"
 #include "2d/CCSprite.h"
-
-#include <algorithm>
+#include "deprecated/CCString.h" // For StringUtils::format
 
 NS_CC_BEGIN
 
@@ -37,7 +36,7 @@ NS_CC_BEGIN
 
 TMXTiledMap * TMXTiledMap::create(const std::string& tmxFile)
 {
-    TMXTiledMap *ret = new TMXTiledMap();
+    TMXTiledMap *ret = new (std::nothrow) TMXTiledMap();
     if (ret->initWithTMXFile(tmxFile))
     {
         ret->autorelease();
@@ -49,7 +48,7 @@ TMXTiledMap * TMXTiledMap::create(const std::string& tmxFile)
 
 TMXTiledMap* TMXTiledMap::createWithXML(const std::string& tmxString, const std::string& resourcePath)
 {
-    TMXTiledMap *ret = new TMXTiledMap();
+    TMXTiledMap *ret = new (std::nothrow) TMXTiledMap();
     if (ret->initWithXML(tmxString, resourcePath))
     {
         ret->autorelease();
@@ -91,8 +90,7 @@ bool TMXTiledMap::initWithXML(const std::string& tmxString, const std::string& r
 
 TMXTiledMap::TMXTiledMap()
     :_mapSize(Size::ZERO)
-    ,_tileSize(Size::ZERO)
-    ,_mapInfo(NULL)
+    ,_tileSize(Size::ZERO)        
 {
 }
 
@@ -138,7 +136,7 @@ TMXTilesetInfo * TMXTiledMap::tilesetForLayer(TMXLayerInfo *layerInfo, TMXMapInf
                         //    gid = CFSwapInt32( gid );
                         /* We support little endian.*/
 
-                        // XXX: gid == 0 --> empty tile
+                        // FIXME:: gid == 0 --> empty tile
                         if( gid != 0 ) 
                         {
                             // Optimization: quick return
@@ -159,7 +157,6 @@ TMXTilesetInfo * TMXTiledMap::tilesetForLayer(TMXLayerInfo *layerInfo, TMXMapInf
 
 void TMXTiledMap::buildWithMapInfo(TMXMapInfo* mapInfo)
 {
-    _mapInfo = mapInfo;
     _mapSize = mapInfo->getMapSize();
     _tileSize = mapInfo->getTileSize();
     _mapOrientation = mapInfo->getOrientation();

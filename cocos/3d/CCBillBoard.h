@@ -28,13 +28,9 @@
 #include "2d/CCSprite.h"
 
 NS_CC_BEGIN
-/**
- * @addtogroup _3d
- * @{
- */
 
 /**
- * @brief Inherit from Sprite, achieve BillBoard.
+ * Inherit from Sprite, achieve BillBoard.
  */
 class CC_DLL BillBoard : public Sprite
 {
@@ -45,7 +41,7 @@ public:
         VIEW_POINT_ORIENTED, // orient to the camera
         VIEW_PLANE_ORIENTED // orient to the XOY plane of camera
     };
-
+    /// @{
     /// @name Creators
 
     /**
@@ -92,15 +88,7 @@ public:
     Mode getMode() const;
 
     //override
-    
-    /** update billboard's transform and turn it towards camera */
-    virtual void visit(Renderer *renderer, const Mat4& parentTransform, uint32_t parentFlags) override;
-    
-    /** 
-     * draw BillBoard object.
-     *
-     * @lua NA
-     */
+    /** draw BillBoard object */
     virtual void draw(Renderer *renderer, const Mat4 &transform, uint32_t flags) override;
 
 
@@ -110,13 +98,11 @@ CC_CONSTRUCTOR_ACCESS:
 
 protected:
 
-    /**
-     * calculate a model matrix which keep orignal translate & scaling but always face to the camera
-     */
-    bool calculateBillbaordTransform();
-    
     Mat4 _camWorldMat;
     Mat4 _mvTransform;
+    Mat4 _billboardTransform;
+    
+    float _zDepthInView;
 
     Mode _mode;
     bool _modeDirty;
@@ -126,8 +112,7 @@ private:
 
 };
 
-// end of 3d group
-/// @}
+
 
 NS_CC_END
 

@@ -22,16 +22,30 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
  ****************************************************************************/
+
+// FIXME: hack, must be included before ziputils
+#ifdef MINIZIP_FROM_SYSTEM
+#include <minizip/unzip.h>
+#else // from our embedded sources
+#include "unzip.h"
+#endif
+
+#include "base/ZipUtils.h"
+
 #include <zlib.h>
 #include <assert.h>
 #include <stdlib.h>
 
-#include "base/ZipUtils.h"
 #include "base/CCData.h"
 #include "base/ccMacros.h"
 #include "platform/CCFileUtils.h"
-#include "unzip.h"
 #include <map>
+
+// FIXME: Other platforms should use upstream minizip like mingw-w64  
+#ifdef MINIZIP_FROM_SYSTEM
+#define unzGoToFirstFile64(A,B,C,D) unzGoToFirstFile2(A,B,C,D, NULL, 0, NULL, 0)
+#define unzGoToNextFile64(A,B,C,D) unzGoToNextFile2(A,B,C,D, NULL, 0, NULL, 0)
+#endif
 
 NS_CC_BEGIN
 
@@ -509,11 +523,11 @@ ZipFile *ZipFile::createWithBuffer(const void* buffer, uLong size)
         return zip;
     } else {
         if (zip) delete zip;
-        return NULL;
+        return nullptr;
     }
 }
 
-ZipFile::ZipFile(void)
+ZipFile::ZipFile()
 : _data(new ZipFilePrivate)
 {
     _data->zipFile = nullptr;
@@ -631,7 +645,7 @@ unsigned char *ZipFile::getFileData(const std::string &fileName, ssize_t *size)
     return buffer;
 }
 
-const std::string ZipFile::getFirstFilename(void)
+std::string ZipFile::getFirstFilename()
 {
     if (unzGoToFirstFile(_data->zipFile) != UNZ_OK) return emptyFilename;
     std::string path;
@@ -640,7 +654,7 @@ const std::string ZipFile::getFirstFilename(void)
     return path;
 }
 
-const std::string ZipFile::getNextFilename(void)
+std::string ZipFile::getNextFilename()
 {
     if (unzGoToNextFile(_data->zipFile) != UNZ_OK) return emptyFilename;
     std::string path;
@@ -652,7 +666,7 @@ const std::string ZipFile::getNextFilename(void)
 int ZipFile::getCurrentFileInfo(std::string *filename, unz_file_info *info)
 {
     char path[FILENAME_MAX + 1];
-    int ret = unzGetCurrentFileInfo(_data->zipFile, info, path, sizeof(path), NULL, 0, NULL, 0);
+    int ret = unzGetCurrentFileInfo(_data->zipFile, info, path, sizeof(path), nullptr, 0, nullptr, 0);
     if (ret != UNZ_OK) {
         *filename = emptyFilename;
     } else {

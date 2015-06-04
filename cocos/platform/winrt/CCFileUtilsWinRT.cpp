@@ -121,10 +121,6 @@ bool CCFileUtilsWinRT::isFileExistInternal(const std::string& strFilePath) const
     return ret;
 }
 
-bool CCFileUtilsWinRT::isDirectoryExistInternal(const std::string& dirname) const
-{
-	return isFileExistInternal(dirname);
-}
 
 bool CCFileUtilsWinRT::isAbsolutePath(const std::string& strPath) const
 {

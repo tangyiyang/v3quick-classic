@@ -5,6 +5,7 @@
 #include "json/writer.h"
 #include "ConfigParser.h"
 
+using namespace cocos2d;
 // ConfigParser
 ConfigParser *ConfigParser::s_sharedInstance = NULL;
 ConfigParser *ConfigParser::getInstance(void)
@@ -117,7 +118,7 @@ string ConfigParser::getEntryFile()
     return _entryfile;
 }
 
-Size ConfigParser::getInitViewSize()
+cocos2d::Size ConfigParser::getInitViewSize()
 {
     return _initViewSize;
 }

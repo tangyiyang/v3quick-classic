@@ -85,7 +85,8 @@ ScriptEventCenter* ScriptEventCenter::create()
 
 std::string ScriptEventCenter::getDescription() const
 {
-    return StringUtils::format("<ScriptEventCenter | tag = %d>", _tag);
+    return "ScriptEventCenter";
+//    return StringUtils::format("<ScriptEventCenter | tag = %d>", _tag);
 }
 
 void ScriptEventCenter::addTouchableNode(Node *node)

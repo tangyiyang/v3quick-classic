@@ -504,7 +504,7 @@ bool luaval_to_ulong(lua_State* L,int lo, unsigned long* outValue, const char* f
     return ok;
 }
 
-bool luaval_to_size(lua_State* L,int lo,Size* outValue, const char* funcName)
+bool luaval_to_size(lua_State* L, int lo, cocos2d::Size* outValue, const char* funcName)
 {
     if (NULL == L || NULL == outValue)
         return false;
@@ -536,7 +536,7 @@ bool luaval_to_size(lua_State* L,int lo,Size* outValue, const char* funcName)
     return ok;
 }
 
-bool luaval_to_rect(lua_State* L,int lo,Rect* outValue, const char* funcName)
+bool luaval_to_rect(lua_State* L, int lo, cocos2d::Rect* outValue, const char* funcName)
 {
     if (NULL == L || NULL == outValue)
         return false;
@@ -864,7 +864,7 @@ bool luaval_to_fontdefinition(lua_State* L, int lo, FontDefinition* outValue , c
             if (outValue->_shadow._shadowEnabled)
             {
                 // default shadow values
-                outValue->_shadow._shadowOffset  = Size(5, 5);
+                outValue->_shadow._shadowOffset  = cocos2d::Size(5, 5);
                 outValue->_shadow._shadowBlur    = 1;
                 outValue->_shadow._shadowOpacity = 1;
             }
@@ -960,7 +960,7 @@ bool luaval_to_ttfconfig(lua_State* L,int lo, cocos2d::TTFConfig* outValue, cons
         
         lua_pushstring(L, "glyphs");
         lua_gettable(L, lo);
-        outValue->glyphs = lua_isnumber(L, -1)?static_cast<GlyphCollection>(lua_tointeger(L, -1)) : GlyphCollection::NEHE;
+        outValue->glyphs = lua_isnumber(L, -1)?static_cast<cocos2d::GlyphCollection>(lua_tointeger(L, -1)) : cocos2d::GlyphCollection::NEHE;
         lua_pop(L, 1);
         
         lua_pushstring(L, "customGlyphs");
@@ -1931,7 +1931,7 @@ void physics_contactdata_to_luaval(lua_State* L, const PhysicsContactData* data)
     lua_rawset(L, -3);
 }
 
-void size_to_luaval(lua_State* L,const Size& sz)
+void size_to_luaval(lua_State* L,const cocos2d::Size& sz)
 {
     if (NULL  == L)
         return;
@@ -1944,7 +1944,7 @@ void size_to_luaval(lua_State* L,const Size& sz)
     lua_rawset(L, -3);                                  /* table[key] = value, L: table */
 }
 
-void rect_to_luaval(lua_State* L,const Rect& rt)
+void rect_to_luaval(lua_State* L,const cocos2d::Rect& rt)
 {
     if (NULL  == L)
         return;

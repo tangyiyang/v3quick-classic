@@ -30,7 +30,6 @@ THE SOFTWARE.
 
 #include <string>
 #include "2d/CCNode.h"
-#include "physics/CCPhysicsWorld.h"
 
 NS_CC_BEGIN
 
@@ -56,6 +55,8 @@ For the moment Scene has no other logic than that, but in future releases it mig
 additional logic.
 
 It is a good practice to use a Scene as the parent of all your nodes.
+ 
+Scene will create a default camera for you.
 */
 class CC_DLL Scene : public Node
 {
@@ -69,33 +70,13 @@ public:
     using Node::addChild;
     virtual std::string getDescription() const override;
     
-    /** Get all cameras.
-     * 
-     * @return The vector of all cameras.
-     * @js NA
-     */
+    /** get all cameras */
     const std::vector<Camera*>& getCameras() const { return _cameras; }
 
-    /** Get the default camera.
-	 * @js NA
-     * @return The default camera of scene.
-     */
-    Camera* getDefaultCamera() const { return _defaultCamera; }
-
-    /** Get lights.
-     * @return The vector of lights.
-     * @js NA
-     */
     const std::vector<BaseLight*>& getLights() const { return _lights; }
     
-    /** Render the scene.
-     * @param renderer The renderer use to render the scene.
-     * @js NA
-     */
+    /** render the scene */
     void render(Renderer* renderer);
-    
-    /** override function */
-    virtual void removeAllChildren() override;
     
 CC_CONSTRUCTOR_ACCESS:
     Scene();
@@ -104,12 +85,11 @@ CC_CONSTRUCTOR_ACCESS:
     bool init();
     bool initWithSize(const Size& size);
     
-    void setCameraOrderDirty() { _cameraOrderDirty = true; }
-    
     void onProjectionChanged(EventCustom* event);
 
 protected:
     friend class Node;
+    friend class ProtectedNode;
     friend class SpriteBatchNode;
     friend class Camera;
     friend class BaseLight;
@@ -117,7 +97,6 @@ protected:
     
     std::vector<Camera*> _cameras; //weak ref to Camera
     Camera*              _defaultCamera; //weak ref, default camera created by scene, _cameras[0], Caution that the default camera can not be added to _cameras before onEnter is called
-    bool                 _cameraOrderDirty; // order is dirty, need sort
     EventListenerCustom*       _event;
 
     std::vector<BaseLight *> _lights;

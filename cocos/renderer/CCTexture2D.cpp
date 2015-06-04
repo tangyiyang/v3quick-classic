@@ -33,20 +33,18 @@ THE SOFTWARE.
 
 #include "renderer/CCTexture2D.h"
 
-#include "CCGL.h"
+#include "platform/CCGL.h"
 #include "platform/CCImage.h"
 #include "base/ccUtils.h"
 #include "platform/CCDevice.h"
 #include "base/ccConfig.h"
 #include "base/ccMacros.h"
 #include "base/CCConfiguration.h"
-#include "base/CCPlatformMacros.h"
+#include "platform/CCPlatformMacros.h"
 #include "base/CCDirector.h"
 #include "renderer/CCGLProgram.h"
 #include "renderer/ccGLStateCache.h"
 #include "renderer/CCGLProgramCache.h"
-
-
 
 
 #if CC_ENABLE_CACHE_TEXTURE_DATA
@@ -79,7 +77,7 @@ namespace {
 #endif
         
 #ifdef GL_ETC1_RGB8_OES
-        PixelFormatInfoMapValue(Texture2D::PixelFormat::ETC, Texture2D::PixelFormatInfo(GL_ETC1_RGB8_OES, 0xFFFFFFFF, 0xFFFFFFFF, 24, true, false)),
+        PixelFormatInfoMapValue(Texture2D::PixelFormat::ETC, Texture2D::PixelFormatInfo(GL_ETC1_RGB8_OES, 0xFFFFFFFF, 0xFFFFFFFF, 4, true, false)),
 #endif
         
 #ifdef GL_COMPRESSED_RGBA_S3TC_DXT1_EXT
@@ -120,8 +118,6 @@ const Texture2D::PixelFormatInfoMap Texture2D::_pixelFormatInfoTables(TexturePix
 // If the image has alpha, you can create RGBA8 (32-bit) or RGBA4 (16-bit) or RGB5A1 (16-bit)
 // Default is: RGBA8888 (32-bit textures)
 static Texture2D::PixelFormat g_defaultAlphaPixelFormat = Texture2D::PixelFormat::DEFAULT;
-
-static bool _PVRHaveAlphaPremultiplied = false;
 
 //////////////////////////////////////////////////////////////////////////
 //conventer function
@@ -705,7 +701,8 @@ bool Texture2D::updateWithData(const void *data,int offsetX,int offsetY,int widt
 
 std::string Texture2D::getDescription() const
 {
-    return StringUtils::format("<Texture2D | Name = %u | Dimensions = %ld x %ld | Coordinates = (%.2f, %.2f)>", _name, (long)_pixelsWide, (long)_pixelsHigh, _maxS, _maxT);
+    return "Texture2D";
+//    return StringUtils::format("<Texture2D | Name = %u | Dimensions = %ld x %ld | Coordinates = (%.2f, %.2f)>", _name, (long)_pixelsWide, (long)_pixelsHigh, _maxS, _maxT);
 }
 
 // implementation Texture2D (Image)
@@ -779,20 +776,8 @@ bool Texture2D::initWithImage(Image *image, PixelFormat format)
         }
 
         // set the premultiplied tag
-        if (!image->hasPremultipliedAlpha())
-        {
-            if (image->getFileType() == Image::Format::PVR)
-            {
-                _hasPremultipliedAlpha = _PVRHaveAlphaPremultiplied;
-            }else
-            {
-                CCLOG("wanning: We cann't find the data is premultiplied or not, we will assume it's false.");
-                _hasPremultipliedAlpha = false;
-            }
-        }else
-        {
-            _hasPremultipliedAlpha = image->isPremultipliedAlpha();
-        }
+        _hasPremultipliedAlpha = image->hasPremultipliedAlpha();
+        
         return true;
     }
 }
@@ -1218,10 +1203,10 @@ void Texture2D::drawInRect(const Rect& rect)
 
 void Texture2D::PVRImagesHavePremultipliedAlpha(bool haveAlphaPremultiplied)
 {
-    _PVRHaveAlphaPremultiplied = haveAlphaPremultiplied;
+    Image::setPVRImagesHavePremultipliedAlpha(haveAlphaPremultiplied);
 }
 
-    
+
 //
 // Use to apply MIN/MAG filter
 //
@@ -1384,7 +1369,7 @@ Texture2D::PixelFormat Texture2D::getDefaultAlphaPixelFormat()
 
 unsigned int Texture2D::getBitsPerPixelForFormat(Texture2D::PixelFormat format) const
 {
-    if (format == PixelFormat::NONE)
+    if (format == PixelFormat::NONE || format == PixelFormat::DEFAULT)
     {
         return 0;
     }

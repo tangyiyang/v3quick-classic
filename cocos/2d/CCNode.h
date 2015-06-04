@@ -37,7 +37,7 @@
 #include "math/CCAffineTransform.h"
 #include "math/CCMath.h"
 #include "renderer/ccGLStateCache.h"
-#include "CCGL.h"
+#include "platform/CCGL.h"
 #include "base/ccUTF8.h"
 
 NS_CC_BEGIN
@@ -117,7 +117,6 @@ public:
     enum {
         FLAGS_TRANSFORM_DIRTY = (1 << 0),
         FLAGS_CONTENT_SIZE_DIRTY = (1 << 1),
-        FLAGS_RENDER_AS_3D = (1 << 3),
 
         FLAGS_DIRTY_MASK = (FLAGS_TRANSFORM_DIRTY | FLAGS_CONTENT_SIZE_DIRTY),
     };
@@ -970,7 +969,7 @@ public:
     CC_DEPRECATED_ATTRIBUTE GLProgram* getShaderProgram() const { return getGLProgram(); }
 
     GLProgramState *getGLProgramState() const;
-    void setGLProgramState(GLProgramState *glProgramState);
+    virtual void setGLProgramState(GLProgramState *glProgramState);
 
     /**
      * Sets the shader program for this node
@@ -983,7 +982,7 @@ public:
      *
      * @param shaderProgram The shader program
      */
-    void setGLProgram(GLProgram *glprogram);
+    virtual void setGLProgram(GLProgram *glprogram);
     CC_DEPRECATED_ATTRIBUTE void setShaderProgram(GLProgram *glprogram) { setGLProgram(glprogram); }
     /// @} end of Shader Program
 
@@ -1585,21 +1584,15 @@ protected:
     bool doEnumerate(std::string name, std::function<bool (Node *)> callback) const;
     bool doEnumerateRecursive(const Node* node, const std::string &name, std::function<bool (Node *)> callback) const;
     
+    //check whether this camera mask is visible by the current visiting camera
+    bool isVisitableByVisitingCamera() const;
+    
 #if CC_USE_PHYSICS
     void updatePhysicsBodyTransform(Scene* layer);
     virtual void updatePhysicsBodyPosition(Scene* layer);
     virtual void updatePhysicsBodyRotation(Scene* layer);
     virtual void updatePhysicsBodyScale(Scene* scene);
 #endif // CC_USE_PHYSICS
-
-
-	//check whether this camera mask is visible by the current visiting camera
-	bool isVisitableByVisitingCamera() const;
-	
-    // update quaternion from Rotation3D
-    void updateRotationQuat();
-    // update Rotation3D from quaternion
-    void updateRotation3D();
     
 private:
     void addChildHelper(Node* child, int localZOrder, int tag, const std::string &name, bool setTag);
@@ -1612,8 +1605,6 @@ protected:
     // rotation Z is decomposed in 2 to simulate Skew for Flash animations
     float _rotationZ_X;             ///< rotation angle on Z-axis, component X
     float _rotationZ_Y;             ///< rotation angle on Z-axis, component Y
-    
-    Quaternion _rotationQuat;      ///rotation using quaternion, if _rotationZ_X == _rotationZ_Y, _rotationQuat = RotationZ_X * RotationY * RotationX, else _rotationQuat = RotationY * RotationX
 
     float _scaleX;                  ///< scaling factor on x-axis
     float _scaleY;                  ///< scaling factor on y-axis

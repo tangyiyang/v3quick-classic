@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CE84219B-AFEA-45CC-BAB7-8BD54E195477</string>
+	<key>IDESourceControlProjectName</key>
+	<string>__PROJECT_PACKAGE_LAST_NAME_L__</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8B34E8E323F5743C2CA37D5E9442FE6C62B4768B</key>
+		<string>https://github.com/tangyiyang/v3quick-classic</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>quick/templates/PROJECT_TEMPLATE_01/proj.ios/__PROJECT_PACKAGE_LAST_NAME_L__.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8B34E8E323F5743C2CA37D5E9442FE6C62B4768B</key>
+		<string>../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/tangyiyang/v3quick-classic</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8B34E8E323F5743C2CA37D5E9442FE6C62B4768B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8B34E8E323F5743C2CA37D5E9442FE6C62B4768B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>v3quick-classic</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,4 +1,5 @@
 
+require("cocos.init")
 require("config")
 require("framework.init")
 require("framework.shortcodes")

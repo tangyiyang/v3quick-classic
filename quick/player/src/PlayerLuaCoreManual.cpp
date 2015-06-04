@@ -92,7 +92,7 @@ static int tolua_PlayerLuaCore_ProjectConfig_setFrameSize00(lua_State* tolua_S)
             if (!ok)
                 return 0;
             
-            self->setFrameSize(Size(width, height));
+            self->setFrameSize(cocos2d::Size(width, height));
             return 0;
         }
     }

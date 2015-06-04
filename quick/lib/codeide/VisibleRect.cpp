@@ -26,7 +26,7 @@
 
 USING_NS_CC;
 
-Rect VisibleRect::s_visibleRect;
+cocos2d::Rect VisibleRect::s_visibleRect;
 
 void VisibleRect::lazyInit()
 {
@@ -35,7 +35,7 @@ void VisibleRect::lazyInit()
     s_visibleRect = Director::getInstance()->getOpenGLView()->getVisibleRect();
 }
 
-Rect VisibleRect::getVisibleRect()
+cocos2d::Rect VisibleRect::getVisibleRect()
 {
     lazyInit();
     return s_visibleRect;

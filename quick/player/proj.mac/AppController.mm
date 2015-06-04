@@ -266,13 +266,13 @@ std::string getCurAppPath(void)
 //    }
 
     const cocos2d::Rect frameRect = cocos2d::Rect(0, 0, frameSize.width, frameSize.height);
-    GLView *eglView = GLView::createWithRect("player", frameRect, frameScale, _project.isResizeWindow());
+    GLView *eglView = GLViewImpl::createWithRect("player", frameRect, frameScale, _project.isResizeWindow());
 
     auto director = Director::getInstance();
     director->setOpenGLView(eglView);
-    director->setScreenScale(screenScale);
+//    director->setScreenScale(screenScale);
     
-    _window = glfwGetCocoaWindow(eglView->getWindow());
+    _window = eglView->getCocoaWindow();
 //    [NSApp setDelegate: self];
     [_window center];
 
@@ -313,7 +313,8 @@ std::string getCurAppPath(void)
                                                 Director::getInstance()->getEventDispatcher()->dispatchEvent(&forwardEvent);
                                                 if (forwardEvent.getResult().compare("cancel") != 0)
                                                 {
-                                                    glfwSetWindowShouldClose(Director::getInstance()->getOpenGLView()->getWindow(), 1);
+                                                    GLFWwindow* window = (GLFWwindow*)Director::getInstance()->getOpenGLView()->getCocoaWindow();
+                                                    glfwSetWindowShouldClose(window, 1);
                                                 }
                                             });
     

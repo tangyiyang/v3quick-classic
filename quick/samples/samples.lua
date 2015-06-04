@@ -2,6 +2,20 @@
 local data =
 {
     {
+        title       = "towerdefense",
+        description = "一个塔防演示",
+        path        = "samples/towerdefense",
+        image       = "td_ss.png"
+    },
+
+    {
+        title       = "bytearray",
+        description = "一个byte操作演示",
+        path        = "samples/bytearray",
+        image       = "bytearray_ss.png"
+    },
+
+    {
         title       = "Drag Test",
         description = "一个拖拽演示",
         path        = "samples/drag",
@@ -83,6 +97,41 @@ local data =
         description = "一个翻转金币的小游戏",
         path        = "samples/coinflip",
         image       = "coinflip_ss.png"
+    },
+
+    {
+        title       = "websocket",
+        description = "websocket用法示例",
+        path        = "samples/websockets",
+        image       = "websockets_ss.png"
+    },
+
+    {
+        title       = "statemachine",
+        description = "statemachine用法示例",
+        path        = "samples/statemachine",
+        image       = "statemachine_ss.png"
+    },
+
+    {
+        title       = "nightclub",
+        description = "夜总会",
+        path        = "samples/nightclub",
+        image       = "nightclub_ss.png"
+    },
+
+    {
+        title       = "editbox",
+        description = "输入控件 editbox",
+        path        = "samples/editbox",
+        image       = "editbox_ss.png"
+    },
+
+    {
+        title       = "tests",
+        description = "tests",
+        path        = "samples/tests",
+        image       = "tests_ss.png"
     },
 }
 

@@ -27,10 +27,8 @@
 #define __CCEVENT_H__
 
 #include <string>
-#include <stdint.h>
-
 #include "base/CCRef.h"
-#include "base/CCPlatformMacros.h"
+#include "platform/CCPlatformMacros.h"
 
 NS_CC_BEGIN
 
@@ -39,7 +37,7 @@ class Node;
 /**
  *   Base class of all kinds of events.
  */
-class Event : public Ref
+class CC_DLL Event : public Ref
 {
 public:
     enum class Type
@@ -49,13 +47,11 @@ public:
         ACCELERATION,
         MOUSE,
         FOCUS,
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
         GAME_CONTROLLER,
-#endif
         CUSTOM
     };
     
-protected:
+CC_CONSTRUCTOR_ACCESS:
     /** Constructor */
     Event(Type type);
 public:
@@ -77,10 +73,9 @@ public:
      *        It returns 0 when the listener is associated with fixed priority.
      */
     inline Node* getCurrentTarget() { return _currentTarget; };
-
+    
     std::string getResult() const { return _result; };
     void setResult(const std::string &result) { _result = result; };
-    
 protected:
     /** Sets current target */
     inline void setCurrentTarget(Node* target) { _currentTarget = target; };

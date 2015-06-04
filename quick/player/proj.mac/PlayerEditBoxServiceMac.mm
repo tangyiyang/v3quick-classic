@@ -19,7 +19,7 @@
 - (id) getNSWindow
 {
     auto glview = cocos2d::Director::getInstance()->getOpenGLView();
-    return glfwGetCocoaWindow(glview->getWindow());
+    return glview->getCocoaWindow();
 }
 
 - (void)dealloc
