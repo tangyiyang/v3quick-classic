@@ -157,6 +157,7 @@ TMXTilesetInfo * TMXTiledMap::tilesetForLayer(TMXLayerInfo *layerInfo, TMXMapInf
 
 void TMXTiledMap::buildWithMapInfo(TMXMapInfo* mapInfo)
 {
+    _mapInfo = mapInfo;
     _mapSize = mapInfo->getMapSize();
     _tileSize = mapInfo->getTileSize();
     _mapOrientation = mapInfo->getOrientation();

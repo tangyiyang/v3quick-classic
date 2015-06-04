@@ -12,6 +12,12 @@
 -- @return rect_table#rect_table ret (return value: rect_table)
         
 --------------------------------
+-- 
+-- @function [parent=#TMXTilesetInfo] toLuaTable 
+-- @param self
+-- @return map_table#map_table ret (return value: map_table)
+        
+--------------------------------
 -- js ctor
 -- @function [parent=#TMXTilesetInfo] TMXTilesetInfo 
 -- @param self

@@ -52,6 +52,13 @@
 -- @return size_table#size_table ret (return value: size_table)
         
 --------------------------------
+--  Get the TileMapInfo.<br>
+-- js NA
+-- @function [parent=#TMXTiledMap] getTMXMapInfo 
+-- @param self
+-- @return TMXMapInfo#TMXMapInfo ret (return value: cc.TMXMapInfo)
+        
+--------------------------------
 --  properties 
 -- @function [parent=#TMXTiledMap] getProperties 
 -- @param self

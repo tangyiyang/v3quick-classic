@@ -148,6 +148,9 @@ public:
      */
     virtual ~TMXTilesetInfo();
     Rect getRectForGID(uint32_t gid);
+    
+    ValueMap toLuaTable();
+
 };
 
 /** @brief TMXMapInfo contains the information about the map like:
@@ -277,7 +280,8 @@ public:
     inline void setCurrentString(const std::string& currentString){ _currentString = currentString; }
     inline const std::string& getTMXFileName() const { return _TMXFileName; }
     inline void setTMXFileName(const std::string& fileName){ _TMXFileName = fileName; }
-
+    
+    
 protected:
     void internalInit(const std::string& tmxFileName, const std::string& resourcePath);
 

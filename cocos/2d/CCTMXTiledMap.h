@@ -179,6 +179,11 @@ public:
 
     virtual std::string getDescription() const override;
     
+    /** Get the TileMapInfo.
+     * @js NA
+     */
+    TMXMapInfo* getTMXMapInfo() {return _mapInfo;}
+    
 CC_CONSTRUCTOR_ACCESS:
     /**
      * @js ctor
@@ -214,6 +219,8 @@ protected:
     
     //! tile properties
     ValueMapIntKey _tileProperties;
+    
+    TMXMapInfo* _mapInfo;
 
 private:
     CC_DISALLOW_COPY_AND_ASSIGN(TMXTiledMap);

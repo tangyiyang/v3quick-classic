@@ -95,6 +95,22 @@ Rect TMXTilesetInfo::getRectForGID(uint32_t gid)
     return rect;
 }
 
+ValueMap TMXTilesetInfo::toLuaTable()
+{
+    ValueMap map;
+    map["name"] = _name;
+    map["firstGid"] = _firstGid;
+    map["tileSize_Width"] = _tileSize.width;
+    map["tileSize_Height"] =_tileSize.height;
+    map["spacing"] = _spacing;
+    map["margin"] = _margin;
+    map["sourceImage"] = _sourceImage;
+    map["imageSize_Width"] = _imageSize.width;
+    map["imageSize_height"] = _imageSize.height;
+    
+    return map;
+}
+
 // implementation TMXMapInfo
 
 TMXMapInfo * TMXMapInfo::create(const std::string& tmxFile)
@@ -710,6 +726,7 @@ void TMXMapInfo::textHandler(void *ctx, const char *ch, int len)
         tmxMapInfo->setCurrentString(currentString.c_str());
     }
 }
+
 
 NS_CC_END
 
