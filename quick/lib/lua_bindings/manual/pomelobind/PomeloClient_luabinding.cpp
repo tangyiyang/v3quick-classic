@@ -288,7 +288,7 @@ static int tolua_PomeloClient_luabinding_PomeloClient_registerScriptHandler00(lu
  tolua_Error tolua_err;
  if (
      !tolua_isusertype(tolua_S,1,"PomeloClient",0,&tolua_err) ||
-     (tolua_isvaluenil(tolua_S,2,&tolua_err) || !tolua_isusertype(tolua_S,2,"cocos2d::LUA_FUNCTION",0,&tolua_err)) ||
+     (tolua_isvaluenil(tolua_S,2,&tolua_err) || !toluafix_isfunction(tolua_S,2,"LUA_FUNCTION",0,&tolua_err)) ||
      !tolua_isnoobj(tolua_S,3,&tolua_err)
  )
   goto tolua_lerror;
@@ -296,7 +296,8 @@ static int tolua_PomeloClient_luabinding_PomeloClient_registerScriptHandler00(lu
 #endif
  {
   PomeloClient* self = (PomeloClient*)  tolua_tousertype(tolua_S,1,0);
-  cocos2d::LUA_FUNCTION funcID = *((cocos2d::LUA_FUNCTION*)  tolua_tousertype(tolua_S,2,0));
+  LUA_FUNCTION funcID = (toluafix_ref_function(tolua_S,2,0));
+
 #if COCOS2D_DEBUG >= 1
   if (!self) tolua_error(tolua_S,"invalid 'self' in function 'registerScriptHandler'", NULL);
 #endif

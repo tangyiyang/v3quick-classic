@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		4D5B4E1E1ACE8D5B00FB263F /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5B4E1D1ACE8D5B00FB263F /* libuv.a */; };
 		4D5B4E201ACE8D5E00FB263F /* libjansson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5B4E1F1ACE8D5E00FB263F /* libjansson.a */; };
-		4D9B77FB1A47141A00CF525C /* PomeloClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B77F81A47141A00CF525C /* PomeloClient.cpp */; };
+		4D8956591B25FCE3002DE928 /* PomeloClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D8956551B25FCE3002DE928 /* PomeloClient.cpp */; };
+		4D89565A1B25FCE3002DE928 /* PomeloClient_luabinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D8956571B25FCE3002DE928 /* PomeloClient_luabinding.cpp */; };
 		4DC8F6E81B0B980400808C84 /* libpomelo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC8F6E71B0B980400808C84 /* libpomelo.a */; };
-		4DCAED831AE898BF0031C513 /* PomeloClient_luabinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DCAED811AE898BF0031C513 /* PomeloClient_luabinding.cpp */; };
 		4DCF3C911B1F32F80043BCD7 /* liblibquick.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E0B1FB196B9C3C0053EFD7 /* liblibquick.a */; };
 		9F05A0CF194EC0FA003CFA1F /* PlayerMessageBoxServiceMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F05A0CE194EC0FA003CFA1F /* PlayerMessageBoxServiceMac.mm */; };
 		9F05A101194EF319003CFA1F /* ConsoleWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F05A0FE194EF319003CFA1F /* ConsoleWindow.xib */; };
@@ -140,12 +140,12 @@
 /* Begin PBXFileReference section */
 		4D5B4E1D1ACE8D5B00FB263F /* libuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libuv.a; path = ../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Default/libuv.a; sourceTree = "<group>"; };
 		4D5B4E1F1ACE8D5E00FB263F /* libjansson.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjansson.a; path = ../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Default/libjansson.a; sourceTree = "<group>"; };
-		4D9B77F81A47141A00CF525C /* PomeloClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PomeloClient.cpp; sourceTree = "<group>"; };
-		4D9B77F91A47141A00CF525C /* PomeloClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PomeloClient.h; sourceTree = "<group>"; };
+		4D8956551B25FCE3002DE928 /* PomeloClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PomeloClient.cpp; sourceTree = "<group>"; };
+		4D8956561B25FCE3002DE928 /* PomeloClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PomeloClient.h; sourceTree = "<group>"; };
+		4D8956571B25FCE3002DE928 /* PomeloClient_luabinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PomeloClient_luabinding.cpp; sourceTree = "<group>"; };
+		4D8956581B25FCE3002DE928 /* PomeloClient_luabinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PomeloClient_luabinding.h; sourceTree = "<group>"; };
 		4DA5A2351B0B847C00B9E188 /* pomelo_mac.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pomelo_mac.xcodeproj; path = external/libpomelo/pomelo_mac.xcodeproj; sourceTree = QUICK_V3_ROOT; };
 		4DC8F6E71B0B980400808C84 /* libpomelo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpomelo.a; path = ../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Default/libpomelo.a; sourceTree = "<group>"; };
-		4DCAED811AE898BF0031C513 /* PomeloClient_luabinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PomeloClient_luabinding.cpp; sourceTree = "<group>"; };
-		4DCAED821AE898BF0031C513 /* PomeloClient_luabinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PomeloClient_luabinding.h; sourceTree = "<group>"; };
 		9F05A0CC194EB080003CFA1F /* PlayerMenuServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMenuServiceProtocol.h; sourceTree = "<group>"; };
 		9F05A0CD194EC0DB003CFA1F /* PlayerMessageBoxServiceMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerMessageBoxServiceMac.h; sourceTree = SOURCE_ROOT; };
 		9F05A0CE194EC0FA003CFA1F /* PlayerMessageBoxServiceMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlayerMessageBoxServiceMac.mm; sourceTree = SOURCE_ROOT; };
@@ -237,15 +237,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4D9B77F51A47141A00CF525C /* pomelobind */ = {
+		4D8956541B25FCE3002DE928 /* pomelobind */ = {
 			isa = PBXGroup;
 			children = (
-				4DCAED811AE898BF0031C513 /* PomeloClient_luabinding.cpp */,
-				4DCAED821AE898BF0031C513 /* PomeloClient_luabinding.h */,
-				4D9B77F81A47141A00CF525C /* PomeloClient.cpp */,
-				4D9B77F91A47141A00CF525C /* PomeloClient.h */,
+				4D8956551B25FCE3002DE928 /* PomeloClient.cpp */,
+				4D8956561B25FCE3002DE928 /* PomeloClient.h */,
+				4D8956571B25FCE3002DE928 /* PomeloClient_luabinding.cpp */,
+				4D8956581B25FCE3002DE928 /* PomeloClient_luabinding.h */,
 			);
-			path = pomelobind;
+			name = pomelobind;
+			path = ../../lib/lua_bindings/manual/pomelobind;
 			sourceTree = "<group>";
 		};
 		4DC8F7391B0B9A6500808C84 /* Products */ = {
@@ -359,7 +360,7 @@
 		9F1C8D94194DEE040068C99B /* src */ = {
 			isa = PBXGroup;
 			children = (
-				4D9B77F51A47141A00CF525C /* pomelobind */,
+				4D8956541B25FCE3002DE928 /* pomelobind */,
 				9F5D865619E696D70075F386 /* PlayerLuaCore.cpp */,
 				9F5D865719E696D70075F386 /* PlayerLuaCore.h */,
 				9F5D865C19E7A6A50075F386 /* PlayerLuaCoreManual.cpp */,
@@ -545,18 +546,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F1CF4091998C6BA00497F21 /* PlayerMenuServiceProtocol.cpp in Sources */,
-				4DCAED831AE898BF0031C513 /* PomeloClient_luabinding.cpp in Sources */,
+				4D89565A1B25FCE3002DE928 /* PomeloClient_luabinding.cpp in Sources */,
 				9F1C8DA2194DEFE40068C99B /* PlayerMac.mm in Sources */,
 				9F05A10A194EF988003CFA1F /* NSApplication+SheetAdditions.m in Sources */,
 				9FCDC2BB196D2DD9005CB55E /* PlayerEditBoxServiceMac.mm in Sources */,
 				9F1C8D82194DECE80068C99B /* main.m in Sources */,
 				9F5D865E19E7A6A50075F386 /* PlayerLuaCoreManual.cpp in Sources */,
 				9F19C52919580A5800CA020E /* PlayerUtils.cpp in Sources */,
+				4D8956591B25FCE3002DE928 /* PomeloClient.cpp in Sources */,
 				9F5D865819E696D70075F386 /* PlayerLuaCore.cpp in Sources */,
 				9F1C8DA1194DEFE40068C99B /* PlayerFileDialogServiceMac.mm in Sources */,
 				9F1C8D7D194DECD70068C99B /* AppController.mm in Sources */,
 				9F3BF72C194E91380072B3D0 /* AppDelegate.cpp in Sources */,
-				4D9B77FB1A47141A00CF525C /* PomeloClient.cpp in Sources */,
 				9F1C8D9C194DEE040068C99B /* PlayerServiceProtocol.cpp in Sources */,
 				9F6667CC19D9663000B5DA44 /* NumberFormater.m in Sources */,
 				9F3078BB19A58E9F007B7B03 /* PlayerTaskServiceMac.mm in Sources */,
