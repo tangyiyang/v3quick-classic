@@ -75,6 +75,14 @@
         
 --------------------------------
 -- 
+-- @function [parent=#SkeletonAnimation] setAttachment 
+-- @param self
+-- @param #string slotName
+-- @param #string attachmentName
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+-- 
 -- @function [parent=#SkeletonAnimation] setMix 
 -- @param self
 -- @param #string fromAnimation

@@ -60,6 +60,8 @@ public:
 	spTrackEntry* getCurrent (int trackIndex = 0);
 	void clearTracks ();
 	void clearTrack (int trackIndex = 0);
+    
+    virtual bool setAttachment (const std::string& slotName, const std::string& attachmentName);
 
 	void setStartListener (const StartListener& listener);
 	void setEndListener (const EndListener& listener);

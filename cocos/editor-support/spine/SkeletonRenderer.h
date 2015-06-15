@@ -81,7 +81,7 @@ public:
 	/* Returns 0 if the slot or attachment was not found. */
 	spAttachment* getAttachment (const std::string& slotName, const std::string& attachmentName) const;
 	/* Returns false if the slot or attachment was not found. */
-	bool setAttachment (const std::string& slotName, const std::string& attachmentName);
+	virtual bool setAttachment (const std::string& slotName, const std::string& attachmentName);
 
 	// --- BlendProtocol
 	virtual void setBlendFunc (const cocos2d::BlendFunc& blendFunc);

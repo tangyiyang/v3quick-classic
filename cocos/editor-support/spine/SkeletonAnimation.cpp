@@ -209,6 +209,12 @@ void SkeletonAnimation::onTrackEntryEvent (int trackIndex, spEventType type, spE
 		break;
 	}
 }
+    
+bool SkeletonAnimation::setAttachment (const std::string& slotName, const std::string& attachmentName)
+{
+    CCLOG("call SkeletonAnimation::setAttachment slotName = %s, attachmentName = %s", slotName.c_str(), attachmentName.c_str());
+    return SkeletonRenderer::setAttachment(slotName, attachmentName);
+}
 
 void SkeletonAnimation::setStartListener (const StartListener& listener) {
 	_startListener = listener;
