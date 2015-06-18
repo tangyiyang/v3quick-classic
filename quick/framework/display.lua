@@ -538,9 +538,6 @@ transition.moveBy(group, {time = 2.0, x = 100})
 function display.newNode()
     return cc.Node:create()
 end
-print("cc.ClippingRectangleNode = ", cc.ClippingRectangleNode)
-print("cc.ClippingRegionNode = ", cc.ClippingRegionNode)
-print("cc.ui = ", cc.ui)
 
 if cc.ClippingRectangleNode then
 
