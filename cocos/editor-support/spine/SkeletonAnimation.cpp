@@ -111,6 +111,7 @@ SkeletonAnimation::SkeletonAnimation (const std::string& skeletonDataFile, spAtl
 SkeletonAnimation::SkeletonAnimation (const std::string& skeletonDataFile, const std::string& atlasFile, float scale)
 		: SkeletonRenderer(skeletonDataFile, atlasFile, scale) {
 	initialize();
+    spSkeleton_updateWorldTransform(_skeleton);
 }
 
 SkeletonAnimation::~SkeletonAnimation () {
