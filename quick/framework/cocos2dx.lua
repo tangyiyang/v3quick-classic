@@ -50,14 +50,17 @@ THE SOFTWARE.
 
 local p = cc.PACKAGE_NAME .. ".cocos2dx."
 
-if cc.p ~= nil then
+print('cc.p = ', cc.p)
+-- if not cc.p then
 -- cc.p exist, so the cocos.init have loaded
+print('load the OpenglConstants')
 require(p .. "Cocos2dConstants")
 require(p .. "OpenglConstants")
 require(p .. "Cocos2d")
 require(p .. "StudioConstants")
-end
+-- end
 
+print('gl = ', gl)
 require(p .. "Event")
 require(p .. "ActionEx")
 require(p .. "NodeEx")

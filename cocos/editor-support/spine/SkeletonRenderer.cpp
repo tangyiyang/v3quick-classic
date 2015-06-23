@@ -34,6 +34,7 @@
 #include <spine/PolygonBatch.h>
 #include <algorithm>
 
+
 USING_NS_CC;
 using std::min;
 using std::max;
@@ -346,6 +347,48 @@ bool SkeletonRenderer::setAttachment (const std::string& slotName, const std::st
 
 spSkeleton* SkeletonRenderer::getSkeleton () {
 	return _skeleton;
+}
+    
+cocos2d::ValueMap SkeletonRenderer::getBoneLua(const std::string& boneName) {
+    spBone* bone = spSkeleton_findBone(_skeleton, boneName.c_str());
+    if (!bone) {
+        cocos2d::ValueMap ret;
+        ret["x"] = bone->x;
+        ret["y"] = bone->y;
+        ret["rotation"] = bone->rotation;
+        ret["rotationIK"] = bone->rotationIK;
+        ret["scaleX"] = bone->scaleX;
+        ret["m00"] = bone->m00;
+        ret["m01"] = bone->m01;
+        ret["m10"] = bone->m10;
+        ret["m11"] = bone->m11;
+        ret["worldY"] = bone->worldY;
+        ret["worldRotation"] = bone->worldRotation;
+        ret["worldScaleX"] = bone->worldScaleX;
+        ret["worldScaleY"] = bone->worldScaleY;
+
+        // this is not aim to let the script to write a runtime
+        // this is convient for script to read the data for
+        spBoneData* data= bone->data;
+        
+        // this is no use for the script, what's more, it's not convient to read the data from spBoneData* in Lua
+        ret["data_parent"] = bone->data->parent;
+        
+        // these may be more useful
+        ret["data_name"] = data->name;
+        ret["data_length"] = data->length;
+        ret["data_x"] = data->x;
+        ret["data_y"] = data->y;
+        ret["data_rotation"] = data->rotation;
+        ret["data_scaleX"] = data->scaleX;
+        ret["data_scaleY"] = data->scaleY;
+        ret["data_inheritScale"] = data->inheritScale;
+        ret["data_inheritRotation"] = data->inheritRotation;
+        
+        return ret;
+    } else {
+        return ValueMapNull;
+    }
 }
 
 void SkeletonRenderer::setTimeScale (float scale) {

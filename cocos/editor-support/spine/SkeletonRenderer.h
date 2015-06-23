@@ -53,6 +53,8 @@ public:
 	virtual void onExit () override;
 
 	spSkeleton* getSkeleton();
+    
+    cocos2d::ValueMap getBoneLua(const std::string& boneName);
 
 	void setTimeScale(float scale);
 	float getTimeScale() const;

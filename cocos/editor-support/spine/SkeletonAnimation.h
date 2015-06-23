@@ -61,6 +61,7 @@ public:
 	void clearTracks ();
 	void clearTrack (int trackIndex = 0);
     
+    
     virtual bool setAttachment (const std::string& slotName, const std::string& attachmentName);
 
 	void setStartListener (const StartListener& listener);
