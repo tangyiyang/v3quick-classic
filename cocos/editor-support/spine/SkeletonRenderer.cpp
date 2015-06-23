@@ -351,7 +351,7 @@ spSkeleton* SkeletonRenderer::getSkeleton () {
     
 cocos2d::ValueMap SkeletonRenderer::getBoneLua(const std::string& boneName) {
     spBone* bone = spSkeleton_findBone(_skeleton, boneName.c_str());
-    if (!bone) {
+    if (bone) {
         cocos2d::ValueMap ret;
         ret["x"] = bone->x;
         ret["y"] = bone->y;
@@ -362,6 +362,7 @@ cocos2d::ValueMap SkeletonRenderer::getBoneLua(const std::string& boneName) {
         ret["m01"] = bone->m01;
         ret["m10"] = bone->m10;
         ret["m11"] = bone->m11;
+        ret["worldX"] = bone->worldX;
         ret["worldY"] = bone->worldY;
         ret["worldRotation"] = bone->worldRotation;
         ret["worldScaleX"] = bone->worldScaleX;
