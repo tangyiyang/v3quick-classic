@@ -51,7 +51,7 @@ void spAnimation_dispose (spAnimation* self) {
 }
 
 void spAnimation_apply (const spAnimation* self, spSkeleton* skeleton, float lastTime, float time, int loop, spEvent** events,
-		int* eventsCount) {
+		int* eventsCount, char activeBoneNames[16][64], int activeBoneCnt) {
 	int i, n = self->timelinesCount;
 
 	if (loop && self->duration) {
@@ -60,11 +60,11 @@ void spAnimation_apply (const spAnimation* self, spSkeleton* skeleton, float las
 	}
 
 	for (i = 0; i < n; ++i)
-		spTimeline_apply(self->timelines[i], skeleton, lastTime, time, events, eventsCount, 1);
+		spTimeline_apply(self->timelines[i], skeleton, lastTime, time, events, eventsCount, 1, activeBoneNames, activeBoneCnt);
 }
 
 void spAnimation_mix (const spAnimation* self, spSkeleton* skeleton, float lastTime, float time, int loop, spEvent** events,
-		int* eventsCount, float alpha) {
+		int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt) {
 	int i, n = self->timelinesCount;
 
 	if (loop && self->duration) {
@@ -73,21 +73,30 @@ void spAnimation_mix (const spAnimation* self, spSkeleton* skeleton, float lastT
 	}
 
 	for (i = 0; i < n; ++i)
-		spTimeline_apply(self->timelines[i], skeleton, lastTime, time, events, eventsCount, alpha);
+		spTimeline_apply(self->timelines[i], skeleton, lastTime, time, events, eventsCount, alpha, activeBoneNames, activeBoneCnt);
 }
 
+int isBoneActive(const char* boneName, char activeBoneNames[16][64], int activeBoneCnt) {
+    int i;
+    for (i = 0; i < activeBoneCnt; ++i) {
+        if (strcmp( (const char*)activeBoneNames[i], boneName) == 0) {
+            return 1;
+        }
+    }
+    return 0;
+}
 /**/
 
 typedef struct _spTimelineVtable {
 	void (*apply) (const spTimeline* self, spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-			int* eventsCount, float alpha);
+			int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt);
 	void (*dispose) (spTimeline* self);
 } _spTimelineVtable;
 
 void _spTimeline_init (spTimeline* self, spTimelineType type, /**/
 void (*dispose) (spTimeline* self), /**/
 		void (*apply) (const spTimeline* self, spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-				int* eventsCount, float alpha)) {
+				int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt)) {
 	CONST_CAST(spTimelineType, self->type) = type;
 	CONST_CAST(_spTimelineVtable*, self->vtable) = NEW(_spTimelineVtable);
 	VTABLE(spTimeline, self)->dispose = dispose;
@@ -103,8 +112,8 @@ void spTimeline_dispose (spTimeline* self) {
 }
 
 void spTimeline_apply (const spTimeline* self, spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-		int* eventsCount, float alpha) {
-	VTABLE(spTimeline, self)->apply(self, skeleton, lastTime, time, firedEvents, eventsCount, alpha);
+		int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt) {
+	VTABLE(spTimeline, self)->apply(self, skeleton, lastTime, time, firedEvents, eventsCount, alpha, activeBoneNames, activeBoneCnt);
 }
 
 /**/
@@ -115,7 +124,7 @@ static const int BEZIER_SEGMENTS = 10, BEZIER_SIZE = 10 * 2 - 1;
 void _spCurveTimeline_init (spCurveTimeline* self, spTimelineType type, int framesCount, /**/
 void (*dispose) (spTimeline* self), /**/
 		void (*apply) (const spTimeline* self, spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-				int* eventsCount, float alpha)) {
+				int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt)) {
 	_spTimeline_init(SUPER(self), type, dispose, apply);
 	self->curves = CALLOC(float, (framesCount - 1) * BEZIER_SIZE);
 }
@@ -238,7 +247,7 @@ void _spBaseTimeline_dispose (spTimeline* timeline) {
 /* Many timelines have structure identical to struct spBaseTimeline and extend spCurveTimeline. **/
 struct spBaseTimeline* _spBaseTimeline_create (int framesCount, spTimelineType type, int frameSize, /**/
 		void (*apply) (const spTimeline* self, spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-				int* eventsCount, float alpha)) {
+				int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt)) {
 	struct spBaseTimeline* self = NEW(struct spBaseTimeline);
 	_spCurveTimeline_init(SUPER(self), type, framesCount, _spBaseTimeline_dispose, apply);
 
@@ -254,7 +263,7 @@ static const int ROTATE_PREV_FRAME_TIME = -2;
 static const int ROTATE_FRAME_VALUE = 1;
 
 void _spRotateTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-		int* eventsCount, float alpha) {
+		int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt) {
 	spBone *bone;
 	int frameIndex;
 	float prevFrameValue, frameTime, percent, amount;
@@ -264,16 +273,23 @@ void _spRotateTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, 
 	if (time < self->frames[0]) return; /* Time is before first frame. */
 
 	bone = skeleton->bones[self->boneIndex];
-
-	if (time >= self->frames[self->framesCount - 2]) { /* Time is after last frame. */
-		float amount = bone->data->rotation + self->frames[self->framesCount - 1] - bone->rotation;
-		while (amount > 180)
-			amount -= 360;
-		while (amount < -180)
-			amount += 360;
-		bone->rotation += amount * alpha;
-		return;
-	}
+    
+    if (activeBoneNames) {
+        if (!isBoneActive(bone->data->name, activeBoneNames, activeBoneCnt)) {
+//            printf("Bone %s is not active, will not update it!\n", bone->data->name);
+            return;
+        }
+    }
+    if (time >= self->frames[self->framesCount - 2]) { /* Time is after last frame. */
+        float amount = bone->data->rotation + self->frames[self->framesCount - 1] - bone->rotation;
+        while (amount > 180)
+            amount -= 360;
+        while (amount < -180)
+            amount += 360;
+        bone->rotation += amount * alpha;
+        return;
+    }
+    
 
 	/* Interpolate between the previous frame and the current frame. */
 	frameIndex = binarySearch(self->frames, self->framesCount, time, 2);
@@ -312,7 +328,7 @@ static const int TRANSLATE_FRAME_X = 1;
 static const int TRANSLATE_FRAME_Y = 2;
 
 void _spTranslateTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, float lastTime, float time,
-		spEvent** firedEvents, int* eventsCount, float alpha) {
+		spEvent** firedEvents, int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt) {
 	spBone *bone;
 	int frameIndex;
 	float prevFrameX, prevFrameY, frameTime, percent;
@@ -320,27 +336,35 @@ void _spTranslateTimeline_apply (const spTimeline* timeline, spSkeleton* skeleto
 	spTranslateTimeline* self = SUB_CAST(spTranslateTimeline, timeline);
 
 	if (time < self->frames[0]) return; /* Time is before first frame. */
-
+    
 	bone = skeleton->bones[self->boneIndex];
+    
+    if (activeBoneNames) {
+        if (!isBoneActive(bone->data->name, activeBoneNames, activeBoneCnt)) {
+//            printf("Bone %s is not active, will not update it!\n", bone->data->name);
+            return;
+        }
+    }
+    
+    if (time >= self->frames[self->framesCount - 3]) { /* Time is after last frame. */
+        bone->x += (bone->data->x + self->frames[self->framesCount - 2] - bone->x) * alpha;
+        bone->y += (bone->data->y + self->frames[self->framesCount - 1] - bone->y) * alpha;
+        return;
+    }
+    
+    /* Interpolate between the previous frame and the current frame. */
+    frameIndex = binarySearch(self->frames, self->framesCount, time, 3);
+    prevFrameX = self->frames[frameIndex - 2];
+    prevFrameY = self->frames[frameIndex - 1];
+    frameTime = self->frames[frameIndex];
+    percent = 1 - (time - frameTime) / (self->frames[frameIndex + TRANSLATE_PREV_FRAME_TIME] - frameTime);
+    percent = spCurveTimeline_getCurvePercent(SUPER(self), frameIndex / 3 - 1, percent < 0 ? 0 : (percent > 1 ? 1 : percent));
+    
+    bone->x += (bone->data->x + prevFrameX + (self->frames[frameIndex + TRANSLATE_FRAME_X] - prevFrameX) * percent - bone->x)
+    * alpha;
+    bone->y += (bone->data->y + prevFrameY + (self->frames[frameIndex + TRANSLATE_FRAME_Y] - prevFrameY) * percent - bone->y)
+    * alpha;
 
-	if (time >= self->frames[self->framesCount - 3]) { /* Time is after last frame. */
-		bone->x += (bone->data->x + self->frames[self->framesCount - 2] - bone->x) * alpha;
-		bone->y += (bone->data->y + self->frames[self->framesCount - 1] - bone->y) * alpha;
-		return;
-	}
-
-	/* Interpolate between the previous frame and the current frame. */
-	frameIndex = binarySearch(self->frames, self->framesCount, time, 3);
-	prevFrameX = self->frames[frameIndex - 2];
-	prevFrameY = self->frames[frameIndex - 1];
-	frameTime = self->frames[frameIndex];
-	percent = 1 - (time - frameTime) / (self->frames[frameIndex + TRANSLATE_PREV_FRAME_TIME] - frameTime);
-	percent = spCurveTimeline_getCurvePercent(SUPER(self), frameIndex / 3 - 1, percent < 0 ? 0 : (percent > 1 ? 1 : percent));
-
-	bone->x += (bone->data->x + prevFrameX + (self->frames[frameIndex + TRANSLATE_FRAME_X] - prevFrameX) * percent - bone->x)
-			* alpha;
-	bone->y += (bone->data->y + prevFrameY + (self->frames[frameIndex + TRANSLATE_FRAME_Y] - prevFrameY) * percent - bone->y)
-			* alpha;
 }
 
 spTranslateTimeline* spTranslateTimeline_create (int framesCount) {
@@ -357,7 +381,7 @@ void spTranslateTimeline_setFrame (spTranslateTimeline* self, int frameIndex, fl
 /**/
 
 void _spScaleTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-		int* eventsCount, float alpha) {
+		int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt) {
 	spBone *bone;
 	int frameIndex;
 	float prevFrameX, prevFrameY, frameTime, percent;
@@ -367,6 +391,13 @@ void _spScaleTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, f
 	if (time < self->frames[0]) return; /* Time is before first frame. */
 
 	bone = skeleton->bones[self->boneIndex];
+    if (activeBoneNames) {
+        if (!isBoneActive(bone->data->name, activeBoneNames, activeBoneCnt)) {
+//            printf("Bone %s is not active, will not update it!\n", bone->data->name);
+            return;
+        }
+    }
+    
 	if (time >= self->frames[self->framesCount - 3]) { /* Time is after last frame. */
 		bone->scaleX += (bone->data->scaleX * self->frames[self->framesCount - 2] - bone->scaleX) * alpha;
 		bone->scaleY += (bone->data->scaleY * self->frames[self->framesCount - 1] - bone->scaleY) * alpha;
@@ -404,7 +435,7 @@ static const int COLOR_FRAME_B = 3;
 static const int COLOR_FRAME_A = 4;
 
 void _spColorTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-		int* eventsCount, float alpha) {
+		int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt) {
 	spSlot *slot;
 	int frameIndex;
 	float prevFrameR, prevFrameG, prevFrameB, prevFrameA, percent, frameTime;
@@ -412,7 +443,7 @@ void _spColorTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, f
 	spColorTimeline* self = (spColorTimeline*)timeline;
 
 	if (time < self->frames[0]) return; /* Time is before first frame. */
-
+    
 	if (time >= self->frames[self->framesCount - 5]) {
 		/* Time is after last frame. */
 		int i = self->framesCount - 1;
@@ -466,13 +497,13 @@ void spColorTimeline_setFrame (spColorTimeline* self, int frameIndex, float time
 /**/
 
 void _spAttachmentTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, float lastTime, float time,
-		spEvent** firedEvents, int* eventsCount, float alpha) {
+		spEvent** firedEvents, int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt) {
 	int frameIndex;
 	const char* attachmentName;
 	spAttachmentTimeline* self = (spAttachmentTimeline*)timeline;
 
 	if (time < self->frames[0]) {
-		if (lastTime > time) _spAttachmentTimeline_apply(timeline, skeleton, lastTime, (float)INT_MAX, 0, 0, 0);
+		if (lastTime > time) _spAttachmentTimeline_apply(timeline, skeleton, lastTime, (float)INT_MAX, 0, 0, 0, activeBoneNames, activeBoneCnt);
 		return;
 	} else if (lastTime > time) /**/
 		lastTime = -1;
@@ -524,13 +555,13 @@ void spAttachmentTimeline_setFrame (spAttachmentTimeline* self, int frameIndex, 
 
 /** Fires events for frames > lastTime and <= time. */
 void _spEventTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-		int* eventsCount, float alpha) {
+		int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt) {
 	spEventTimeline* self = (spEventTimeline*)timeline;
 	int frameIndex;
 	if (!firedEvents) return;
 
 	if (lastTime > time) { /* Fire events after last time for looped animations. */
-		_spEventTimeline_apply(timeline, skeleton, lastTime, (float)INT_MAX, firedEvents, eventsCount, alpha);
+		_spEventTimeline_apply(timeline, skeleton, lastTime, (float)INT_MAX, firedEvents, eventsCount, alpha, activeBoneNames, activeBoneCnt);
 		lastTime = -1;
 	} else if (lastTime >= self->frames[self->framesCount - 1]) /* Last time is after last frame. */
 	return;
@@ -587,7 +618,7 @@ void spEventTimeline_setFrame (spEventTimeline* self, int frameIndex, float time
 /**/
 
 void _spDrawOrderTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, float lastTime, float time,
-		spEvent** firedEvents, int* eventsCount, float alpha) {
+		spEvent** firedEvents, int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt) {
 	int i;
 	int frameIndex;
 	const int* drawOrderToSetupIndex;
@@ -649,7 +680,7 @@ void spDrawOrderTimeline_setFrame (spDrawOrderTimeline* self, int frameIndex, fl
 /**/
 
 void _spFFDTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-		int* eventsCount, float alpha) {
+		int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt) {
 	int frameIndex, i;
 	float percent, frameTime;
 	const float* prevVertices;
@@ -751,7 +782,7 @@ static const int IKCONSTRAINT_PREV_FRAME_BEND_DIRECTION = -1;
 static const int IKCONSTRAINT_FRAME_MIX = 1;
 
 void _spIkConstraintTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, float lastTime, float time,
-		spEvent** firedEvents, int* eventsCount, float alpha) {
+		spEvent** firedEvents, int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt) {
 	int frameIndex;
 	float prevFrameMix, frameTime, percent, mix;
 	spIkConstraint* ikConstraint;

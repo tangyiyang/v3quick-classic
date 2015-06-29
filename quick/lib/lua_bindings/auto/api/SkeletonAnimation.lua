@@ -45,10 +45,10 @@
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] setTrackStartListener 
+-- @function [parent=#SkeletonAnimation] setMixBone 
 -- @param self
--- @param #spTrackEntry entry
--- @param #function listener
+-- @param #string mixAnimationName
+-- @param #array_table activeBoneNames
 -- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
         
 --------------------------------
@@ -101,6 +101,14 @@
 -- 
 -- @function [parent=#SkeletonAnimation] clearTracks 
 -- @param self
+-- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
+        
+--------------------------------
+-- 
+-- @function [parent=#SkeletonAnimation] setTrackStartListener 
+-- @param self
+-- @param #spTrackEntry entry
+-- @param #function listener
 -- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
         
 --------------------------------

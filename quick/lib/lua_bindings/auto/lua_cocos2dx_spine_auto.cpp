@@ -1090,7 +1090,7 @@ int lua_cocos2dx_spine_SkeletonAnimation_onTrackEntryEvent(lua_State* tolua_S)
 
     return 0;
 }
-int lua_cocos2dx_spine_SkeletonAnimation_setTrackStartListener(lua_State* tolua_S)
+int lua_cocos2dx_spine_SkeletonAnimation_setMixBone(lua_State* tolua_S)
 {
     int argc = 0;
     spine::SkeletonAnimation* cobj = nullptr;
@@ -1110,7 +1110,7 @@ int lua_cocos2dx_spine_SkeletonAnimation_setTrackStartListener(lua_State* tolua_
 #if COCOS2D_DEBUG >= 1
     if (!cobj) 
     {
-        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_spine_SkeletonAnimation_setTrackStartListener'", nullptr);
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_spine_SkeletonAnimation_setMixBone'", nullptr);
         return 0;
     }
 #endif
@@ -1118,32 +1118,27 @@ int lua_cocos2dx_spine_SkeletonAnimation_setTrackStartListener(lua_State* tolua_
     argc = lua_gettop(tolua_S)-1;
     if (argc == 2) 
     {
-        spTrackEntry* arg0;
-        std::function<void (int)> arg1;
+        std::string arg0;
+        std::vector<std::string> arg1;
 
-        #pragma warning NO CONVERSION TO NATIVE FOR spTrackEntry*
-		ok = false;
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "sp.SkeletonAnimation:setMixBone");
 
-        do {
-			// Lambda binding for lua is not supported.
-			assert(false);
-		} while(0)
-		;
+        ok &= luaval_to_std_vector_string(tolua_S, 3, &arg1, "sp.SkeletonAnimation:setMixBone");
         if(!ok)
         {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_spine_SkeletonAnimation_setTrackStartListener'", nullptr);
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_spine_SkeletonAnimation_setMixBone'", nullptr);
             return 0;
         }
-        cobj->setTrackStartListener(arg0, arg1);
+        cobj->setMixBone(arg0, arg1);
         lua_settop(tolua_S, 1);
         return 1;
     }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "sp.SkeletonAnimation:setTrackStartListener",argc, 2);
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "sp.SkeletonAnimation:setMixBone",argc, 2);
     return 0;
 
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_spine_SkeletonAnimation_setTrackStartListener'.",&tolua_err);
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_spine_SkeletonAnimation_setMixBone'.",&tolua_err);
 #endif
 
     return 0;
@@ -1524,6 +1519,64 @@ int lua_cocos2dx_spine_SkeletonAnimation_clearTracks(lua_State* tolua_S)
 
     return 0;
 }
+int lua_cocos2dx_spine_SkeletonAnimation_setTrackStartListener(lua_State* tolua_S)
+{
+    int argc = 0;
+    spine::SkeletonAnimation* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"sp.SkeletonAnimation",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (spine::SkeletonAnimation*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_spine_SkeletonAnimation_setTrackStartListener'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 2) 
+    {
+        spTrackEntry* arg0;
+        std::function<void (int)> arg1;
+
+        #pragma warning NO CONVERSION TO NATIVE FOR spTrackEntry*
+		ok = false;
+
+        do {
+			// Lambda binding for lua is not supported.
+			assert(false);
+		} while(0)
+		;
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_spine_SkeletonAnimation_setTrackStartListener'", nullptr);
+            return 0;
+        }
+        cobj->setTrackStartListener(arg0, arg1);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "sp.SkeletonAnimation:setTrackStartListener",argc, 2);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_spine_SkeletonAnimation_setTrackStartListener'.",&tolua_err);
+#endif
+
+    return 0;
+}
 int lua_cocos2dx_spine_SkeletonAnimation_clearTrack(lua_State* tolua_S)
 {
     int argc = 0;
@@ -1662,7 +1715,7 @@ int lua_register_cocos2dx_spine_SkeletonAnimation(lua_State* tolua_S)
         tolua_function(tolua_S,"getState",lua_cocos2dx_spine_SkeletonAnimation_getState);
         tolua_function(tolua_S,"setTrackCompleteListener",lua_cocos2dx_spine_SkeletonAnimation_setTrackCompleteListener);
         tolua_function(tolua_S,"onTrackEntryEvent",lua_cocos2dx_spine_SkeletonAnimation_onTrackEntryEvent);
-        tolua_function(tolua_S,"setTrackStartListener",lua_cocos2dx_spine_SkeletonAnimation_setTrackStartListener);
+        tolua_function(tolua_S,"setMixBone",lua_cocos2dx_spine_SkeletonAnimation_setMixBone);
         tolua_function(tolua_S,"setCompleteListener",lua_cocos2dx_spine_SkeletonAnimation_setCompleteListener);
         tolua_function(tolua_S,"setTrackEndListener",lua_cocos2dx_spine_SkeletonAnimation_setTrackEndListener);
         tolua_function(tolua_S,"setEventListener",lua_cocos2dx_spine_SkeletonAnimation_setEventListener);
@@ -1670,6 +1723,7 @@ int lua_register_cocos2dx_spine_SkeletonAnimation(lua_State* tolua_S)
         tolua_function(tolua_S,"setMix",lua_cocos2dx_spine_SkeletonAnimation_setMix);
         tolua_function(tolua_S,"setEndListener",lua_cocos2dx_spine_SkeletonAnimation_setEndListener);
         tolua_function(tolua_S,"clearTracks",lua_cocos2dx_spine_SkeletonAnimation_clearTracks);
+        tolua_function(tolua_S,"setTrackStartListener",lua_cocos2dx_spine_SkeletonAnimation_setTrackStartListener);
         tolua_function(tolua_S,"clearTrack",lua_cocos2dx_spine_SkeletonAnimation_clearTrack);
         tolua_function(tolua_S,"onAnimationStateEvent",lua_cocos2dx_spine_SkeletonAnimation_onAnimationStateEvent);
     tolua_endmodule(tolua_S);

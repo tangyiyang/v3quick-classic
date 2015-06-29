@@ -38,10 +38,16 @@
 extern "C" {
 #endif
 
+#define MAX_MIX_BONE (16)
+#define MAX_MIXBONE_NAME_LENGTH (64)
+#define MAX_MIXANIMATION_NAME_LENGTH (64)
 typedef struct {
 	spSkeletonData* const skeletonData;
 	float defaultMix;
 	const void* const entries;
+    char mixActiveBoneNames[MAX_MIX_BONE][MAX_MIXBONE_NAME_LENGTH];
+    int mixActiveBoneCnts;
+    char mixAnimationName[MAX_MIXANIMATION_NAME_LENGTH];
 } spAnimationStateData;
 
 spAnimationStateData* spAnimationStateData_create (spSkeletonData* skeletonData);
@@ -49,6 +55,7 @@ void spAnimationStateData_dispose (spAnimationStateData* self);
 
 void spAnimationStateData_setMixByName (spAnimationStateData* self, const char* fromName, const char* toName, float duration);
 void spAnimationStateData_setMix (spAnimationStateData* self, spAnimation* from, spAnimation* to, float duration);
+void spAnimationStateData_setMixBone(spAnimationStateData* self, const char* mixAnimationName, char activeBoneNames[16][64], int activeBoneCnts);
 /* Returns 0 if there is no mixing between the animations. */
 float spAnimationStateData_getMix (spAnimationStateData* self, spAnimation* from, spAnimation* to);
 

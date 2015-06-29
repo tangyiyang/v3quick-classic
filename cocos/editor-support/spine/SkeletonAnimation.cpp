@@ -143,6 +143,19 @@ void SkeletonAnimation::setAnimationStateData (spAnimationStateData* stateData) 
 void SkeletonAnimation::setMix (const std::string& fromAnimation, const std::string& toAnimation, float duration) {
 	spAnimationStateData_setMixByName(_state->data, fromAnimation.c_str(), toAnimation.c_str(), duration);
 }
+    
+void SkeletonAnimation::setMixBone(const std::string& mixAnimationName, const std::vector<std::string>& activeBoneNames) {
+    char boneNames[16][64] = {};
+    
+    for (int i = 0; i < activeBoneNames.size(); ++i) {
+        size_t size = activeBoneNames[i].size();
+        strncpy(boneNames[i], activeBoneNames[i].c_str(), size);
+    }
+    
+//    spAnimationState_resetBoneState(_state, mixAnimationName.c_str(), boneNames, (int)activeBoneNames.size());
+    
+    spAnimationStateData_setMixBone(_state->data, mixAnimationName.c_str(), boneNames, (int)activeBoneNames.size());
+}
 
 spTrackEntry* SkeletonAnimation::setAnimation (int trackIndex, const std::string& name, bool loop) {
 	spAnimation* animation = spSkeletonData_findAnimation(_skeleton->data, name.c_str());

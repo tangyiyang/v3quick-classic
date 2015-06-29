@@ -54,6 +54,7 @@ public:
 
 	void setAnimationStateData (spAnimationStateData* stateData);
 	void setMix (const std::string& fromAnimation, const std::string& toAnimation, float duration);
+    void setMixBone(const std::string& mixAnimationName, const std::vector<std::string>& activeBoneNames);
 
 	spTrackEntry* setAnimation (int trackIndex, const std::string& name, bool loop);
 	spTrackEntry* addAnimation (int trackIndex, const std::string& name, bool loop, float delay = 0);

@@ -71,6 +71,8 @@ struct spAnimationState {
 	spTrackEntry** tracks;
 
 	void* rendererObject;
+    
+    float mixBoneRenderTime;
 };
 
 /* @param data May be 0 for no mixing. */
@@ -82,6 +84,8 @@ void spAnimationState_apply (spAnimationState* self, struct spSkeleton* skeleton
 
 void spAnimationState_clearTracks (spAnimationState* self);
 void spAnimationState_clearTrack (spAnimationState* self, int trackIndex);
+    
+void spAnimationState_resetBoneState(spAnimationState* self, struct spSkeleton* skeleton, const char* mixAnimationName, char activeBoneNames[16][64], int activeBoneCnts);
 
 /** Set the current animation. Any queued animations are cleared. */
 spTrackEntry* spAnimationState_setAnimationByName (spAnimationState* self, int trackIndex, const char* animationName,

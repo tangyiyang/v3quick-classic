@@ -200,10 +200,15 @@ void spSkeleton_updateWorldTransform (const spSkeleton* self) {
 		self->bones[i]->rotationIK = self->bones[i]->rotation;
 
 	i = 0;
+//    printf("boneCacheCount = %d\n", internal->boneCacheCount);
+    
 	last = internal->boneCacheCount - 1;
 	while (1) {
-		for (ii = 0, nn = internal->boneCacheCounts[i]; ii < nn; ++ii)
-			spBone_updateWorldTransform(internal->boneCache[i][ii]);
+        for (ii = 0, nn = internal->boneCacheCounts[i]; ii < nn; ++ii) {
+            spBone* bone = internal->boneCache[i][ii];
+//            printf("i,ii = (%d, %d), boneName = %s\n", i, ii, bone->data->name);
+            spBone_updateWorldTransform(internal->boneCache[i][ii]);
+        }
 		if (i == last) break;
 		spIkConstraint_apply(self->ikConstraints[i]);
 		i++;
