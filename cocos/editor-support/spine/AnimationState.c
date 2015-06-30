@@ -140,11 +140,15 @@ void spAnimationState_apply (spAnimationState* self, spSkeleton* skeleton) {
                 
                 if (strlen(self->data->mixAnimationName) > 0) {
                     if (strcmp(current->animation->name, self->data->mixAnimationName) == 0) {
+                        printf("update mix track = %d\n", i);
                         spAnimation_apply(current->animation, skeleton, current->lastTime, time, current->loop,
                                           internal->events, &eventsCount, self->data->mixActiveBoneNames, self->data->mixActiveBoneCnts);
+                        spSkeleton_updateWorldTransform(skeleton, self->data->mixActiveBoneNames, self->data->mixActiveBoneCnts);
                     } else {
                         spAnimation_apply(current->animation, skeleton, current->lastTime, time, current->loop,
                                           internal->events, &eventsCount, NULL, 0);
+                        spSkeleton_updateWorldTransform(skeleton, NULL, 0);
+
 
                     }
                 }
@@ -204,6 +208,7 @@ void spAnimationState_apply (spAnimationState* self, spSkeleton* skeleton) {
 
 		current->lastTime = current->time;
 	}
+    
 }
 
 void spAnimationState_clearTracks (spAnimationState* self) {

@@ -313,7 +313,7 @@ cocos2d::Rect SkeletonRenderer::getBoundingBox () const {
 // --- Convenience methods for Skeleton_* functions.
 
 void SkeletonRenderer::updateWorldTransform () {
-	spSkeleton_updateWorldTransform(_skeleton);
+	spSkeleton_updateWorldTransform(_skeleton, NULL, 0);
 }
 
 void SkeletonRenderer::setToSetupPose () {

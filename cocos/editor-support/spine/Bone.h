@@ -52,6 +52,9 @@ struct spBone {
 	float const m10, m11, worldY; /* c d y */
 	float const worldRotation;
 	float const worldScaleX, worldScaleY;
+    
+    // for mix bone
+    int isChildOfMixBone;
 };
 
 void spBone_setYDown (int/*bool*/yDown);

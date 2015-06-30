@@ -274,9 +274,12 @@ void _spRotateTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, 
 
 	bone = skeleton->bones[self->boneIndex];
     
+    if (strcmp(bone->data->name, "weapon") == 0) {
+        int q= 0;
+    }
     if (activeBoneNames) {
-        if (!isBoneActive(bone->data->name, activeBoneNames, activeBoneCnt)) {
-//            printf("Bone %s is not active, will not update it!\n", bone->data->name);
+        if ( (!isBoneActive(bone->data->name, activeBoneNames, activeBoneCnt)) || bone->isChildOfMixBone) {
+            printf("Bone %s is not active, will not update it!\n", bone->data->name);
             return;
         }
     }
@@ -340,8 +343,8 @@ void _spTranslateTimeline_apply (const spTimeline* timeline, spSkeleton* skeleto
 	bone = skeleton->bones[self->boneIndex];
     
     if (activeBoneNames) {
-        if (!isBoneActive(bone->data->name, activeBoneNames, activeBoneCnt)) {
-//            printf("Bone %s is not active, will not update it!\n", bone->data->name);
+        if (!isBoneActive(bone->data->name, activeBoneNames, activeBoneCnt) || bone->isChildOfMixBone) {
+            printf("Bone %s is not active, will not update it!\n", bone->data->name);
             return;
         }
     }
@@ -392,8 +395,8 @@ void _spScaleTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, f
 
 	bone = skeleton->bones[self->boneIndex];
     if (activeBoneNames) {
-        if (!isBoneActive(bone->data->name, activeBoneNames, activeBoneCnt)) {
-//            printf("Bone %s is not active, will not update it!\n", bone->data->name);
+        if (!isBoneActive(bone->data->name, activeBoneNames, activeBoneCnt) || bone->isChildOfMixBone) {
+            printf("Bone %s is not active, will not update it!\n", bone->data->name);
             return;
         }
     }
