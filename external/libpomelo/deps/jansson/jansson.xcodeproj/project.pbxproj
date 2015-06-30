@@ -173,6 +173,7 @@
 				HEADER_SEARCH_PATHS = ./src;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				PRODUCT_NAME = jansson;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Default;
