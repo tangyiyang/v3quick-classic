@@ -205,8 +205,8 @@ void spSkeleton_updateWorldTransform (const spSkeleton* self, const char activeB
 	while (1) {
         for (ii = 0, nn = internal->boneCacheCounts[i]; ii < nn; ++ii) {
             spBone* bone = internal->boneCache[i][ii];
-            if (bone->isChildOfMixBone && activeBoneCnt > 0) {
-                printf("bone %s will not update transform\n", bone->data->name);
+            if (bone->isNotUpdateInMix && activeBoneCnt > 0) {
+                printf("updateWorldTransform bone %s will update transform\n", bone->data->name);
             } else {
                 spBone_updateWorldTransform(internal->boneCache[i][ii]);
             }
@@ -356,25 +356,40 @@ int isBoneChild(spBone* bone, const char fatherName[64]) {
     }
 }
 
+//void spSkeleton_createBoneTree(const spSkeleton* self, const char activeBoneNames[16][64], int activeBoneCnt) {
+//    int i, j;
+//    for (i = 0; i < activeBoneCnt; ++i) {
+//        for (j = 0; j < self->bonesCount; ++j) {
+//            spBone* bone = self->bones[j];
+//            if (strcmp(bone->data->name, activeBoneNames[i]) == 0) {
+//                bone->isChildOfMixBone = 0;
+//                printf("bone[%s] \t\t%s = \t %s\n", bone->data->name, activeBoneNames[i], bone->isChildOfMixBone ? "true" : "false");
+//                continue;
+//            }
+//            if (!bone->isChildOfMixBone) {
+//                bone->isChildOfMixBone = isBoneChild(bone, activeBoneNames[i]);
+//            }
+//            printf("bone[%s] \t\t%s = \t %s\n", bone->data->name, activeBoneNames[i], bone->isChildOfMixBone ? "true" : "false");
+//        }
+//    }
+//}
 
-void spSkeleton_createBoneTree(const spSkeleton* self, const char activeBoneNames[16][64], int activeBoneCnt) {
-    int i, j;
-    for (i = 0; i < activeBoneCnt; ++i) {
-        for (j = 0; j < self->bonesCount; ++j) {
-            spBone* bone = self->bones[j];
-            if (strcmp(bone->data->name, activeBoneNames[i]) == 0) {
-                bone->isChildOfMixBone = 0;
-                printf("bone[%s] \t\t%s = \t %s\n", bone->data->name, activeBoneNames[i], bone->isChildOfMixBone ? "true" : "false");
-                continue;
-            }
-            if (!bone->isChildOfMixBone) {
-                bone->isChildOfMixBone = isBoneChild(bone, activeBoneNames[i]);
-            }
-            printf("bone[%s] \t\t%s = \t %s\n", bone->data->name, activeBoneNames[i], bone->isChildOfMixBone ? "true" : "false");
+void spSkeleton_setBoneWillMix(const spSkeleton* self) {
+    int i;
+    for (i = 0; i < self->bonesCount; ++i) {
+        spBone* bone = self->bones[i];
+        if (strstr(bone->data->name, "_mix") != NULL) {
+            bone->isNotUpdateInMix = 0;
+        } else {
+            bone->isNotUpdateInMix = 1;
         }
     }
+    
+    for (i = 0; i < self->bonesCount; ++i) {
+        printf("bone [%s], isNotUpdateInMix = %d\n", self->bones[i]->data->name, self->bones[i]->isNotUpdateInMix);
+    }
+    
 }
-
 
 
 void spSkeleton_update (spSkeleton* self, float deltaTime) {

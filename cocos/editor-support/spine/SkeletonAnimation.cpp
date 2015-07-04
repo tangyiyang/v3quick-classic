@@ -125,12 +125,9 @@ void SkeletonAnimation::update (float deltaTime) {
 	deltaTime *= _timeScale;
 	spAnimationState_update(_state, deltaTime);
 	spAnimationState_apply(_state, _skeleton);
-//    for ()
-//    if (strlen(_state->data->mixAnimationName) > 0) {
-//        printf("will not update the world transform of the other track!\n");
-//    } else {
-//        spSkeleton_updateWorldTransform(_skeleton, _state->data->mixAnimationName);
-//    }
+
+//  spSkeleton_updateWorldTransform(_skeleton, _state->data->mixAnimationName);
+
 }
 
 void SkeletonAnimation::setAnimationStateData (spAnimationStateData* stateData) {
@@ -157,8 +154,7 @@ void SkeletonAnimation::setMixBone(const std::string& mixAnimationName, const st
         strncpy(boneNames[i], activeBoneNames[i].c_str(), size);
     }
     
-//    spAnimationState_resetBoneState(_state, mixAnimationName.c_str(), boneNames, (int)activeBoneNames.size());
-    spSkeleton_createBoneTree(_skeleton, boneNames, (int)activeBoneNames.size());
+    spSkeleton_setBoneWillMix(_skeleton);
     spAnimationStateData_setMixBone(_state->data, mixAnimationName.c_str(), boneNames, (int)activeBoneNames.size());
 }
 

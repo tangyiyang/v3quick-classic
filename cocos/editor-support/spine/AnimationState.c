@@ -148,9 +148,11 @@ void spAnimationState_apply (spAnimationState* self, spSkeleton* skeleton) {
                         spAnimation_apply(current->animation, skeleton, current->lastTime, time, current->loop,
                                           internal->events, &eventsCount, NULL, 0);
                         spSkeleton_updateWorldTransform(skeleton, NULL, 0);
-
-
                     }
+                } else {
+                    spAnimation_apply(current->animation, skeleton, current->lastTime, time, current->loop,
+                                      internal->events, &eventsCount, NULL, 0);
+                    spSkeleton_updateWorldTransform(skeleton, NULL, 0);
                 }
 			} else {
 				spAnimation_mix(current->animation, skeleton, current->lastTime, time,

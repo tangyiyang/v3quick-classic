@@ -101,7 +101,7 @@ int spSkeleton_setAttachment (spSkeleton* self, const char* slotName, const char
 /* Returns 0 if the IK constraint was not found. */
 spIkConstraint* spSkeleton_findIkConstraint (const spSkeleton* self, const char* ikConstraintName);
 
-void spSkeleton_createBoneTree(const spSkeleton* self, const char activeBoneNames[16][64], int activeBoneCnt);
+void spSkeleton_setBoneWillMix(const spSkeleton* self);
 void spSkeleton_update (spSkeleton* self, float deltaTime);
 
 #ifdef SPINE_SHORT_NAMES
