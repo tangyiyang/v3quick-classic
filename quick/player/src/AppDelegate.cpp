@@ -123,6 +123,7 @@ void StartupCall::startup()
     {
         workdir = path.substr(0, p);
         stack->addSearchPath(workdir.c_str());
+        FileUtils::getInstance()->addSearchPath(workdir.c_str());
     }
     
     // connect debugger

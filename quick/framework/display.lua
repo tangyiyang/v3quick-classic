@@ -246,7 +246,7 @@ display.SCENE_TRANSITIONS = {
 
 display.TEXTURES_PIXEL_FORMAT = {}
 
-display.DEFAULT_TTF_FONT        = "Arial"
+display.DEFAULT_TTF_FONT        = ""
 display.DEFAULT_TTF_FONT_SIZE   = 24
 
 
@@ -1291,6 +1291,7 @@ local label = display.newTTFLabel({
 function display.newTTFLabel(params)
     assert(type(params) == "table",
            "[framework.display] newTTFLabel() invalid params")
+
 
     local text       = tostring(params.text)
     local font       = params.font or display.DEFAULT_TTF_FONT

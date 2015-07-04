@@ -41,7 +41,6 @@ function WelcomeScene:createLogo(node)
     label:align(display.LEFT_CENTER)
     node:addChild(label)
 
-
     label = cc.ui.UILabel.new({
 		UILabelType = 2,
         text = "v" .. cc.VERSION,

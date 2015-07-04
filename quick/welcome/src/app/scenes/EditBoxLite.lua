@@ -34,7 +34,7 @@ end
 ]]
 function EditBoxLite:ctor(params)
     local fontSize = params.fontSize or 35
-    local fontName = params.font or "arial" --"Courier New"
+    local fontName = params.font or "Arial" --"Courier New"
     local image    = params.image
     local text     = params.text or ""
     local width    = params.size.width
