@@ -51,7 +51,7 @@ void spAnimation_dispose (spAnimation* self) {
 }
 
 void spAnimation_apply (const spAnimation* self, spSkeleton* skeleton, float lastTime, float time, int loop, spEvent** events,
-		int* eventsCount, char activeBoneNames[16][64], int activeBoneCnt) {
+		int* eventsCount, char activeBoneNames[16][64], int activeBoneCnt, int isMainAnimation) {
 	int i, n = self->timelinesCount;
 
 	if (loop && self->duration) {
@@ -60,11 +60,11 @@ void spAnimation_apply (const spAnimation* self, spSkeleton* skeleton, float las
 	}
 
 	for (i = 0; i < n; ++i)
-		spTimeline_apply(self->timelines[i], skeleton, lastTime, time, events, eventsCount, 1, activeBoneNames, activeBoneCnt);
+		spTimeline_apply(self->timelines[i], skeleton, lastTime, time, events, eventsCount, 1, activeBoneNames, activeBoneCnt, isMainAnimation);
 }
 
 void spAnimation_mix (const spAnimation* self, spSkeleton* skeleton, float lastTime, float time, int loop, spEvent** events,
-		int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt) {
+		int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt, int isMainAnimation) {
 	int i, n = self->timelinesCount;
 
 	if (loop && self->duration) {
@@ -73,7 +73,7 @@ void spAnimation_mix (const spAnimation* self, spSkeleton* skeleton, float lastT
 	}
 
 	for (i = 0; i < n; ++i)
-		spTimeline_apply(self->timelines[i], skeleton, lastTime, time, events, eventsCount, alpha, activeBoneNames, activeBoneCnt);
+		spTimeline_apply(self->timelines[i], skeleton, lastTime, time, events, eventsCount, alpha, activeBoneNames, activeBoneCnt, isMainAnimation);
 }
 
 int isBoneActive(const char* boneName, char activeBoneNames[16][64], int activeBoneCnt) {
@@ -89,14 +89,14 @@ int isBoneActive(const char* boneName, char activeBoneNames[16][64], int activeB
 
 typedef struct _spTimelineVtable {
 	void (*apply) (const spTimeline* self, spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-			int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt);
+			int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt, int isMainAnimation);
 	void (*dispose) (spTimeline* self);
 } _spTimelineVtable;
 
 void _spTimeline_init (spTimeline* self, spTimelineType type, /**/
 void (*dispose) (spTimeline* self), /**/
 		void (*apply) (const spTimeline* self, spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-				int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt)) {
+				int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt,int isMainAnimation)) {
 	CONST_CAST(spTimelineType, self->type) = type;
 	CONST_CAST(_spTimelineVtable*, self->vtable) = NEW(_spTimelineVtable);
 	VTABLE(spTimeline, self)->dispose = dispose;
@@ -112,8 +112,8 @@ void spTimeline_dispose (spTimeline* self) {
 }
 
 void spTimeline_apply (const spTimeline* self, spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-		int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt) {
-	VTABLE(spTimeline, self)->apply(self, skeleton, lastTime, time, firedEvents, eventsCount, alpha, activeBoneNames, activeBoneCnt);
+		int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt, int isMainAnimation) {
+	VTABLE(spTimeline, self)->apply(self, skeleton, lastTime, time, firedEvents, eventsCount, alpha, activeBoneNames, activeBoneCnt, isMainAnimation);
 }
 
 /**/
@@ -124,7 +124,7 @@ static const int BEZIER_SEGMENTS = 10, BEZIER_SIZE = 10 * 2 - 1;
 void _spCurveTimeline_init (spCurveTimeline* self, spTimelineType type, int framesCount, /**/
 void (*dispose) (spTimeline* self), /**/
 		void (*apply) (const spTimeline* self, spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-				int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt)) {
+				int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt, int isMainAnimation)) {
 	_spTimeline_init(SUPER(self), type, dispose, apply);
 	self->curves = CALLOC(float, (framesCount - 1) * BEZIER_SIZE);
 }
@@ -247,7 +247,7 @@ void _spBaseTimeline_dispose (spTimeline* timeline) {
 /* Many timelines have structure identical to struct spBaseTimeline and extend spCurveTimeline. **/
 struct spBaseTimeline* _spBaseTimeline_create (int framesCount, spTimelineType type, int frameSize, /**/
 		void (*apply) (const spTimeline* self, spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-				int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt)) {
+				int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt, int isMainAnimation)) {
 	struct spBaseTimeline* self = NEW(struct spBaseTimeline);
 	_spCurveTimeline_init(SUPER(self), type, framesCount, _spBaseTimeline_dispose, apply);
 
@@ -263,7 +263,7 @@ static const int ROTATE_PREV_FRAME_TIME = -2;
 static const int ROTATE_FRAME_VALUE = 1;
 
 void _spRotateTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-		int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt) {
+		int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt, int isMainAnimation) {
 	spBone *bone;
 	int frameIndex;
 	float prevFrameValue, frameTime, percent, amount;
@@ -274,15 +274,20 @@ void _spRotateTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, 
 
 	bone = skeleton->bones[self->boneIndex];
     
-    if (strcmp(bone->data->name, "weapon") == 0) {
-        int q= 0;
-    }
-    if (activeBoneNames) {
-        if ((bone->isNotUpdateInMix)) {
-            printf("Bone %s is NotUpdateInMix, will not update it!\n", bone->data->name);
-            return;
+    if (activeBoneCnt > 0) {
+        // main animation
+        if (isMainAnimation) {
+            if (bone->nameEndWithMix) { // main animation which contains mix will not be updated
+                return;
+            }
+        // mix animation
+        } else {
+            if (!bone->nameEndWithMix) { // mix animation will not update the bones which doesn't contain mix
+                return;
+            }
         }
     }
+    
     if (time >= self->frames[self->framesCount - 2]) { /* Time is after last frame. */
         float amount = bone->data->rotation + self->frames[self->framesCount - 1] - bone->rotation;
         while (amount > 180)
@@ -331,7 +336,7 @@ static const int TRANSLATE_FRAME_X = 1;
 static const int TRANSLATE_FRAME_Y = 2;
 
 void _spTranslateTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, float lastTime, float time,
-		spEvent** firedEvents, int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt) {
+		spEvent** firedEvents, int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt, int isMainAnimation) {
 	spBone *bone;
 	int frameIndex;
 	float prevFrameX, prevFrameY, frameTime, percent;
@@ -342,10 +347,19 @@ void _spTranslateTimeline_apply (const spTimeline* timeline, spSkeleton* skeleto
     
 	bone = skeleton->bones[self->boneIndex];
     
-    if (activeBoneNames) {
-        if ( (bone->isNotUpdateInMix) ) {
-            printf("Bone %s is NotUpdateInMix, will not update it!\n", bone->data->name);
-            return;
+    // main animation
+    if (activeBoneCnt > 0) {
+        if (isMainAnimation) {
+            if (bone->nameEndWithMix) { // main animation which contains mix will not be updated
+                printf("translate, isMainAnimation, boneName = %d %s\n", isMainAnimation, bone->data->name);
+                return;
+            }
+            // mix animation
+        } else {
+            if (!bone->nameEndWithMix) { // mix animation will not update the bones which doesn't contain mix
+                printf("translate, isMainAnimation, boneName = %d %s\n", isMainAnimation, bone->data->name);
+                return;
+            }
         }
     }
     
@@ -384,7 +398,7 @@ void spTranslateTimeline_setFrame (spTranslateTimeline* self, int frameIndex, fl
 /**/
 
 void _spScaleTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-		int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt) {
+		int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt, int isMainAnimation) {
 	spBone *bone;
 	int frameIndex;
 	float prevFrameX, prevFrameY, frameTime, percent;
@@ -394,12 +408,20 @@ void _spScaleTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, f
 	if (time < self->frames[0]) return; /* Time is before first frame. */
 
 	bone = skeleton->bones[self->boneIndex];
-    if (activeBoneNames) {
-        if ((bone->isNotUpdateInMix)) {
-            printf("Bone %s isNotUpdateInMix, will not update it!\n", bone->data->name);
-            return;
+    if (activeBoneCnt > 0) {
+        // main animation
+        if (isMainAnimation) {
+            if (bone->nameEndWithMix) { // main animation which contains mix will not be updated
+                return;
+            }
+        // mix animation
+        } else {
+            if (!bone->nameEndWithMix) { // mix animation will not update the bones which doesn't contain mix
+                return;
+            }
         }
     }
+
     
 	if (time >= self->frames[self->framesCount - 3]) { /* Time is after last frame. */
 		bone->scaleX += (bone->data->scaleX * self->frames[self->framesCount - 2] - bone->scaleX) * alpha;
@@ -438,13 +460,20 @@ static const int COLOR_FRAME_B = 3;
 static const int COLOR_FRAME_A = 4;
 
 void _spColorTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-		int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt) {
+		int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt, int isMainAnimation) {
 	spSlot *slot;
 	int frameIndex;
 	float prevFrameR, prevFrameG, prevFrameB, prevFrameA, percent, frameTime;
 	float r, g, b, a;
 	spColorTimeline* self = (spColorTimeline*)timeline;
-
+    
+    // not update the mix animation
+    if (activeBoneCnt > 0) {
+        if (!isMainAnimation) {
+            return;
+        }
+    }
+    
 	if (time < self->frames[0]) return; /* Time is before first frame. */
     
 	if (time >= self->frames[self->framesCount - 5]) {
@@ -500,13 +529,20 @@ void spColorTimeline_setFrame (spColorTimeline* self, int frameIndex, float time
 /**/
 
 void _spAttachmentTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, float lastTime, float time,
-		spEvent** firedEvents, int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt) {
+		spEvent** firedEvents, int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt, int isMainAnimation) {
 	int frameIndex;
 	const char* attachmentName;
 	spAttachmentTimeline* self = (spAttachmentTimeline*)timeline;
+    
+    // not update the mix animation
+    if (activeBoneCnt > 0) {
+        if (!isMainAnimation) {
+            return;
+        }
+    }
 
 	if (time < self->frames[0]) {
-		if (lastTime > time) _spAttachmentTimeline_apply(timeline, skeleton, lastTime, (float)INT_MAX, 0, 0, 0, activeBoneNames, activeBoneCnt);
+		if (lastTime > time) _spAttachmentTimeline_apply(timeline, skeleton, lastTime, (float)INT_MAX, 0, 0, 0, activeBoneNames, activeBoneCnt, isMainAnimation);
 		return;
 	} else if (lastTime > time) /**/
 		lastTime = -1;
@@ -558,13 +594,21 @@ void spAttachmentTimeline_setFrame (spAttachmentTimeline* self, int frameIndex, 
 
 /** Fires events for frames > lastTime and <= time. */
 void _spEventTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-		int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt) {
+		int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt, int isMainAnimation) {
 	spEventTimeline* self = (spEventTimeline*)timeline;
 	int frameIndex;
 	if (!firedEvents) return;
+    
+    // not update the mix animation
+    if (activeBoneCnt > 0) {
+        if (!isMainAnimation) {
+            return;
+        }
+    }
+
 
 	if (lastTime > time) { /* Fire events after last time for looped animations. */
-		_spEventTimeline_apply(timeline, skeleton, lastTime, (float)INT_MAX, firedEvents, eventsCount, alpha, activeBoneNames, activeBoneCnt);
+		_spEventTimeline_apply(timeline, skeleton, lastTime, (float)INT_MAX, firedEvents, eventsCount, alpha, activeBoneNames, activeBoneCnt, isMainAnimation);
 		lastTime = -1;
 	} else if (lastTime >= self->frames[self->framesCount - 1]) /* Last time is after last frame. */
 	return;
@@ -621,13 +665,21 @@ void spEventTimeline_setFrame (spEventTimeline* self, int frameIndex, float time
 /**/
 
 void _spDrawOrderTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, float lastTime, float time,
-		spEvent** firedEvents, int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt) {
+		spEvent** firedEvents, int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt, int isMainAnimation) {
 	int i;
 	int frameIndex;
 	const int* drawOrderToSetupIndex;
 	spDrawOrderTimeline* self = (spDrawOrderTimeline*)timeline;
 
 	if (time < self->frames[0]) return; /* Time is before first frame. */
+    
+    // not update the mix animation
+    if (activeBoneCnt > 0) {
+        if (!isMainAnimation) {
+            return;
+        }
+    }
+
 
 	if (time >= self->frames[self->framesCount - 1]) /* Time is after last frame. */
 		frameIndex = self->framesCount - 1;
@@ -683,7 +735,7 @@ void spDrawOrderTimeline_setFrame (spDrawOrderTimeline* self, int frameIndex, fl
 /**/
 
 void _spFFDTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-		int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt) {
+		int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt, int isMainAnimation) {
 	int frameIndex, i;
 	float percent, frameTime;
 	const float* prevVertices;
@@ -692,6 +744,14 @@ void _spFFDTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, flo
 
 	spSlot *slot = skeleton->slots[self->slotIndex];
 	if (slot->attachment != self->attachment) return;
+    
+    // not update the mix animation
+    if (activeBoneCnt > 0) {
+        if (!isMainAnimation) {
+            return;
+        }
+    }
+
 
 	if (time < self->frames[0]) {
 		slot->attachmentVerticesCount = 0;
@@ -785,13 +845,21 @@ static const int IKCONSTRAINT_PREV_FRAME_BEND_DIRECTION = -1;
 static const int IKCONSTRAINT_FRAME_MIX = 1;
 
 void _spIkConstraintTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, float lastTime, float time,
-		spEvent** firedEvents, int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt) {
+		spEvent** firedEvents, int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt, int isMainAnimation) {
 	int frameIndex;
 	float prevFrameMix, frameTime, percent, mix;
 	spIkConstraint* ikConstraint;
 	spIkConstraintTimeline* self = (spIkConstraintTimeline*)timeline;
 
 	if (time < self->frames[0]) return; /* Time is before first frame. */
+    
+    // not update the mix animation
+    if (activeBoneCnt > 0) {
+        if (!isMainAnimation) {
+            return;
+        }
+    }
+
 
 	ikConstraint = skeleton->ikConstraints[self->ikConstraintIndex];
 

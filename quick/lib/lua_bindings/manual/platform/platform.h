@@ -25,7 +25,6 @@ THE SOFTWARE.
 #ifndef __PLATFORM_H__
 #define __PLATFORM_H__
 
-#include "CCThread.h"
 #include "CCPlatformMacros.h"
 #include <typeinfo>
 #include <ctype.h>

@@ -192,7 +192,7 @@ void spSkeleton_updateCache (const spSkeleton* self) {
 	}
 }
 
-void spSkeleton_updateWorldTransform (const spSkeleton* self, const char activeBoneName[16][64], int activeBoneCnt) {
+void spSkeleton_updateWorldTransform (const spSkeleton* self, const char activeBoneName[16][64], int activeBoneCnt, int isMainAnimation) {
 	int i, ii, nn, last;
 	_spSkeleton* internal = SUB_CAST(_spSkeleton, self);
 
@@ -205,11 +205,27 @@ void spSkeleton_updateWorldTransform (const spSkeleton* self, const char activeB
 	while (1) {
         for (ii = 0, nn = internal->boneCacheCounts[i]; ii < nn; ++ii) {
             spBone* bone = internal->boneCache[i][ii];
-            if (bone->isNotUpdateInMix && activeBoneCnt > 0) {
-                printf("updateWorldTransform bone %s will update transform\n", bone->data->name);
+            // mix模式
+            if (activeBoneCnt > 0) {
+                // 主动画更新非mix骨骼
+                if (isMainAnimation) {
+                    if ( !(bone->nameEndWithMix)) {
+                        spBone_updateWorldTransform(internal->boneCache[i][ii]);
+                        printf("type 1, isMainAnimation, boneName = %d, %s\n", isMainAnimation, bone->data->name);
+                    }
+                    // 非主动画更新mix骨骼
+                } else {
+                    if (bone->nameEndWithMix) {
+                        spBone_updateWorldTransform(internal->boneCache[i][ii]);
+                        printf("type 2, isMainAnimation, boneName = %d, %s\n", isMainAnimation, bone->data->name);
+                    }
+                }
+            // 非mix模式
             } else {
                 spBone_updateWorldTransform(internal->boneCache[i][ii]);
             }
+            
+            
         }
 		if (i == last) break;
 		spIkConstraint_apply(self->ikConstraints[i]);
@@ -378,16 +394,18 @@ void spSkeleton_setBoneWillMix(const spSkeleton* self) {
     int i;
     for (i = 0; i < self->bonesCount; ++i) {
         spBone* bone = self->bones[i];
+        // name end with _mix will not update
         if (strstr(bone->data->name, "_mix") != NULL) {
-            bone->isNotUpdateInMix = 0;
+            bone->nameEndWithMix = 1;
         } else {
-            bone->isNotUpdateInMix = 1;
+            bone->nameEndWithMix = 0;
         }
     }
     
     for (i = 0; i < self->bonesCount; ++i) {
-        printf("bone [%s], isNotUpdateInMix = %d\n", self->bones[i]->data->name, self->bones[i]->isNotUpdateInMix);
+        printf("bone [%s], nameEndWithMix = %d\n", self->bones[i]->data->name, self->bones[i]->nameEndWithMix);
     }
+    
     
 }
 

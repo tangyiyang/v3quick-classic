@@ -54,7 +54,8 @@ struct spBone {
 	float const worldScaleX, worldScaleY;
     
     // for mix bone
-    int isNotUpdateInMix; /*bool, default = 0*/
+    int nameEndWithMix; /*bool, default = 0*/
+    int isChildOfMix;
 };
 
 void spBone_setYDown (int/*bool*/yDown);

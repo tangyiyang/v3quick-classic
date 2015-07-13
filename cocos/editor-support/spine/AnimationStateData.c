@@ -140,7 +140,8 @@ void spAnimationStateData_setMix (spAnimationStateData* self, spAnimation* from,
 	fromEntry->toEntries = toEntry;
 }
 
-void spAnimationStateData_setMixBone(spAnimationStateData* self, const char* mixAnimationName, char activeBoneNames[16][64], int activeBoneCnts) {
+void spAnimationStateData_setMixBone(spAnimationStateData* self, const char* mixAnimationName,
+                                     char activeBoneNames[16][64], int activeBoneCnts) {
     printf("spAnimationStateData_setMixBone mixName = %s, boneCnt = %d\n", mixAnimationName, activeBoneCnts);
     if (mixAnimationName) {
         strncpy(self->mixAnimationName, mixAnimationName, strlen(mixAnimationName));

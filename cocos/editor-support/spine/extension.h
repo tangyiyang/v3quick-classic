@@ -168,7 +168,7 @@ void _spAttachment_deinit (spAttachment* self);
 void _spTimeline_init (spTimeline* self, spTimelineType type, /**/
 void (*dispose) (spTimeline* self), /**/
 		void (*apply) (const spTimeline* self, spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-				int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt));
+				int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt, int isMainAnimation));
 void _spTimeline_deinit (spTimeline* self);
 
 #ifdef SPINE_SHORT_NAMES
@@ -181,7 +181,7 @@ void _spTimeline_deinit (spTimeline* self);
 void _spCurveTimeline_init (spCurveTimeline* self, spTimelineType type, int framesCount, /**/
 void (*dispose) (spTimeline* self), /**/
 		void (*apply) (const spTimeline* self, spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-				int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt));
+				int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt, int isMainAnimation));
 void _spCurveTimeline_deinit (spCurveTimeline* self);
 
 #ifdef SPINE_SHORT_NAMES

@@ -67,7 +67,7 @@ void spSkeleton_dispose (spSkeleton* self);
 
 /* Caches information about bones and IK constraints. Must be called if bones or IK constraints are added or removed. */
 void spSkeleton_updateCache (const spSkeleton* self);
-void spSkeleton_updateWorldTransform (const spSkeleton* self, const char activeBoneName[16][64], int activeBoneCnt);
+void spSkeleton_updateWorldTransform (const spSkeleton* self, const char activeBoneName[16][64], int activeBoneCnt, int isMainAnimation);
 
 void spSkeleton_setToSetupPose (const spSkeleton* self);
 void spSkeleton_setBonesToSetupPose (const spSkeleton* self);

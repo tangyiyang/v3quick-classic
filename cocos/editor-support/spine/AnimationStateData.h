@@ -55,7 +55,8 @@ void spAnimationStateData_dispose (spAnimationStateData* self);
 
 void spAnimationStateData_setMixByName (spAnimationStateData* self, const char* fromName, const char* toName, float duration);
 void spAnimationStateData_setMix (spAnimationStateData* self, spAnimation* from, spAnimation* to, float duration);
-void spAnimationStateData_setMixBone(spAnimationStateData* self, const char* mixAnimationName, char activeBoneNames[16][64], int activeBoneCnts);
+void spAnimationStateData_setMixBone(spAnimationStateData* self, const char* mixAnimationName,
+                                     char activeBoneNames[16][64], int activeBoneCnts);
 /* Returns 0 if there is no mixing between the animations. */
 float spAnimationStateData_getMix (spAnimationStateData* self, spAnimation* from, spAnimation* to);
 

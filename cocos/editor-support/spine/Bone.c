@@ -44,7 +44,7 @@ spBone* spBone_create (spBoneData* data, spSkeleton* skeleton, spBone* parent) {
 	CONST_CAST(spBone*, self->parent) = parent;
 	spBone_setToSetupPose(self);
     
-    self->isNotUpdateInMix = 0;
+    self->nameEndWithMix = 0;
 	return self;
 }
 
