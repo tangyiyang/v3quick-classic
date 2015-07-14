@@ -275,14 +275,15 @@ void _spRotateTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, 
 	bone = skeleton->bones[self->boneIndex];
     
     if (activeBoneCnt > 0) {
+        int isMixBones = bone->nameEndWithMix;// || bone->isChildOfMixBone;
         // main animation
         if (isMainAnimation) {
-            if (bone->nameEndWithMix) { // main animation which contains mix will not be updated
-                return;
-            }
+//            if (isMixBones) { // main animation which contains mix will not be updated
+//                return;
+//            }
         // mix animation
         } else {
-            if (!bone->nameEndWithMix) { // mix animation will not update the bones which doesn't contain mix
+            if ( !(isMixBones) ) { // mix animation will not update the bones which doesn't contain mix
                 return;
             }
         }
@@ -349,15 +350,17 @@ void _spTranslateTimeline_apply (const spTimeline* timeline, spSkeleton* skeleto
     
     // main animation
     if (activeBoneCnt > 0) {
+        int isMixBones = bone->nameEndWithMix;// || bone->isChildOfMixBone;
+
         if (isMainAnimation) {
-            if (bone->nameEndWithMix) { // main animation which contains mix will not be updated
-                printf("translate, isMainAnimation, boneName = %d %s\n", isMainAnimation, bone->data->name);
-                return;
-            }
+//            if (!isMixBones) { // main animation which contains mix will not be updated
+//                printf("type 0 _spTranslateTimeline_apply, isMainAnimation, boneName = %d %s\n", isMainAnimation, bone->data->name);
+//                return;
+//            }
             // mix animation
         } else {
-            if (!bone->nameEndWithMix) { // mix animation will not update the bones which doesn't contain mix
-                printf("translate, isMainAnimation, boneName = %d %s\n", isMainAnimation, bone->data->name);
+            if (isMixBones) { // mix animation will not update the bones which doesn't contain mix
+                printf("type 1 _spTranslateTimeline_apply, isMainAnimation, boneName = %d %s\n", isMainAnimation, bone->data->name);
                 return;
             }
         }
@@ -409,14 +412,15 @@ void _spScaleTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, f
 
 	bone = skeleton->bones[self->boneIndex];
     if (activeBoneCnt > 0) {
+        int isMixBones = bone->nameEndWithMix;// || bone->isChildOfMixBone;
         // main animation
         if (isMainAnimation) {
-            if (bone->nameEndWithMix) { // main animation which contains mix will not be updated
-                return;
-            }
+//            if (isMixBones) { // main animation which contains mix will not be updated
+//                return;
+//            }
         // mix animation
         } else {
-            if (!bone->nameEndWithMix) { // mix animation will not update the bones which doesn't contain mix
+            if (!isMixBones) { // mix animation will not update the bones which doesn't contain mix
                 return;
             }
         }

@@ -55,7 +55,7 @@ struct spBone {
     
     // for mix bone
     int nameEndWithMix; /*bool, default = 0*/
-    int isChildOfMix;
+    int isChildOfMixBone;
 };
 
 void spBone_setYDown (int/*bool*/yDown);
@@ -68,6 +68,8 @@ void spBone_setToSetupPose (spBone* self);
 
 void spBone_updateWorldTransform (spBone* self);
 
+void spBone_updateWorldTransformOnlySelf (spBone* self); // this will not be influenced by the bone's parents
+    
 void spBone_worldToLocal (spBone* self, float worldX, float worldY, float* localX, float* localY);
 void spBone_localToWorld (spBone* self, float localX, float localY, float* worldX, float* worldY);
 
