@@ -5,11 +5,35 @@
 -- @parent_module cc
 
 --------------------------------
+-- js NA<br>
+-- lua NA
+-- @function [parent=#EditBox] keyboardDidShow 
+-- @param self
+-- @param #cc.IMEKeyboardNotificationInfo info
+-- @return EditBox#EditBox self (return value: cc.EditBox)
+        
+--------------------------------
+-- get a script Handler<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#EditBox] getScriptEditBoxHandler 
+-- @param self
+-- @return int#int ret (return value: int)
+        
+--------------------------------
 -- Get the text entered in the edit box.<br>
 -- return The text entered in the edit box.
 -- @function [parent=#EditBox] getText 
 -- @param self
 -- @return char#char ret (return value: char)
+        
+--------------------------------
+-- js NA<br>
+-- lua NA
+-- @function [parent=#EditBox] keyboardDidHide 
+-- @param self
+-- @param #cc.IMEKeyboardNotificationInfo info
+-- @return EditBox#EditBox self (return value: cc.EditBox)
         
 --------------------------------
 -- Set the placeholder's font name.<br>
@@ -35,6 +59,33 @@
 -- @return EditBox#EditBox self (return value: cc.EditBox)
         
 --------------------------------
+-- Registers a script function that will be called for EditBox events.<br>
+-- This handler will be removed automatically after onExit() called.<br>
+-- code<br>
+-- -- lua sample<br>
+-- local function editboxEventHandler(eventType)<br>
+-- if eventType == "began" then<br>
+-- -- triggered when an edit box gains focus after keyboard is shown<br>
+-- elseif eventType == "ended" then<br>
+-- -- triggered when an edit box loses focus after keyboard is hidden.<br>
+-- elseif eventType == "changed" then<br>
+-- -- triggered when the edit box text was changed.<br>
+-- elseif eventType == "return" then<br>
+-- -- triggered when the return button was pressed or the outside area of keyboard was touched.<br>
+-- end<br>
+-- end<br>
+-- local editbox = EditBox:create(Size(...), Scale9Sprite:create(...))<br>
+-- editbox = registerScriptEditBoxHandler(editboxEventHandler)<br>
+-- endcode<br>
+-- param handler A number that indicates a lua function.<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#EditBox] registerScriptEditBoxHandler 
+-- @param self
+-- @param #int handler
+-- @return EditBox#EditBox self (return value: cc.EditBox)
+        
+--------------------------------
 -- Set the placeholder's font size.<br>
 -- param fontSize The font size.
 -- @function [parent=#EditBox] setPlaceholderFontSize 
@@ -48,6 +99,22 @@
 -- @function [parent=#EditBox] setInputMode 
 -- @param self
 -- @param #int inputMode
+-- @return EditBox#EditBox self (return value: cc.EditBox)
+        
+--------------------------------
+-- Unregisters a script function that will be called for EditBox events.<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#EditBox] unregisterScriptEditBoxHandler 
+-- @param self
+-- @return EditBox#EditBox self (return value: cc.EditBox)
+        
+--------------------------------
+-- js NA<br>
+-- lua NA
+-- @function [parent=#EditBox] keyboardWillShow 
+-- @param self
+-- @param #cc.IMEKeyboardNotificationInfo info
 -- @return EditBox#EditBox self (return value: cc.EditBox)
         
 --------------------------------
@@ -66,6 +133,22 @@
 -- @return EditBox#EditBox self (return value: cc.EditBox)
         
 --------------------------------
+-- js NA<br>
+-- lua NA
+-- @function [parent=#EditBox] keyboardWillHide 
+-- @param self
+-- @param #cc.IMEKeyboardNotificationInfo info
+-- @return EditBox#EditBox self (return value: cc.EditBox)
+        
+--------------------------------
+-- 
+-- @function [parent=#EditBox] touchDownAction 
+-- @param self
+-- @param #cc.Ref sender
+-- @param #int controlEvent
+-- @return EditBox#EditBox self (return value: cc.EditBox)
+        
+--------------------------------
 -- Set the placeholder's font.<br>
 -- param pFontName The font name.<br>
 -- param fontSize The font size.
@@ -73,6 +156,14 @@
 -- @param self
 -- @param #char pFontName
 -- @param #int fontSize
+-- @return EditBox#EditBox self (return value: cc.EditBox)
+        
+--------------------------------
+-- Gets/Sets the delegate for edit box.<br>
+-- lua NA
+-- @function [parent=#EditBox] setDelegate 
+-- @param self
+-- @param #cc.EditBoxDelegate pDelegate
 -- @return EditBox#EditBox self (return value: cc.EditBox)
         
 --------------------------------
@@ -108,6 +199,13 @@
 -- @param self
 -- @param #int returnType
 -- @return EditBox#EditBox self (return value: cc.EditBox)
+        
+--------------------------------
+-- js NA<br>
+-- lua NA
+-- @function [parent=#EditBox] getDelegate 
+-- @param self
+-- @return EditBoxDelegate#EditBoxDelegate ret (return value: cc.EditBoxDelegate)
         
 --------------------------------
 -- Set the input flags that are to be applied to the edit box.<br>
@@ -168,6 +266,30 @@
 -- @function [parent=#EditBox] setAnchorPoint 
 -- @param self
 -- @param #vec2_table anchorPoint
+-- @return EditBox#EditBox self (return value: cc.EditBox)
+        
+--------------------------------
+-- js NA<br>
+-- lua NA
+-- @function [parent=#EditBox] onEnter 
+-- @param self
+-- @return EditBox#EditBox self (return value: cc.EditBox)
+        
+--------------------------------
+-- js NA<br>
+-- lua NA
+-- @function [parent=#EditBox] onExit 
+-- @param self
+-- @return EditBox#EditBox self (return value: cc.EditBox)
+        
+--------------------------------
+-- js NA<br>
+-- lua NA
+-- @function [parent=#EditBox] visit 
+-- @param self
+-- @param #cc.Renderer renderer
+-- @param #mat4_table parentTransform
+-- @param #unsigned int parentFlags
 -- @return EditBox#EditBox self (return value: cc.EditBox)
         
 --------------------------------

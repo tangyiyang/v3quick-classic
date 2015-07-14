@@ -29,6 +29,7 @@
 #include "2d/CCActionInstant.h"
 #include "2d/CCActionInterval.h"
 #include "2d/CCActionTween.h"
+#include "2d/CCActionEase.h"
 #include "base/CCDirector.h"
 #include "renderer/CCRenderer.h"
 
@@ -63,8 +64,8 @@ ScrollView::ScrollView()
 , _bounceable(false)
 , _clippingToBounds(false)
 , _touchLength(0.0f)
-, _minScale(0.0f)
-, _maxScale(0.0f)
+, _minScale(0.7f)
+, _maxScale(1.5f)
 , _touchListener(nullptr)
 {
 
@@ -132,7 +133,7 @@ bool ScrollView::initWithViewSize(Size size, Node *container/* = nullptr*/)
         _touchLength = 0.0f;
         
         this->addChild(_container);
-        _minScale = _maxScale = 1.0f;
+//        _minScale = _maxScale = 1.0f;
 
         
         return true;
@@ -236,6 +237,7 @@ void ScrollView::setContentOffsetInDuration(Vec2 offset, float dt)
 {
     FiniteTimeAction *scroll, *expire;
     
+//    scroll = EaseBackOut::create(MoveTo::create(dt, offset));
     scroll = MoveTo::create(dt, offset);
     expire = CallFuncN::create(CC_CALLBACK_1(ScrollView::stoppedAnimatedScroll,this));
     _container->runAction(Sequence::create(scroll, expire, nullptr));
@@ -413,7 +415,10 @@ void ScrollView::deaccelerateScrolling(float dt)
     newX = _container->getPosition().x;
     newY = _container->getPosition().y;
     
+    
+    _scrollDistance     = _scrollDistance - Vec2(newX - _container->getPosition().x, newY - _container->getPosition().y);
     _scrollDistance     = _scrollDistance * SCROLL_DEACCEL_RATE;
+    
     this->setContentOffset(Vec2(newX,newY));
     
     if ((fabsf(_scrollDistance.x) <= SCROLL_DEACCEL_DIST &&
@@ -751,6 +756,7 @@ void ScrollView::onTouchMoved(Touch* touch, Event* event)
                 newY     = _container->getPosition().y + moveDistance.y;
 
                 _scrollDistance = moveDistance;
+                CCLOG("in touch moved , _scrollDis = %.2f, %.2f", _scrollDistance.x, _scrollDistance.y);
                 this->setContentOffset(Vec2(newX, newY));
             }
         }

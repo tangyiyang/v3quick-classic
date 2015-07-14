@@ -208,6 +208,16 @@
 -- @return Scale9Sprite#Scale9Sprite self (return value: cc.Scale9Sprite)
         
 --------------------------------
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Scale9Sprite] visit 
+-- @param self
+-- @param #cc.Renderer renderer
+-- @param #mat4_table parentTransform
+-- @param #unsigned int parentFlags
+-- @return Scale9Sprite#Scale9Sprite self (return value: cc.Scale9Sprite)
+        
+--------------------------------
 -- 
 -- @function [parent=#Scale9Sprite] setOpacityModifyRGB 
 -- @param self
