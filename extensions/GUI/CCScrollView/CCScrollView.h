@@ -352,6 +352,11 @@ protected:
      * max and min scale
      */
     float _minScale, _maxScale;
+    
+    /**
+     *
+     */
+    float _willScaleBack;
     /**
      * scissor rect for parent, just for restoring GL_SCISSOR_BOX
      */

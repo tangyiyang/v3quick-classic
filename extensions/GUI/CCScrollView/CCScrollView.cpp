@@ -43,6 +43,7 @@ NS_CC_EXT_BEGIN
 #define INSET_RATIO          0.2f
 #define MOVE_INCH            7.0f/160.0f
 #define BOUNCE_BACK_FACTOR   0.35f
+#define MAX_SCALE_FIX        0.8f
 
 static float convertDistanceFromPointToInch(float pointDis)
 {
@@ -64,8 +65,8 @@ ScrollView::ScrollView()
 , _bounceable(false)
 , _clippingToBounds(false)
 , _touchLength(0.0f)
-, _minScale(0.7f)
-, _maxScale(1.5f)
+, _minScale(0.3f)
+, _maxScale(2.0f)
 , _touchListener(nullptr)
 {
 
@@ -267,7 +268,14 @@ void ScrollView::setZoomScale(float s)
         }
         
         oldCenter = _container->convertToNodeSpace(center);
-        _container->setScale(MAX(_minScale, MIN(_maxScale, s)));
+        float scale = MAX(_minScale, MIN(_maxScale + MAX_SCALE_FIX, s));
+        if (scale > _maxScale) {
+            _willScaleBack = true;
+            _container->setScale(scale);
+        } else {
+            _willScaleBack = false;
+            _container->setScale(MAX(_minScale, MIN(_maxScale, s)));
+        }
         newCenter = _container->convertToWorldSpace(oldCenter);
         
         const Vec2 offset = center - newCenter;
@@ -756,7 +764,6 @@ void ScrollView::onTouchMoved(Touch* touch, Event* event)
                 newY     = _container->getPosition().y + moveDistance.y;
 
                 _scrollDistance = moveDistance;
-                CCLOG("in touch moved , _scrollDis = %.2f, %.2f", _scrollDistance.x, _scrollDistance.y);
                 this->setContentOffset(Vec2(newX, newY));
             }
         }
@@ -791,6 +798,11 @@ void ScrollView::onTouchEnded(Touch* touch, Event* event)
     {
         _dragging = false;    
         _touchMoved = false;
+    }
+    
+    if (_willScaleBack) {
+        _willScaleBack = false;
+        this->setZoomScaleInDuration(_maxScale, 0.4);
     }
 }
 
