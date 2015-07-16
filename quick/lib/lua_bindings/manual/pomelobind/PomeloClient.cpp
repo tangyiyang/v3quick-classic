@@ -57,10 +57,22 @@ PomeloClient::PomeloClient(){
     Director::getInstance()->getScheduler()->schedule(schedule_selector(PomeloClient::dispatchCallbacks), this, 0, false);
     Director::getInstance()->getScheduler()->pauseTarget(this);
 //    client = pc_client_new();
-    pthread_mutex_init(&reponse_queue_mutex, NULL);
-//    pthread_mutex_init(&event_queue_mutex, NULL);
-//    pthread_mutex_init(&notify_queue_mutex, NULL);
-    pthread_mutex_init(&task_count_mutex, NULL);
+#ifdef _WINDOWS_
+	reponse_queue_mutex = CreateMutex(
+		NULL,              // default security attributes
+		false,             // initially not owned
+		L"response_queue_mutex");
+
+	task_count_mutex = CreateMutex(
+		NULL,              // default security attributes
+		false,             // initially not owned
+		L"task_count_mutex");
+#else 
+	pthread_mutex_init(&reponse_queue_mutex, NULL);
+	//    pthread_mutex_init(&event_queue_mutex, NULL);
+	//    pthread_mutex_init(&notify_queue_mutex, NULL);
+	pthread_mutex_init(&task_count_mutex, NULL);
+#endif
 //    pthread_mutex_init(&connect_mutex, NULL);
     task_count = 0;
 //    connect_status = 0;
@@ -68,19 +80,30 @@ PomeloClient::PomeloClient(){
 }
 PomeloClient::~PomeloClient(){
     Director::getInstance()->getScheduler()->unschedule(schedule_selector(PomeloClient::dispatchCallbacks), this);
+#ifdef _WINDOWS_
+#else
     pthread_mutex_destroy(&reponse_queue_mutex);
     pthread_mutex_destroy(&task_count_mutex);
+#endif
 }
 
 void PomeloClient::dispatchRequest(){
     std::map<std::string, std::string> m;
+#ifdef _WINDOWS_
+	WaitForSingleObject(reponse_queue_mutex, INFINITE);
+#else
     pthread_mutex_lock(&reponse_queue_mutex);
+#endif
     if (msgQueue.size()>0) {
         m = msgQueue.front();
         msgQueue.pop();
         decTaskCount();
     }
-    pthread_mutex_unlock(&reponse_queue_mutex);
+#ifdef _WINDOWS_
+	ReleaseMutex(reponse_queue_mutex);
+#else
+	pthread_mutex_unlock(&reponse_queue_mutex);
+#endif
     if (!m.empty()) {
         //CCLog("event: %s, msg: %s", m["event"].c_str(), m["msg"].c_str());
         callScriptHandler(m["event"].c_str(), m["msg"].c_str());
@@ -88,14 +111,19 @@ void PomeloClient::dispatchRequest(){
 }
 void PomeloClient::dispatchCallbacks(float delta){
     dispatchRequest();
-    
-    pthread_mutex_lock(&task_count_mutex);
-    
+#ifdef _WINDOWS_
+	WaitForSingleObject(task_count_mutex, INFINITE);
+#else
+	pthread_mutex_lock(&task_count_mutex);
+#endif
     if (task_count==0) {
         Director::getInstance()->getScheduler()->pauseTarget(this);
     }
+#ifdef _WINDOWS_
+	ReleaseMutex(task_count_mutex);
+#else
     pthread_mutex_unlock(&task_count_mutex);
-    
+#endif
 }
 
 void PomeloClient::destroyInstance()
@@ -186,22 +214,55 @@ void PomeloClient::pushMsg(std::string event, std::string msg)
 	std::map<std::string, std::string> m;
 	m["event"] = event;
 	m["msg"] = msg;
-    pthread_mutex_lock(&reponse_queue_mutex);
+#ifdef _WINDOWS_
+	WaitForSingleObject(reponse_queue_mutex, INFINITE);
+#else
+	pthread_mutex_lock(&reponse_queue_mutex);
+#endif
+    
     msgQueue.push(m);
-    pthread_mutex_unlock(&reponse_queue_mutex);
-    incTaskCount();
+
+#ifdef _WINDOWS_
+	ReleaseMutex(reponse_queue_mutex);
+#else
+	pthread_mutex_unlock(&reponse_queue_mutex);
+#endif
+
+	incTaskCount();
 }
 
 void PomeloClient::incTaskCount(){
-    pthread_mutex_lock(&task_count_mutex);
+#ifdef _WINDOWS_
+	WaitForSingleObject(task_count_mutex, INFINITE);
+#else
+	pthread_mutex_lock(&task_count_mutex);
+#endif
+
     task_count++;
-    pthread_mutex_unlock(&task_count_mutex);
+
+#ifdef _WINDOWS_
+	ReleaseMutex(task_count_mutex);
+#else
+	pthread_mutex_unlock(&task_count_mutex);
+#endif
     Director::getInstance()->getScheduler()->resumeTarget(s_PomeloClient);
 }
 void PomeloClient::decTaskCount(){
-    pthread_mutex_lock(&task_count_mutex);
+
+#ifdef _WINDOWS_
+	WaitForSingleObject(task_count_mutex, INFINITE);
+#else
+	pthread_mutex_lock(&task_count_mutex);
+#endif
+
     task_count--;
-    pthread_mutex_unlock(&task_count_mutex);
+
+#ifdef _WINDOWS_
+	ReleaseMutex(task_count_mutex);
+#else
+	pthread_mutex_unlock(&task_count_mutex);
+#endif
+
 }
 void PomeloClient::registerScriptHandler(LUA_FUNCTION funcID)
 {

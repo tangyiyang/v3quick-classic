@@ -52,7 +52,17 @@ bool AppDelegate::applicationDidFinishLaunching()
     ScriptEngineManager::getInstance()->setScriptEngine(engine);
 
     // add custom pomelo bind
+
+	// add this line to fix crash
+	// becase the luastack is already clean
+	// in luaopen_PomeloClient_luabinding, tolua_module, lua_rawget(-2) will crash
+	lua_getglobal(engine->getLuaStack()->getLuaState(), "_G");
+
     luaopen_PomeloClient_luabinding(engine->getLuaStack()->getLuaState());
+
+	// remeber to clean the stack
+	lua_settop(engine->getLuaStack()->getLuaState(), 0);
+
     StartupCall *call = StartupCall::create(this);
     if (_project.getDebuggerType() == kCCLuaDebuggerLDT)
     {

@@ -119,7 +119,8 @@ void PlayerWin::relaunch()
 {
     int x = 0;
     int y = 0;
-    glfwGetWindowPos(Director::getInstance()->getOpenGLView()->getWindow(), &x, &y);
+	GLViewImpl* view = dynamic_cast<GLViewImpl*>(Director::getInstance()->getOpenGLView());
+	glfwGetWindowPos(view->getWindow(), &x, &y);
     _project.setWindowOffset(Vec2(x, y));
     openNewPlayerWithProjectConfig(_project);
 
@@ -348,15 +349,15 @@ int PlayerWin::run()
 
     const Rect frameRect = Rect(0, 0, frameSize.width, frameSize.height);
     const bool isResize = _project.isResizeWindow();
-    auto glview = GLView::createWithRect("quick-cocos2d-x", frameRect, frameScale, isResize, false, true);
-    _hwnd = glfwGetWin32Window(glview->getWindow());
+	auto glview = GLViewImpl::createWithRect("quick-cocos2d-x", frameRect, frameScale, isResize);
+	_hwnd = glview->getWin32Window();
     SendMessage(_hwnd, WM_SETICON, ICON_BIG, (LPARAM)icon);
     SendMessage(_hwnd, WM_SETICON, ICON_SMALL, (LPARAM)icon);
     FreeResource(icon);
 
     auto director = Director::getInstance();
     director->setOpenGLView(glview);
-    director->setScreenScale(screenScale);
+    //director->setScreenScale(screenScale);
 
     // set window position
     if (_project.getProjectDir().length())
@@ -392,7 +393,7 @@ int PlayerWin::run()
     director->getScheduler()->schedule([hwnd, hwndConsole, project](float dt) {
         CC_UNUSED_PARAM(dt);
         ShowWindow(hwnd, SW_RESTORE);
-        GLFWwindow *window = Director::getInstance()->getOpenGLView()->getWindow();
+		GLFWwindow *window = dynamic_cast<GLViewImpl*>(Director::getInstance()->getOpenGLView())->getWindow();
         glfwShowWindow(window);
     }, this, 0.0f, 0, 0.001f, false, "SHOW_WINDOW_CALLBACK");
 
@@ -439,7 +440,7 @@ void PlayerWin::onWindowClose(EventCustom* event)
     Director::getInstance()->getEventDispatcher()->dispatchEvent(&forwardEvent);
     if (forwardEvent.getResult().compare("cancel") != 0)
     {
-        glfwSetWindowShouldClose(Director::getInstance()->getOpenGLView()->getWindow(), 1);
+		glfwSetWindowShouldClose(dynamic_cast<GLViewImpl*>(Director::getInstance()->getOpenGLView())->getWindow(), 1);
     }
 }
 

@@ -144,7 +144,7 @@ void NativeWin32::removeAlertViewLuaListener(void)
 
 const string NativeWin32::getInputText(const char* title, const char* message, const char* defaultValue)
 {
-    HWND handle = glfwGetWin32Window(Director::getInstance()->getOpenGLView()->getWindow());
+	HWND handle = Director::getInstance()->getOpenGLView()->getWin32Window();
 
 	NativeWin32InputBoxStruct inputbox;
 	inputbox.title = string(title ? title : "INPUT TEXT");

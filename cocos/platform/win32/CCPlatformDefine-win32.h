@@ -32,15 +32,17 @@ THE SOFTWARE.
 #include <string.h>
 #endif
 
-#if defined(CC_STATIC)
-    #define CC_DLL
-#else
-#if defined(_USRDLL)
-    #define CC_DLL     __declspec(dllexport)
-#else         /* use a DLL library */
-    #define CC_DLL     __declspec(dllimport)
-#endif
-#endif
+#define CC_DLL
+
+//#if defined(CC_STATIC)
+//    #define CC_DLL
+//#else
+//#if defined(_USRDLL)
+//    #define CC_DLL     __declspec(dllexport)
+//#else         /* use a DLL library */
+//    #define CC_DLL     __declspec(dllimport)
+//#endif
+//#endif
 
 #include <assert.h>
 

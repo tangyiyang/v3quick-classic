@@ -36,7 +36,7 @@ std::string getIPAddress()
 
 void shutDownApp()
 {
-    HWND hwnd = glfwGetWin32Window(cocos2d::Director::getInstance()->getOpenGLView()->getWindow());
+    HWND hwnd = cocos2d::Director::getInstance()->getOpenGLView()->getWin32Window();
     ::SendMessage(hwnd, WM_CLOSE, NULL, NULL);
 }
 

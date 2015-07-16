@@ -23,9 +23,9 @@
 # define _WIN32_WINNT   0x0502
 #endif
 
-#if !defined(_SSIZE_T_) && !defined(_SSIZE_T_DEFINED)
+#if !defined(__SSIZE_T) && !defined(_SSIZE_T_DEFINED)
 typedef intptr_t ssize_t;
-# define _SSIZE_T_
+# define __SSIZE_T
 # define _SSIZE_T_DEFINED
 #endif
 

@@ -8,6 +8,10 @@
 //#include "ThreadSafeQueue.h"
 #include<queue>
 
+#ifdef _WINDOWS_
+#include <Windows.h>
+#endif
+
 
 #define PC_EVENT_CONNECTED "connected"
 #define PC_EVENT_CONNECTEFAIL "connectFailed"
@@ -43,8 +47,13 @@ private:
     cocos2d::LUA_FUNCTION scriptHandler;
     int task_count;
     pc_client_t *client;
+#ifdef _WINDOWS_
+	void* reponse_queue_mutex;
+	void* task_count_mutex;
+#else
     pthread_mutex_t reponse_queue_mutex;
     pthread_mutex_t task_count_mutex;
+#endif
     std::queue< std::map<std::string, std::string> > msgQueue;
     
     void incTaskCount();

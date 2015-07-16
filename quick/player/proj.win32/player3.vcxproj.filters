@@ -8,7 +8,10 @@
     <Filter Include="src">
       <UniqueIdentifier>{bb14b99a-5a46-4b23-b2ef-07f6c2a5805e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="win32">
+    <Filter Include="src\pomelobind">
+      <UniqueIdentifier>{c2fc714b-8f96-4aa0-9e9b-e0879e733c7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\win32">
       <UniqueIdentifier>{bc51c81a-4b7f-4cf8-96b0-31ceaee64eb6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -38,46 +41,52 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
-      <Filter>win32</Filter>
+      <Filter>src\win32</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h">
-      <Filter>win32</Filter>
+      <Filter>src\win32</Filter>
     </ClInclude>
     <ClInclude Include="targetver.h">
-      <Filter>win32</Filter>
+      <Filter>src\win32</Filter>
     </ClInclude>
     <ClInclude Include="..\src\PlayerSettings.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="PlayerMessageBoxServiceWin.h">
-      <Filter>win32</Filter>
+      <Filter>src\win32</Filter>
     </ClInclude>
     <ClInclude Include="PlayerMenuServiceWin.h">
-      <Filter>win32</Filter>
+      <Filter>src\win32</Filter>
     </ClInclude>
     <ClInclude Include="PlayerWin.h">
-      <Filter>win32</Filter>
+      <Filter>src\win32</Filter>
     </ClInclude>
     <ClInclude Include="PlayerFileDialogServiceWin.h">
-      <Filter>win32</Filter>
+      <Filter>src\win32</Filter>
     </ClInclude>
     <ClInclude Include="..\src\PlayerEditBoxServiceProtocol.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="PlayerEditBoxServiceWin.h">
-      <Filter>win32</Filter>
+      <Filter>src\win32</Filter>
     </ClInclude>
     <ClInclude Include="..\src\PlayerTaskServiceProtocol.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="PlayerTaskServiceWin.h">
-      <Filter>win32</Filter>
+      <Filter>src\win32</Filter>
     </ClInclude>
     <ClInclude Include="..\src\PlayerLuaCore.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\src\PlayerLuaCoreManual.hpp">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lib\lua_bindings\manual\pomelobind\PomeloClient_luabinding.h">
+      <Filter>src\pomelobind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lib\lua_bindings\manual\pomelobind\PomeloClient.h">
+      <Filter>src\pomelobind</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -91,7 +100,7 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
-      <Filter>win32</Filter>
+      <Filter>src\win32</Filter>
     </ClCompile>
     <ClCompile Include="..\src\PlayerSettings.cpp">
       <Filter>src</Filter>
@@ -100,25 +109,25 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="PlayerMessageBoxServiceWin.cpp">
-      <Filter>win32</Filter>
+      <Filter>src\win32</Filter>
     </ClCompile>
     <ClCompile Include="PlayerMenuServiceWin.cpp">
-      <Filter>win32</Filter>
+      <Filter>src\win32</Filter>
     </ClCompile>
     <ClCompile Include="PlayerWin.cpp">
-      <Filter>win32</Filter>
+      <Filter>src\win32</Filter>
     </ClCompile>
     <ClCompile Include="PlayerFileDialogServiceWin.cpp">
-      <Filter>win32</Filter>
+      <Filter>src\win32</Filter>
     </ClCompile>
     <ClCompile Include="..\src\PlayerUtils.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="PlayerEditBoxServiceWin.cpp">
-      <Filter>win32</Filter>
+      <Filter>src\win32</Filter>
     </ClCompile>
     <ClCompile Include="PlayerTaskServiceWin.cpp">
-      <Filter>win32</Filter>
+      <Filter>src\win32</Filter>
     </ClCompile>
     <ClCompile Include="..\src\PlayerTaskServiceProtocol.cpp">
       <Filter>src</Filter>
@@ -128,6 +137,12 @@
     </ClCompile>
     <ClCompile Include="..\src\PlayerLuaCoreManual.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lib\lua_bindings\manual\pomelobind\PomeloClient.cpp">
+      <Filter>src\pomelobind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lib\lua_bindings\manual\pomelobind\PomeloClient_luabinding.cpp">
+      <Filter>src\pomelobind</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

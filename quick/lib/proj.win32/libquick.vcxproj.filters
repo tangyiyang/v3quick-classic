@@ -235,9 +235,6 @@
     <Filter Include="libquick\lua_bindings\luajit\include">
       <UniqueIdentifier>{92ce1273-d8fd-4b2d-bfe9-616e0ac78c57}</UniqueIdentifier>
     </Filter>
-    <Filter Include="libquick\lua_bindings\manual">
-      <UniqueIdentifier>{14bf70e5-2bff-413b-977a-00b07a1ce408}</UniqueIdentifier>
-    </Filter>
     <Filter Include="libquick\lua_bindings\tolua">
       <UniqueIdentifier>{0dfc7fb6-d38a-40af-9c1f-993b62209323}</UniqueIdentifier>
     </Filter>
@@ -358,6 +355,18 @@
     <Filter Include="extensions\GUI\CCTextField">
       <UniqueIdentifier>{47bf8197-5cde-469d-bbb1-948e1aab5885}</UniqueIdentifier>
     </Filter>
+    <Filter Include="extensions\GUI\CCScrollView">
+      <UniqueIdentifier>{58c02ef2-fa7f-4054-8266-38cb1a2445db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cocos\deprecated">
+      <UniqueIdentifier>{45304f83-a110-453e-9c48-6770f6b2bd30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cocos\editor-support\spine">
+      <UniqueIdentifier>{5d513d4d-29fe-45c9-99f7-cb659fe58c44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libquick\lua_bindings\manual">
+      <UniqueIdentifier>{14bf70e5-2bff-413b-977a-00b07a1ce408}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\cocos\2d\CCActionManager.h">
@@ -385,9 +394,6 @@
       <Filter>cocos\2d</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\cocos\2d\CCClippingNode.h">
-      <Filter>cocos\2d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\2d\CCClippingRegionNode.h">
       <Filter>cocos\2d</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\cocos\2d\CCComponent.h">
@@ -542,36 +548,6 @@
     </ClInclude>
     <ClInclude Include="..\..\..\cocos\2d\CCActionInterval.h">
       <Filter>cocos\2d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\3d\CCAnimation3D.h">
-      <Filter>cocos\3d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\3d\CCAnimationCurve.h">
-      <Filter>cocos\3d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\3d\CCBundle3D.h">
-      <Filter>cocos\3d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\3d\CCBundle3DData.h">
-      <Filter>cocos\3d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\3d\CCMesh.h">
-      <Filter>cocos\3d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\3d\CCMeshSkin.h">
-      <Filter>cocos\3d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\3d\CCObjLoader.h">
-      <Filter>cocos\3d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\3d\CCSprite3D.h">
-      <Filter>cocos\3d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\3d\CCSprite3DMaterial.h">
-      <Filter>cocos\3d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\3d\CCAnimate3D.h">
-      <Filter>cocos\3d</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\cocos\audio\include\Export.h">
       <Filter>cocos\audio\include</Filter>
@@ -813,101 +789,8 @@
     <ClInclude Include="..\..\..\cocos\physics\chipmunk\CCPhysicsWorldInfo_chipmunk.h">
       <Filter>cocos\physics\chipmunk</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\cocos\platform\CCApplicationProtocol.h">
-      <Filter>cocos\platform</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\platform\CCCommon.h">
-      <Filter>cocos\platform</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\platform\CCDevice.h">
-      <Filter>cocos\platform</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\platform\CCFileUtils.h">
-      <Filter>cocos\platform</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\platform\CCGLViewProtocol.h">
-      <Filter>cocos\platform</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\platform\CCImage.h">
-      <Filter>cocos\platform</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\platform\CCSAXParser.h">
-      <Filter>cocos\platform</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\platform\CCThread.h">
-      <Filter>cocos\platform</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\platform\desktop\CCGLView.h">
-      <Filter>cocos\platform\desktop</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\platform\win32\CCApplication.h">
-      <Filter>cocos\platform\win32</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\platform\win32\CCFileUtilsWin32.h">
-      <Filter>cocos\platform\win32</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\platform\win32\CCGL.h">
-      <Filter>cocos\platform\win32</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\platform\win32\CCPlatformDefine.h">
-      <Filter>cocos\platform\win32</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\platform\win32\CCStdC.h">
-      <Filter>cocos\platform\win32</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\cocos\platform\win32\compat\stdint.h">
       <Filter>cocos\platform\win32\compat</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\renderer\CCRenderCommand.h">
-      <Filter>cocos\renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\renderer\CCRenderCommandPool.h">
-      <Filter>cocos\renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\renderer\CCRenderer.h">
-      <Filter>cocos\renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\renderer\ccShaders.h">
-      <Filter>cocos\renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\renderer\CCTexture2D.h">
-      <Filter>cocos\renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\renderer\CCTextureAtlas.h">
-      <Filter>cocos\renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\renderer\CCTextureCache.h">
-      <Filter>cocos\renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\renderer\CCBatchCommand.h">
-      <Filter>cocos\renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\renderer\CCCustomCommand.h">
-      <Filter>cocos\renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\renderer\CCGLProgram.h">
-      <Filter>cocos\renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\renderer\CCGLProgramCache.h">
-      <Filter>cocos\renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\renderer\CCGLProgramState.h">
-      <Filter>cocos\renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\renderer\CCGLProgramStateCache.h">
-      <Filter>cocos\renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\renderer\ccGLStateCache.h">
-      <Filter>cocos\renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\renderer\CCGroupCommand.h">
-      <Filter>cocos\renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\renderer\CCMeshCommand.h">
-      <Filter>cocos\renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cocos\renderer\CCQuadCommand.h">
-      <Filter>cocos\renderer</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\cocos\cocos2d.h">
       <Filter>cocos</Filter>
@@ -1641,9 +1524,6 @@
     <ClInclude Include="..\ProjectConfig\ProjectConfig.h">
       <Filter>libquick\ProjectConfig</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\cocos\3d\CCBundleReader.h">
-      <Filter>cocos\3d</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\cocos\base\CCUserDefault.h">
       <Filter>cocos\base</Filter>
     </ClInclude>
@@ -1983,6 +1863,321 @@
     <ClInclude Include="..\lua_bindings\manual\snapshot.h">
       <Filter>libquick\lua_bindings\manual</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\cocos\2d\CCClippingRectangleNode.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\platform\desktop\CCGLViewImpl-desktop.h">
+      <Filter>cocos\platform\desktop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\platform\win32\CCFileUtils-win32.h">
+      <Filter>cocos\platform\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\platform\win32\CCGL-win32.h">
+      <Filter>cocos\platform\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\platform\win32\CCPlatformDefine-win32.h">
+      <Filter>cocos\platform\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\platform\win32\CCStdC-win32.h">
+      <Filter>cocos\platform\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\platform\win32\CCApplication-win32.h">
+      <Filter>cocos\platform\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\platform\CCFileUtils.h">
+      <Filter>cocos\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\platform\CCGL.h">
+      <Filter>cocos\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\platform\CCGLView.h">
+      <Filter>cocos\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\platform\CCImage.h">
+      <Filter>cocos\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\platform\CCPlatformConfig.h">
+      <Filter>cocos\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\platform\CCPlatformDefine.h">
+      <Filter>cocos\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\platform\CCPlatformMacros.h">
+      <Filter>cocos\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\platform\CCSAXParser.h">
+      <Filter>cocos\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\platform\CCStdC.h">
+      <Filter>cocos\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\platform\CCThread.h">
+      <Filter>cocos\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\platform\CCApplication.h">
+      <Filter>cocos\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\platform\CCApplicationProtocol.h">
+      <Filter>cocos\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\platform\CCCommon.h">
+      <Filter>cocos\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\platform\CCDevice.h">
+      <Filter>cocos\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extensions\GUI\CCScrollView\CCScrollView.h">
+      <Filter>extensions\GUI\CCScrollView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\2d\CCCamera.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\deprecated\CCString.h">
+      <Filter>cocos\deprecated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\2d\CCMenuItem.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\2d\CCMenu.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\renderer\CCTexture2D.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\renderer\CCTextureAtlas.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\renderer\CCTextureCache.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\renderer\CCTrianglesCommand.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\renderer\CCVertexIndexBuffer.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\renderer\CCVertexIndexData.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\renderer\CCBatchCommand.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\renderer\CCCustomCommand.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\renderer\CCGLProgram.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\renderer\CCGLProgramCache.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\renderer\CCGLProgramState.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\renderer\CCGLProgramStateCache.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\renderer\ccGLStateCache.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\renderer\CCGroupCommand.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\renderer\CCMeshCommand.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\renderer\CCPrimitive.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\renderer\CCPrimitiveCommand.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\renderer\CCQuadCommand.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\renderer\CCRenderCommand.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\renderer\CCRenderCommandPool.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\renderer\CCRenderer.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\renderer\ccShaders.h">
+      <Filter>cocos\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\3d\CCAnimation3D.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\3d\CCAnimationCurve.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\3d\CCAttachNode.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\3d\CCBillBoard.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\3d\CCBundle3D.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\3d\CCBundle3DData.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\3d\CCBundleReader.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\3d\CCMesh.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\3d\CCMeshSkin.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\3d\CCMeshVertexIndexData.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\3d\CCOBB.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\3d\CCObjLoader.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\3d\CCRay.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\3d\CCSkeleton3D.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\3d\CCSprite3D.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\3d\CCSprite3DMaterial.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\3d\cocos3d.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\3d\CCAABB.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\3d\CCAnimate3D.h">
+      <Filter>cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\2d\CCProtectedNode.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lua_bindings\manual\lua_cocos2dx_spine_manual.hpp">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lua_bindings\auto\lua_cocos2dx_spine_auto.hpp">
+      <Filter>libquick\lua_bindings\auto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\base\pvr.h">
+      <Filter>cocos\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\Slot.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\SlotData.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\spine.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\spine-cocos2dx.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\Event.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\EventData.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\extension.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\IkConstraint.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\IkConstraintData.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\Json.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\MeshAttachment.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\PolygonBatch.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\RegionAttachment.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\Skeleton.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\SkeletonAnimation.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\SkeletonBounds.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\SkeletonData.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\SkeletonJson.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\SkeletonRenderer.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\Skin.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\SkinnedMeshAttachment.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\AnimationState.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\AnimationStateData.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\Atlas.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\AtlasAttachmentLoader.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\Attachment.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\AttachmentLoader.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\Bone.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\BoneData.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\BoundingBoxAttachment.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\editor-support\spine\Animation.h">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\2d\CCFileCache.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lua_bindings\manual\LuaSkeletonAnimation.h">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cocos\2d\CCLight.h">
+      <Filter>cocos\2d</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\cocos\2d\CCActionManager.cpp">
@@ -2010,9 +2205,6 @@
       <Filter>cocos\2d</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\cocos\2d\CCClippingNode.cpp">
-      <Filter>cocos\2d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\2d\CCClippingRegionNode.cpp">
       <Filter>cocos\2d</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\cocos\2d\CCComponent.cpp">
@@ -2167,30 +2359,6 @@
     </ClCompile>
     <ClCompile Include="..\..\..\cocos\2d\CCActionInterval.cpp">
       <Filter>cocos\2d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\3d\CCAnimation3D.cpp">
-      <Filter>cocos\3d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\3d\CCBundle3D.cpp">
-      <Filter>cocos\3d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\3d\CCMesh.cpp">
-      <Filter>cocos\3d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\3d\CCMeshSkin.cpp">
-      <Filter>cocos\3d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\3d\CCObjLoader.cpp">
-      <Filter>cocos\3d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\3d\CCSprite3D.cpp">
-      <Filter>cocos\3d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\3d\CCSprite3DMaterial.cpp">
-      <Filter>cocos\3d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\3d\CCAnimate3D.cpp">
-      <Filter>cocos\3d</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\cocos\audio\win32\SimpleAudioEngine.cpp">
       <Filter>cocos\audio\win32</Filter>
@@ -2380,87 +2548,6 @@
     </ClCompile>
     <ClCompile Include="..\..\..\cocos\physics\chipmunk\CCPhysicsWorldInfo_chipmunk.cpp">
       <Filter>cocos\physics\chipmunk</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\platform\CCFileUtils.cpp">
-      <Filter>cocos\platform</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\platform\CCGLViewProtocol.cpp">
-      <Filter>cocos\platform</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\platform\CCImage.cpp">
-      <Filter>cocos\platform</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\platform\CCSAXParser.cpp">
-      <Filter>cocos\platform</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\platform\CCThread.cpp">
-      <Filter>cocos\platform</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\platform\desktop\CCGLView.cpp">
-      <Filter>cocos\platform\desktop</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\platform\win32\CCApplication.cpp">
-      <Filter>cocos\platform\win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\platform\win32\CCCommon.cpp">
-      <Filter>cocos\platform\win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\platform\win32\CCDevice.cpp">
-      <Filter>cocos\platform\win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\platform\win32\CCFileUtilsWin32.cpp">
-      <Filter>cocos\platform\win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\platform\win32\CCStdC.cpp">
-      <Filter>cocos\platform\win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\renderer\CCRenderCommand.cpp">
-      <Filter>cocos\renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\renderer\CCRenderer.cpp">
-      <Filter>cocos\renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\renderer\ccShaders.cpp">
-      <Filter>cocos\renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\renderer\CCTexture2D.cpp">
-      <Filter>cocos\renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\renderer\CCTextureAtlas.cpp">
-      <Filter>cocos\renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\renderer\CCTextureCache.cpp">
-      <Filter>cocos\renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\renderer\CCBatchCommand.cpp">
-      <Filter>cocos\renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\renderer\CCCustomCommand.cpp">
-      <Filter>cocos\renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\renderer\CCGLProgram.cpp">
-      <Filter>cocos\renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\renderer\CCGLProgramCache.cpp">
-      <Filter>cocos\renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\renderer\CCGLProgramState.cpp">
-      <Filter>cocos\renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\renderer\CCGLProgramStateCache.cpp">
-      <Filter>cocos\renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\renderer\ccGLStateCache.cpp">
-      <Filter>cocos\renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\renderer\CCGroupCommand.cpp">
-      <Filter>cocos\renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\renderer\CCMeshCommand.cpp">
-      <Filter>cocos\renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cocos\renderer\CCQuadCommand.cpp">
-      <Filter>cocos\renderer</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\cocos\cocos2d.cpp">
       <Filter>cocos</Filter>
@@ -2780,9 +2867,6 @@
     <ClCompile Include="..\ProjectConfig\ProjectConfig.cpp">
       <Filter>libquick\ProjectConfig</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\cocos\3d\CCBundleReader.cpp">
-      <Filter>cocos\3d</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\cocos\base\CCUserDefault.cpp">
       <Filter>cocos\base</Filter>
     </ClCompile>
@@ -2999,11 +3083,281 @@
     <ClCompile Include="..\extra\platform\win32\CCNativeWin32.cpp">
       <Filter>libquick\extra\platform\win32</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\cocos\2d\CCClippingRectangleNode.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\platform\desktop\CCGLViewImpl-desktop.cpp">
+      <Filter>cocos\platform\desktop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\platform\win32\CCFileUtils-win32.cpp">
+      <Filter>cocos\platform\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\platform\win32\CCStdC-win32.cpp">
+      <Filter>cocos\platform\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\platform\win32\CCApplication-win32.cpp">
+      <Filter>cocos\platform\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\platform\win32\CCCommon-win32.cpp">
+      <Filter>cocos\platform\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\platform\win32\CCDevice-win32.cpp">
+      <Filter>cocos\platform\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\platform\CCFileUtils.cpp">
+      <Filter>cocos\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\platform\CCGLView.cpp">
+      <Filter>cocos\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\platform\CCImage.cpp">
+      <Filter>cocos\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\platform\CCSAXParser.cpp">
+      <Filter>cocos\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\platform\CCThread.cpp">
+      <Filter>cocos\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\extensions\GUI\CCScrollView\CCScrollView.cpp">
+      <Filter>extensions\GUI\CCScrollView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\2d\CCCamera.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\deprecated\CCString.cpp">
+      <Filter>cocos\deprecated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\2d\CCMenuItem.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\2d\CCMenu.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\renderer\CCTexture2D.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\renderer\CCTextureAtlas.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\renderer\CCTextureCache.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\renderer\CCTrianglesCommand.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\renderer\CCVertexIndexBuffer.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\renderer\CCVertexIndexData.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\renderer\CCBatchCommand.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\renderer\CCCustomCommand.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\renderer\CCGLProgram.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\renderer\CCGLProgramCache.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\renderer\CCGLProgramState.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\renderer\CCGLProgramStateCache.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\renderer\ccGLStateCache.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\renderer\CCGroupCommand.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\renderer\CCMeshCommand.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\renderer\CCPrimitive.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\renderer\CCPrimitiveCommand.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\renderer\CCQuadCommand.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\renderer\CCRenderCommand.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\renderer\CCRenderer.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\renderer\ccShaders.cpp">
+      <Filter>cocos\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\3d\CCAttachNode.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\3d\CCBillBoard.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\3d\CCBundle3D.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\3d\CCBundleReader.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\3d\CCMesh.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\3d\CCMeshSkin.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\3d\CCMeshVertexIndexData.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\3d\CCOBB.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\3d\CCObjLoader.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\3d\CCRay.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\3d\CCSkeleton3D.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\3d\CCSprite3D.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\3d\CCSprite3DMaterial.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\3d\CCAABB.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\3d\CCAnimate3D.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\3d\CCAnimation3D.cpp">
+      <Filter>cocos\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\2d\CCProtectedNode.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lua_bindings\manual\lua_cocos2dx_spine_manual.cpp">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lua_bindings\auto\lua_cocos2dx_spine_auto.cpp">
+      <Filter>libquick\lua_bindings\auto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\base\pvr.cpp">
+      <Filter>cocos\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\SlotData.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\spine-cocos2dx.cpp">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\Event.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\EventData.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\extension.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\IkConstraint.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\IkConstraintData.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\Json.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\MeshAttachment.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\PolygonBatch.cpp">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\RegionAttachment.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\Skeleton.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\SkeletonAnimation.cpp">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\SkeletonBounds.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\SkeletonData.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\SkeletonJson.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\SkeletonRenderer.cpp">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\Skin.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\SkinnedMeshAttachment.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\Slot.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\AnimationStateData.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\Atlas.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\AtlasAttachmentLoader.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\Attachment.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\AttachmentLoader.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\Bone.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\BoneData.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\BoundingBoxAttachment.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\Animation.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\editor-support\spine\AnimationState.c">
+      <Filter>cocos\editor-support\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\2d\CCFileCache.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lua_bindings\manual\LuaSkeletonAnimation.cpp">
+      <Filter>libquick\lua_bindings\manual</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cocos\2d\CCLight.cpp">
+      <Filter>cocos\2d</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\cocos\3d\CCAnimationCurve.inl">
-      <Filter>cocos\3d</Filter>
-    </None>
     <None Include="..\..\..\cocos\math\Mat4.inl">
       <Filter>cocos\math</Filter>
     </None>
@@ -3025,10 +3379,22 @@
     <None Include="..\..\..\cocos\math\Vec4.inl">
       <Filter>cocos\math</Filter>
     </None>
+    <None Include="..\..\..\cocos\cocos2d-prefix.pch">
+      <Filter>cocos</Filter>
+    </None>
     <None Include="..\..\..\cocos\renderer\ccShader_3D_Color.frag">
       <Filter>cocos\renderer</Filter>
     </None>
+    <None Include="..\..\..\cocos\renderer\ccShader_3D_ColorNormal.frag">
+      <Filter>cocos\renderer</Filter>
+    </None>
+    <None Include="..\..\..\cocos\renderer\ccShader_3D_ColorNormalTex.frag">
+      <Filter>cocos\renderer</Filter>
+    </None>
     <None Include="..\..\..\cocos\renderer\ccShader_3D_ColorTex.frag">
+      <Filter>cocos\renderer</Filter>
+    </None>
+    <None Include="..\..\..\cocos\renderer\ccShader_3D_PositionNormalTex.vert">
       <Filter>cocos\renderer</Filter>
     </None>
     <None Include="..\..\..\cocos\renderer\ccShader_3D_PositionTex.vert">
@@ -3053,6 +3419,9 @@
       <Filter>cocos\renderer</Filter>
     </None>
     <None Include="..\..\..\cocos\renderer\ccShader_Position_uColor.vert">
+      <Filter>cocos\renderer</Filter>
+    </None>
+    <None Include="..\..\..\cocos\renderer\ccShader_Position_uColor-no-gl_PointSize.vert">
       <Filter>cocos\renderer</Filter>
     </None>
     <None Include="..\..\..\cocos\renderer\ccShader_PositionColor.frag">
@@ -3100,8 +3469,8 @@
     <None Include="..\..\..\cocos\renderer\ccShader_PositionTextureColorAlphaTest.frag">
       <Filter>cocos\renderer</Filter>
     </None>
-    <None Include="..\..\..\cocos\cocos2d-prefix.pch">
-      <Filter>cocos</Filter>
+    <None Include="..\..\..\cocos\3d\CCAnimationCurve.inl">
+      <Filter>cocos\3d</Filter>
     </None>
   </ItemGroup>
 </Project>
