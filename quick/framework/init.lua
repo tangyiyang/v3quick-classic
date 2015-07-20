@@ -127,6 +127,7 @@ filter     = require(cc.PACKAGE_NAME .. ".filter")
 audio      = require(cc.PACKAGE_NAME .. ".audio")
 network    = require(cc.PACKAGE_NAME .. ".network")
 crypto     = require(cc.PACKAGE_NAME .. ".crypto")
+sproto     = require(cc.PACKAGE_NAME .. ".sproto")
 
 local cjson = require(cc.PACKAGE_NAME .. ".json")
 if cjson then

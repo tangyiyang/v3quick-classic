@@ -238,6 +238,21 @@
 		4DDEE35A1ACE884F00FE769A /* cocos2d-prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4DDEE3591ACE884F00FE769A /* cocos2d-prefix.pch */; };
 		4DE050471A31A0F3003F730A /* CCFileCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DE050451A31A0F3003F730A /* CCFileCache.cpp */; };
 		4DE050481A31A0F3003F730A /* CCFileCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DE050461A31A0F3003F730A /* CCFileCache.h */; };
+		4DF974A71B5D451400D3CDA6 /* lsproto.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DF974A31B5D451400D3CDA6 /* lsproto.c */; };
+		4DF974A81B5D451400D3CDA6 /* msvcint.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DF974A41B5D451400D3CDA6 /* msvcint.h */; };
+		4DF974A91B5D451400D3CDA6 /* sproto.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DF974A51B5D451400D3CDA6 /* sproto.c */; };
+		4DF974AA1B5D451400D3CDA6 /* sproto.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DF974A61B5D451400D3CDA6 /* sproto.h */; };
+		4DF974B81B5D530800D3CDA6 /* lpcap.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DF974AC1B5D530800D3CDA6 /* lpcap.c */; };
+		4DF974B91B5D530800D3CDA6 /* lpcap.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DF974AD1B5D530800D3CDA6 /* lpcap.h */; };
+		4DF974BA1B5D530800D3CDA6 /* lpcode.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DF974AE1B5D530800D3CDA6 /* lpcode.c */; };
+		4DF974BB1B5D530800D3CDA6 /* lpcode.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DF974AF1B5D530800D3CDA6 /* lpcode.h */; };
+		4DF974BC1B5D530800D3CDA6 /* lpprint.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DF974B01B5D530800D3CDA6 /* lpprint.c */; };
+		4DF974BD1B5D530800D3CDA6 /* lpprint.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DF974B11B5D530800D3CDA6 /* lpprint.h */; };
+		4DF974BE1B5D530800D3CDA6 /* lptree.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DF974B21B5D530800D3CDA6 /* lptree.c */; };
+		4DF974BF1B5D530800D3CDA6 /* lptree.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DF974B31B5D530800D3CDA6 /* lptree.h */; };
+		4DF974C01B5D530800D3CDA6 /* lptypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DF974B41B5D530800D3CDA6 /* lptypes.h */; };
+		4DF974C11B5D530800D3CDA6 /* lpvm.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DF974B51B5D530800D3CDA6 /* lpvm.c */; };
+		4DF974C21B5D530800D3CDA6 /* lpvm.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DF974B61B5D530800D3CDA6 /* lpvm.h */; };
 		9F1CF4041998AC3C00497F21 /* ProjectConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F1CF4021998AC3C00497F21 /* ProjectConfig.cpp */; };
 		9F1CF4051998AC3C00497F21 /* ProjectConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F1CF4031998AC3C00497F21 /* ProjectConfig.h */; };
 		DA02C8A919861DC300E2687A /* CCArmature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA02C8A719861DC300E2687A /* CCArmature.cpp */; };
@@ -1296,6 +1311,21 @@
 		4DDEE3591ACE884F00FE769A /* cocos2d-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cocos2d-prefix.pch"; sourceTree = "<group>"; };
 		4DE050451A31A0F3003F730A /* CCFileCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCFileCache.cpp; sourceTree = "<group>"; };
 		4DE050461A31A0F3003F730A /* CCFileCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFileCache.h; sourceTree = "<group>"; };
+		4DF974A31B5D451400D3CDA6 /* lsproto.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lsproto.c; sourceTree = "<group>"; };
+		4DF974A41B5D451400D3CDA6 /* msvcint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msvcint.h; sourceTree = "<group>"; };
+		4DF974A51B5D451400D3CDA6 /* sproto.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sproto.c; sourceTree = "<group>"; };
+		4DF974A61B5D451400D3CDA6 /* sproto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sproto.h; sourceTree = "<group>"; };
+		4DF974AC1B5D530800D3CDA6 /* lpcap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lpcap.c; sourceTree = "<group>"; };
+		4DF974AD1B5D530800D3CDA6 /* lpcap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lpcap.h; sourceTree = "<group>"; };
+		4DF974AE1B5D530800D3CDA6 /* lpcode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lpcode.c; sourceTree = "<group>"; };
+		4DF974AF1B5D530800D3CDA6 /* lpcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lpcode.h; sourceTree = "<group>"; };
+		4DF974B01B5D530800D3CDA6 /* lpprint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lpprint.c; sourceTree = "<group>"; };
+		4DF974B11B5D530800D3CDA6 /* lpprint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lpprint.h; sourceTree = "<group>"; };
+		4DF974B21B5D530800D3CDA6 /* lptree.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lptree.c; sourceTree = "<group>"; };
+		4DF974B31B5D530800D3CDA6 /* lptree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lptree.h; sourceTree = "<group>"; };
+		4DF974B41B5D530800D3CDA6 /* lptypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lptypes.h; sourceTree = "<group>"; };
+		4DF974B51B5D530800D3CDA6 /* lpvm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lpvm.c; sourceTree = "<group>"; };
+		4DF974B61B5D530800D3CDA6 /* lpvm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lpvm.h; sourceTree = "<group>"; };
 		9F1CF4021998AC3C00497F21 /* ProjectConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProjectConfig.cpp; sourceTree = "<group>"; };
 		9F1CF4031998AC3C00497F21 /* ProjectConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectConfig.h; sourceTree = "<group>"; };
 		DA02C8A719861DC300E2687A /* CCArmature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCArmature.cpp; sourceTree = "<group>"; };
@@ -2385,6 +2415,35 @@
 			path = apple;
 			sourceTree = "<group>";
 		};
+		4DF974A21B5D451400D3CDA6 /* sproto */ = {
+			isa = PBXGroup;
+			children = (
+				4DF974A31B5D451400D3CDA6 /* lsproto.c */,
+				4DF974A41B5D451400D3CDA6 /* msvcint.h */,
+				4DF974A51B5D451400D3CDA6 /* sproto.c */,
+				4DF974A61B5D451400D3CDA6 /* sproto.h */,
+			);
+			path = sproto;
+			sourceTree = "<group>";
+		};
+		4DF974AB1B5D530800D3CDA6 /* lpeg */ = {
+			isa = PBXGroup;
+			children = (
+				4DF974AC1B5D530800D3CDA6 /* lpcap.c */,
+				4DF974AD1B5D530800D3CDA6 /* lpcap.h */,
+				4DF974AE1B5D530800D3CDA6 /* lpcode.c */,
+				4DF974AF1B5D530800D3CDA6 /* lpcode.h */,
+				4DF974B01B5D530800D3CDA6 /* lpprint.c */,
+				4DF974B11B5D530800D3CDA6 /* lpprint.h */,
+				4DF974B21B5D530800D3CDA6 /* lptree.c */,
+				4DF974B31B5D530800D3CDA6 /* lptree.h */,
+				4DF974B41B5D530800D3CDA6 /* lptypes.h */,
+				4DF974B51B5D530800D3CDA6 /* lpvm.c */,
+				4DF974B61B5D530800D3CDA6 /* lpvm.h */,
+			);
+			path = lpeg;
+			sourceTree = "<group>";
+		};
 		DA02C8A519861DC300E2687A /* editor-support */ = {
 			isa = PBXGroup;
 			children = (
@@ -2584,6 +2643,8 @@
 		DAF282B2196BDACB00959DA1 /* lua_extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4DF974AB1B5D530800D3CDA6 /* lpeg */,
+				4DF974A21B5D451400D3CDA6 /* sproto */,
 				DAF282B4196BDACB00959DA1 /* cjson */,
 				DAF282BB196BDACB00959DA1 /* debugger */,
 				DAF282BF196BDACB00959DA1 /* filesystem */,
@@ -4273,6 +4334,7 @@
 				DAF28313196BDACB00959DA1 /* luasocket_buffer.h in Headers */,
 				F48959F9199BA9F9000AA6A2 /* once.h in Headers */,
 				F4E0B685196B9E4C0053EFD7 /* CCControlButton.h in Headers */,
+				4DF974A81B5D451400D3CDA6 /* msvcint.h in Headers */,
 				4D14511C1B1F0778006B0290 /* CCEventController.h in Headers */,
 				4DC9F52319FE10D300FA1E3B /* BoundingBoxAttachment.h in Headers */,
 				DAF28325196BDACB00959DA1 /* udp.h in Headers */,
@@ -4364,6 +4426,7 @@
 				F4E0BCE6196BA0450053EFD7 /* jconfig.h in Headers */,
 				F4E0B2F1196B9C670053EFD7 /* CCParallaxNode.h in Headers */,
 				F4E0B518196B9C7D0053EFD7 /* CocosDenshion.h in Headers */,
+				4DF974B91B5D530800D3CDA6 /* lpcap.h in Headers */,
 				DAF2830F196BDACB00959DA1 /* inet.h in Headers */,
 				4D14511E1B1F0778006B0290 /* CCEventListenerController.h in Headers */,
 				F48959EA199BA9F9000AA6A2 /* repeated_field.h in Headers */,
@@ -4578,6 +4641,7 @@
 				49BCFA17197F4CE700F48FF6 /* CCFilteredSprite.h in Headers */,
 				F4E0BB45196BA00A0053EFD7 /* svmm.h in Headers */,
 				F4E0B327196B9C670053EFD7 /* CCMeshSkin.h in Headers */,
+				4DF974C21B5D530800D3CDA6 /* lpvm.h in Headers */,
 				F4E0BB31196BA00A0053EFD7 /* ftcalc.h in Headers */,
 				F4E0BB27196BA00A0053EFD7 /* ftsnames.h in Headers */,
 				F4E0BB0B196BA00A0053EFD7 /* ftbbox.h in Headers */,
@@ -4663,6 +4727,7 @@
 				F4E0B5F6196B9C7D0053EFD7 /* CCDevice.h in Headers */,
 				DAF2831F196BDACB00959DA1 /* socket_scripts.h in Headers */,
 				F4E0B2D9196B9C670053EFD7 /* CCGrid.h in Headers */,
+				4DF974BF1B5D530800D3CDA6 /* lptree.h in Headers */,
 				F4E0B5A9196B9C7D0053EFD7 /* WebSocket.h in Headers */,
 				F4E0B2FD196B9C670053EFD7 /* CCRenderTexture.h in Headers */,
 				F4E0BE21196BA0C10053EFD7 /* pnglibconf.h in Headers */,
@@ -4740,6 +4805,7 @@
 				F4E0B317196B9C670053EFD7 /* CCTransitionPageTurn.h in Headers */,
 				F4E0B5FE196B9C7D0053EFD7 /* CCSAXParser.h in Headers */,
 				DAF28315196BDACB00959DA1 /* luasocket_io.h in Headers */,
+				4DF974BD1B5D530800D3CDA6 /* lpprint.h in Headers */,
 				49BCFA33197F4CE700F48FF6 /* ccFilterShader_vblur_vert.h in Headers */,
 				F4E0BB04196BA00A0053EFD7 /* ftheader.h in Headers */,
 				DAF28279196BDA7300959DA1 /* CCCrypto.h in Headers */,
@@ -4770,6 +4836,7 @@
 				F4E0B542196B9C7D0053EFD7 /* CCEventCustom.h in Headers */,
 				F4E0B2C5196B9C660053EFD7 /* CCDrawingPrimitives.h in Headers */,
 				F4E0B64E196B9C7D0053EFD7 /* CCGroupCommand.h in Headers */,
+				4DF974C01B5D530800D3CDA6 /* lptypes.h in Headers */,
 				F4E0B531196B9C7D0053EFD7 /* ccCArray.h in Headers */,
 				F4E0BFD0196BA25D0053EFD7 /* lua.h in Headers */,
 				4DCF3C781B1F2D460043BCD7 /* CCGL.h in Headers */,
@@ -4799,12 +4866,14 @@
 				F4E0B2A3196B9C660053EFD7 /* CCActionEase.h in Headers */,
 				DAF282A1196BDA7300959DA1 /* OpenUDIDMac.h in Headers */,
 				F4E0B6DE196B9EEB0053EFD7 /* chipmunk.h in Headers */,
+				4DF974BB1B5D530800D3CDA6 /* lpcode.h in Headers */,
 				F4E0B5B7196B9C7D0053EFD7 /* CCPhysicsContactInfo_chipmunk.h in Headers */,
 				F4E0B5BA196B9C7D0053EFD7 /* CCPhysicsJointInfo_chipmunk.h in Headers */,
 				F48959EB199BA9F9000AA6A2 /* atomicops.h in Headers */,
 				F4E0B52B196B9C7D0053EFD7 /* atitc.h in Headers */,
 				F4E0B311196B9C670053EFD7 /* CCTMXTiledMap.h in Headers */,
 				F4E0BB51196BA00A0053EFD7 /* svxf86nm.h in Headers */,
+				4DF974AA1B5D451400D3CDA6 /* sproto.h in Headers */,
 				F4E0BB1C196BA00A0053EFD7 /* ftlist.h in Headers */,
 				49BCFA1A197F4CE700F48FF6 /* ccFilterShader_colorramp_frag.h in Headers */,
 				F4E0B594196B9C7D0053EFD7 /* CCMath.h in Headers */,
@@ -4971,6 +5040,7 @@
 				DA02C8AD19862D9500E2687A /* lua_cocos2dx_studio_auto.cpp in Sources */,
 				F4E0B687196B9E4C0053EFD7 /* CCControlUtils.cpp in Sources */,
 				F4E0B2DA196B9C670053EFD7 /* CCLabel.cpp in Sources */,
+				4DF974B81B5D530800D3CDA6 /* lpcap.c in Sources */,
 				F4E0B2FE196B9C670053EFD7 /* CCScene.cpp in Sources */,
 				F4E0BFC6196BA25D0053EFD7 /* lua_cocos2dx_extension_auto.cpp in Sources */,
 				F4E0B5BB196B9C7D0053EFD7 /* CCPhysicsShapeInfo_chipmunk.cpp in Sources */,
@@ -4980,6 +5050,7 @@
 				F4E0BE62196BA0C10053EFD7 /* tinyxml2.cpp in Sources */,
 				4DC9F51219FE10D300FA1E3B /* AnimationState.c in Sources */,
 				4DC9F54419FE10D300FA1E3B /* SkinnedMeshAttachment.c in Sources */,
+				4DF974A91B5D451400D3CDA6 /* sproto.c in Sources */,
 				F4E0B2B6196B9C660053EFD7 /* CCAnimation.cpp in Sources */,
 				4DCF3C9F1B1F34040043BCD7 /* CCVertexIndexBuffer.cpp in Sources */,
 				F4E0B571196B9C7D0053EFD7 /* CCTouch.cpp in Sources */,
@@ -4988,6 +5059,7 @@
 				DA02C8F41986370F00E2687A /* DictionaryHelper.cpp in Sources */,
 				F4E0BEA3196BA0C20053EFD7 /* xxtea.cpp in Sources */,
 				F4E0C075196BA25D0053EFD7 /* lua_cocos2dx_manual.cpp in Sources */,
+				4DF974BE1B5D530800D3CDA6 /* lptree.c in Sources */,
 				F4E0B5B6196B9C7D0053EFD7 /* CCPhysicsContactInfo_chipmunk.cpp in Sources */,
 				F4E0B52A196B9C7D0053EFD7 /* atitc.cpp in Sources */,
 				F4E0B30A196B9C670053EFD7 /* CCTileMapAtlas.cpp in Sources */,
@@ -5088,6 +5160,7 @@
 				F4895A0A199BA9F9000AA6A2 /* Runtime.cpp in Sources */,
 				4DCF3C9C1B1F34030043BCD7 /* CCPrimitive.cpp in Sources */,
 				F4E0B64F196B9C7D0053EFD7 /* CCMeshCommand.cpp in Sources */,
+				4DF974A71B5D451400D3CDA6 /* lsproto.c in Sources */,
 				4DC9F52019FE10D300FA1E3B /* BoneData.c in Sources */,
 				F4E0B59E196B9C7D0053EFD7 /* TransformUtils.cpp in Sources */,
 				4D867A3F1B1E9E43007731FF /* CCCamera.cpp in Sources */,
@@ -5143,6 +5216,7 @@
 				49BCFA3B197F4D3600F48FF6 /* lua_cocos2dx_extension_filter_auto.cpp in Sources */,
 				F41590A9196BD1D20046D7EE /* CCScriptEventDispatcher.cpp in Sources */,
 				F4E0B304196B9C670053EFD7 /* CCSpriteFrame.cpp in Sources */,
+				4DF974BC1B5D530800D3CDA6 /* lpprint.c in Sources */,
 				4D711E5F19E804850009A0C8 /* CCTableViewCell.cpp in Sources */,
 				DAF28324196BDACB00959DA1 /* udp.c in Sources */,
 				F4E0B29E196B9C660053EFD7 /* CCActionCamera.cpp in Sources */,
@@ -5199,6 +5273,7 @@
 				F48959E5199BA9F9000AA6A2 /* zero_copy_stream_impl_lite.cc in Sources */,
 				DA02C8F81986379F00E2687A /* CCUtilMath.cpp in Sources */,
 				DAF282AE196BDA7300959DA1 /* CCStoreProduct.cpp in Sources */,
+				4DF974BA1B5D530800D3CDA6 /* lpcode.c in Sources */,
 				F4E0B32C196B9C670053EFD7 /* CCSprite3DMaterial.cpp in Sources */,
 				F4E0C090196BA25D0053EFD7 /* tolua_push.c in Sources */,
 				49BCFA3F1980DABA00F48FF6 /* CCCustomFilter.cpp in Sources */,
@@ -5315,6 +5390,7 @@
 				F4E0B2C8196B9C660053EFD7 /* CCFont.cpp in Sources */,
 				4D1451011B1F071D006B0290 /* CCAttachNode.cpp in Sources */,
 				49BCFA06197F4CE700F48FF6 /* CCHazeFilter.cpp in Sources */,
+				4DF974C11B5D530800D3CDA6 /* lpvm.c in Sources */,
 				F4E0B5B4196B9C7D0053EFD7 /* CCPhysicsBodyInfo_chipmunk.cpp in Sources */,
 				DA02C8EA1986307900E2687A /* CCSpriteFrameCacheHelper.cpp in Sources */,
 				49BCFA08197F4CE700F48FF6 /* CCHueFilter.cpp in Sources */,
@@ -5441,6 +5517,7 @@
 					"CC_USE_SQLITE=1",
 					"CC_USE_TGA=1",
 					"CC_USE_TIFF=1",
+					LPEG_DEBUG,
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",

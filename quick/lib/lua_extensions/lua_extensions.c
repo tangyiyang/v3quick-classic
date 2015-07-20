@@ -27,6 +27,10 @@ extern "C" {
 // lsqlite3
 #include "lsqlite3/lsqlite3.h"
 
+// sproto
+#include "sproto/lsproto.c"
+#include "lpeg/lptree.c"
+    
 static luaL_Reg luax_exts[] = {
 #if CC_USE_JSON
     {"cjson", luaopen_cjson_safe},
@@ -41,6 +45,8 @@ static luaL_Reg luax_exts[] = {
 #if CC_USE_SQLITE
     {"lsqlite3", luaopen_lsqlite3},
 #endif
+    {"sproto.core", luaopen_sproto_core},
+    {"lpeg", luaopen_lpeg},
     {NULL, NULL}
 };
 
