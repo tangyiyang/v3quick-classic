@@ -140,6 +140,26 @@
 		4D0259901B5E197F002BC427 /* lua_cocos2dx_TDGAMission_auto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4D0259861B5E197F002BC427 /* lua_cocos2dx_TDGAMission_auto.hpp */; };
 		4D0259911B5E197F002BC427 /* lua_cocos2dx_TDGAVirtualCurrency_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D0259871B5E197F002BC427 /* lua_cocos2dx_TDGAVirtualCurrency_auto.cpp */; };
 		4D0259921B5E197F002BC427 /* lua_cocos2dx_TDGAVirtualCurrency_auto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4D0259881B5E197F002BC427 /* lua_cocos2dx_TDGAVirtualCurrency_auto.hpp */; };
+		4D025A9E1B5E4ABD002BC427 /* CocosGUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025A8C1B5E4ABD002BC427 /* CocosGUI.cpp */; };
+		4D025A9F1B5E4ABD002BC427 /* CocosGUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025A8D1B5E4ABD002BC427 /* CocosGUI.h */; };
+		4D025AA01B5E4ABD002BC427 /* GUIDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025A8E1B5E4ABD002BC427 /* GUIDefine.h */; };
+		4D025AA11B5E4ABD002BC427 /* GUIExport.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025A8F1B5E4ABD002BC427 /* GUIExport.h */; };
+		4D025AA21B5E4ABD002BC427 /* UIHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025A901B5E4ABD002BC427 /* UIHelper.cpp */; };
+		4D025AA31B5E4ABD002BC427 /* UIHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025A911B5E4ABD002BC427 /* UIHelper.h */; };
+		4D025AA41B5E4ABD002BC427 /* UILayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025A921B5E4ABD002BC427 /* UILayout.cpp */; };
+		4D025AA51B5E4ABD002BC427 /* UILayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025A931B5E4ABD002BC427 /* UILayout.h */; };
+		4D025AA61B5E4ABD002BC427 /* UILayoutComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025A941B5E4ABD002BC427 /* UILayoutComponent.cpp */; };
+		4D025AA71B5E4ABD002BC427 /* UILayoutComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025A951B5E4ABD002BC427 /* UILayoutComponent.h */; };
+		4D025AA81B5E4ABD002BC427 /* UILayoutManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025A961B5E4ABD002BC427 /* UILayoutManager.cpp */; };
+		4D025AA91B5E4ABD002BC427 /* UILayoutManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025A971B5E4ABD002BC427 /* UILayoutManager.h */; };
+		4D025AAA1B5E4ABD002BC427 /* UILayoutParameter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025A981B5E4ABD002BC427 /* UILayoutParameter.cpp */; };
+		4D025AAB1B5E4ABD002BC427 /* UILayoutParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025A991B5E4ABD002BC427 /* UILayoutParameter.h */; };
+		4D025AAC1B5E4ABD002BC427 /* UIRichText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025A9A1B5E4ABD002BC427 /* UIRichText.cpp */; };
+		4D025AAD1B5E4ABD002BC427 /* UIRichText.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025A9B1B5E4ABD002BC427 /* UIRichText.h */; };
+		4D025AAE1B5E4ABD002BC427 /* UIWidget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025A9C1B5E4ABD002BC427 /* UIWidget.cpp */; };
+		4D025AAF1B5E4ABD002BC427 /* UIWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025A9D1B5E4ABD002BC427 /* UIWidget.h */; };
+		4D025AB21B5E4B0C002BC427 /* UIScale9Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025AB01B5E4B0C002BC427 /* UIScale9Sprite.cpp */; };
+		4D025AB31B5E4B0C002BC427 /* UIScale9Sprite.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025AB11B5E4B0C002BC427 /* UIScale9Sprite.h */; };
 		4D753B151B1F003200C9DA46 /* CCPlatformConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D753B131B1F003200C9DA46 /* CCPlatformConfig.h */; };
 		4D753B161B1F003200C9DA46 /* CCPlatformMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D753B141B1F003200C9DA46 /* CCPlatformMacros.h */; };
 		4D93A8F21B16BCDE0075E8A4 /* CCAABB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D93A8EA1B16BCDD0075E8A4 /* CCAABB.cpp */; };
@@ -1170,6 +1190,26 @@
 		4D0259861B5E197F002BC427 /* lua_cocos2dx_TDGAMission_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_cocos2dx_TDGAMission_auto.hpp; sourceTree = "<group>"; };
 		4D0259871B5E197F002BC427 /* lua_cocos2dx_TDGAVirtualCurrency_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_TDGAVirtualCurrency_auto.cpp; sourceTree = "<group>"; };
 		4D0259881B5E197F002BC427 /* lua_cocos2dx_TDGAVirtualCurrency_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_cocos2dx_TDGAVirtualCurrency_auto.hpp; sourceTree = "<group>"; };
+		4D025A8C1B5E4ABD002BC427 /* CocosGUI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CocosGUI.cpp; sourceTree = "<group>"; };
+		4D025A8D1B5E4ABD002BC427 /* CocosGUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocosGUI.h; sourceTree = "<group>"; };
+		4D025A8E1B5E4ABD002BC427 /* GUIDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIDefine.h; sourceTree = "<group>"; };
+		4D025A8F1B5E4ABD002BC427 /* GUIExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIExport.h; sourceTree = "<group>"; };
+		4D025A901B5E4ABD002BC427 /* UIHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIHelper.cpp; sourceTree = "<group>"; };
+		4D025A911B5E4ABD002BC427 /* UIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIHelper.h; sourceTree = "<group>"; };
+		4D025A921B5E4ABD002BC427 /* UILayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UILayout.cpp; sourceTree = "<group>"; };
+		4D025A931B5E4ABD002BC427 /* UILayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILayout.h; sourceTree = "<group>"; };
+		4D025A941B5E4ABD002BC427 /* UILayoutComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UILayoutComponent.cpp; sourceTree = "<group>"; };
+		4D025A951B5E4ABD002BC427 /* UILayoutComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILayoutComponent.h; sourceTree = "<group>"; };
+		4D025A961B5E4ABD002BC427 /* UILayoutManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UILayoutManager.cpp; sourceTree = "<group>"; };
+		4D025A971B5E4ABD002BC427 /* UILayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILayoutManager.h; sourceTree = "<group>"; };
+		4D025A981B5E4ABD002BC427 /* UILayoutParameter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UILayoutParameter.cpp; sourceTree = "<group>"; };
+		4D025A991B5E4ABD002BC427 /* UILayoutParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILayoutParameter.h; sourceTree = "<group>"; };
+		4D025A9A1B5E4ABD002BC427 /* UIRichText.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIRichText.cpp; sourceTree = "<group>"; };
+		4D025A9B1B5E4ABD002BC427 /* UIRichText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRichText.h; sourceTree = "<group>"; };
+		4D025A9C1B5E4ABD002BC427 /* UIWidget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIWidget.cpp; sourceTree = "<group>"; };
+		4D025A9D1B5E4ABD002BC427 /* UIWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWidget.h; sourceTree = "<group>"; };
+		4D025AB01B5E4B0C002BC427 /* UIScale9Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIScale9Sprite.cpp; sourceTree = "<group>"; };
+		4D025AB11B5E4B0C002BC427 /* UIScale9Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScale9Sprite.h; sourceTree = "<group>"; };
 		4D753B131B1F003200C9DA46 /* CCPlatformConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPlatformConfig.h; sourceTree = "<group>"; };
 		4D753B141B1F003200C9DA46 /* CCPlatformMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPlatformMacros.h; sourceTree = "<group>"; };
 		4D93A8EA1B16BCDD0075E8A4 /* CCAABB.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCAABB.cpp; sourceTree = "<group>"; };
@@ -2697,6 +2737,33 @@
 			path = talkingdata;
 			sourceTree = "<group>";
 		};
+		4D025A8B1B5E4ABD002BC427 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				4D025AB01B5E4B0C002BC427 /* UIScale9Sprite.cpp */,
+				4D025AB11B5E4B0C002BC427 /* UIScale9Sprite.h */,
+				4D025A8C1B5E4ABD002BC427 /* CocosGUI.cpp */,
+				4D025A8D1B5E4ABD002BC427 /* CocosGUI.h */,
+				4D025A8E1B5E4ABD002BC427 /* GUIDefine.h */,
+				4D025A8F1B5E4ABD002BC427 /* GUIExport.h */,
+				4D025A901B5E4ABD002BC427 /* UIHelper.cpp */,
+				4D025A911B5E4ABD002BC427 /* UIHelper.h */,
+				4D025A921B5E4ABD002BC427 /* UILayout.cpp */,
+				4D025A931B5E4ABD002BC427 /* UILayout.h */,
+				4D025A941B5E4ABD002BC427 /* UILayoutComponent.cpp */,
+				4D025A951B5E4ABD002BC427 /* UILayoutComponent.h */,
+				4D025A961B5E4ABD002BC427 /* UILayoutManager.cpp */,
+				4D025A971B5E4ABD002BC427 /* UILayoutManager.h */,
+				4D025A981B5E4ABD002BC427 /* UILayoutParameter.cpp */,
+				4D025A991B5E4ABD002BC427 /* UILayoutParameter.h */,
+				4D025A9A1B5E4ABD002BC427 /* UIRichText.cpp */,
+				4D025A9B1B5E4ABD002BC427 /* UIRichText.h */,
+				4D025A9C1B5E4ABD002BC427 /* UIWidget.cpp */,
+				4D025A9D1B5E4ABD002BC427 /* UIWidget.h */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
 		4DAC5E511A38AAB200AA10F1 /* spine */ = {
 			isa = PBXGroup;
 			children = (
@@ -3295,6 +3362,7 @@
 		DAF28FC2196D338D00959DA1 /* cocos */ = {
 			isa = PBXGroup;
 			children = (
+				4D025A8B1B5E4ABD002BC427 /* ui */,
 				4DB52F001B2055D700664B72 /* deprecated */,
 				DA9F9303198F18540089A141 /* editor-support */,
 				DAF28FC3196D338D00959DA1 /* 2d */,
@@ -4057,6 +4125,7 @@
 				DAF29390196D339000959DA1 /* CCEvent.h in Headers */,
 				DAF28EAD196D082900959DA1 /* tolua_event.h in Headers */,
 				4DB52EED1B20541900664B72 /* CCVertexIndexData.h in Headers */,
+				4D025AA51B5E4ABD002BC427 /* UILayout.h in Headers */,
 				DAF293D5196D339200959DA1 /* CCValue.h in Headers */,
 				DAF294CD196D359500959DA1 /* CCControlExtensions.h in Headers */,
 				4D0259901B5E197F002BC427 /* lua_cocos2dx_TDGAMission_auto.hpp in Headers */,
@@ -4194,6 +4263,7 @@
 				DAF292ED196D338E00959DA1 /* CCFontAtlasCache.h in Headers */,
 				4DC9F5B419FE241F00FA1E3B /* Bone.h in Headers */,
 				4D02593B1B5DEADF002BC427 /* lpprint.h in Headers */,
+				4D025AA11B5E4ABD002BC427 /* GUIExport.h in Headers */,
 				DAF293B1196D339100959DA1 /* CCEventType.h in Headers */,
 				DA9F9345198F18540089A141 /* CCProcessBase.h in Headers */,
 				DAF292F9196D338E00959DA1 /* CCGrid.h in Headers */,
@@ -4205,6 +4275,7 @@
 				DAF29414196D339500959DA1 /* CCPhysicsJoint.h in Headers */,
 				DA9F9349198F18540089A141 /* CCSpriteFrameCacheHelper.h in Headers */,
 				DAF29356196D338F00959DA1 /* SimpleAudioEngine.h in Headers */,
+				4D025AA91B5E4ABD002BC427 /* UILayoutManager.h in Headers */,
 				49BCFADF1982699900F48FF6 /* ccFilterShader_hue_frag.h in Headers */,
 				DAF28DF5196D082800959DA1 /* lauxlib.h in Headers */,
 				DAF28EA7196D082900959DA1 /* CCLuaObjcBridge.h in Headers */,
@@ -4229,6 +4300,7 @@
 				DAF292D9196D338E00959DA1 /* CCClippingNode.h in Headers */,
 				DAF292D7196D338E00959DA1 /* CCAtlasNode.h in Headers */,
 				DAF28EDB196D082900959DA1 /* socket_scripts.h in Headers */,
+				4D025AAF1B5E4ABD002BC427 /* UIWidget.h in Headers */,
 				4DB52DF61B20509A00664B72 /* CCApplication.h in Headers */,
 				DAF28DB1196D082800959DA1 /* CCCrypto.h in Headers */,
 				DAF29412196D339500959DA1 /* CCPhysicsContact.h in Headers */,
@@ -4256,6 +4328,7 @@
 				DAF28EB7196D082900959DA1 /* strbuf.h in Headers */,
 				DAF293D3196D339200959DA1 /* ccUtils.h in Headers */,
 				DAF29333196D338F00959DA1 /* CCTMXXMLParser.h in Headers */,
+				4D025A9F1B5E4ABD002BC427 /* CocosGUI.h in Headers */,
 				4DC351E41A30C0600053FB06 /* CCFileCache.h in Headers */,
 				4DB52ECD1B20541900664B72 /* CCGLProgramCache.h in Headers */,
 				DAF28DD3196D082800959DA1 /* ReachabilityIOSMac.h in Headers */,
@@ -4288,6 +4361,7 @@
 				DAF28DAC196D082800959DA1 /* HelperFunc.h in Headers */,
 				DAF28DBA196D082800959DA1 /* CCNetwork.h in Headers */,
 				DAF28ED1196D082900959DA1 /* luasocket_io.h in Headers */,
+				4D025AAD1B5E4ABD002BC427 /* UIRichText.h in Headers */,
 				4DB52DEE1B20508800664B72 /* cocos2d-prefix.pch in Headers */,
 				4DB52E661B20510900664B72 /* CCRay.h in Headers */,
 				DAF29301196D338E00959DA1 /* CCLabelTextFormatter.h in Headers */,
@@ -4300,8 +4374,10 @@
 				DAF28EE9196D082900959DA1 /* lua_zlib.h in Headers */,
 				DAF29394196D339000959DA1 /* CCEventController.h in Headers */,
 				DA9F9334198F18540089A141 /* CCArmatureDefine.h in Headers */,
+				4D025AA31B5E4ABD002BC427 /* UIHelper.h in Headers */,
 				49BCFAF219826B7D00F48FF6 /* lua_cocos2dx_extension_filter_auto.hpp in Headers */,
 				DAF29465196D339800959DA1 /* CCFileUtils.h in Headers */,
+				4D025AA71B5E4ABD002BC427 /* UILayoutComponent.h in Headers */,
 				DAF293B3196D339100959DA1 /* ccFPSImages.h in Headers */,
 				4D93A9061B16BE800075E8A4 /* CCLight.h in Headers */,
 				4DB52EDE1B20541900664B72 /* CCRenderCommandPool.h in Headers */,
@@ -4310,6 +4386,7 @@
 				DAF292C3196D338E00959DA1 /* CCActionGrid3D.h in Headers */,
 				49BCFABB1982699900F48FF6 /* CCGrayFilter.h in Headers */,
 				DAF28DEB196D082800959DA1 /* lua_cocos2dx_auto.hpp in Headers */,
+				4D025AAB1B5E4ABD002BC427 /* UILayoutParameter.h in Headers */,
 				4D93A9041B16BE800075E8A4 /* CCCamera.h in Headers */,
 				DA9F9343198F18540089A141 /* CCDisplayManager.h in Headers */,
 				DAF292FF196D338E00959DA1 /* CCLabelBMFont.h in Headers */,
@@ -4338,12 +4415,14 @@
 				DAF293A8196D339100959DA1 /* CCEventListenerKeyboard.h in Headers */,
 				DAF292FB196D338E00959DA1 /* CCLabel.h in Headers */,
 				DAF293AE196D339100959DA1 /* CCEventMouse.h in Headers */,
+				4D025AA01B5E4ABD002BC427 /* GUIDefine.h in Headers */,
 				DA9FAA1A1973F1C1006A0B4C /* HelperFunc_luabinding.h in Headers */,
 				4DC9F5AC19FE241F00FA1E3B /* Atlas.h in Headers */,
 				49BCFAB11982699900F48FF6 /* CCCustomFilter.h in Headers */,
 				4DB52DEC1B20508800664B72 /* CCPlatformDefine-ios.h in Headers */,
 				DAF2931F196D338F00959DA1 /* CCScene.h in Headers */,
 				4DC9F5C219FE241F00FA1E3B /* IkConstraintData.h in Headers */,
+				4D025AB31B5E4B0C002BC427 /* UIScale9Sprite.h in Headers */,
 				DA9F934B198F18540089A141 /* CCTransformHelp.h in Headers */,
 				DAF28DB4196D082800959DA1 /* CCAlertViewDelegate.h in Headers */,
 				DAF29359196D338F00959DA1 /* CDConfig.h in Headers */,
@@ -4437,6 +4516,7 @@
 				1A087AE91860400400196EF5 /* edtaa3func.cpp in Sources */,
 				DAF2939B196D339100959DA1 /* CCEventKeyboard.cpp in Sources */,
 				4DB52E6F1B20512F00664B72 /* ccRandom.cpp in Sources */,
+				4D025AA81B5E4ABD002BC427 /* UILayoutManager.cpp in Sources */,
 				DAF292BA196D338E00959DA1 /* CCActionCamera.cpp in Sources */,
 				DAF29358196D338F00959DA1 /* CDAudioManager.m in Sources */,
 				DAF292DC196D338E00959DA1 /* CCComponent.cpp in Sources */,
@@ -4465,6 +4545,7 @@
 				DAF293AD196D339100959DA1 /* CCEventMouse.cpp in Sources */,
 				DAF28ECC196D082900959DA1 /* luasocket.c in Sources */,
 				DAF28EAC196D082900959DA1 /* tolua_event.c in Sources */,
+				4D025AAE1B5E4ABD002BC427 /* UIWidget.cpp in Sources */,
 				1A570355180BD0B00088DEC7 /* ioapi.cpp in Sources */,
 				49BCFAAA1982699900F48FF6 /* CCBlurFilter.cpp in Sources */,
 				DAF293E2196D339300959DA1 /* ZipUtils.cpp in Sources */,
@@ -4493,6 +4574,7 @@
 				DAF29324196D338F00959DA1 /* CCSpriteFrame.cpp in Sources */,
 				DAF292CA196D338E00959DA1 /* CCActionPageTurn3D.cpp in Sources */,
 				4DC9F5DD19FE241F00FA1E3B /* SlotData.c in Sources */,
+				4D025AA41B5E4ABD002BC427 /* UILayout.cpp in Sources */,
 				DAF28DC7196D082800959DA1 /* CCStoreReceiptVerifyRequestIOS.mm in Sources */,
 				DAF2937E196D339000959DA1 /* ccCArray.cpp in Sources */,
 				DAF29409196D339400959DA1 /* Vec3.cpp in Sources */,
@@ -4514,6 +4596,7 @@
 				DAF292F4196D338E00959DA1 /* CCGLBufferedNode.cpp in Sources */,
 				DAF29395196D339100959DA1 /* CCEventCustom.cpp in Sources */,
 				DAF292D0196D338E00959DA1 /* CCActionTween.cpp in Sources */,
+				4D025AAC1B5E4ABD002BC427 /* UIRichText.cpp in Sources */,
 				4DC9F5BD19FE241F00FA1E3B /* extension.c in Sources */,
 				DAF292F8196D338E00959DA1 /* CCGrid.cpp in Sources */,
 				DAF294D4196D359900959DA1 /* CCEditBox.cpp in Sources */,
@@ -4552,6 +4635,7 @@
 				DAF2946C196D339900959DA1 /* CCThread.cpp in Sources */,
 				DAF28E9D196D082900959DA1 /* Lua_web_socket.cpp in Sources */,
 				DAF28ECA196D082900959DA1 /* inet.c in Sources */,
+				4D025AAA1B5E4ABD002BC427 /* UILayoutParameter.cpp in Sources */,
 				4DB52E061B2050D000664B72 /* CCClippingRectangleNode.cpp in Sources */,
 				DAF28EB2196D082900959DA1 /* fpconv.c in Sources */,
 				DAF2938D196D339000959DA1 /* CCDirector.cpp in Sources */,
@@ -4564,6 +4648,7 @@
 				DAF29341196D338F00959DA1 /* CCBundle3D.cpp in Sources */,
 				4DB52EE31B20541900664B72 /* CCTexture2D.cpp in Sources */,
 				4DC9F5C519FE241F00FA1E3B /* MeshAttachment.c in Sources */,
+				4D025AA21B5E4ABD002BC427 /* UIHelper.cpp in Sources */,
 				DA9F9340198F18540089A141 /* CCDisplayFactory.cpp in Sources */,
 				DAF294DC196D359900959DA1 /* CCEditBoxImplMac.mm in Sources */,
 				DAF28E89196D082900959DA1 /* CCLuaBridge.cpp in Sources */,
@@ -4611,6 +4696,7 @@
 				DAF294F6196D368700959DA1 /* cpSpaceComponent.c in Sources */,
 				DAF29304196D338F00959DA1 /* CCLayer.cpp in Sources */,
 				DA9F92FC198F170B0089A141 /* lua_cocos2dx_studio_auto.cpp in Sources */,
+				4D025A9E1B5E4ABD002BC427 /* CocosGUI.cpp in Sources */,
 				4DB52DE21B20508800664B72 /* CCDirectorCaller-ios.mm in Sources */,
 				4DC9F5A519FE241F00FA1E3B /* Animation.c in Sources */,
 				DAF28E91196D082900959DA1 /* Cocos2dxLuaLoader.cpp in Sources */,
@@ -4684,6 +4770,7 @@
 				DAF28EDE196D082900959DA1 /* timeout.c in Sources */,
 				DAF29310196D338F00959DA1 /* CCParallaxNode.cpp in Sources */,
 				4DB52EDA1B20541900664B72 /* CCQuadCommand.cpp in Sources */,
+				4D025AB21B5E4B0C002BC427 /* UIScale9Sprite.cpp in Sources */,
 				4DC9F5D719FE241F00FA1E3B /* Skin.c in Sources */,
 				DAF294F5196D368700959DA1 /* cpSpace.c in Sources */,
 				49BCFACA1982699900F48FF6 /* CCTestFilter.cpp in Sources */,
@@ -4814,6 +4901,7 @@
 				DAF292C2196D338E00959DA1 /* CCActionGrid3D.cpp in Sources */,
 				4DB52DEA1B20508800664B72 /* CCGLViewImpl-ios.mm in Sources */,
 				DAF2935D196D339000959DA1 /* CocosDenshion.m in Sources */,
+				4D025AA61B5E4ABD002BC427 /* UILayoutComponent.cpp in Sources */,
 				4D0259571B5E16BF002BC427 /* TDCCItem.mm in Sources */,
 				DAF28DBF196D082800959DA1 /* CCNative.mm in Sources */,
 				4D93A9051B16BE800075E8A4 /* CCLight.cpp in Sources */,
