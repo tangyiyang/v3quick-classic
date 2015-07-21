@@ -160,6 +160,8 @@
 		4D025AAF1B5E4ABD002BC427 /* UIWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025A9D1B5E4ABD002BC427 /* UIWidget.h */; };
 		4D025AB21B5E4B0C002BC427 /* UIScale9Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025AB01B5E4B0C002BC427 /* UIScale9Sprite.cpp */; };
 		4D025AB31B5E4B0C002BC427 /* UIScale9Sprite.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025AB11B5E4B0C002BC427 /* UIScale9Sprite.h */; };
+		4D025AB61B5E4D0A002BC427 /* lua_cocos2dx_ui_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025AB41B5E4D0A002BC427 /* lua_cocos2dx_ui_auto.cpp */; };
+		4D025AB71B5E4D0A002BC427 /* lua_cocos2dx_ui_auto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4D025AB51B5E4D0A002BC427 /* lua_cocos2dx_ui_auto.hpp */; };
 		4D753B151B1F003200C9DA46 /* CCPlatformConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D753B131B1F003200C9DA46 /* CCPlatformConfig.h */; };
 		4D753B161B1F003200C9DA46 /* CCPlatformMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D753B141B1F003200C9DA46 /* CCPlatformMacros.h */; };
 		4D93A8F21B16BCDE0075E8A4 /* CCAABB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D93A8EA1B16BCDD0075E8A4 /* CCAABB.cpp */; };
@@ -1210,6 +1212,8 @@
 		4D025A9D1B5E4ABD002BC427 /* UIWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWidget.h; sourceTree = "<group>"; };
 		4D025AB01B5E4B0C002BC427 /* UIScale9Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIScale9Sprite.cpp; sourceTree = "<group>"; };
 		4D025AB11B5E4B0C002BC427 /* UIScale9Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScale9Sprite.h; sourceTree = "<group>"; };
+		4D025AB41B5E4D0A002BC427 /* lua_cocos2dx_ui_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_ui_auto.cpp; sourceTree = "<group>"; };
+		4D025AB51B5E4D0A002BC427 /* lua_cocos2dx_ui_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_cocos2dx_ui_auto.hpp; sourceTree = "<group>"; };
 		4D753B131B1F003200C9DA46 /* CCPlatformConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPlatformConfig.h; sourceTree = "<group>"; };
 		4D753B141B1F003200C9DA46 /* CCPlatformMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPlatformMacros.h; sourceTree = "<group>"; };
 		4D93A8EA1B16BCDD0075E8A4 /* CCAABB.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCAABB.cpp; sourceTree = "<group>"; };
@@ -3114,6 +3118,8 @@
 		DAF28C44196D082800959DA1 /* auto */ = {
 			isa = PBXGroup;
 			children = (
+				4D025AB41B5E4D0A002BC427 /* lua_cocos2dx_ui_auto.cpp */,
+				4D025AB51B5E4D0A002BC427 /* lua_cocos2dx_ui_auto.hpp */,
 				4DC9F5EA19FE244500FA1E3B /* lua_cocos2dx_spine_auto.cpp */,
 				4DC9F5EB19FE244500FA1E3B /* lua_cocos2dx_spine_auto.hpp */,
 				DA9F92FA198F170B0089A141 /* lua_cocos2dx_studio_auto.cpp */,
@@ -4165,6 +4171,7 @@
 				DAF29315196D338F00959DA1 /* CCParticleExamples.h in Headers */,
 				49BCFADE1982699900F48FF6 /* ccFilterShader_hblur_vert.h in Headers */,
 				DAF292BD196D338E00959DA1 /* CCActionCatmullRom.h in Headers */,
+				4D025AB71B5E4D0A002BC427 /* lua_cocos2dx_ui_auto.hpp in Headers */,
 				4DC9F5D419FE241F00FA1E3B /* SkeletonJson.h in Headers */,
 				49BCFAE91982699900F48FF6 /* ccFilterShader_vblur_vert.h in Headers */,
 				DAF293AC196D339100959DA1 /* CCEventListenerTouch.h in Headers */,
@@ -4612,6 +4619,7 @@
 				DAF29338196D338F00959DA1 /* CCTransitionProgress.cpp in Sources */,
 				DAF28DF0196D082800959DA1 /* lua_cocos2dx_physics_auto.cpp in Sources */,
 				4DB52DE41B20508800664B72 /* CCEAGLView-ios.mm in Sources */,
+				4D025AB61B5E4D0A002BC427 /* lua_cocos2dx_ui_auto.cpp in Sources */,
 				DAF294E9196D368700959DA1 /* cpRotaryLimitJoint.c in Sources */,
 				4DC9F5A719FE241F00FA1E3B /* AnimationState.c in Sources */,
 				DAF292D4196D338E00959DA1 /* CCAnimationCache.cpp in Sources */,

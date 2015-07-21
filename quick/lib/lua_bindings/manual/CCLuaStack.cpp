@@ -65,6 +65,7 @@ extern "C" {
 #include "luabinding/cocos2dx_extra_ios_iap_luabinding.h"
 #include "luabinding/HelperFunc_luabinding.h"
 #include "lua_cocos2dx_extension_filter_auto.hpp"
+#include "lua_cocos2dx_ui_auto.hpp"
 
 #include "lua_cocos2dx_spine_auto.hpp"
 #include "lua_cocos2dx_spine_manual.hpp"
@@ -179,6 +180,9 @@ bool LuaStack::init(void)
     // add spine support
     register_all_cocos2dx_spine(_state);
     register_all_cocos2dx_spine_manual(_state);
+    
+    // add cocos2d-x ui support
+    register_all_cocos2dx_ui(_state);
 
 #if CC_USE_CCS_ARMATURE
     register_all_cocos2dx_studio(_state);
