@@ -83,6 +83,28 @@
 		49BCFA3C197F4D3600F48FF6 /* lua_cocos2dx_extension_filter_auto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 49BCFA3A197F4D3600F48FF6 /* lua_cocos2dx_extension_filter_auto.hpp */; };
 		49BCFA3F1980DABA00F48FF6 /* CCCustomFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49BCFA3D1980DABA00F48FF6 /* CCCustomFilter.cpp */; };
 		49BCFA401980DABA00F48FF6 /* CCCustomFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 49BCFA3E1980DABA00F48FF6 /* CCCustomFilter.h */; };
+		4D025AD31B5E66EC002BC427 /* CocosGUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025ABF1B5E66EC002BC427 /* CocosGUI.cpp */; };
+		4D025AD41B5E66EC002BC427 /* CocosGUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025AC01B5E66EC002BC427 /* CocosGUI.h */; };
+		4D025AD51B5E66EC002BC427 /* GUIDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025AC11B5E66EC002BC427 /* GUIDefine.h */; };
+		4D025AD61B5E66EC002BC427 /* GUIExport.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025AC21B5E66EC002BC427 /* GUIExport.h */; };
+		4D025AD71B5E66EC002BC427 /* UIHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025AC31B5E66EC002BC427 /* UIHelper.cpp */; };
+		4D025AD81B5E66EC002BC427 /* UIHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025AC41B5E66EC002BC427 /* UIHelper.h */; };
+		4D025AD91B5E66EC002BC427 /* UILayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025AC51B5E66EC002BC427 /* UILayout.cpp */; };
+		4D025ADA1B5E66EC002BC427 /* UILayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025AC61B5E66EC002BC427 /* UILayout.h */; };
+		4D025ADB1B5E66EC002BC427 /* UILayoutComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025AC71B5E66EC002BC427 /* UILayoutComponent.cpp */; };
+		4D025ADC1B5E66EC002BC427 /* UILayoutComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025AC81B5E66EC002BC427 /* UILayoutComponent.h */; };
+		4D025ADD1B5E66EC002BC427 /* UILayoutManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025AC91B5E66EC002BC427 /* UILayoutManager.cpp */; };
+		4D025ADE1B5E66EC002BC427 /* UILayoutManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025ACA1B5E66EC002BC427 /* UILayoutManager.h */; };
+		4D025ADF1B5E66EC002BC427 /* UILayoutParameter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025ACB1B5E66EC002BC427 /* UILayoutParameter.cpp */; };
+		4D025AE01B5E66EC002BC427 /* UILayoutParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025ACC1B5E66EC002BC427 /* UILayoutParameter.h */; };
+		4D025AE11B5E66EC002BC427 /* UIRichText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025ACD1B5E66EC002BC427 /* UIRichText.cpp */; };
+		4D025AE21B5E66EC002BC427 /* UIRichText.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025ACE1B5E66EC002BC427 /* UIRichText.h */; };
+		4D025AE31B5E66EC002BC427 /* UIScale9Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025ACF1B5E66EC002BC427 /* UIScale9Sprite.cpp */; };
+		4D025AE41B5E66EC002BC427 /* UIScale9Sprite.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025AD01B5E66EC002BC427 /* UIScale9Sprite.h */; };
+		4D025AE51B5E66EC002BC427 /* UIWidget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025AD11B5E66EC002BC427 /* UIWidget.cpp */; };
+		4D025AE61B5E66EC002BC427 /* UIWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025AD21B5E66EC002BC427 /* UIWidget.h */; };
+		4D025AE91B5E66FE002BC427 /* lua_cocos2dx_ui_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025AE71B5E66FE002BC427 /* lua_cocos2dx_ui_auto.cpp */; };
+		4D025AEA1B5E66FE002BC427 /* lua_cocos2dx_ui_auto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4D025AE81B5E66FE002BC427 /* lua_cocos2dx_ui_auto.hpp */; };
 		4D1450F41B1F06E2006B0290 /* CCClippingRectangleNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D1450F01B1F06E2006B0290 /* CCClippingRectangleNode.cpp */; };
 		4D1450F51B1F06E2006B0290 /* CCClippingRectangleNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D1450F11B1F06E2006B0290 /* CCClippingRectangleNode.h */; };
 		4D1450F61B1F06E2006B0290 /* CCProtectedNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D1450F21B1F06E2006B0290 /* CCProtectedNode.cpp */; };
@@ -1154,6 +1176,28 @@
 		49BCFA3A197F4D3600F48FF6 /* lua_cocos2dx_extension_filter_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_cocos2dx_extension_filter_auto.hpp; sourceTree = "<group>"; };
 		49BCFA3D1980DABA00F48FF6 /* CCCustomFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCCustomFilter.cpp; sourceTree = "<group>"; };
 		49BCFA3E1980DABA00F48FF6 /* CCCustomFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCustomFilter.h; sourceTree = "<group>"; };
+		4D025ABF1B5E66EC002BC427 /* CocosGUI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CocosGUI.cpp; sourceTree = "<group>"; };
+		4D025AC01B5E66EC002BC427 /* CocosGUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocosGUI.h; sourceTree = "<group>"; };
+		4D025AC11B5E66EC002BC427 /* GUIDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIDefine.h; sourceTree = "<group>"; };
+		4D025AC21B5E66EC002BC427 /* GUIExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIExport.h; sourceTree = "<group>"; };
+		4D025AC31B5E66EC002BC427 /* UIHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIHelper.cpp; sourceTree = "<group>"; };
+		4D025AC41B5E66EC002BC427 /* UIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIHelper.h; sourceTree = "<group>"; };
+		4D025AC51B5E66EC002BC427 /* UILayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UILayout.cpp; sourceTree = "<group>"; };
+		4D025AC61B5E66EC002BC427 /* UILayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILayout.h; sourceTree = "<group>"; };
+		4D025AC71B5E66EC002BC427 /* UILayoutComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UILayoutComponent.cpp; sourceTree = "<group>"; };
+		4D025AC81B5E66EC002BC427 /* UILayoutComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILayoutComponent.h; sourceTree = "<group>"; };
+		4D025AC91B5E66EC002BC427 /* UILayoutManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UILayoutManager.cpp; sourceTree = "<group>"; };
+		4D025ACA1B5E66EC002BC427 /* UILayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILayoutManager.h; sourceTree = "<group>"; };
+		4D025ACB1B5E66EC002BC427 /* UILayoutParameter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UILayoutParameter.cpp; sourceTree = "<group>"; };
+		4D025ACC1B5E66EC002BC427 /* UILayoutParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILayoutParameter.h; sourceTree = "<group>"; };
+		4D025ACD1B5E66EC002BC427 /* UIRichText.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIRichText.cpp; sourceTree = "<group>"; };
+		4D025ACE1B5E66EC002BC427 /* UIRichText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRichText.h; sourceTree = "<group>"; };
+		4D025ACF1B5E66EC002BC427 /* UIScale9Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIScale9Sprite.cpp; sourceTree = "<group>"; };
+		4D025AD01B5E66EC002BC427 /* UIScale9Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScale9Sprite.h; sourceTree = "<group>"; };
+		4D025AD11B5E66EC002BC427 /* UIWidget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIWidget.cpp; sourceTree = "<group>"; };
+		4D025AD21B5E66EC002BC427 /* UIWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWidget.h; sourceTree = "<group>"; };
+		4D025AE71B5E66FE002BC427 /* lua_cocos2dx_ui_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_ui_auto.cpp; sourceTree = "<group>"; };
+		4D025AE81B5E66FE002BC427 /* lua_cocos2dx_ui_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_cocos2dx_ui_auto.hpp; sourceTree = "<group>"; };
 		4D1450F01B1F06E2006B0290 /* CCClippingRectangleNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCClippingRectangleNode.cpp; sourceTree = "<group>"; };
 		4D1450F11B1F06E2006B0290 /* CCClippingRectangleNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCClippingRectangleNode.h; sourceTree = "<group>"; };
 		4D1450F21B1F06E2006B0290 /* CCProtectedNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCProtectedNode.cpp; sourceTree = "<group>"; };
@@ -2313,6 +2357,33 @@
 			path = shaders;
 			sourceTree = "<group>";
 		};
+		4D025ABE1B5E66EC002BC427 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				4D025ABF1B5E66EC002BC427 /* CocosGUI.cpp */,
+				4D025AC01B5E66EC002BC427 /* CocosGUI.h */,
+				4D025AC11B5E66EC002BC427 /* GUIDefine.h */,
+				4D025AC21B5E66EC002BC427 /* GUIExport.h */,
+				4D025AC31B5E66EC002BC427 /* UIHelper.cpp */,
+				4D025AC41B5E66EC002BC427 /* UIHelper.h */,
+				4D025AC51B5E66EC002BC427 /* UILayout.cpp */,
+				4D025AC61B5E66EC002BC427 /* UILayout.h */,
+				4D025AC71B5E66EC002BC427 /* UILayoutComponent.cpp */,
+				4D025AC81B5E66EC002BC427 /* UILayoutComponent.h */,
+				4D025AC91B5E66EC002BC427 /* UILayoutManager.cpp */,
+				4D025ACA1B5E66EC002BC427 /* UILayoutManager.h */,
+				4D025ACB1B5E66EC002BC427 /* UILayoutParameter.cpp */,
+				4D025ACC1B5E66EC002BC427 /* UILayoutParameter.h */,
+				4D025ACD1B5E66EC002BC427 /* UIRichText.cpp */,
+				4D025ACE1B5E66EC002BC427 /* UIRichText.h */,
+				4D025ACF1B5E66EC002BC427 /* UIScale9Sprite.cpp */,
+				4D025AD01B5E66EC002BC427 /* UIScale9Sprite.h */,
+				4D025AD11B5E66EC002BC427 /* UIWidget.cpp */,
+				4D025AD21B5E66EC002BC427 /* UIWidget.h */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
 		4D14516A1B1F0CD6006B0290 /* deprecated */ = {
 			isa = PBXGroup;
 			children = (
@@ -2919,6 +2990,7 @@
 		F4E0B1CC196B9B740053EFD7 /* cocos */ = {
 			isa = PBXGroup;
 			children = (
+				4D025ABE1B5E66EC002BC427 /* ui */,
 				4D14516A1B1F0CD6006B0290 /* deprecated */,
 				F4E0B1FC196B9C660053EFD7 /* 2d */,
 				F4E0B287196B9C660053EFD7 /* 3d */,
@@ -4198,6 +4270,8 @@
 		F4E0BEA8196BA25D0053EFD7 /* auto */ = {
 			isa = PBXGroup;
 			children = (
+				4D025AE71B5E66FE002BC427 /* lua_cocos2dx_ui_auto.cpp */,
+				4D025AE81B5E66FE002BC427 /* lua_cocos2dx_ui_auto.hpp */,
 				4DC9F4B819FDF6A500FA1E3B /* lua_cocos2dx_spine_auto.cpp */,
 				4DC9F4B919FDF6A500FA1E3B /* lua_cocos2dx_spine_auto.hpp */,
 				DA02C8AB19862D9500E2687A /* lua_cocos2dx_studio_auto.cpp */,
@@ -4340,6 +4414,7 @@
 				DAF28325196BDACB00959DA1 /* udp.h in Headers */,
 				F4E0BCD7196BA0450053EFD7 /* glfw3native.h in Headers */,
 				F4E0B307196B9C670053EFD7 /* CCSpriteFrameCache.h in Headers */,
+				4D025AE41B5E66EC002BC427 /* UIScale9Sprite.h in Headers */,
 				49BCFA1D197F4CE700F48FF6 /* ccFilterShader_drop_shadow_vert.h in Headers */,
 				F4E0B562196B9C7D0053EFD7 /* CCMap.h in Headers */,
 				49BCFA1E197F4CE700F48FF6 /* ccFilterShader_emboss_frag.h in Headers */,
@@ -4399,6 +4474,7 @@
 				F4E0B644196B9C7D0053EFD7 /* CCGLProgram.h in Headers */,
 				F4E0B574196B9C7D0053EFD7 /* ccTypes.h in Headers */,
 				DAF282AF196BDA7300959DA1 /* CCStoreProduct.h in Headers */,
+				4D025ADE1B5E66EC002BC427 /* UILayoutManager.h in Headers */,
 				F4E0B2FB196B9C670053EFD7 /* CCProgressTimer.h in Headers */,
 				49BCFA18197F4CE700F48FF6 /* ccFilterShader_blur_frag.h in Headers */,
 				DA02C8D319862EA800E2687A /* CCSkin.h in Headers */,
@@ -4438,6 +4514,7 @@
 				F4E0BB59196BA00A0053EFD7 /* ttunpat.h in Headers */,
 				DAF28275196BDA7300959DA1 /* cocos2dx_extra.h in Headers */,
 				F4E0B564196B9C7D0053EFD7 /* CCNS.h in Headers */,
+				4D025AEA1B5E66FE002BC427 /* lua_cocos2dx_ui_auto.hpp in Headers */,
 				F4E0BE67196BA0C10053EFD7 /* ioapi_mem.h in Headers */,
 				DAF282AD196BDA7300959DA1 /* CCStorePaymentTransactionWrapper.h in Headers */,
 				DAF282AA196BDA7300959DA1 /* CCStore.h in Headers */,
@@ -4463,10 +4540,13 @@
 				F4E0BB22196BA00A0053EFD7 /* ftotval.h in Headers */,
 				49BCFA2F197F4CE700F48FF6 /* ccFilterShader_sharpen_frag.h in Headers */,
 				49BCFA0B197F4CE700F48FF6 /* CCMaskFilter.h in Headers */,
+				4D025ADA1B5E66EC002BC427 /* UILayout.h in Headers */,
 				DA02C8C919862EA800E2687A /* CCBatchNode.h in Headers */,
 				4D1451591B1F0915006B0290 /* CCController.h in Headers */,
+				4D025AD61B5E66EC002BC427 /* GUIExport.h in Headers */,
 				F4E0BB41196BA00A0053EFD7 /* svcid.h in Headers */,
 				F4E0B5F5196B9C7D0053EFD7 /* CCCommon.h in Headers */,
+				4D025AE21B5E66EC002BC427 /* UIRichText.h in Headers */,
 				F4E0B586196B9C7D0053EFD7 /* s3tc.h in Headers */,
 				F4E0BB47196BA00A0053EFD7 /* svpfr.h in Headers */,
 				F4E0B6DF196B9EEB0053EFD7 /* chipmunk_ffi.h in Headers */,
@@ -4528,6 +4608,7 @@
 				4D711E5C19E804850009A0C8 /* CCScrollView.h in Headers */,
 				4D14511F1B1F0778006B0290 /* CCGameController.h in Headers */,
 				4D1451331B1F07A6006B0290 /* CCPlatformDefine.h in Headers */,
+				4D025ADC1B5E66EC002BC427 /* UILayoutComponent.h in Headers */,
 				F4E0BB2B196BA00A0053EFD7 /* fttrigon.h in Headers */,
 				F4E0C078196BA25D0053EFD7 /* lua_cocos2dx_physics_manual.hpp in Headers */,
 				4949C33219AC6B4100113896 /* UITextField.h in Headers */,
@@ -4558,6 +4639,7 @@
 				DAF28303196BDACB00959DA1 /* lsqlite3.h in Headers */,
 				F4E0C076196BA25D0053EFD7 /* lua_cocos2dx_manual.hpp in Headers */,
 				DAF282AC196BDA7300959DA1 /* CCStorePaymentTransaction.h in Headers */,
+				4D025AE01B5E66EC002BC427 /* UILayoutParameter.h in Headers */,
 				F4E0B2C7196B9C660053EFD7 /* CCDrawNode.h in Headers */,
 				F48959F7199BA9F9000AA6A2 /* map-util.h in Headers */,
 				F4E0B57A196B9C7D0053EFD7 /* ccUTF8.h in Headers */,
@@ -4574,6 +4656,7 @@
 				F4E0B2B9196B9C660053EFD7 /* CCAnimationCache.h in Headers */,
 				F4E0C06C196BA25D0053EFD7 /* CCLuaValue.h in Headers */,
 				4DC9F51519FE10D300FA1E3B /* AnimationStateData.h in Headers */,
+				4D025AE61B5E66EC002BC427 /* UIWidget.h in Headers */,
 				F4E0B68C196B9E4C0053EFD7 /* CCScale9Sprite.h in Headers */,
 				F4895A02199BA9F9000AA6A2 /* wire_format_lite_inl.h in Headers */,
 				49BCFA2A197F4CE700F48FF6 /* ccFilterShader_motion_blur_frag.h in Headers */,
@@ -4659,6 +4742,7 @@
 				DAF2835A196CEE6D00959DA1 /* CCBundleReader.h in Headers */,
 				DA9FAA04197377AC006A0B4C /* cocos2dx_extra_luabinding.h in Headers */,
 				F4E0B5AD196B9C7D0053EFD7 /* CCPhysicsContact.h in Headers */,
+				4D025AD81B5E66EC002BC427 /* UIHelper.h in Headers */,
 				F4895A01199BA9F9000AA6A2 /* wire_format_lite.h in Headers */,
 				4D14512B1B1F0792006B0290 /* HttpResponse.h in Headers */,
 				F4E0BB55196BA00A0053EFD7 /* t1tables.h in Headers */,
@@ -4871,6 +4955,7 @@
 				F4E0B5BA196B9C7D0053EFD7 /* CCPhysicsJointInfo_chipmunk.h in Headers */,
 				F48959EB199BA9F9000AA6A2 /* atomicops.h in Headers */,
 				F4E0B52B196B9C7D0053EFD7 /* atitc.h in Headers */,
+				4D025AD41B5E66EC002BC427 /* CocosGUI.h in Headers */,
 				F4E0B311196B9C670053EFD7 /* CCTMXTiledMap.h in Headers */,
 				F4E0BB51196BA00A0053EFD7 /* svxf86nm.h in Headers */,
 				4DF974AA1B5D451400D3CDA6 /* sproto.h in Headers */,
@@ -4905,6 +4990,7 @@
 				F4E0C08A196BA25D0053EFD7 /* tolua_fix.h in Headers */,
 				F4E0BD0A196BA0460053EFD7 /* prettywriter.h in Headers */,
 				F4E0B6F4196B9EEB0053EFD7 /* cpSpace.h in Headers */,
+				4D025AD51B5E66EC002BC427 /* GUIDefine.h in Headers */,
 				DA02C8CE19862EA800E2687A /* CCDatas.h in Headers */,
 				49BCFA24197F4CE700F48FF6 /* ccFilterShader_gaussian_vblur_frag.h in Headers */,
 				F4E0B6E6196B9EEB0053EFD7 /* cpGearJoint.h in Headers */,
@@ -5001,6 +5087,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4E0B2FA196B9C670053EFD7 /* CCProgressTimer.cpp in Sources */,
+				4D025AD71B5E66EC002BC427 /* UIHelper.cpp in Sources */,
 				DA02C8E91986307900E2687A /* CCDisplayManager.cpp in Sources */,
 				4DCF3C791B1F2D460043BCD7 /* CCGLView.cpp in Sources */,
 				F4E0B2D2196B9C670053EFD7 /* CCFontFreeType.cpp in Sources */,
@@ -5037,6 +5124,7 @@
 				DAF28276196BDA7300959DA1 /* libbase64.c in Sources */,
 				F4E0B2EC196B9C670053EFD7 /* CCNode.cpp in Sources */,
 				F4E0B557196B9C7D0053EFD7 /* CCEventMouse.cpp in Sources */,
+				4D025AD91B5E66EC002BC427 /* UILayout.cpp in Sources */,
 				DA02C8AD19862D9500E2687A /* lua_cocos2dx_studio_auto.cpp in Sources */,
 				F4E0B687196B9E4C0053EFD7 /* CCControlUtils.cpp in Sources */,
 				F4E0B2DA196B9C670053EFD7 /* CCLabel.cpp in Sources */,
@@ -5131,6 +5219,7 @@
 				F4E0B5FD196B9C7D0053EFD7 /* CCSAXParser.cpp in Sources */,
 				4DC9F51019FE10D300FA1E3B /* Animation.c in Sources */,
 				F4E0B2D6196B9C670053EFD7 /* CCGrabber.cpp in Sources */,
+				4D025AE11B5E66EC002BC427 /* UIRichText.cpp in Sources */,
 				4D14518A1B1F0CD6006B0290 /* CCString.cpp in Sources */,
 				F4E0B2AE196B9C660053EFD7 /* CCActionPageTurn3D.cpp in Sources */,
 				DAF2830E196BDACB00959DA1 /* inet.c in Sources */,
@@ -5145,6 +5234,7 @@
 				F4E0B2D8196B9C670053EFD7 /* CCGrid.cpp in Sources */,
 				F4E0B5A4196B9C7D0053EFD7 /* Vec4.cpp in Sources */,
 				DA02C8EF198636C000E2687A /* CocoLoader.cpp in Sources */,
+				4D025ADD1B5E66EC002BC427 /* UILayoutManager.cpp in Sources */,
 				F4E0B515196B9C7D0053EFD7 /* CDOpenALSupport.m in Sources */,
 				F4E0C069196BA25D0053EFD7 /* CCLuaStack.cpp in Sources */,
 				4DC9F53819FE10D300FA1E3B /* SkeletonAnimation.cpp in Sources */,
@@ -5282,6 +5372,7 @@
 				F4E0B51A196B9C7D0053EFD7 /* SimpleAudioEngine.mm in Sources */,
 				F4E0B6FD196B9EEB0053EFD7 /* cpPinJoint.c in Sources */,
 				F4E0B5BD196B9C7D0053EFD7 /* CCPhysicsWorldInfo_chipmunk.cpp in Sources */,
+				4D025ADF1B5E66EC002BC427 /* UILayoutParameter.cpp in Sources */,
 				F4E0B54B196B9C7D0053EFD7 /* CCEventListenerAcceleration.cpp in Sources */,
 				DA02C8E71986307900E2687A /* CCDataReaderHelper.cpp in Sources */,
 				49BCFA0A197F4CE700F48FF6 /* CCMaskFilter.cpp in Sources */,
@@ -5313,17 +5404,20 @@
 				F4E0B2A2196B9C660053EFD7 /* CCActionEase.cpp in Sources */,
 				F4E0B5AC196B9C7D0053EFD7 /* CCPhysicsContact.cpp in Sources */,
 				F4E0B6FB196B9EEB0053EFD7 /* cpGearJoint.c in Sources */,
+				4D025AE51B5E66EC002BC427 /* UIWidget.cpp in Sources */,
 				F4E0B695196B9E4C0053EFD7 /* CCEditBoxImplMac.mm in Sources */,
 				F4E0C067196BA25D0053EFD7 /* CCLuaEngine.cpp in Sources */,
 				DA02C8DA19862F5E00E2687A /* CCProcessBase.cpp in Sources */,
 				F4E0B5A2196B9C7D0053EFD7 /* Vec3.cpp in Sources */,
 				F4E0B54D196B9C7D0053EFD7 /* CCEventListenerCustom.cpp in Sources */,
+				4D025AE91B5E66FE002BC427 /* lua_cocos2dx_ui_auto.cpp in Sources */,
 				F4E0B559196B9C7D0053EFD7 /* CCEventTouch.cpp in Sources */,
 				F4E0B706196B9EEB0053EFD7 /* cpBBTree.c in Sources */,
 				F48959F2199BA9F9000AA6A2 /* atomicops_internals_x86_msvc.cc in Sources */,
 				F4E0B30E196B9C670053EFD7 /* CCTMXObjectGroup.cpp in Sources */,
 				4DC9F52419FE10D300FA1E3B /* Event.c in Sources */,
 				F4E0B711196B9EEB0053EFD7 /* cpSpatialIndex.c in Sources */,
+				4D025AD31B5E66EC002BC427 /* CocosGUI.cpp in Sources */,
 				4DC9F52219FE10D300FA1E3B /* BoundingBoxAttachment.c in Sources */,
 				DAF28359196CEE6D00959DA1 /* CCBundleReader.cpp in Sources */,
 				F4E0B553196B9C7D0053EFD7 /* CCEventListenerMouse.cpp in Sources */,
@@ -5338,6 +5432,7 @@
 				F4E0B312196B9C670053EFD7 /* CCTMXXMLParser.cpp in Sources */,
 				F4E0B65C196B9C7D0053EFD7 /* CCTextureAtlas.cpp in Sources */,
 				F4E0C091196BA25D0053EFD7 /* tolua_to.c in Sources */,
+				4D025ADB1B5E66EC002BC427 /* UILayoutComponent.cpp in Sources */,
 				F4E0B2AC196B9C660053EFD7 /* CCActionManager.cpp in Sources */,
 				F4E0B2AA196B9C660053EFD7 /* CCActionInterval.cpp in Sources */,
 				DAF2827A196BDA7300959DA1 /* md5.c in Sources */,
@@ -5370,6 +5465,7 @@
 				DAF28322196BDACB00959DA1 /* timeout.c in Sources */,
 				F4E0B533196B9C7D0053EFD7 /* CCConfiguration.cpp in Sources */,
 				F4E0B70F196B9EEB0053EFD7 /* cpSpaceQuery.c in Sources */,
+				4D025AE31B5E66EC002BC427 /* UIScale9Sprite.cpp in Sources */,
 				DAF2829A196BDA7300959DA1 /* CCNetworkIOSMac.mm in Sources */,
 				4DC9F54219FE10D300FA1E3B /* Skin.c in Sources */,
 				F4E0B56F196B9C7D0053EFD7 /* CCScriptSupport.cpp in Sources */,
