@@ -45,8 +45,13 @@ static luaL_Reg luax_exts[] = {
 #if CC_USE_SQLITE
     {"lsqlite3", luaopen_lsqlite3},
 #endif
+
+// cloud wu's protocal buffer and lpeg
     {"sproto.core", luaopen_sproto_core},
     {"lpeg", luaopen_lpeg},
+
+    
+
     {NULL, NULL}
 };
 
