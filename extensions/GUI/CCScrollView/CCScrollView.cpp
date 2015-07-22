@@ -68,6 +68,7 @@ ScrollView::ScrollView()
 , _minScale(0.3f)
 , _maxScale(2.0f)
 , _touchListener(nullptr)
+, _willScaleBack(false)
 {
 
 }
