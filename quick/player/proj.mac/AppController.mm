@@ -274,11 +274,11 @@ std::string getCurAppPath(void)
     
     _window = eglView->getCocoaWindow();
 //    [NSApp setDelegate: self];
-    [_window center];
 
     if (_project.getProjectDir().length())
     {
         [self setZoom:_project.getFrameScale()];
+        [_window center];
         Vec2 pos = _project.getWindowOffset();
         if (pos.x != 0 && pos.y != 0)
         {
