@@ -66,6 +66,16 @@
 -- @return Camera#Camera self (return value: cc.Camera)
         
 --------------------------------
+-- 
+-- @function [parent=#Camera] initOrthographic 
+-- @param self
+-- @param #float zoomX
+-- @param #float zoomY
+-- @param #float nearPlane
+-- @param #float farPlane
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
 --  create default camera, the camera type depends on Director::getProjection 
 -- @function [parent=#Camera] create 
 -- @param self
