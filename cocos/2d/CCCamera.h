@@ -140,7 +140,6 @@ public:
     virtual void onExit() override;
     
     static const Camera* getVisitingCamera() { return _visitingCamera; }
-    
     bool initOrthographic(float zoomX, float zoomY, float nearPlane, float farPlane);
 
 CC_CONSTRUCTOR_ACCESS:
