@@ -15,3 +15,4 @@ Features in this Branch
         1. Add FileDataCache to improve creation of spine.
         2. Add SpriteBuilder runtime for quick. (https://github.com/tangyiyang/spritebuilder-lua)
         3. Upgrade Luajit to v2.1, support arm64 bytecode on ios.
+        4. Add lpeg and sproto support for Lua. Can easily connect to skynet server.
