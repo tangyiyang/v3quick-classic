@@ -13,6 +13,8 @@
 			buildPhases = (
 			);
 			dependencies = (
+				4DBBBEFC1B7127100071C5BE /* PBXTargetDependency */,
+				4DBBBEFE1B7127100071C5BE /* PBXTargetDependency */,
 				ED0742767B5705C603FF3A12 /* PBXTargetDependency */,
 				683C1E392E34993EF8BD67B8 /* PBXTargetDependency */,
 				08B1E65596C4DFA34A2FA807 /* PBXTargetDependency */,
@@ -159,6 +161,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7B3D4FCA869873B5ED098816;
 			remoteInfo = echo2;
+		};
+		4DBBBEFB1B7127100071C5BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DDA9A8E1B6786C10050352B /* uv_mac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 178071661CB321BB5A46AC92;
+			remoteInfo = libuv;
+		};
+		4DBBBEFD1B7127100071C5BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DDA9A881B6786B60050352B /* jansson_mac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A42BD6BC281DD5AD92086C4D;
+			remoteInfo = jansson;
 		};
 		4DDA9A8C1B6786B60050352B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1049,6 +1065,16 @@
 			isa = PBXTargetDependency;
 			name = libuv;
 			targetProxy = 4D5B4E141ACE8D0000FB263F /* PBXContainerItemProxy */;
+		};
+		4DBBBEFC1B7127100071C5BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libuv;
+			targetProxy = 4DBBBEFB1B7127100071C5BE /* PBXContainerItemProxy */;
+		};
+		4DBBBEFE1B7127100071C5BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = jansson;
+			targetProxy = 4DBBBEFD1B7127100071C5BE /* PBXContainerItemProxy */;
 		};
 		5A5BF3290B369B5EC6022A66 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

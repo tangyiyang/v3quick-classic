@@ -69,6 +69,7 @@
 -- 
 -- @function [parent=#Camera] initOrthographic 
 -- @param self
+-- @param #float zoomX
 -- @param #float zoomY
 -- @param #float nearPlane
 -- @param #float farPlane

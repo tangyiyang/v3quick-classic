@@ -155,6 +155,9 @@ public:
 
     /** @deprecated use getSpriteFrameByName() instead */
     CC_DEPRECATED_ATTRIBUTE SpriteFrame* spriteFrameByName(const std::string&name) { return getSpriteFrameByName(name); }
+    
+    // this is for debug use, don't use in production code
+    Map<std::string, SpriteFrame*> getAllSpriteFrames();
 
 protected:
     // MARMALADE: Made this protected not private, as deriving from this class is pretty useful

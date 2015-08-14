@@ -118,7 +118,6 @@
 		4D02593E1B5DEADF002BC427 /* lptypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0259321B5DEADF002BC427 /* lptypes.h */; };
 		4D02593F1B5DEADF002BC427 /* lpvm.c in Sources */ = {isa = PBXBuildFile; fileRef = 4D0259331B5DEADF002BC427 /* lpvm.c */; };
 		4D0259401B5DEADF002BC427 /* lpvm.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0259341B5DEADF002BC427 /* lpvm.h */; };
-		4D02594F1B5E1561002BC427 /* libTalkingDataGA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D02594E1B5E1561002BC427 /* libTalkingDataGA.a */; };
 		4D0259561B5E16BF002BC427 /* TDCCAccount.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D0259511B5E16BF002BC427 /* TDCCAccount.mm */; };
 		4D0259571B5E16BF002BC427 /* TDCCItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D0259521B5E16BF002BC427 /* TDCCItem.mm */; };
 		4D0259581B5E16BF002BC427 /* TDCCMission.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D0259531B5E16BF002BC427 /* TDCCMission.mm */; };
@@ -283,6 +282,7 @@
 		4DB54B9219E82CE100977D36 /* CCTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DB54B8C19E82CE100977D36 /* CCTableView.h */; };
 		4DB54B9319E82CE100977D36 /* CCTableViewCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DB54B8D19E82CE100977D36 /* CCTableViewCell.cpp */; };
 		4DB54B9419E82CE100977D36 /* CCTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DB54B8E19E82CE100977D36 /* CCTableViewCell.h */; };
+		4DBBBEF01B71253C0071C5BE /* libTalkingDataGA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBBBEEF1B71253C0071C5BE /* libTalkingDataGA.a */; };
 		4DC351E31A30C0600053FB06 /* CCFileCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DC351E11A30C0600053FB06 /* CCFileCache.cpp */; };
 		4DC351E41A30C0600053FB06 /* CCFileCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DC351E21A30C0600053FB06 /* CCFileCache.h */; };
 		4DC6CFCC1AE8CB8800F40809 /* libcurl_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC6CFCB1AE8CB8800F40809 /* libcurl_arm64.a */; };
@@ -1170,7 +1170,6 @@
 		4D0259321B5DEADF002BC427 /* lptypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lptypes.h; sourceTree = "<group>"; };
 		4D0259331B5DEADF002BC427 /* lpvm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lpvm.c; sourceTree = "<group>"; };
 		4D0259341B5DEADF002BC427 /* lpvm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lpvm.h; sourceTree = "<group>"; };
-		4D02594E1B5E1561002BC427 /* libTalkingDataGA.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTalkingDataGA.a; path = ../../../external/TalkingDataGameAnalytics/ios/libTalkingDataGA.a; sourceTree = "<group>"; };
 		4D0259511B5E16BF002BC427 /* TDCCAccount.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TDCCAccount.mm; path = ../../../external/TalkingDataGameAnalytics/ios/TDCCAccount.mm; sourceTree = "<group>"; };
 		4D0259521B5E16BF002BC427 /* TDCCItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TDCCItem.mm; path = ../../../external/TalkingDataGameAnalytics/ios/TDCCItem.mm; sourceTree = "<group>"; };
 		4D0259531B5E16BF002BC427 /* TDCCMission.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TDCCMission.mm; path = ../../../external/TalkingDataGameAnalytics/ios/TDCCMission.mm; sourceTree = "<group>"; };
@@ -1364,6 +1363,7 @@
 		4DB54B8C19E82CE100977D36 /* CCTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTableView.h; sourceTree = "<group>"; };
 		4DB54B8D19E82CE100977D36 /* CCTableViewCell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCTableViewCell.cpp; sourceTree = "<group>"; };
 		4DB54B8E19E82CE100977D36 /* CCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTableViewCell.h; sourceTree = "<group>"; };
+		4DBBBEEF1B71253C0071C5BE /* libTalkingDataGA.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTalkingDataGA.a; path = external/TalkingDataGameAnalytics/ios/libTalkingDataGA.a; sourceTree = QUICK_V3_ROOT; };
 		4DC351E11A30C0600053FB06 /* CCFileCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCFileCache.cpp; sourceTree = "<group>"; };
 		4DC351E21A30C0600053FB06 /* CCFileCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFileCache.h; sourceTree = "<group>"; };
 		4DC6CFC91AE8CAE100F40809 /* libwebsockets_arm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwebsockets_arm64.a; path = ../../../external/websockets/prebuilt/ios/libwebsockets_arm64.a; sourceTree = "<group>"; };
@@ -1991,7 +1991,7 @@
 				A07A4CAF1783777C0073F6A7 /* Foundation.framework in Frameworks */,
 				1A570364180BD1120088DEC7 /* libpng.a in Frameworks */,
 				1A570378180BD1B40088DEC7 /* libjpeg.a in Frameworks */,
-				4D02594F1B5E1561002BC427 /* libTalkingDataGA.a in Frameworks */,
+				4DBBBEF01B71253C0071C5BE /* libTalkingDataGA.a in Frameworks */,
 				1A5703A4180BD2350088DEC7 /* libtiff.a in Frameworks */,
 				1A5703BB180BD2800088DEC7 /* libwebp.a in Frameworks */,
 				1A57052E180BD3280088DEC7 /* libfreetype.a in Frameworks */,
@@ -2019,7 +2019,7 @@
 		1551A341158F2AB200E66CFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4D02594E1B5E1561002BC427 /* libTalkingDataGA.a */,
+				4DBBBEEF1B71253C0071C5BE /* libTalkingDataGA.a */,
 				4DC6CFD61AE8CC3300F40809 /* libwebp_arm64.a */,
 				4DC6CFD31AE8CBEE00F40809 /* libjpeg_arm64.a */,
 				4DC6CFD11AE8CBE200F40809 /* libtiff_arm64.a */,
@@ -5103,6 +5103,7 @@
 					/Users/sleepers/opensource_projects/v3quick/external/jpeg/prebuilt/ios,
 					/Users/sleepers/opensource_projects/v3quick/external/webp/prebuilt/ios,
 					"/Users/sleepers/opensource_projects/v3quick-classic/external/TalkingDataGameAnalytics/ios",
+					"/Users/sleepers/Projects/github/v3quick-classic/external/TalkingDataGameAnalytics/ios",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -5178,6 +5179,7 @@
 					/Users/sleepers/opensource_projects/v3quick/external/jpeg/prebuilt/ios,
 					/Users/sleepers/opensource_projects/v3quick/external/webp/prebuilt/ios,
 					"/Users/sleepers/opensource_projects/v3quick-classic/external/TalkingDataGameAnalytics/ios",
+					"/Users/sleepers/Projects/github/v3quick-classic/external/TalkingDataGameAnalytics/ios",
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		4D73DC7E1B59030B0043E5D7 /* liblibquick.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E0B1FB196B9C3C0053EFD7 /* liblibquick.a */; };
 		4D73DC7F1B59030B0043E5D7 /* libpomelo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC8F7451B0B9A6500808C84 /* libpomelo.a */; };
-		4D73DC821B59030B0043E5D7 /* libjansson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D73DC801B59030B0043E5D7 /* libjansson.a */; };
-		4D73DC831B59030B0043E5D7 /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D73DC811B59030B0043E5D7 /* libuv.a */; };
 		4D8956591B25FCE3002DE928 /* PomeloClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D8956551B25FCE3002DE928 /* PomeloClient.cpp */; };
 		4D89565A1B25FCE3002DE928 /* PomeloClient_luabinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D8956571B25FCE3002DE928 /* PomeloClient_luabinding.cpp */; };
+		4DBBBF0E1B71274B0071C5BE /* libjansson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBBBF0C1B71274B0071C5BE /* libjansson.a */; };
+		4DBBBF0F1B71274B0071C5BE /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBBBF0D1B71274B0071C5BE /* libuv.a */; };
 		9F05A0CF194EC0FA003CFA1F /* PlayerMessageBoxServiceMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F05A0CE194EC0FA003CFA1F /* PlayerMessageBoxServiceMac.mm */; };
 		9F05A101194EF319003CFA1F /* ConsoleWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F05A0FE194EF319003CFA1F /* ConsoleWindow.xib */; };
 		9F05A102194EF319003CFA1F /* ConsoleWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F05A100194EF319003CFA1F /* ConsoleWindowController.m */; };
@@ -152,6 +152,8 @@
 		4D8956571B25FCE3002DE928 /* PomeloClient_luabinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PomeloClient_luabinding.cpp; sourceTree = "<group>"; };
 		4D8956581B25FCE3002DE928 /* PomeloClient_luabinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PomeloClient_luabinding.h; sourceTree = "<group>"; };
 		4DA5A2351B0B847C00B9E188 /* pomelo_mac.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pomelo_mac.xcodeproj; path = external/libpomelo/pomelo_mac.xcodeproj; sourceTree = QUICK_V3_ROOT; };
+		4DBBBF0C1B71274B0071C5BE /* libjansson.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjansson.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/player3-dfgdbwuvqnvbqycosmrparesczkv/Build/Products/Default/libjansson.a"; sourceTree = "<group>"; };
+		4DBBBF0D1B71274B0071C5BE /* libuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libuv.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/player3-dfgdbwuvqnvbqycosmrparesczkv/Build/Products/Default/libuv.a"; sourceTree = "<group>"; };
 		9F05A0CC194EB080003CFA1F /* PlayerMenuServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMenuServiceProtocol.h; sourceTree = "<group>"; };
 		9F05A0CD194EC0DB003CFA1F /* PlayerMessageBoxServiceMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerMessageBoxServiceMac.h; sourceTree = SOURCE_ROOT; };
 		9F05A0CE194EC0FA003CFA1F /* PlayerMessageBoxServiceMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlayerMessageBoxServiceMac.mm; sourceTree = SOURCE_ROOT; };
@@ -222,8 +224,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D73DC821B59030B0043E5D7 /* libjansson.a in Frameworks */,
-				4D73DC831B59030B0043E5D7 /* libuv.a in Frameworks */,
+				4DBBBF0E1B71274B0071C5BE /* libjansson.a in Frameworks */,
+				4DBBBF0F1B71274B0071C5BE /* libuv.a in Frameworks */,
 				4D73DC7E1B59030B0043E5D7 /* liblibquick.a in Frameworks */,
 				4D73DC7F1B59030B0043E5D7 /* libpomelo.a in Frameworks */,
 				DAB2BFC619595AE800ADD4E0 /* SystemConfiguration.framework in Frameworks */,
@@ -293,6 +295,8 @@
 		9F1C8D31194DE61E0068C99B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4DBBBF0C1B71274B0071C5BE /* libjansson.a */,
+				4DBBBF0D1B71274B0071C5BE /* libuv.a */,
 				4D73DC801B59030B0043E5D7 /* libjansson.a */,
 				4D73DC811B59030B0043E5D7 /* libuv.a */,
 				DAB2BFC519595AE800ADD4E0 /* SystemConfiguration.framework */,
@@ -733,6 +737,7 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Build/Products/Default",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/player3-hddxhrmhqrcoksclazhccmbyzetk/Build/Products/Default-iphoneos",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/player3-hddxhrmhqrcoksclazhccmbyzetk/Build/Products/Default",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/player3-dfgdbwuvqnvbqycosmrparesczkv/Build/Products/Default",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_LDFLAGS = (
@@ -783,6 +788,7 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Build/Products/Default",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/player3-hddxhrmhqrcoksclazhccmbyzetk/Build/Products/Default-iphoneos",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/player3-hddxhrmhqrcoksclazhccmbyzetk/Build/Products/Default",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/player3-dfgdbwuvqnvbqycosmrparesczkv/Build/Products/Default",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_LDFLAGS = (

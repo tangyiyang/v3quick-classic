@@ -104,6 +104,12 @@
 -- @return SpriteFrameCache#SpriteFrameCache self (return value: cc.SpriteFrameCache)
         
 --------------------------------
+-- 
+-- @function [parent=#SpriteFrameCache] getAllSpriteFrames 
+-- @param self
+-- @return map_table#map_table ret (return value: map_table)
+        
+--------------------------------
 --  Destroys the cache. It releases all the Sprite Frames and the retained instance. 
 -- @function [parent=#SpriteFrameCache] destroyInstance 
 -- @param self

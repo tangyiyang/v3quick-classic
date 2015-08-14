@@ -427,5 +427,9 @@ SpriteFrame* SpriteFrameCache::getSpriteFrameByName(const std::string& name)
     return frame;
 }
 
+Map<std::string, SpriteFrame*> SpriteFrameCache::getAllSpriteFrames() {
+    return _spriteFrames;
+}
+
 NS_CC_END
 
