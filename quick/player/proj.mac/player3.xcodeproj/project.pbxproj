@@ -145,8 +145,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4D73DC801B59030B0043E5D7 /* libjansson.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjansson.a; path = "../../../../../Library/Developer/Xcode/DerivedData/player3-hddxhrmhqrcoksclazhccmbyzetk/Build/Products/Default/libjansson.a"; sourceTree = "<group>"; };
-		4D73DC811B59030B0043E5D7 /* libuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libuv.a; path = "../../../../../Library/Developer/Xcode/DerivedData/player3-hddxhrmhqrcoksclazhccmbyzetk/Build/Products/Default/libuv.a"; sourceTree = "<group>"; };
 		4D8956551B25FCE3002DE928 /* PomeloClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PomeloClient.cpp; sourceTree = "<group>"; };
 		4D8956561B25FCE3002DE928 /* PomeloClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PomeloClient.h; sourceTree = "<group>"; };
 		4D8956571B25FCE3002DE928 /* PomeloClient_luabinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PomeloClient_luabinding.cpp; sourceTree = "<group>"; };
@@ -297,8 +295,6 @@
 			children = (
 				4DBBBF0C1B71274B0071C5BE /* libjansson.a */,
 				4DBBBF0D1B71274B0071C5BE /* libuv.a */,
-				4D73DC801B59030B0043E5D7 /* libjansson.a */,
-				4D73DC811B59030B0043E5D7 /* libuv.a */,
 				DAB2BFC519595AE800ADD4E0 /* SystemConfiguration.framework */,
 				9F3BF73C194E91E10072B3D0 /* OpenGL.framework */,
 				9F3BF73A194E91D70072B3D0 /* QuartzCore.framework */,
