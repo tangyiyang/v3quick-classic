@@ -79,6 +79,10 @@ public:
 	virtual void onTrackEntryEvent (int trackIndex, spEventType type, spEvent* event, int loopCount);
 
 	spAnimationState* getState() const;
+    
+    void setPaused();
+    bool isPaused();
+    void setResumed();
 
 protected:
 	SkeletonAnimation ();
@@ -96,6 +100,7 @@ protected:
 	EndListener _endListener;
 	CompleteListener _completeListener;
 	EventListener _eventListener;
+    bool _paused;
 
 private:
 	typedef SkeletonRenderer super;

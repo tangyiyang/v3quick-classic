@@ -6,27 +6,6 @@
 
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] setStartListener 
--- @param self
--- @param #function listener
--- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
-        
---------------------------------
--- 
--- @function [parent=#SkeletonAnimation] setTrackEventListener 
--- @param self
--- @param #spTrackEntry entry
--- @param #function listener
--- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
-        
---------------------------------
--- 
--- @function [parent=#SkeletonAnimation] getState 
--- @param self
--- @return spAnimationState#spAnimationState ret (return value: spAnimationState)
-        
---------------------------------
--- 
 -- @function [parent=#SkeletonAnimation] setTrackCompleteListener 
 -- @param self
 -- @param #spTrackEntry entry
@@ -35,12 +14,10 @@
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] onTrackEntryEvent 
+-- @function [parent=#SkeletonAnimation] setTrackStartListener 
 -- @param self
--- @param #int trackIndex
--- @param #int type
--- @param #spEvent event
--- @param #int loopCount
+-- @param #spTrackEntry entry
+-- @param #function listener
 -- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
         
 --------------------------------
@@ -53,23 +30,9 @@
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] setCompleteListener 
--- @param self
--- @param #function listener
--- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
-        
---------------------------------
--- 
--- @function [parent=#SkeletonAnimation] setTrackEndListener 
+-- @function [parent=#SkeletonAnimation] setTrackEventListener 
 -- @param self
 -- @param #spTrackEntry entry
--- @param #function listener
--- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
-        
---------------------------------
--- 
--- @function [parent=#SkeletonAnimation] setEventListener 
--- @param self
 -- @param #function listener
 -- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
         
@@ -99,15 +62,37 @@
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] clearTracks 
+-- @function [parent=#SkeletonAnimation] onAnimationStateEvent 
+-- @param self
+-- @param #int trackIndex
+-- @param #int type
+-- @param #spEvent event
+-- @param #int loopCount
+-- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
+        
+--------------------------------
+-- 
+-- @function [parent=#SkeletonAnimation] getState 
+-- @param self
+-- @return spAnimationState#spAnimationState ret (return value: spAnimationState)
+        
+--------------------------------
+-- 
+-- @function [parent=#SkeletonAnimation] setResumed 
 -- @param self
 -- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] setTrackStartListener 
+-- @function [parent=#SkeletonAnimation] setEventListener 
 -- @param self
--- @param #spTrackEntry entry
+-- @param #function listener
+-- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
+        
+--------------------------------
+-- 
+-- @function [parent=#SkeletonAnimation] setCompleteListener 
+-- @param self
 -- @param #function listener
 -- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
         
@@ -119,12 +104,45 @@
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] onAnimationStateEvent 
+-- @function [parent=#SkeletonAnimation] onTrackEntryEvent 
 -- @param self
 -- @param #int trackIndex
 -- @param #int type
 -- @param #spEvent event
 -- @param #int loopCount
+-- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
+        
+--------------------------------
+-- 
+-- @function [parent=#SkeletonAnimation] clearTracks 
+-- @param self
+-- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
+        
+--------------------------------
+-- 
+-- @function [parent=#SkeletonAnimation] setTrackEndListener 
+-- @param self
+-- @param #spTrackEntry entry
+-- @param #function listener
+-- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
+        
+--------------------------------
+-- 
+-- @function [parent=#SkeletonAnimation] setStartListener 
+-- @param self
+-- @param #function listener
+-- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
+        
+--------------------------------
+-- 
+-- @function [parent=#SkeletonAnimation] isPaused 
+-- @param self
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+-- 
+-- @function [parent=#SkeletonAnimation] setPaused 
+-- @param self
 -- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
         
 return nil

@@ -265,5 +265,23 @@ void SkeletonAnimation::setTrackEventListener (spTrackEntry* entry, const EventL
 spAnimationState* SkeletonAnimation::getState() const {
 	return _state;
 }
+    
+void SkeletonAnimation::setPaused() {
+    if (!_paused) {
+        _paused = true;
+    } else {
+        CCLOG("Animation Already Paused?");
+    }
+}
+bool SkeletonAnimation::isPaused() {
+    return _paused;
+}
+void SkeletonAnimation::setResumed(){
+    if (_paused) {
+        _paused = false;
+    } else {
+        CCLOG("Animation Already Resumed?");
+    }
+}
 
 }
