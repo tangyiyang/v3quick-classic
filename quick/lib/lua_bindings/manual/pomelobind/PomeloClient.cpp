@@ -105,7 +105,7 @@ void PomeloClient::dispatchRequest(){
 	pthread_mutex_unlock(&reponse_queue_mutex);
 #endif
     if (!m.empty()) {
-        //CCLog("event: %s, msg: %s", m["event"].c_str(), m["msg"].c_str());
+        CCLOG("event: %s, msg: %s", m["event"].c_str(), m["msg"].c_str());
         callScriptHandler(m["event"].c_str(), m["msg"].c_str());
     }
 }

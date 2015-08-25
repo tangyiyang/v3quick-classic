@@ -36,7 +36,7 @@ void CCFileCache::addFile(const char* fileName) {
 void CCFileCache::addFile(const char* fileName, unsigned char* filedata, int length) {
     unsigned char *newAddr = (unsigned char*)malloc(length);
     memcpy(newAddr, filedata, length);
-    CCLOG("CCFileCache:addFile fileName = %s, data = %p", fileName, filedata);
+//    CCLOG("CCFileCache:addFile fileName = %s, data = %p", fileName, filedata);
     m_datas.insert(std::make_pair(fileName, newAddr));
     m_lengths.insert(std::make_pair(fileName, length));
 }

@@ -93,7 +93,8 @@ void SkeletonAnimation::initialize () {
 	_state = spAnimationState_create(spAnimationStateData_create(_skeleton->data));
 	_state->rendererObject = this;
 	_state->listener = animationCallback;
-
+    _paused = false;
+    
 	_spAnimationState* stateInternal = (_spAnimationState*)_state;
 	stateInternal->disposeTrackEntry = disposeTrackEntry;
 }
@@ -120,6 +121,9 @@ SkeletonAnimation::~SkeletonAnimation () {
 }
 
 void SkeletonAnimation::update (float deltaTime) {
+    if (_paused) {
+        return;
+    }
 	super::update(deltaTime);
 
 	deltaTime *= _timeScale;
