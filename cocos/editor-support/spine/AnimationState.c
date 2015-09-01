@@ -64,7 +64,6 @@ spAnimationState* spAnimationState_create (spAnimationStateData* data) {
 	CONST_CAST(spAnimationStateData*, self->data) = data;
 	internal->createTrackEntry = _spAnimationState_createTrackEntry;
 	internal->disposeTrackEntry = _spAnimationState_disposeTrackEntry;
-    self->mixBoneRenderTime = 0;
 	return self;
 }
 
@@ -132,33 +131,20 @@ void spAnimationState_apply (spAnimationState* self, spSkeleton* skeleton) {
 		if (!current->loop && time > current->endTime) time = current->endTime;
 
 		previous = current->previous;
-
-        int isMainAnimation = i == 0 ? 1 : 0;
-
 		if (!previous) {
 			if (current->mix == 1) {
-                if (self->data->mixActiveBoneCnts > 0) {
-                        spAnimation_apply(current->animation, skeleton, current->lastTime, time, current->loop,
-                                          internal->events, &eventsCount, self->data->mixActiveBoneNames, self->data->mixActiveBoneCnts, isMainAnimation);
-
-                        spSkeleton_updateWorldTransform(skeleton, self->data->mixActiveBoneNames, self->data->mixActiveBoneCnts, isMainAnimation);
-                    
-                // 正常情况，没有动画融合的时候走这里
-                } else {
-                    spAnimation_apply(current->animation, skeleton, current->lastTime, time, current->loop,
-                                      internal->events, &eventsCount, NULL, 0, isMainAnimation);
-                    spSkeleton_updateWorldTransform(skeleton, NULL, 0, isMainAnimation);
-                }
+				spAnimation_apply(current->animation, skeleton, current->lastTime, time,
+					current->loop, internal->events, &eventsCount);
 			} else {
 				spAnimation_mix(current->animation, skeleton, current->lastTime, time,
-					current->loop, internal->events, &eventsCount, current->mix, NULL, 0, isMainAnimation);
+					current->loop, internal->events, &eventsCount, current->mix);
 			}
 		} else {
 			float alpha = current->mixTime / current->mixDuration * current->mix;
 
 			float previousTime = previous->time;
 			if (!previous->loop && previousTime > previous->endTime) previousTime = previous->endTime;
-			spAnimation_apply(previous->animation, skeleton, previousTime, previousTime, previous->loop, 0, 0, NULL, 0, i);
+			spAnimation_apply(previous->animation, skeleton, previousTime, previousTime, previous->loop, 0, 0);
 
 			if (alpha >= 1) {
 				alpha = 1;
@@ -166,7 +152,7 @@ void spAnimationState_apply (spAnimationState* self, spSkeleton* skeleton) {
 				current->previous = 0;
 			}
 			spAnimation_mix(current->animation, skeleton, current->lastTime, time,
-				current->loop, internal->events, &eventsCount, alpha, NULL, 0, isMainAnimation);
+				current->loop, internal->events, &eventsCount, alpha);
 		}
 
 		entryChanged = 0;
@@ -199,14 +185,12 @@ void spAnimationState_apply (spAnimationState* self, spSkeleton* skeleton) {
 			}
 			if (self->listener) {
 				self->listener(self, i, SP_ANIMATION_COMPLETE, 0, count);
-                spAnimationState_resetBoneState(self);
-                if (self->tracks[i] != current) continue;
+				if (self->tracks[i] != current) continue;
 			}
 		}
 
 		current->lastTime = current->time;
 	}
-    
 }
 
 void spAnimationState_clearTracks (spAnimationState* self) {
@@ -228,12 +212,6 @@ void spAnimationState_clearTrack (spAnimationState* self, int trackIndex) {
 	self->tracks[trackIndex] = 0;
 
 	_spAnimationState_disposeAllEntries(self, current);
-}
-
-void spAnimationState_resetBoneState(spAnimationState* self) {
-    self->data->mixActiveBoneCnts = 0;
-//    self->data->mixActiveBoneNames = NULL;
-//    self->data->mixAnimationName = "";
 }
 
 spTrackEntry* _spAnimationState_expandToIndex (spAnimationState* self, int index) {

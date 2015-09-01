@@ -49,8 +49,8 @@ public:
 	virtual void draw (cocos2d::Renderer* renderer, const cocos2d::Mat4& transform, uint32_t transformFlags) override;
 	virtual void drawSkeleton (const cocos2d::Mat4& transform, uint32_t transformFlags);
 	virtual cocos2d::Rect getBoundingBox () const override;
-	virtual void onEnter () override;
-	virtual void onExit () override;
+	virtual void onEnter ();
+	virtual void onExit ();
 
 	spSkeleton* getSkeleton();
     

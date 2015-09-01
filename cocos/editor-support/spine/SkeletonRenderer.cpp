@@ -313,7 +313,7 @@ cocos2d::Rect SkeletonRenderer::getBoundingBox () const {
 // --- Convenience methods for Skeleton_* functions.
 
 void SkeletonRenderer::updateWorldTransform () {
-	spSkeleton_updateWorldTransform(_skeleton, NULL, 0, 0);
+	spSkeleton_updateWorldTransform(_skeleton);
 }
 
 void SkeletonRenderer::setToSetupPose () {
@@ -393,7 +393,7 @@ cocos2d::ValueMap SkeletonRenderer::getBoneLua(const std::string& boneName) {
 }
 
 void SkeletonRenderer::setTimeScale (float scale) {
-	_timeScale = scale;
+	_timeScale = scale; 
 }
 float SkeletonRenderer::getTimeScale () const {
 	return _timeScale;

@@ -192,7 +192,7 @@ void spSkeleton_updateCache (const spSkeleton* self) {
 	}
 }
 
-void spSkeleton_updateWorldTransform (const spSkeleton* self, const char activeBoneName[16][64], int activeBoneCnt, int isMainAnimation) {
+void spSkeleton_updateWorldTransform (const spSkeleton* self) {
 	int i, ii, nn, last;
 	_spSkeleton* internal = SUB_CAST(_spSkeleton, self);
 
@@ -200,36 +200,10 @@ void spSkeleton_updateWorldTransform (const spSkeleton* self, const char activeB
 		self->bones[i]->rotationIK = self->bones[i]->rotation;
 
 	i = 0;
-    
 	last = internal->boneCacheCount - 1;
 	while (1) {
-        for (ii = 0, nn = internal->boneCacheCounts[i]; ii < nn; ++ii) {
-            spBone* bone = internal->boneCache[i][ii];
-            // mix模式
-//            activeBoneCnt = 0;
-            if (activeBoneCnt > 0) {
-                // 主动画更新非mix骨骼
-                int isMixBones = bone->nameEndWithMix || bone->isChildOfMixBone;
-                if (isMainAnimation) {
-                    if (!isMixBones ) {
-                        spBone_updateWorldTransform(internal->boneCache[i][ii]);
-//                        printf("type 0, isMainAnimation, boneName = %d, %s\n", isMainAnimation, bone->data->name);
-                    }
-                    // 非主动画更新mix骨骼
-                } else {
-                    if (isMixBones) {
-                        spBone_updateWorldTransform(internal->boneCache[i][ii]);
-//                        spBone_updateWorldTransformOnlySelf(internal->boneCache[i][ii]);
-//                        printf("type 2, isMainAnimation, boneName = %d, %s\n", isMainAnimation, bone->data->name);
-                    }
-                }
-            // 非mix模式
-            } else {
-                spBone_updateWorldTransform(internal->boneCache[i][ii]);
-            }
-            
-            
-        }
+		for (ii = 0, nn = internal->boneCacheCounts[i]; ii < nn; ++ii)
+			spBone_updateWorldTransform(internal->boneCache[i][ii]);
 		if (i == last) break;
 		spIkConstraint_apply(self->ikConstraints[i]);
 		i++;
@@ -361,60 +335,6 @@ spIkConstraint* spSkeleton_findIkConstraint (const spSkeleton* self, const char*
 		if (strcmp(self->ikConstraints[i]->data->name, ikConstraintName) == 0) return self->ikConstraints[i];
 	return 0;
 }
-
-
-int isBoneChild(spBone* bone, const char* fatherName) {
-    if (bone && strcmp(bone->data->name, fatherName) == 0) {
-        return 1;
-    } else {
-        if (bone->parent) {
-            return isBoneChild(bone->parent, fatherName);
-        } else {
-            return 0;
-        }
-    }
-}
-
-void spSkeleton_setBoneChild(const spSkeleton* self, const char* fatherName) {
-    int i;
-    for (i = 0; i < self->bonesCount; ++i) {
-        spBone* bone = self->bones[i];
-        if (strcmp(bone->data->name, fatherName) == 0) {
-            bone->isChildOfMixBone = 0;
-//            printf("bone[%s] \t\t%s = \t %s\n", bone->data->name, fatherName, bone->isChildOfMixBone ? "true" : "false");
-            continue;
-        }
-        if (!bone->isChildOfMixBone) {
-            bone->isChildOfMixBone = isBoneChild(bone, fatherName);
-        }
-       // printf("bone[%s] \t\t%s = \t %s\n", bone->data->name, fatherName, bone->isChildOfMixBone ? "true" : "false");
-    }
-}
-
-void spSkeleton_setBoneWillMix(const spSkeleton* self) {
-    int i;
-    int totalMixBoneCnt = 0;
-	char*  names[16] = {NULL};
-    for (i = 0; i < self->bonesCount; ++i) {
-        spBone* bone = self->bones[i];
-        // name end with _mix will not update
-        if (strstr(bone->data->name, "_mix") != NULL) {
-            bone->nameEndWithMix = 1;
-            names[totalMixBoneCnt++] = (char*)bone->data->name;
-        } else {
-            bone->nameEndWithMix = 0;
-        }
-    }
-    
-    for (i = 0; i < totalMixBoneCnt; ++i) {
-        spSkeleton_setBoneChild(self, names[i]);
-    }
-    for (i = 0; i < self->bonesCount; ++i) {
-//        printf("bone [%s], (nameEndWithMix, isChildOfMixBone) = (%d, %d)\n", self->bones[i]->data->name, self->bones[i]->nameEndWithMix, self->bones[i]->isChildOfMixBone);
-    }
-    
-}
-
 
 void spSkeleton_update (spSkeleton* self, float deltaTime) {
 	self->time += deltaTime;

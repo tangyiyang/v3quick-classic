@@ -43,8 +43,6 @@ spBone* spBone_create (spBoneData* data, spSkeleton* skeleton, spBone* parent) {
 	CONST_CAST(spSkeleton*, self->skeleton) = skeleton;
 	CONST_CAST(spBone*, self->parent) = parent;
 	spBone_setToSetupPose(self);
-    
-    self->nameEndWithMix = 0;
 	return self;
 }
 
@@ -90,35 +88,6 @@ void spBone_updateWorldTransform (spBone* self) {
 		CONST_CAST(float, self->m10) = sine * self->worldScaleX;
 		CONST_CAST(float, self->m11) = cosine * self->worldScaleY;
 	}
-}
-
-void spBone_updateWorldTransformOnlySelf (spBone* self)
-{
-    float radians, cosine, sine;
-    
-    CONST_CAST(float, self->worldX) = self->skeleton->flipX ? -self->x : self->x;
-    CONST_CAST(float, self->worldY) = self->skeleton->flipY != yDown ? -self->y : self->y;
-    CONST_CAST(float, self->worldScaleX) = self->scaleX;
-    CONST_CAST(float, self->worldScaleY) = self->scaleY;
-    CONST_CAST(float, self->worldRotation) = self->rotationIK;
-    
-    radians = self->worldRotation * DEG_RAD;
-    cosine = COS(radians);
-    sine = SIN(radians);
-    if (self->skeleton->flipX) {
-        CONST_CAST(float, self->m00) = -cosine * self->worldScaleX;
-        CONST_CAST(float, self->m01) = sine * self->worldScaleY;
-    } else {
-        CONST_CAST(float, self->m00) = cosine * self->worldScaleX;
-        CONST_CAST(float, self->m01) = -sine * self->worldScaleY;
-    }
-    if (self->skeleton->flipY != yDown) {
-        CONST_CAST(float, self->m10) = -sine * self->worldScaleX;
-        CONST_CAST(float, self->m11) = -cosine * self->worldScaleY;
-    } else {
-        CONST_CAST(float, self->m10) = sine * self->worldScaleX;
-        CONST_CAST(float, self->m11) = cosine * self->worldScaleY;
-    }
 }
 
 void spBone_setToSetupPose (spBone* self) {

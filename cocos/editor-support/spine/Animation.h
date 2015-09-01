@@ -56,14 +56,14 @@ void spAnimation_dispose (spAnimation* self);
  * @param lastTime The last time the animation was applied.
  * @param events Any triggered events are added. */
 void spAnimation_apply (const spAnimation* self, struct spSkeleton* skeleton, float lastTime, float time, int loop,
-		spEvent** events, int* eventsCount, char activeBoneNames[16][64], int activeBoneCnt, int isMainAnimation);
+		spEvent** events, int* eventsCount);
 
 /** Poses the skeleton at the specified time for this animation mixed with the current pose.
  * @param lastTime The last time the animation was applied.
  * @param events Any triggered events are added.
  * @param alpha The amount of this animation that affects the current pose. */
 void spAnimation_mix (const spAnimation* self, struct spSkeleton* skeleton, float lastTime, float time, int loop,
-		spEvent** events, int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt, int isMainAnimation);
+		spEvent** events, int* eventsCount, float alpha);
 
 #ifdef SPINE_SHORT_NAMES
 typedef spAnimation Animation;
@@ -95,7 +95,7 @@ struct spTimeline {
 
 void spTimeline_dispose (spTimeline* self);
 void spTimeline_apply (const spTimeline* self, struct spSkeleton* skeleton, float lastTime, float time, spEvent** firedEvents,
-		int* eventsCount, float alpha, char activeBoneNames[16][64], int activeBoneCnt, int isMainAnimation);
+		int* eventsCount, float alpha);
 
 #ifdef SPINE_SHORT_NAMES
 typedef spTimeline Timeline;

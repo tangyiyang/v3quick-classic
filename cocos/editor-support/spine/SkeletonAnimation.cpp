@@ -94,8 +94,7 @@ void SkeletonAnimation::initialize () {
 	_state = spAnimationState_create(spAnimationStateData_create(_skeleton->data));
 	_state->rendererObject = this;
 	_state->listener = animationCallback;
-    _paused = false;
-    
+
 	_spAnimationState* stateInternal = (_spAnimationState*)_state;
 	stateInternal->disposeTrackEntry = disposeTrackEntry;
 }
@@ -113,7 +112,7 @@ SkeletonAnimation::SkeletonAnimation (const std::string& skeletonDataFile, spAtl
 SkeletonAnimation::SkeletonAnimation (const std::string& skeletonDataFile, const std::string& atlasFile, float scale)
 		: SkeletonRenderer(skeletonDataFile, atlasFile, scale) {
 	initialize();
-    spSkeleton_updateWorldTransform(_skeleton, NULL, 0, 0);
+    spSkeleton_updateWorldTransform(_skeleton);
 }
 
 SkeletonAnimation::~SkeletonAnimation () {
@@ -122,17 +121,12 @@ SkeletonAnimation::~SkeletonAnimation () {
 }
 
 void SkeletonAnimation::update (float deltaTime) {
-    if (_paused) {
-        return;
-    }
 	super::update(deltaTime);
 
 	deltaTime *= _timeScale;
 	spAnimationState_update(_state, deltaTime);
 	spAnimationState_apply(_state, _skeleton);
-
-//  spSkeleton_updateWorldTransform(_skeleton, _state->data->mixAnimationName);
-
+	spSkeleton_updateWorldTransform(_skeleton);
 }
 
 void SkeletonAnimation::setAnimationStateData (spAnimationStateData* stateData) {
@@ -149,18 +143,6 @@ void SkeletonAnimation::setAnimationStateData (spAnimationStateData* stateData) 
 
 void SkeletonAnimation::setMix (const std::string& fromAnimation, const std::string& toAnimation, float duration) {
 	spAnimationStateData_setMixByName(_state->data, fromAnimation.c_str(), toAnimation.c_str(), duration);
-}
-    
-void SkeletonAnimation::setMixBone(const std::string& mixAnimationName, const std::vector<std::string>& activeBoneNames) {
-    char boneNames[16][64] = {};
-    
-    for (int i = 0; i < activeBoneNames.size(); ++i) {
-        size_t size = activeBoneNames[i].size();
-        strncpy(boneNames[i], activeBoneNames[i].c_str(), size);
-    }
-    
-    spSkeleton_setBoneWillMix(_skeleton);
-    spAnimationStateData_setMixBone(_state->data, mixAnimationName.c_str(), boneNames, (int)activeBoneNames.size());
 }
 
 spTrackEntry* SkeletonAnimation::setAnimation (int trackIndex, const std::string& name, bool loop) {
@@ -288,24 +270,6 @@ void SkeletonAnimation::setTrackEventListener (spTrackEntry* entry, const EventL
 
 spAnimationState* SkeletonAnimation::getState() const {
 	return _state;
-}
-    
-void SkeletonAnimation::setPaused() {
-    if (!_paused) {
-        _paused = true;
-    } else {
-        CCLOG("Animation Already Paused?");
-    }
-}
-bool SkeletonAnimation::isPaused() {
-    return _paused;
-}
-void SkeletonAnimation::setResumed(){
-    if (_paused) {
-        _paused = false;
-    } else {
-        CCLOG("Animation Already Resumed?");
-    }
 }
 
 }

@@ -73,12 +73,6 @@ void _FromEntry_dispose (_FromEntry* self) {
 spAnimationStateData* spAnimationStateData_create (spSkeletonData* skeletonData) {
 	spAnimationStateData* self = NEW(spAnimationStateData);
 	CONST_CAST(spSkeletonData*, self->skeletonData) = skeletonData;
-    self->mixActiveBoneCnts = 0;
-    memset(self->mixAnimationName, 0, MAX_MIXANIMATION_NAME_LENGTH);
-    int i;
-    for (i = 0; i < MAX_MIX_BONE; ++i) {
-        memset(self->mixActiveBoneNames[i], 0, MAX_MIXBONE_NAME_LENGTH);
-    }
 	return self;
 }
 
@@ -99,6 +93,7 @@ void spAnimationStateData_dispose (spAnimationStateData* self) {
 		_FromEntry_dispose(fromEntry);
 		fromEntry = nextFromEntry;
 	}
+
 	FREE(self);
 }
 
@@ -138,23 +133,6 @@ void spAnimationStateData_setMix (spAnimationStateData* self, spAnimation* from,
 	toEntry = _ToEntry_create(to, duration);
 	toEntry->next = fromEntry->toEntries;
 	fromEntry->toEntries = toEntry;
-}
-
-void spAnimationStateData_setMixBone(spAnimationStateData* self, const char* mixAnimationName,
-                                     char activeBoneNames[16][64], int activeBoneCnts) {
-    printf("spAnimationStateData_setMixBone mixName = %s, boneCnt = %d\n", mixAnimationName, activeBoneCnts);
-    if (mixAnimationName) {
-        strncpy(self->mixAnimationName, mixAnimationName, strlen(mixAnimationName));
-        int i;
-        for (i = 0; i < activeBoneCnts; ++i) {
-            strncpy(self->mixActiveBoneNames[i], activeBoneNames[i], strlen(activeBoneNames[i]));
-        }
-    } else {
-        strncpy(self->mixAnimationName, "", MAX_MIXANIMATION_NAME_LENGTH);
-    }
-    self->mixActiveBoneCnts = activeBoneCnts;
-    
-    
 }
 
 float spAnimationStateData_getMix (spAnimationStateData* self, spAnimation* from, spAnimation* to) {
