@@ -64,6 +64,7 @@ public:
     
     
     virtual bool setAttachment (const std::string& slotName, const std::string& attachmentName);
+    cocos2d::ValueMap getAttachmentLua (const std::string& slotName, const std::string& attachmentName);
 
 	void setStartListener (const StartListener& listener);
 	void setEndListener (const EndListener& listener);

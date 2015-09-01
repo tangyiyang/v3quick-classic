@@ -55,6 +55,14 @@
         
 --------------------------------
 -- 
+-- @function [parent=#SkeletonAnimation] getAttachmentLua 
+-- @param self
+-- @param #string slotName
+-- @param #string attachmentName
+-- @return map_table#map_table ret (return value: map_table)
+        
+--------------------------------
+-- 
 -- @function [parent=#SkeletonAnimation] setEndListener 
 -- @param self
 -- @param #function listener

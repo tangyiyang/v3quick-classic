@@ -137,23 +137,11 @@ void spAnimationState_apply (spAnimationState* self, spSkeleton* skeleton) {
 
 		if (!previous) {
 			if (current->mix == 1) {
-//				spAnimation_apply(current->animation, skeleton, current->lastTime, time,
-//					current->loop, internal->events, &eventsCount, self->data->mixActiveBoneNames, self->data->mixActiveBoneCnts);
-                
                 if (self->data->mixActiveBoneCnts > 0) {
-//                    if (strcmp(current->animation->name, self->data->mixAnimationName) == 0) {
-//                        printf("update mix track = %d\n", i);
-//
                         spAnimation_apply(current->animation, skeleton, current->lastTime, time, current->loop,
                                           internal->events, &eventsCount, self->data->mixActiveBoneNames, self->data->mixActiveBoneCnts, isMainAnimation);
 
                         spSkeleton_updateWorldTransform(skeleton, self->data->mixActiveBoneNames, self->data->mixActiveBoneCnts, isMainAnimation);
-//
-//                    } else {
-//                        spAnimation_apply(current->animation, skeleton, current->lastTime, time, current->loop,
-//                                          internal->events, &eventsCount, NULL, 0, i);
-//                        spSkeleton_updateWorldTransform(skeleton, NULL, 0, i);
-//                    }
                     
                 // 正常情况，没有动画融合的时候走这里
                 } else {

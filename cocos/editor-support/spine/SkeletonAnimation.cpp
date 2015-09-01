@@ -32,6 +32,7 @@
 #include <spine/spine-cocos2dx.h>
 #include <spine/extension.h>
 #include <algorithm>
+#include <spine/BoundingBoxAttachment.h>
 
 USING_NS_CC;
 using std::min;
@@ -232,6 +233,25 @@ void SkeletonAnimation::onTrackEntryEvent (int trackIndex, spEventType type, spE
 bool SkeletonAnimation::setAttachment (const std::string& slotName, const std::string& attachmentName)
 {
     return SkeletonRenderer::setAttachment(slotName, attachmentName);
+}
+    
+cocos2d::ValueMap SkeletonAnimation::getAttachmentLua (const std::string& slotName, const std::string& attachmentName)
+{
+    cocos2d::ValueMap ret;
+
+    spAttachment* attachMent = SkeletonRenderer::getAttachment(slotName, attachmentName);
+    if(attachMent && attachMent->type == SP_ATTACHMENT_BOUNDING_BOX) {
+        spBoundingBoxAttachment* box = SUB_CAST(spBoundingBoxAttachment, attachMent);
+        ret["name"] = box->super.name;
+        ret["verticesCount"] = box->verticesCount;
+        ValueVector vertices(box->vertices, box->vertices + box->verticesCount);
+        ret["vertices"] = vertices;
+        
+        return ret;
+    } else {
+        return ret;
+    }
+
 }
 
 void SkeletonAnimation::setStartListener (const StartListener& listener) {
