@@ -206,13 +206,12 @@ void spSkeleton_updateWorldTransform (const spSkeleton* self, const char activeB
         for (ii = 0, nn = internal->boneCacheCounts[i]; ii < nn; ++ii) {
             spBone* bone = internal->boneCache[i][ii];
             // mix模式
-            activeBoneCnt = 0;
+//            activeBoneCnt = 0;
             if (activeBoneCnt > 0) {
                 // 主动画更新非mix骨骼
-                int isMixBones = bone->nameEndWithMix;// || bone->isChildOfMixBone;
+                int isMixBones = bone->nameEndWithMix || bone->isChildOfMixBone;
                 if (isMainAnimation) {
                     if (!isMixBones ) {
-//                        spBone_updateWorldTransformOnlySelf(internal->boneCache[i][ii]);
                         spBone_updateWorldTransform(internal->boneCache[i][ii]);
 //                        printf("type 0, isMainAnimation, boneName = %d, %s\n", isMainAnimation, bone->data->name);
                     }
