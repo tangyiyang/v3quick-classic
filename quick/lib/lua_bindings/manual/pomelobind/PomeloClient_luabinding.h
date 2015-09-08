@@ -1,6 +1,7 @@
 
 #ifndef __POMELOCLIENT_LUABINDING_H_
 #define __POMELOCLIENT_LUABINDING_H_
+#include "PomeloClient.h"
 
 extern "C" {
 #include "lua.h"

@@ -418,7 +418,7 @@ int pc_client_connect(pc_client_t *client, struct sockaddr_in *addr) {
   uv_thread_create(&client->worker, pc__worker, client);
 
   // TODO should set a timeout?
-  pc__cond_wait(client, 0);
+  pc__cond_wait(client, 20);
 
   pc_connect_req_destroy(conn_req);
 

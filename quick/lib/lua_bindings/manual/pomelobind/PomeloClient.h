@@ -12,40 +12,70 @@
 #include <Windows.h>
 #endif
 
-
-#define PC_EVENT_CONNECTED "connected"
-#define PC_EVENT_CONNECTEFAIL "connectFailed"
-#define PC_EVENT_NOTIFYERR "notifyError"
-#define PC_EVENT_NOTIFYFAIL "notifyFailed"
-#define PC_EVENT_NOTIFYSUCCESS "notifySuccess"
-#define PC_EVENT_REQUESTERR "requestError"
-#define PC_EVENT_REQUESTFAIL "requestFailed"
+class Msg {
+public:
+    enum MessageType {
+        MSG_REQUEST = 0,
+        MSG_NOTIFY = 1,
+        MSG_EVENT = 2,
+    };
+public:
+    Msg(int t, int r, const char* e, const char* m) {
+        type = t;
+        reqId = r;
+        event = e;
+        msg = m;
+    }
+    
+    virtual ~Msg() {
+    
+    }
+    
+    static Msg* create(int type, const char* event) { return new Msg(type, -1, event, ""); }
+    static Msg* create(int type, int reqId, const char* event, const char* msg) { return new Msg(type, reqId, event, msg); }
+        
+public:
+    int type;
+    int reqId;
+    std::string event;
+    std::string msg;
+};
+ 
 
 class PomeloClient :public cocos2d::Ref{
 public:
     static PomeloClient *getInstance();
     static void destroyInstance();
     
-    int connect(const char *ip, int port);
-    void disconnect();
-	int addListener(const char* event);
-	void removeListener(const char* event);
-	void notify(const char *route, const char *str);
-	void request(const char *route, const char *str);
-    void registerScriptHandler(cocos2d::LUA_FUNCTION funcID);
-	void unregisterScriptHandler(void);
-
+public:
     PomeloClient();
     virtual ~PomeloClient();
+     
+    int connect(const char *ip, int port);
+    void disconnect();
     
+	void request(const char *route, const char *str, cocos2d::LUA_FUNCTION handler);
     
+    int  addListener(const char* event, cocos2d::LUA_FUNCTION handler);
+    
+    void removeListener(const char* event);
+    
+    void notify(const char *route, const char *str, cocos2d::LUA_FUNCTION handler = 0);
     
 public:
-    void pushMsg(std::string event, std::string msg);
+    void pushMsg(Msg* msg);
     
 private:
-    cocos2d::LUA_FUNCTION scriptHandler;
-    int task_count;
+    void dispatchCallbacks(float delta);
+    void dispatchRequest();
+    void callScriptHandler(Msg* msg);
+        
+private:
+    std::map<int, cocos2d::LUA_FUNCTION> requestCallbacks;          // "int" means reqId
+    std::map<std::string, cocos2d::LUA_FUNCTION> notifyCallbacks;   // "std::string" means route
+    std::map<std::string, cocos2d::LUA_FUNCTION> eventCallbacks;    //  "std::string" means route
+
+    volatile int task_count;
     pc_client_t *client;
 #ifdef _WINDOWS_
 	void* reponse_queue_mutex;
@@ -54,14 +84,7 @@ private:
     pthread_mutex_t reponse_queue_mutex;
     pthread_mutex_t task_count_mutex;
 #endif
-    std::queue< std::map<std::string, std::string> > msgQueue;
-    
-    void incTaskCount();
-    void decTaskCount();
-    void dispatchCallbacks(float delta);
-    void dispatchRequest();
-    void callScriptHandler(const char* event, const char* msg);
-
+    std::queue<Msg*> msgQueue;
 };
 
 #endif /* defined(__PomeloClient_H__) */

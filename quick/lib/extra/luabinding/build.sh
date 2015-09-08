@@ -13,5 +13,5 @@ echo ""
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 echo ""
 #$MAKE_LUABINDING -pfx cc -d "$OUTPUT_DIR" HelperFunc_luabinding.tolua
-$MAKE_LUABINDING -pfx cc -d "$QUICK_V3_ROOT"/quick/player/src/pomelobind  PomeloClient_luabinding.tolua
+$MAKE_LUABINDING -pfx cc -d "$QUICK_V3_ROOT"/quick/lib/lua_bindings/manual  PomeloClient_luabinding.tolua
 # mv PomeloClient_luabinding.h PomeloClient_luabinding.cpp "$QUICK_V3_ROOT"/quick/player/src/pomelobind 

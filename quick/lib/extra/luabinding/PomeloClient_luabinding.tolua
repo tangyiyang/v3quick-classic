@@ -1,18 +1,19 @@
-
-
 class PomeloClient :public cocos2d::Ref{
 
     static PomeloClient *getInstance();
     static void destroyInstance();
     
     int connect(const char *ip, int port);
+
     void disconnect();
-	int addListener(const char* event);
-	void removeListener(const char* event);
-	void notify(const char *route, const char *str);
-	void request(const char *route, const char *str);
-    void registerScriptHandler(cocos2d::LUA_FUNCTION funcID);
-	void unregisterScriptHandler(void);
+    
+	void request(const char *route, const char *str, cocos2d::LUA_FUNCTION handler);
+    
+    int  addListener(const char* event, cocos2d::LUA_FUNCTION handler);
+    
+    void removeListener(const char* event);
+    
+    void notify(const char *route, const char *str, cocos2d::LUA_FUNCTION handler = 0);
 
 };
 
