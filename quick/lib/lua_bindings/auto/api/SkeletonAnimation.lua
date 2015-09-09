@@ -6,10 +6,41 @@
 
 --------------------------------
 -- 
+-- @function [parent=#SkeletonAnimation] setStartListener 
+-- @param self
+-- @param #function listener
+-- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
+        
+--------------------------------
+-- 
+-- @function [parent=#SkeletonAnimation] setTrackEventListener 
+-- @param self
+-- @param #spTrackEntry entry
+-- @param #function listener
+-- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
+        
+--------------------------------
+-- 
+-- @function [parent=#SkeletonAnimation] getState 
+-- @param self
+-- @return spAnimationState#spAnimationState ret (return value: spAnimationState)
+        
+--------------------------------
+-- 
 -- @function [parent=#SkeletonAnimation] setTrackCompleteListener 
 -- @param self
 -- @param #spTrackEntry entry
 -- @param #function listener
+-- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
+        
+--------------------------------
+-- 
+-- @function [parent=#SkeletonAnimation] onTrackEntryEvent 
+-- @param self
+-- @param #int trackIndex
+-- @param #int type
+-- @param #spEvent event
+-- @param #int loopCount
 -- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
         
 --------------------------------
@@ -22,17 +53,23 @@
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] setMixBone 
+-- @function [parent=#SkeletonAnimation] setCompleteListener 
 -- @param self
--- @param #string mixAnimationName
--- @param #array_table activeBoneNames
+-- @param #function listener
 -- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] setTrackEventListener 
+-- @function [parent=#SkeletonAnimation] setTrackEndListener 
 -- @param self
 -- @param #spTrackEntry entry
+-- @param #function listener
+-- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
+        
+--------------------------------
+-- 
+-- @function [parent=#SkeletonAnimation] setEventListener 
+-- @param self
 -- @param #function listener
 -- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
         
@@ -55,17 +92,15 @@
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] getAttachmentLua 
--- @param self
--- @param #string slotName
--- @param #string attachmentName
--- @return map_table#map_table ret (return value: map_table)
-        
---------------------------------
--- 
 -- @function [parent=#SkeletonAnimation] setEndListener 
 -- @param self
 -- @param #function listener
+-- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
+        
+--------------------------------
+-- 
+-- @function [parent=#SkeletonAnimation] clearTracks 
+-- @param self
 -- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
         
 --------------------------------
@@ -80,77 +115,16 @@
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] getState 
--- @param self
--- @return spAnimationState#spAnimationState ret (return value: spAnimationState)
-        
---------------------------------
--- 
--- @function [parent=#SkeletonAnimation] setResumed 
--- @param self
--- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
-        
---------------------------------
--- 
--- @function [parent=#SkeletonAnimation] setEventListener 
--- @param self
--- @param #function listener
--- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
-        
---------------------------------
--- 
--- @function [parent=#SkeletonAnimation] setCompleteListener 
--- @param self
--- @param #function listener
--- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
-        
---------------------------------
--- 
 -- @function [parent=#SkeletonAnimation] clearTrack 
 -- @param self
 -- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] onTrackEntryEvent 
+-- @function [parent=#SkeletonAnimation] getAttachmentLua 
 -- @param self
--- @param #int trackIndex
--- @param #int type
--- @param #spEvent event
--- @param #int loopCount
--- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
-        
---------------------------------
--- 
--- @function [parent=#SkeletonAnimation] clearTracks 
--- @param self
--- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
-        
---------------------------------
--- 
--- @function [parent=#SkeletonAnimation] setTrackEndListener 
--- @param self
--- @param #spTrackEntry entry
--- @param #function listener
--- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
-        
---------------------------------
--- 
--- @function [parent=#SkeletonAnimation] setStartListener 
--- @param self
--- @param #function listener
--- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
-        
---------------------------------
--- 
--- @function [parent=#SkeletonAnimation] isPaused 
--- @param self
--- @return bool#bool ret (return value: bool)
-        
---------------------------------
--- 
--- @function [parent=#SkeletonAnimation] setPaused 
--- @param self
--- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
+-- @param #string slotName
+-- @param #string attachmentName
+-- @return map_table#map_table ret (return value: map_table)
         
 return nil

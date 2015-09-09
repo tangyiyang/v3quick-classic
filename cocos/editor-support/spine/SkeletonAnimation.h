@@ -80,10 +80,6 @@ public:
 
 	spAnimationState* getState() const;
     
-    void setPaused();
-    bool isPaused();
-    void setResumed();
-
 protected:
 	SkeletonAnimation ();
 	SkeletonAnimation (spSkeletonData* skeletonData);
