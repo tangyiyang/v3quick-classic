@@ -16,3 +16,4 @@ quick/lib/proj.win32/Debug/
 *.xcuserstate
 *.xcscmblueprint
 *.xcdebuuger
+*framework_precompiled
