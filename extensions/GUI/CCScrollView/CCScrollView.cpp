@@ -648,8 +648,9 @@ bool ScrollView::onTouchBegan(Touch* touch, Event* event)
     Rect frame = getViewRect();
 
     //dispatcher does not know about clipping. reject touches outside visible bounds.
-    if (_touches.size() > 2 ||
-        _touchMoved          ||
+
+    if (_touches.size() >= 2 ||
+//        _touchMoved          ||
         !frame.containsPoint(touch->getLocation()))
     {
         return false;
@@ -676,7 +677,7 @@ bool ScrollView::onTouchBegan(Touch* touch, Event* event)
         _touchLength = _container->convertTouchToNodeSpace(_touches[0]).getDistance(
                        _container->convertTouchToNodeSpace(_touches[1]));
         
-        _dragging  = false;
+        _dragging  = true;
     } 
     return true;
 }
@@ -690,17 +691,23 @@ void ScrollView::onTouchMoved(Touch* touch, Event* event)
 
     if (std::find(_touches.begin(), _touches.end(), touch) != _touches.end())
     {
-        if (_touches.size() == 1 && _dragging)
+        if (_dragging)
         { // scrolling
             Vec2 moveDistance, newPoint;
             Rect  frame;
             float newX, newY;
             
             frame = getViewRect();
-
-            newPoint     = this->convertTouchToNodeSpace(_touches[0]);
-            moveDistance = newPoint - _touchPoint;
             
+            if(_touches.size() == 2) {
+                newPoint = (this->convertTouchToNodeSpace(_touches[0]).getMidpoint(
+                                                                                      this->convertTouchToNodeSpace(_touches[1])));
+            } else {
+                CCASSERT(_touches.size() == 1, "");
+                newPoint     = this->convertTouchToNodeSpace(_touches[0]);
+            }
+            moveDistance = newPoint - _touchPoint;
+
             float dis = 0.0f;
             if (_direction == Direction::VERTICAL)
             {
@@ -768,7 +775,8 @@ void ScrollView::onTouchMoved(Touch* touch, Event* event)
                 this->setContentOffset(Vec2(newX, newY));
             }
         }
-        else if (_touches.size() == 2 && !_dragging)
+        
+        if (_touches.size() == 2)
         {
             const float len = _container->convertTouchToNodeSpace(_touches[0]).getDistance(
                                             _container->convertTouchToNodeSpace(_touches[1]));
@@ -793,17 +801,21 @@ void ScrollView::onTouchEnded(Touch* touch, Event* event)
             this->schedule(schedule_selector(ScrollView::deaccelerateScrolling));
         }
         _touches.erase(touchIter);
-    } 
+        
+        if (_touches.size() == 1)
+        {
+            _touchPoint = this->convertTouchToNodeSpace(_touches[0]);
+        }
+    }
 
     if (_touches.size() == 0)
     {
         _dragging = false;    
         _touchMoved = false;
-    }
-    
-    if (_willScaleBack) {
-        _willScaleBack = false;
-        this->setZoomScaleInDuration(_maxScale, 0.4);
+        if (_willScaleBack) {
+            _willScaleBack = false;
+            this->setZoomScaleInDuration(_maxScale, 0.4);
+        }
     }
 }
 
