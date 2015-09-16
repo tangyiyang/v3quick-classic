@@ -9,6 +9,7 @@ LOCAL_SRC_FILES := \
           $(LOCAL_PATH)/lua_cocos2dx_auto.cpp \
           $(LOCAL_PATH)/lua_cocos2dx_extension_auto.cpp \
           $(LOCAL_PATH)/lua_cocos2dx_spine_auto.cpp \
+          $(LOCAL_PATH)/lua_cocos2dx_ui_auto.cpp \
 
 ifeq ($(CC_USE_CCS_ARMATURE),1)
 LOCAL_SRC_FILES += \

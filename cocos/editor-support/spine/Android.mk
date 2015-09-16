@@ -36,7 +36,8 @@ Slot.c \
 SlotData.c \
 spine-cocos2dx.cpp
 
-LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/..
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/.. \
+						   $(LOCAL_PATH)/ \
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/.. \
                     $(LOCAL_PATH)/../.. \

@@ -37,7 +37,7 @@ LOCAL_SRC_FILES := \
                 $(LOCAL_PATH)/CCScriptSupport.cpp \
                 $(LOCAL_PATH)/CCTouch.cpp \
                 $(LOCAL_PATH)/CCUserDefault.cpp \
-                $(LOCAL_PATH)/CCUserDefaultAndroid.cpp \
+                $(LOCAL_PATH)/CCUserDefault-android.cpp \
                 $(LOCAL_PATH)/CCValue.cpp \
                 $(LOCAL_PATH)/ZipUtils.cpp \
                 $(LOCAL_PATH)/atitc.cpp \
@@ -75,6 +75,7 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH) \
                     $(LOCAL_PATH)/../../external/nslog
 
 LOCAL_WHOLE_STATIC_LIBRARIES := cocos_freetype2_static
+LOCAL_WHOLE_STATIC_LIBRARIES += event_static
 
 # define the macro to compile through support/zip_support/ioapi.c
 LOCAL_CFLAGS   :=  -DUSE_FILE32API
@@ -85,3 +86,4 @@ LOCAL_EXPORT_CPPFLAGS := -Wno-deprecated-declarations -Wno-extern-c-compat
 include $(BUILD_STATIC_LIBRARY)
 
 $(call import-module,freetype2/prebuilt/android)
+$(call import-module,event)

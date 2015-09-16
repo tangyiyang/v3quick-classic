@@ -25,7 +25,14 @@ LOCAL_SRC_FILES := \
                         $(LOCAL_PATH)/socket/udp.c \
                         $(LOCAL_PATH)/socket/unix.c \
                         $(LOCAL_PATH)/socket/usocket.c \
-                        $(LOCAL_PATH)/lua_extensions.c
+                        $(LOCAL_PATH)/lua_extensions.c \
+                        $(LOCAL_PATH)/talkingdata/lua_cocos2dx_TDGAAccount_auto.cpp \
+                        $(LOCAL_PATH)/talkingdata/lua_cocos2dx_TDGAItem_auto.cpp \
+                        $(LOCAL_PATH)/talkingdata/lua_cocos2dx_TDGAMission_auto.cpp \
+                        $(LOCAL_PATH)/talkingdata/lua_cocos2dx_TDGAVirtualCurrency_auto.cpp \
+                        $(LOCAL_PATH)/talkingdata/lua_cocos2dx_TalkingDataGA_auto.cpp \
+                        $(LOCAL_PATH)/sproto/lsproto.c \
+                        $(LOCAL_PATH)/sproto/sproto.c \
 
 ifeq ($(CC_USE_SQLITE),1)
 LOCAL_SRC_FILES += \
@@ -50,7 +57,9 @@ LOCAL_EXPORT_C_INCLUDES := $(QUICK_V3_LIB)/lua_bindings/luajit/include \
                            $(LOCAL_PATH)/filesystem \
                            $(LOCAL_PATH)/lpack \
                            $(LOCAL_PATH)/socket \
-                           $(LOCAL_PATH)/lsqlite3
+                           $(LOCAL_PATH)/lsqlite3 \
+                           $(LOCAL_PATH)/sproto \
+                           $(LOCAL_PATH)/talkingdata \
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/ \
                     $(QUICK_V3_LIB)/lua_bindings/luajit/include \
@@ -63,12 +72,16 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/ \
                     $(LOCAL_PATH)/lpack \
                     $(LOCAL_PATH)/socket \
                     $(LOCAL_PATH)/lsqlite3 \
+                    $(LOCAL_PATH)/talkingdata \
+                    $(LOCAL_PATH)/sproto \
                     $(COCOS2DX_CORE) \
                     $(COCOS2DX_CORE)/platform \
                     $(COCOS2DX_CORE)/platform/android \
                     $(COCOS2DX_CORE)/kazmath/include \
                     $(COCOS2DX_ROOT)/extensions \
-                    $(COCOS2DX_ROOT)/external
+                    $(COCOS2DX_ROOT)/external \
+                    $(COCOS2DX_ROOT)/external/TalkingDataGameAnalytics/include \
+                    $(QUICK_V3_LIB) \
 
 LOCAL_WHOLE_STATIC_LIBRARIES := luajit_static
 
@@ -77,3 +90,4 @@ LOCAL_CFLAGS += -Wno-psabi -DCC_LUA_ENGINE_ENABLED=1 $(ANDROID_COCOS2D_BUILD_FLA
 include $(BUILD_STATIC_LIBRARY)
 
 $(call import-module,lua_bindings/luajit)
+$(call import-module,TalkingDataGameAnalytics/android)

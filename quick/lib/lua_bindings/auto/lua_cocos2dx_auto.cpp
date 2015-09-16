@@ -51574,6 +51574,416 @@ int lua_register_cocos2dx_Menu(lua_State* tolua_S)
     return 1;
 }
 
+int lua_cocos2dx_ClippingNode_hasContent(lua_State* tolua_S)
+{
+    int argc = 0;
+    cocos2d::ClippingNode* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"cc.ClippingNode",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (cocos2d::ClippingNode*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_ClippingNode_hasContent'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_ClippingNode_hasContent'", nullptr);
+            return 0;
+        }
+        bool ret = cobj->hasContent();
+        tolua_pushboolean(tolua_S,(bool)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "cc.ClippingNode:hasContent",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_ClippingNode_hasContent'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_ClippingNode_setInverted(lua_State* tolua_S)
+{
+    int argc = 0;
+    cocos2d::ClippingNode* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"cc.ClippingNode",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (cocos2d::ClippingNode*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_ClippingNode_setInverted'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        bool arg0;
+
+        ok &= luaval_to_boolean(tolua_S, 2,&arg0, "cc.ClippingNode:setInverted");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_ClippingNode_setInverted'", nullptr);
+            return 0;
+        }
+        cobj->setInverted(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "cc.ClippingNode:setInverted",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_ClippingNode_setInverted'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_ClippingNode_setStencil(lua_State* tolua_S)
+{
+    int argc = 0;
+    cocos2d::ClippingNode* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"cc.ClippingNode",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (cocos2d::ClippingNode*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_ClippingNode_setStencil'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        cocos2d::Node* arg0;
+
+        ok &= luaval_to_object<cocos2d::Node>(tolua_S, 2, "cc.Node",&arg0);
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_ClippingNode_setStencil'", nullptr);
+            return 0;
+        }
+        cobj->setStencil(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "cc.ClippingNode:setStencil",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_ClippingNode_setStencil'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_ClippingNode_getAlphaThreshold(lua_State* tolua_S)
+{
+    int argc = 0;
+    cocos2d::ClippingNode* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"cc.ClippingNode",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (cocos2d::ClippingNode*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_ClippingNode_getAlphaThreshold'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_ClippingNode_getAlphaThreshold'", nullptr);
+            return 0;
+        }
+        double ret = cobj->getAlphaThreshold();
+        tolua_pushnumber(tolua_S,(lua_Number)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "cc.ClippingNode:getAlphaThreshold",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_ClippingNode_getAlphaThreshold'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_ClippingNode_getStencil(lua_State* tolua_S)
+{
+    int argc = 0;
+    cocos2d::ClippingNode* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"cc.ClippingNode",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (cocos2d::ClippingNode*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_ClippingNode_getStencil'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_ClippingNode_getStencil'", nullptr);
+            return 0;
+        }
+        cocos2d::Node* ret = cobj->getStencil();
+        object_to_luaval<cocos2d::Node>(tolua_S, "cc.Node",(cocos2d::Node*)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "cc.ClippingNode:getStencil",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_ClippingNode_getStencil'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_ClippingNode_setAlphaThreshold(lua_State* tolua_S)
+{
+    int argc = 0;
+    cocos2d::ClippingNode* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"cc.ClippingNode",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (cocos2d::ClippingNode*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_ClippingNode_setAlphaThreshold'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        double arg0;
+
+        ok &= luaval_to_number(tolua_S, 2,&arg0, "cc.ClippingNode:setAlphaThreshold");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_ClippingNode_setAlphaThreshold'", nullptr);
+            return 0;
+        }
+        cobj->setAlphaThreshold(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "cc.ClippingNode:setAlphaThreshold",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_ClippingNode_setAlphaThreshold'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_ClippingNode_isInverted(lua_State* tolua_S)
+{
+    int argc = 0;
+    cocos2d::ClippingNode* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"cc.ClippingNode",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (cocos2d::ClippingNode*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_ClippingNode_isInverted'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_ClippingNode_isInverted'", nullptr);
+            return 0;
+        }
+        bool ret = cobj->isInverted();
+        tolua_pushboolean(tolua_S,(bool)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "cc.ClippingNode:isInverted",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_ClippingNode_isInverted'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_ClippingNode_create(lua_State* tolua_S)
+{
+    int argc = 0;
+    bool ok  = true;
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertable(tolua_S,1,"cc.ClippingNode",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+
+    do 
+    {
+        if (argc == 1)
+        {
+            cocos2d::Node* arg0;
+            ok &= luaval_to_object<cocos2d::Node>(tolua_S, 2, "cc.Node",&arg0);
+            if (!ok) { break; }
+            cocos2d::ClippingNode* ret = cocos2d::ClippingNode::create(arg0);
+            object_to_luaval<cocos2d::ClippingNode>(tolua_S, "cc.ClippingNode",(cocos2d::ClippingNode*)ret);
+            return 1;
+        }
+    } while (0);
+    ok  = true;
+    do 
+    {
+        if (argc == 0)
+        {
+            cocos2d::ClippingNode* ret = cocos2d::ClippingNode::create();
+            object_to_luaval<cocos2d::ClippingNode>(tolua_S, "cc.ClippingNode",(cocos2d::ClippingNode*)ret);
+            return 1;
+        }
+    } while (0);
+    ok  = true;
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d", "cc.ClippingNode:create",argc, 0);
+    return 0;
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_ClippingNode_create'.",&tolua_err);
+#endif
+    return 0;
+}
+static int lua_cocos2dx_ClippingNode_finalize(lua_State* tolua_S)
+{
+    printf("luabindings: finalizing LUA object (ClippingNode)");
+    return 0;
+}
+
+int lua_register_cocos2dx_ClippingNode(lua_State* tolua_S)
+{
+    tolua_usertype(tolua_S,"cc.ClippingNode");
+    tolua_cclass(tolua_S,"ClippingNode","cc.ClippingNode","cc.Node",nullptr);
+
+    tolua_beginmodule(tolua_S,"ClippingNode");
+        tolua_function(tolua_S,"hasContent",lua_cocos2dx_ClippingNode_hasContent);
+        tolua_function(tolua_S,"setInverted",lua_cocos2dx_ClippingNode_setInverted);
+        tolua_function(tolua_S,"setStencil",lua_cocos2dx_ClippingNode_setStencil);
+        tolua_function(tolua_S,"getAlphaThreshold",lua_cocos2dx_ClippingNode_getAlphaThreshold);
+        tolua_function(tolua_S,"getStencil",lua_cocos2dx_ClippingNode_getStencil);
+        tolua_function(tolua_S,"setAlphaThreshold",lua_cocos2dx_ClippingNode_setAlphaThreshold);
+        tolua_function(tolua_S,"isInverted",lua_cocos2dx_ClippingNode_isInverted);
+        tolua_function(tolua_S,"create", lua_cocos2dx_ClippingNode_create);
+    tolua_endmodule(tolua_S);
+    std::string typeName = typeid(cocos2d::ClippingNode).name();
+    g_luaType[typeName] = "cc.ClippingNode";
+    g_typeCast["ClippingNode"] = "cc.ClippingNode";
+    return 1;
+}
+
 int lua_cocos2dx_ClippingRectangleNode_isClippingEnabled(lua_State* tolua_S)
 {
     int argc = 0;
@@ -79696,6 +80106,7 @@ TOLUA_API int register_all_cocos2dx(lua_State* tolua_S)
 	lua_register_cocos2dx_TintBy(tolua_S);
 	lua_register_cocos2dx_TransitionShrinkGrow(tolua_S);
 	lua_register_cocos2dx_LabelTTF(tolua_S);
+	lua_register_cocos2dx_ClippingNode(tolua_S);
 	lua_register_cocos2dx_ParticleFlower(tolua_S);
 	lua_register_cocos2dx_EaseCircleActionIn(tolua_S);
 	lua_register_cocos2dx_ParticleSmoke(tolua_S);

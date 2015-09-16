@@ -24,7 +24,7 @@ LOCAL_SRC_FILES := \
     $(LOCAL_PATH)/CCAnimationCache.cpp \
     $(LOCAL_PATH)/CCAtlasNode.cpp \
     $(LOCAL_PATH)/CCClippingNode.cpp \
-    $(LOCAL_PATH)/CCClippingRegionNode.cpp \
+    $(LOCAL_PATH)/CCClippingRectangleNode.cpp \
     $(LOCAL_PATH)/CCComponent.cpp \
     $(LOCAL_PATH)/CCComponentContainer.cpp \
     $(LOCAL_PATH)/CCDrawNode.cpp \

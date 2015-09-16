@@ -8,11 +8,11 @@ LOCAL_MODULE_FILENAME := libcocos2d
 
 LOCAL_SRC_FILES := \
 $(LOCAL_PATH)/cocos2d.cpp \
-$(LOCAL_PATH)/platform/CCGLViewProtocol.cpp \
 $(LOCAL_PATH)/platform/CCFileUtils.cpp \
+$(LOCAL_PATH)/platform/CCGLView.cpp \
+$(LOCAL_PATH)/platform/CCImage.cpp \
 $(LOCAL_PATH)/platform/CCSAXParser.cpp \
 $(LOCAL_PATH)/platform/CCThread.cpp \
-$(LOCAL_PATH)/platform/CCImage.cpp \
 $(LOCAL_PATH)/math/CCAffineTransform.cpp \
 $(LOCAL_PATH)/math/CCGeometry.cpp \
 $(LOCAL_PATH)/math/CCVertex.cpp \
@@ -75,6 +75,8 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH) \
                     $(LOCAL_PATH)/../external/freetype2/include/android/freetype2 \
                     $(LOCAL_PATH)/../external/tiff/include/android \
                     $(LOCAL_PATH)/../external/webp/include/android \
+                    $(LOCAL_PATH)/../external/png/include/android \
+                    $(LOCAL_PATH)/../external/jpeg/include/android \
                     $(LOCAL_PATH)/base \
                     $(QUICK_V3_LIB) \
                     $(QUICK_V3_LIB)/extra \
@@ -83,6 +85,12 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH) \
 LOCAL_WHOLE_STATIC_LIBRARIES := cocos2dx_2d_static
 LOCAL_WHOLE_STATIC_LIBRARIES += cocos2dx_3d_static
 LOCAL_WHOLE_STATIC_LIBRARIES += cocos2dx_base_static
+LOCAL_WHOLE_STATIC_LIBRARIES += cpufeatures
+LOCAL_WHOLE_STATIC_LIBRARIES += cocos_png_static
+LOCAL_WHOLE_STATIC_LIBRARIES += cocos_jpeg_static
+LOCAL_WHOLE_STATIC_LIBRARIES += cocos2dx-talkingdata
+
+
 # ifeq ($(CC_USE_PHYSICS),1)
 LOCAL_WHOLE_STATIC_LIBRARIES += cocos2dx_physics_static
 # endif
@@ -96,6 +104,7 @@ LOCAL_EXPORT_CPPFLAGS := -Wno-deprecated-declarations -Wno-extern-c-compat
 
 include $(BUILD_STATIC_LIBRARY)
 
+$(call import-module,android/cpufeatures)
 $(call import-module,2d)
 $(call import-module,3d)
 $(call import-module,base)

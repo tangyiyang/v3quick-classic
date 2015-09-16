@@ -1017,6 +1017,11 @@
 
 
 --------------------------------------------------------
+-- the cc ClippingNode
+-- @field [parent=#cc] ClippingNode#ClippingNode ClippingNode preloaded module
+
+
+--------------------------------------------------------
 -- the cc ClippingRectangleNode
 -- @field [parent=#cc] ClippingRectangleNode#ClippingRectangleNode ClippingRectangleNode preloaded module
 

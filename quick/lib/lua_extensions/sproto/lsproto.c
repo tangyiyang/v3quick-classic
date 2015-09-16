@@ -1,4 +1,7 @@
-#include <string.h>
+#ifndef lsproto_c__ 
+#define lsproto_c__
+
+#include <string.h> 
 #include <stdlib.h>
 #include "msvcint.h"
 
@@ -660,3 +663,7 @@ luaopen_sproto_core(lua_State *L) {
 	pushfunction_withbuffer(L, "unpack", lunpack);
 	return 1;
 }
+
+//end of lsproto_c__
+#endif 
+

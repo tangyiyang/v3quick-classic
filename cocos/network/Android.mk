@@ -13,11 +13,19 @@ ifeq ($(CC_USE_CURL),1)
 LOCAL_SRC_FILES += HttpClient.cpp
 endif
 
+$(info (QUICK_V3_LIB) ==== )
+$(info $(QUICK_V3_LIB))
 
 LOCAL_EXPORT_C_INCLUDES :=
 
-LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../external/curl/include/android \
-                    $(LOCAL_PATH)/../../external/websockets/include/android
+LOCAL_C_INCLUDES := $(LOCAL_PATH) \
+                    $(LOCAL_PATH)/.. \
+                    $(LOCAL_PATH)/../platform/android \
+ 					$(LOCAL_PATH)/../../external/curl/include/android \
+                    $(LOCAL_PATH)/../../external/websockets/include/android \
+                    $(QUICK_V3_LIB)
+
+
 
 LOCAL_STATIC_LIBRARIES := cocos2dx_internal_static
 
