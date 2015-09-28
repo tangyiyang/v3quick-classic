@@ -97,6 +97,8 @@ protected:
 	CompleteListener _completeListener;
 	EventListener _eventListener;
     bool _paused;
+    
+    std::string _filePath;
 
 private:
 	typedef SkeletonRenderer super;

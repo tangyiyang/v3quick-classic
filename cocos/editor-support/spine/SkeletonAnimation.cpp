@@ -114,6 +114,7 @@ SkeletonAnimation::SkeletonAnimation (const std::string& skeletonDataFile, const
 		: SkeletonRenderer(skeletonDataFile, atlasFile, scale) {
 	initialize();
     spSkeleton_updateWorldTransform(_skeleton);
+    _filePath = skeletonDataFile;
 }
 
 SkeletonAnimation::~SkeletonAnimation () {
@@ -152,7 +153,7 @@ void SkeletonAnimation::setMix (const std::string& fromAnimation, const std::str
 spTrackEntry* SkeletonAnimation::setAnimation (int trackIndex, const std::string& name, bool loop) {
 	spAnimation* animation = spSkeletonData_findAnimation(_skeleton->data, name.c_str());
 	if (!animation) {
-		log("Spine: Animation not found: %s", name.c_str());
+		log("Spine: %s Animation not found: %s", _filePath.c_str(), name.c_str());
 		return 0;
 	}
 	return spAnimationState_setAnimation(_state, trackIndex, animation, loop);
