@@ -37,6 +37,9 @@ LOCAL_WHOLE_STATIC_LIBRARIES += cocos_extension_static
 LOCAL_WHOLE_STATIC_LIBRARIES += cocostudio_armature_static
 LOCAL_WHOLE_STATIC_LIBRARIES += extra_filters_static
 LOCAL_WHOLE_STATIC_LIBRARIES += spine_static
+LOCAL_WHOLE_STATIC_LIBRARIES += cocos2dx_ui_static
+
+
 
 
 include $(BUILD_STATIC_LIBRARY)

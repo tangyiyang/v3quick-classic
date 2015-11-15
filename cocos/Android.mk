@@ -46,7 +46,8 @@ $(LOCAL_PATH)/../external/unzip/ioapi.cpp \
 $(LOCAL_PATH)/../external/unzip/unzip.cpp \
 $(LOCAL_PATH)/../external/unzip/ioapi_mem.cpp \
 $(LOCAL_PATH)/../external/edtaa3func/edtaa3func.cpp \
-$(LOCAL_PATH)/../external/xxhash/xxhash.c
+$(LOCAL_PATH)/../external/xxhash/xxhash.c \
+$(LOCAL_PATH)/deprecated/CCString.cpp
 
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH) \
                     $(LOCAL_PATH)/. \
@@ -59,7 +60,8 @@ LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH) \
                     $(LOCAL_PATH)/../external/chipmunk/include/chipmunk \
                     $(LOCAL_PATH)/../external/xxhash \
                     $(QUICK_V3_LIB) \
-                    $(LOCAL_PATH)/../external/nslog
+                    $(LOCAL_PATH)/../external/nslog \
+                    $(LOCAL_PATH)/deprecated
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH) \
                     $(LOCAL_PATH)/. \
@@ -80,7 +82,8 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH) \
                     $(LOCAL_PATH)/base \
                     $(QUICK_V3_LIB) \
                     $(QUICK_V3_LIB)/extra \
-                    $(LOCAL_PATH)/../external/nslog
+                    $(LOCAL_PATH)/../external/nslog \
+                    $(LOCAL_PATH)/deprecated
 
 LOCAL_WHOLE_STATIC_LIBRARIES := cocos2dx_2d_static
 LOCAL_WHOLE_STATIC_LIBRARIES += cocos2dx_3d_static
@@ -108,6 +111,7 @@ $(call import-module,android/cpufeatures)
 $(call import-module,2d)
 $(call import-module,3d)
 $(call import-module,base)
+$(call import-module,ui)
 # ifeq ($(CC_USE_PHYSICS),1)
 $(call import-module,physics)
 # endif

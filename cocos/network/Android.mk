@@ -33,6 +33,7 @@ ifeq ($(CC_USE_CURL),1)
 LOCAL_STATIC_LIBRARIES += cocos_curl_static
 endif
 
-LOCAL_STATIC_LIBRARIES += libwebsockets_static
+LOCAL_STATIC_LIBRARIES += websockets_static
 
 include $(BUILD_STATIC_LIBRARY)
+

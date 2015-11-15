@@ -10,8 +10,8 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
     ../../native/AppDelegate.cpp \
     $(QUICK_V3_LIB)/ProjectConfig/ProjectConfig.cpp \
     $(QUICK_V3_LIB)/ProjectConfig/SimulatorConfig.cpp \
-    $(QUICK_V3_LIB)/../player/src/pomelobind/PomeloClient.cpp \
-    $(QUICK_V3_LIB)/../player/src/pomelobind/PomeloClient_luabinding.cpp \
+    $(QUICK_V3_LIB)/lib/lua_bindings/manual/pomelobind/pomelobind/PomeloClient.cpp \
+    $(QUICK_V3_LIB)/lib/lua_bindings/manual/pomelobind/PomeloClient_luabinding.cpp \
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../native \
                     $(QUICK_V3_LIB)/../../external/libpomelo/include \
