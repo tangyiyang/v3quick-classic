@@ -61,6 +61,9 @@ LOCAL_SRC_FILES := \
     $(LOCAL_PATH)/CCTweenFunction.cpp \
     $(LOCAL_PATH)/CCMenu.cpp \
     $(LOCAL_PATH)/CCMenuItem.cpp \
+    $(LOCAL_PATH)/CCCamera.cpp \
+    $(LOCAL_PATH)/CCProtectedNode.cpp \
+
 
 # ifeq ($(CC_USE_TGA),1)
     LOCAL_SRC_FILES += $(LOCAL_PATH)/CCTileMapAtlas.cpp

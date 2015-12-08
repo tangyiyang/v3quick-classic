@@ -1,13 +1,11 @@
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := cocos3d_static
+LOCAL_MODULE := cocos2dx_3d_static
 
 LOCAL_MODULE_FILENAME := libcocos3d
 
-LOCAL_SRC_FILES :=
-ifeq ($(CC_USE_3D),1)
-LOCAL_SRC_FILES += \
+LOCAL_SRC_FILES := \
 CCRay.cpp \
 CCAABB.cpp \
 CCOBB.cpp \
@@ -24,11 +22,12 @@ CCSprite3DMaterial.cpp \
 CCObjLoader.cpp \
 CCSkeleton3D.cpp \
 CCSprite3D.cpp
-endif
 
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/..
 
-LOCAL_C_INCLUDES := $(LOCAL_PATH)/..
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/.. \
+					$(COCOS2DX_ROOT)/external \
+					$(QUICK_V3_LIB) \
 
 LOCAL_STATIC_LIBRARIES := cocos2dx_internal_static
 

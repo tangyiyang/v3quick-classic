@@ -13,9 +13,6 @@ ifeq ($(CC_USE_CURL),1)
 LOCAL_SRC_FILES += HttpClient.cpp
 endif
 
-$(info (QUICK_V3_LIB) ==== )
-$(info $(QUICK_V3_LIB))
-
 LOCAL_EXPORT_C_INCLUDES :=
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH) \
@@ -32,8 +29,8 @@ LOCAL_STATIC_LIBRARIES := cocos2dx_internal_static
 ifeq ($(CC_USE_CURL),1)
 LOCAL_STATIC_LIBRARIES += cocos_curl_static
 endif
-
 LOCAL_STATIC_LIBRARIES += websockets_static
 
 include $(BUILD_STATIC_LIBRARY)
 
+$(call import-module,websockets/prebuilt/android)
