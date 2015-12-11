@@ -54,8 +54,6 @@ extern "C" {
 #include "LuaScriptHandlerMgr.h"
 #include "lua_cocos2dx_auto.hpp"
 #include "lua_cocos2dx_extension_auto.hpp"
-#include "lua_cocos2dx_studio_auto.hpp"
-#include "lua_cocos2dx_coco_studio_manual.hpp"
 #include "lua_cocos2dx_manual.hpp"
 #include "LuaBasicConversions.h"
 #include "lua_cocos2dx_extension_manual.h"
@@ -183,11 +181,6 @@ bool LuaStack::init(void)
     
     // add cocos2d-x ui support
     register_all_cocos2dx_ui(_state);
-
-#if CC_USE_CCS_ARMATURE
-    register_all_cocos2dx_studio(_state);
-    register_all_cocos2dx_coco_studio_manual(_state);
-#endif
     
 #if CC_USE_EXTRA_FILTERS
     register_all_cocos2dx_extension_filter(_state);
