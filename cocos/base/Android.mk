@@ -51,7 +51,8 @@ LOCAL_SRC_FILES := \
                 $(LOCAL_PATH)/s3tc.cpp \
                 $(LOCAL_PATH)/CCController.cpp \
                 $(LOCAL_PATH)/CCController-android.cpp \
-                $(LOCAL_PATH)/ObjectFactory.cpp
+                $(LOCAL_PATH)/ObjectFactory.cpp \
+                $(LOCAL_PATH)/pvr.cpp
 
 # ifeq ($(CC_USE_TGA),1)
     LOCAL_SRC_FILES += $(LOCAL_PATH)/TGAlib.cpp

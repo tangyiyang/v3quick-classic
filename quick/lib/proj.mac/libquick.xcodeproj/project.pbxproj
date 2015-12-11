@@ -103,8 +103,6 @@
 		4D025AE41B5E66EC002BC427 /* UIScale9Sprite.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025AD01B5E66EC002BC427 /* UIScale9Sprite.h */; };
 		4D025AE51B5E66EC002BC427 /* UIWidget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025AD11B5E66EC002BC427 /* UIWidget.cpp */; };
 		4D025AE61B5E66EC002BC427 /* UIWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D025AD21B5E66EC002BC427 /* UIWidget.h */; };
-		4D025AE91B5E66FE002BC427 /* lua_cocos2dx_ui_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D025AE71B5E66FE002BC427 /* lua_cocos2dx_ui_auto.cpp */; };
-		4D025AEA1B5E66FE002BC427 /* lua_cocos2dx_ui_auto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4D025AE81B5E66FE002BC427 /* lua_cocos2dx_ui_auto.hpp */; };
 		4D1450F41B1F06E2006B0290 /* CCClippingRectangleNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D1450F01B1F06E2006B0290 /* CCClippingRectangleNode.cpp */; };
 		4D1450F51B1F06E2006B0290 /* CCClippingRectangleNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D1450F11B1F06E2006B0290 /* CCClippingRectangleNode.h */; };
 		4D1450F61B1F06E2006B0290 /* CCProtectedNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D1450F21B1F06E2006B0290 /* CCProtectedNode.cpp */; };
@@ -1153,8 +1151,6 @@
 		4D025AD01B5E66EC002BC427 /* UIScale9Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScale9Sprite.h; sourceTree = "<group>"; };
 		4D025AD11B5E66EC002BC427 /* UIWidget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIWidget.cpp; sourceTree = "<group>"; };
 		4D025AD21B5E66EC002BC427 /* UIWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWidget.h; sourceTree = "<group>"; };
-		4D025AE71B5E66FE002BC427 /* lua_cocos2dx_ui_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_ui_auto.cpp; sourceTree = "<group>"; };
-		4D025AE81B5E66FE002BC427 /* lua_cocos2dx_ui_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_cocos2dx_ui_auto.hpp; sourceTree = "<group>"; };
 		4D1450F01B1F06E2006B0290 /* CCClippingRectangleNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCClippingRectangleNode.cpp; sourceTree = "<group>"; };
 		4D1450F11B1F06E2006B0290 /* CCClippingRectangleNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCClippingRectangleNode.h; sourceTree = "<group>"; };
 		4D1450F21B1F06E2006B0290 /* CCProtectedNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCProtectedNode.cpp; sourceTree = "<group>"; };
@@ -4137,8 +4133,6 @@
 		F4E0BEA8196BA25D0053EFD7 /* auto */ = {
 			isa = PBXGroup;
 			children = (
-				4D025AE71B5E66FE002BC427 /* lua_cocos2dx_ui_auto.cpp */,
-				4D025AE81B5E66FE002BC427 /* lua_cocos2dx_ui_auto.hpp */,
 				4DC9F4B819FDF6A500FA1E3B /* lua_cocos2dx_spine_auto.cpp */,
 				4DC9F4B919FDF6A500FA1E3B /* lua_cocos2dx_spine_auto.hpp */,
 				49BCFA39197F4D3600F48FF6 /* lua_cocos2dx_extension_filter_auto.cpp */,
@@ -4374,7 +4368,6 @@
 				F4E0BB59196BA00A0053EFD7 /* ttunpat.h in Headers */,
 				DAF28275196BDA7300959DA1 /* cocos2dx_extra.h in Headers */,
 				F4E0B564196B9C7D0053EFD7 /* CCNS.h in Headers */,
-				4D025AEA1B5E66FE002BC427 /* lua_cocos2dx_ui_auto.hpp in Headers */,
 				F4E0BE67196BA0C10053EFD7 /* ioapi_mem.h in Headers */,
 				DAF282AD196BDA7300959DA1 /* CCStorePaymentTransactionWrapper.h in Headers */,
 				DAF282AA196BDA7300959DA1 /* CCStore.h in Headers */,
@@ -5233,7 +5226,6 @@
 				F4E0C067196BA25D0053EFD7 /* CCLuaEngine.cpp in Sources */,
 				F4E0B5A2196B9C7D0053EFD7 /* Vec3.cpp in Sources */,
 				F4E0B54D196B9C7D0053EFD7 /* CCEventListenerCustom.cpp in Sources */,
-				4D025AE91B5E66FE002BC427 /* lua_cocos2dx_ui_auto.cpp in Sources */,
 				F4E0B559196B9C7D0053EFD7 /* CCEventTouch.cpp in Sources */,
 				F4E0B706196B9EEB0053EFD7 /* cpBBTree.c in Sources */,
 				F48959F2199BA9F9000AA6A2 /* atomicops_internals_x86_msvc.cc in Sources */,

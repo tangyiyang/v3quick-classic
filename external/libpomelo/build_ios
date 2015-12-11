@@ -1,3 +1,0 @@
-xcodebuild -project deps/jansson/jansson.xcodeproj
-xcodebuild -project deps/uv/uv.xcodeproj
-xcodebuild -project pomelo.xcodeproj

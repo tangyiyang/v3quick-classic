@@ -38,7 +38,12 @@ $(LOCAL_PATH)/renderer/CCTexture2D.cpp \
 $(LOCAL_PATH)/renderer/CCTextureAtlas.cpp \
 $(LOCAL_PATH)/renderer/CCTextureCache.cpp \
 $(LOCAL_PATH)/renderer/ccGLStateCache.cpp \
+$(LOCAL_PATH)/renderer/CCTrianglesCommand.cpp \
+$(LOCAL_PATH)/renderer/CCPrimitiveCommand.cpp \
+$(LOCAL_PATH)/renderer/CCVertexIndexData.cpp \
+$(LOCAL_PATH)/renderer/CCVerTexIndexBuffer.cpp \
 $(LOCAL_PATH)/renderer/ccShaders.cpp \
+$(LOCAL_PATH)/renderer/CCPrimitive.cpp \
 $(LOCAL_PATH)/../external/ConvertUTF/ConvertUTFWrapper.cpp \
 $(LOCAL_PATH)/../external/ConvertUTF/ConvertUTF.c \
 $(LOCAL_PATH)/../external/tinyxml2/tinyxml2.cpp \
@@ -92,6 +97,8 @@ LOCAL_WHOLE_STATIC_LIBRARIES += cpufeatures
 LOCAL_WHOLE_STATIC_LIBRARIES += cocos_png_static
 LOCAL_WHOLE_STATIC_LIBRARIES += cocos_jpeg_static
 LOCAL_WHOLE_STATIC_LIBRARIES += cocos2dx-talkingdata
+LOCAL_WHOLE_STATIC_LIBRARIES += cocos_tiff_static
+LOCAL_WHOLE_STATIC_LIBRARIES += cocos_webp_static
 
 
 # ifeq ($(CC_USE_PHYSICS),1)
@@ -111,9 +118,16 @@ $(call import-module,android/cpufeatures)
 $(call import-module,2d)
 $(call import-module,3d)
 $(call import-module,base)
-$(call import-module,ui)
+
+$(call import-module,platform/android)
+$(call import-module,freetype2/prebuilt/android)
+$(call import-module,png/prebuilt/android)
+$(call import-module,jpeg/prebuilt/android)
+$(call import-module,tiff/prebuilt/android)
+$(call import-module,webp/prebuilt/android)
 
 # ifeq ($(CC_USE_PHYSICS),1)
 $(call import-module,physics)
 # endif
-$(call import-module,platform/android)
+
+

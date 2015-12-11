@@ -1,2 +1,2 @@
-/Users/sleepers/opensource_projects/v3quick/cocos/platform/android/java/bin/AndroidManifest.xml : \
-/Users/sleepers/opensource_projects/v3quick/cocos/platform/android/java/AndroidManifest.xml \
+/Users/sleepers/Projects/github/v3quick-classic/cocos/platform/android/java/bin/AndroidManifest.xml : \
+/Users/sleepers/Projects/github/v3quick-classic/cocos/platform/android/java/AndroidManifest.xml \

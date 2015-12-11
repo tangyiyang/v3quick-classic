@@ -33,6 +33,11 @@ LOCAL_SRC_FILES := \
                         $(LOCAL_PATH)/talkingdata/lua_cocos2dx_TalkingDataGA_auto.cpp \
                         $(LOCAL_PATH)/sproto/lsproto.c \
                         $(LOCAL_PATH)/sproto/sproto.c \
+                        $(LOCAL_PATH)/lpeg/lpcap.c\
+                        $(LOCAL_PATH)/lpeg/lpcode.c\
+                        $(LOCAL_PATH)/lpeg/lpprint.c\
+                        $(LOCAL_PATH)/lpeg/lptree.c\
+                        $(LOCAL_PATH)/lpeg/lpvm.c\
 
 ifeq ($(CC_USE_SQLITE),1)
 LOCAL_SRC_FILES += \
@@ -74,6 +79,7 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/ \
                     $(LOCAL_PATH)/lsqlite3 \
                     $(LOCAL_PATH)/talkingdata \
                     $(LOCAL_PATH)/sproto \
+                    $(LOCAL_PATH)/lpeg \
                     $(COCOS2DX_CORE) \
                     $(COCOS2DX_CORE)/platform \
                     $(COCOS2DX_CORE)/platform/android \

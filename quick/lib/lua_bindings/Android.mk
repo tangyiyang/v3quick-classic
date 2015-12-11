@@ -22,10 +22,6 @@ LOCAL_SRC_FILES := $(LOCAL_PATH)/manual/CCLuaBridge.cpp \
           $(LOCAL_PATH)/manual/snapshot.c \
           $(COCOS2DX_ROOT)/external/xxtea/xxtea.cpp
 
-ifeq ($(CC_USE_CCS_ARMATURE),1)
-LOCAL_SRC_FILES += $(LOCAL_PATH)/manual/lua_cocos2dx_coco_studio_manual.cpp
-endif
-
 # ifeq ($(CC_USE_PHYSICS),1)
 LOCAL_SRC_FILES += $(LOCAL_PATH)/manual/lua_cocos2dx_physics_manual.cpp
 # endif
@@ -40,7 +36,6 @@ LOCAL_C_INCLUDES := $(QUICK_V3_LIB)/lua_bindings/tolua \
                     $(COCOS2DX_ROOT) \
                     $(COCOS2DX_ROOT)/extensions \
                     $(COCOS2DX_CORE)/editor-support/spine \
-                    $(COCOS2DX_CORE)/editor-support/cocostudio \
                     $(COCOS2DX_CORE)/ui \
                     $(LOCAL_PATH)/auto \
                     $(LOCAL_PATH)/manual \
@@ -70,7 +65,6 @@ LOCAL_WHOLE_STATIC_LIBRARIES += luajit_static
 LOCAL_WHOLE_STATIC_LIBRARIES += tolua_static
 LOCAL_WHOLE_STATIC_LIBRARIES += cocos2dx_static
 LOCAL_WHOLE_STATIC_LIBRARIES += lua_extensions_static
-LOCAL_WHOLE_STATIC_LIBRARIES += cocostudio_armature_static
 LOCAL_WHOLE_STATIC_LIBRARIES += spine_static
 
 LOCAL_CFLAGS += -Wno-psabi -DCC_LUA_ENGINE_ENABLED=1
@@ -83,6 +77,5 @@ $(call import-module,lua_bindings/luajit)
 $(call import-module,lua_bindings/tolua)
 $(call import-module,.)
 $(call import-module,lua_extensions)
-$(call import-module,editor-support/cocostudio)
 $(call import-module,editor-support/spine)
 

@@ -63,6 +63,8 @@ LOCAL_SRC_FILES := \
     $(LOCAL_PATH)/CCMenuItem.cpp \
     $(LOCAL_PATH)/CCCamera.cpp \
     $(LOCAL_PATH)/CCProtectedNode.cpp \
+    $(LOCAL_PATH)/CCLight.cpp \
+    
 
 
 # ifeq ($(CC_USE_TGA),1)
