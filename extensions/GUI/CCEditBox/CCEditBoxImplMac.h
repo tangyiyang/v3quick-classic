@@ -119,6 +119,8 @@ private:
     int        _maxTextLength;
     bool       _inRetinaMode;
     CCEditBoxImplMac*  _sysEdit;
+    int   _originFontSize;
+    std::string _fontName;
 };
 
 

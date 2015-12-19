@@ -120,7 +120,8 @@
 
 -(void) setContentSize:(NSSize) size
 {
-    
+    [textField_ setFrameSize:size];
+    [secureTextField_ setFrameSize:size];
 }
 
 -(void) visit
@@ -297,7 +298,7 @@ bool EditBoxImplMac::initWithSize(const Size& size)
     }
     
     _sysEdit = [[CCEditBoxImplMac alloc] initWithFrame:rect editBox:this];
-    
+    _originFontSize = [[_sysEdit textField] frame].size.height*2/3;
     if (!_sysEdit)
         return false;
     
@@ -306,6 +307,10 @@ bool EditBoxImplMac::initWithSize(const Size& size)
 
 void EditBoxImplMac::setFont(const char* pFontName, int fontSize)
 {
+    _fontName = pFontName;
+    if (_originFontSize == 0) {
+        _originFontSize = fontSize;
+    }
 	NSString * fntName = [NSString stringWithUTF8String:pFontName];
 	NSFont *textFont = [NSFont fontWithName:fntName size:fontSize];
 	if (textFont != nil) {
@@ -460,14 +465,17 @@ void EditBoxImplMac::adjustTextFieldPosition()
 {
 	Size contentSize = _editBox->getContentSize();
     GLView* view = Director::getInstance()->getOpenGLView();
-	Rect rect = Rect(0, 0, contentSize.width * view->getContentScaleFactor(),
-                     contentSize.height* view->getContentScaleFactor());
-    
+	Rect rect = Rect(0, 0, contentSize.width * view->getFrameZoomFactor(),
+                     contentSize.height* view->getFrameZoomFactor());
 
     rect = RectApplyAffineTransform(rect, _editBox->nodeToWorldTransform());
-	
+
 	Vec2 designCoord = Vec2(rect.origin.x, rect.origin.y + rect.size.height);
     [_sysEdit setPosition:convertDesignCoordToScreenCoord(designCoord, _inRetinaMode)];
+    NSSize newSize;
+    newSize.width = rect.size.width;
+    newSize.height = rect.size.height;
+    [_sysEdit setContentSize: newSize];
 }
 
 void EditBoxImplMac::setPosition(const Vec2& pos)
