@@ -32,6 +32,7 @@ extern "C" {
 // #include "lpeg/lptree.c"
 extern int luaopen_sproto_core(lua_State *L);
 extern int luaopen_lpeg (lua_State *L);
+extern int luaopen_crypt(lua_State *L);
 
 static luaL_Reg luax_exts[] = {
 #if CC_USE_JSON
@@ -51,7 +52,7 @@ static luaL_Reg luax_exts[] = {
 // cloud wu's protocal buffer and lpeg
     {"sproto.core", luaopen_sproto_core},
     {"lpeg", luaopen_lpeg},
-
+    {"crypt", luaopen_crypt},
     
 
     {NULL, NULL}

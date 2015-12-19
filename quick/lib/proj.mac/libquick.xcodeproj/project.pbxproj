@@ -171,6 +171,8 @@
 		4D867A4C1B1E9E50007731FF /* CCBillBoard.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D867A441B1E9E50007731FF /* CCBillBoard.h */; };
 		4D867A4D1B1E9E50007731FF /* CCOBB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D867A451B1E9E50007731FF /* CCOBB.cpp */; };
 		4D867A4E1B1E9E50007731FF /* CCOBB.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D867A461B1E9E50007731FF /* CCOBB.h */; };
+		4DC839021C1F0DCA00B1351C /* lua-crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DC839011C1F0DCA00B1351C /* lua-crypt.c */; };
+		4DC839041C1F0F8300B1351C /* lsha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DC839031C1F0F8300B1351C /* lsha1.c */; };
 		4DC9F4BA19FDF6A500FA1E3B /* lua_cocos2dx_spine_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9F4B819FDF6A500FA1E3B /* lua_cocos2dx_spine_auto.cpp */; };
 		4DC9F4BB19FDF6A500FA1E3B /* lua_cocos2dx_spine_auto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4DC9F4B919FDF6A500FA1E3B /* lua_cocos2dx_spine_auto.hpp */; };
 		4DC9F4BE19FDF6AF00FA1E3B /* lua_cocos2dx_spine_manual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9F4BC19FDF6AF00FA1E3B /* lua_cocos2dx_spine_manual.cpp */; };
@@ -1221,6 +1223,8 @@
 		4D867A441B1E9E50007731FF /* CCBillBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBillBoard.h; sourceTree = "<group>"; };
 		4D867A451B1E9E50007731FF /* CCOBB.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCOBB.cpp; sourceTree = "<group>"; };
 		4D867A461B1E9E50007731FF /* CCOBB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCOBB.h; sourceTree = "<group>"; };
+		4DC839011C1F0DCA00B1351C /* lua-crypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "lua-crypt.c"; sourceTree = "<group>"; };
+		4DC839031C1F0F8300B1351C /* lsha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lsha1.c; sourceTree = "<group>"; };
 		4DC9F4B819FDF6A500FA1E3B /* lua_cocos2dx_spine_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_spine_auto.cpp; sourceTree = "<group>"; };
 		4DC9F4B919FDF6A500FA1E3B /* lua_cocos2dx_spine_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_cocos2dx_spine_auto.hpp; sourceTree = "<group>"; };
 		4DC9F4BC19FDF6AF00FA1E3B /* lua_cocos2dx_spine_manual.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_spine_manual.cpp; sourceTree = "<group>"; };
@@ -2316,6 +2320,15 @@
 			path = CCScrollView;
 			sourceTree = "<group>";
 		};
+		4DC839001C1F0DCA00B1351C /* lcrypt */ = {
+			isa = PBXGroup;
+			children = (
+				4DC839031C1F0F8300B1351C /* lsha1.c */,
+				4DC839011C1F0DCA00B1351C /* lua-crypt.c */,
+			);
+			path = lcrypt;
+			sourceTree = "<group>";
+		};
 		4DC9F44219FDED9300FA1E3B /* spine */ = {
 			isa = PBXGroup;
 			children = (
@@ -2577,6 +2590,7 @@
 		DAF282B2196BDACB00959DA1 /* lua_extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4DC839001C1F0DCA00B1351C /* lcrypt */,
 				4DF974AB1B5D530800D3CDA6 /* lpeg */,
 				4DF974A21B5D451400D3CDA6 /* sproto */,
 				DAF282B4196BDACB00959DA1 /* cjson */,
@@ -5307,9 +5321,11 @@
 				F4E0B57D196B9C7D0053EFD7 /* CCValue.cpp in Sources */,
 				49BCFA14197F4CE700F48FF6 /* CCTestFilter.cpp in Sources */,
 				F4E0B2FC196B9C670053EFD7 /* CCRenderTexture.cpp in Sources */,
+				4DC839021C1F0DCA00B1351C /* lua-crypt.c in Sources */,
 				DA0D6E011999A58C00EAAB9E /* CCLabelBMFont.cpp in Sources */,
 				4D14511D1B1F0778006B0290 /* CCEventListenerController.cpp in Sources */,
 				4DC9F52619FE10D300FA1E3B /* EventData.c in Sources */,
+				4DC839041C1F0F8300B1351C /* lsha1.c in Sources */,
 				F4E0B645196B9C7D0053EFD7 /* CCGLProgramCache.cpp in Sources */,
 				F4E0B32A196B9C670053EFD7 /* CCSprite3D.cpp in Sources */,
 				F48959F8199BA9F9000AA6A2 /* once.cc in Sources */,

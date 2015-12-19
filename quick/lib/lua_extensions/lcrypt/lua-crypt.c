@@ -884,7 +884,6 @@ int lhmac_sha1(lua_State *L);
 
 int
 luaopen_crypt(lua_State *L) {
-	luaL_checkversion(L);
 	srandom(time(NULL));
 	luaL_Reg l[] = {
 		{ "hashkey", lhashkey },
@@ -903,6 +902,6 @@ luaopen_crypt(lua_State *L) {
 		{ "hmac_hash", lhmac_hash },
 		{ NULL, NULL },
 	};
-	luaL_newlib(L,l);
+    luaL_openlib(L, "crypt", l, 0);
 	return 1;
 }
