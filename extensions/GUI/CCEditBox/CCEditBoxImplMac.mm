@@ -459,7 +459,10 @@ void EditBoxImplMac::updatePosition(float dt)
 void EditBoxImplMac::adjustTextFieldPosition()
 {
 	Size contentSize = _editBox->getContentSize();
-	Rect rect = Rect(0, 0, contentSize.width, contentSize.height);
+    GLView* view = Director::getInstance()->getOpenGLView();
+	Rect rect = Rect(0, 0, contentSize.width * view->getContentScaleFactor(),
+                     contentSize.height* view->getContentScaleFactor());
+    
 
     rect = RectApplyAffineTransform(rect, _editBox->nodeToWorldTransform());
 	
