@@ -332,7 +332,7 @@ function class(classname, super)
 
         function cls.new(...)
             local instance = setmetatable({}, cls)
-            instance.class = cls
+            -- instance.class = cls
             instance:ctor(...)
             return instance
         end
