@@ -76,7 +76,7 @@
         self.textField = [[[NSTextField alloc] initWithFrame:frameRect] autorelease];
         self.secureTextField = [[[NSSecureTextField alloc] initWithFrame:frameRect] autorelease];
 
-        NSFont *font = [NSFont systemFontOfSize:frameRect.size.height*2/3]; //TODO need to delete hard code here.
+        NSFont *font = [NSFont systemFontOfSize:frameRect.size.height*1/2]; //TODO need to delete hard code here.
         textField_.font = font;
         secureTextField_.font = font;
         
@@ -449,7 +449,6 @@ NSPoint EditBoxImplMac::convertDesignCoordToScreenCoord(const Vec2& designCoord,
         screenPos.y = screenPos.y / 2.0f;
     }
     
-    CCLOGINFO("[EditBox] pos x = %f, y = %f", screenGLPos.x, screenGLPos.y);
     return screenPos;
 }
 
@@ -465,16 +464,15 @@ void EditBoxImplMac::adjustTextFieldPosition()
 {
 	Size contentSize = _editBox->getContentSize();
     GLView* view = Director::getInstance()->getOpenGLView();
-	Rect rect = Rect(0, 0, contentSize.width * view->getFrameZoomFactor(),
-                     contentSize.height* view->getFrameZoomFactor());
+	Rect rect = Rect(0, 0, contentSize.width, contentSize.height);
 
     rect = RectApplyAffineTransform(rect, _editBox->nodeToWorldTransform());
 
 	Vec2 designCoord = Vec2(rect.origin.x, rect.origin.y + rect.size.height);
     [_sysEdit setPosition:convertDesignCoordToScreenCoord(designCoord, _inRetinaMode)];
     NSSize newSize;
-    newSize.width = rect.size.width;
-    newSize.height = rect.size.height;
+    newSize.width = rect.size.width * view->getFrameZoomFactor();
+    newSize.height = rect.size.height * view->getFrameZoomFactor();
     [_sysEdit setContentSize: newSize];
 }
 
@@ -493,12 +491,10 @@ void EditBoxImplMac::setVisible(bool visible)
 void EditBoxImplMac::setContentSize(const Size& size)
 {
     _contentSize = size;
-    CCLOG("[Edit text] content size = (%f, %f)", size.width, size.height);
 }
 
 void EditBoxImplMac::setAnchorPoint(const Vec2& anchorPoint)
 {
-    CCLOG("[Edit text] anchor point = (%f, %f)", anchorPoint.x, anchorPoint.y);
 	_anchorPoint = anchorPoint;
 	setPosition(_position);
 }
