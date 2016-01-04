@@ -5,7 +5,9 @@ Why this Project?
 What does Quick-cocos2d-x provide?
 ================
         
-        1. Provide a better and simpler simulator on Mac & Windows(Not avaliable in this branch right now, cause I don't have an windows :(, but it only need upgrade the project file to make things works.) for development, iOS simulator is no longer needed to debug your project in most cases, just click CMD+R to restart.
+        1. Provide a better and simpler simulator on Mac & Windows(Not avaliable in this branch right now, cause I don't have an windows
+        :(, but it only need upgrade the project file to make things works.) for development, iOS simulator is no longer needed to debug
+        your project in most cases, just click CMD+R to restart.
         2. Provide a set of simpler API(quick/framework/*.Lua) to write your game in a more Lua way.
         
 Goal
