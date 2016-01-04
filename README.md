@@ -1,6 +1,6 @@
 Why this Project?
 =================
-![Quick-cocos2d-x](https://github.com/dualface/v3quick) is really a nice project, but the core developer dualface(github.com/dualface) is not going to maintain the quick-cocos2d-x branch any more. What's more, due to the official team upgrade the engine too often, and it's seems cocos2d-x team like javascript much better than Lua, so maitain your own version of cocos2d-x is really the only and good choice for commercial projects.
+[Quick-cocos2d-x](https://github.com/dualface/v3quick) is really a nice project, but the core developer dualface(github.com/dualface) is not going to maintain the quick-cocos2d-x branch any more. What's more, due to the official team upgrade the engine too often, and it's seems cocos2d-x team like javascript much better than Lua, so maitain your own version of cocos2d-x is really the only and good choice for commercial projects.
 
 What does Quick-cocos2d-x provide?
 ================
