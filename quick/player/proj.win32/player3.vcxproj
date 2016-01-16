@@ -61,7 +61,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libcurl_imp.lib;freetype250.lib;glfw3.lib;libjpeg.lib;libpng.lib;sqlite3.lib;libtiff.lib;libwebp.lib;websockets.lib;glew32.lib;libiconv.lib;libzlib.lib;lua51.lib;libquick.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;wsock32.lib;ws2_32.lib;opengl32.lib;winmm.lib;libpomelo.lib;libuv.lib;jansson.lib;psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libcurl_imp.lib;freetype250.lib;glfw3.lib;libjpeg.lib;libpng.lib;sqlite3.lib;libtiff.lib;libwebp.lib;websockets.lib;glew32.lib;libiconv.lib;libzlib.lib;lua51.lib;libquick.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;wsock32.lib;ws2_32.lib;opengl32.lib;winmm.lib;psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(OutDir);$(QUICK_V3_ROOT)\external\curl\prebuilt\win32;$(QUICK_V3_ROOT)\external\freetype2\prebuilt\win32;$(QUICK_V3_ROOT)\external\glfw3\prebuilt\win32;$(QUICK_V3_ROOT)\external\jpeg\prebuilt\win32;$(QUICK_V3_ROOT)\external\png\prebuilt\win32;$(QUICK_V3_ROOT)\external\sqlite3\libraries\win32;$(QUICK_V3_ROOT)\external\tiff\prebuilt\win32;$(QUICK_V3_ROOT)\external\webp\prebuilt\win32;$(QUICK_V3_ROOT)\external\websockets\prebuilt\win32;$(QUICK_V3_ROOT)\external\win32-specific\gles\prebuilt;$(QUICK_V3_ROOT)\external\win32-specific\icon\prebuilt;$(QUICK_V3_ROOT)\external\win32-specific\zlib\prebuilt;$(QUICK_V3_ROOT)\quick\lib\lua_bindings\luajit\win32;$(QUICK_V3_ROOT)\quick\player\proj.win32\Default\lib</AdditionalLibraryDirectories>
     </Link>
     <Manifest>
@@ -103,8 +103,6 @@ copy $(OutDir)*.exe $(OutDir)..\bin\
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\lib\lua_bindings\manual\pomelobind\PomeloClient.h" />
-    <ClInclude Include="..\..\lib\lua_bindings\manual\pomelobind\PomeloClient_luabinding.h" />
     <ClInclude Include="..\src\AppDelegate.h" />
     <ClInclude Include="..\src\PlayerEditBoxServiceProtocol.h" />
     <ClInclude Include="..\src\PlayerFileDialogServiceProtocol.h" />
@@ -129,8 +127,6 @@ copy $(OutDir)*.exe $(OutDir)..\bin\
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\lib\lua_bindings\manual\pomelobind\PomeloClient.cpp" />
-    <ClCompile Include="..\..\lib\lua_bindings\manual\pomelobind\PomeloClient_luabinding.cpp" />
     <ClCompile Include="..\src\AppDelegate.cpp" />
     <ClCompile Include="..\src\PlayerLuaCore.cpp" />
     <ClCompile Include="..\src\PlayerLuaCoreManual.cpp" />
