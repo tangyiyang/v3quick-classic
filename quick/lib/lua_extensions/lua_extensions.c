@@ -53,10 +53,6 @@ static luaL_Reg luax_exts[] = {
     {"sproto.core", luaopen_sproto_core},
     {"lpeg", luaopen_lpeg},
 
-#if CC_TARGET_PLATFORM != CC_PLATFORM_ANDROID
-    {"crypt", luaopen_crypt},
-#endif
-
     {NULL, NULL}
 };
 
