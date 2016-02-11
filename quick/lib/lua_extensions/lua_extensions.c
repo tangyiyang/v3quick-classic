@@ -52,8 +52,10 @@ static luaL_Reg luax_exts[] = {
 // cloud wu's protocal buffer and lpeg
     {"sproto.core", luaopen_sproto_core},
     {"lpeg", luaopen_lpeg},
+
+#if CC_TARGET_PLATFORM != CC_PLATFORM_ANDROID
     {"crypt", luaopen_crypt},
-    
+#endif
 
     {NULL, NULL}
 };
