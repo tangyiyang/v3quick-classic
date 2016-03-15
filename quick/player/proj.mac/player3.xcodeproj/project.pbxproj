@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4D73DC7E1B59030B0043E5D7 /* liblibquick.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E0B1FB196B9C3C0053EFD7 /* liblibquick.a */; };
-		4DBBBF0E1B71274B0071C5BE /* libjansson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBBBF0C1B71274B0071C5BE /* libjansson.a */; };
-		4DBBBF0F1B71274B0071C5BE /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBBBF0D1B71274B0071C5BE /* libuv.a */; };
 		9F05A0CF194EC0FA003CFA1F /* PlayerMessageBoxServiceMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F05A0CE194EC0FA003CFA1F /* PlayerMessageBoxServiceMac.mm */; };
 		9F05A101194EF319003CFA1F /* ConsoleWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F05A0FE194EF319003CFA1F /* ConsoleWindow.xib */; };
 		9F05A102194EF319003CFA1F /* ConsoleWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F05A100194EF319003CFA1F /* ConsoleWindowController.m */; };
@@ -79,8 +77,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4DBBBF0C1B71274B0071C5BE /* libjansson.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjansson.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/player3-dfgdbwuvqnvbqycosmrparesczkv/Build/Products/Default/libjansson.a"; sourceTree = "<group>"; };
-		4DBBBF0D1B71274B0071C5BE /* libuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libuv.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/player3-dfgdbwuvqnvbqycosmrparesczkv/Build/Products/Default/libuv.a"; sourceTree = "<group>"; };
 		9F05A0CC194EB080003CFA1F /* PlayerMenuServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMenuServiceProtocol.h; sourceTree = "<group>"; };
 		9F05A0CD194EC0DB003CFA1F /* PlayerMessageBoxServiceMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerMessageBoxServiceMac.h; sourceTree = SOURCE_ROOT; };
 		9F05A0CE194EC0FA003CFA1F /* PlayerMessageBoxServiceMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlayerMessageBoxServiceMac.mm; sourceTree = SOURCE_ROOT; };
@@ -151,8 +147,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DBBBF0E1B71274B0071C5BE /* libjansson.a in Frameworks */,
-				4DBBBF0F1B71274B0071C5BE /* libuv.a in Frameworks */,
 				4D73DC7E1B59030B0043E5D7 /* liblibquick.a in Frameworks */,
 				DAB2BFC619595AE800ADD4E0 /* SystemConfiguration.framework in Frameworks */,
 				9F3BF73D194E91E10072B3D0 /* OpenGL.framework in Frameworks */,
@@ -193,8 +187,6 @@
 		9F1C8D31194DE61E0068C99B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4DBBBF0C1B71274B0071C5BE /* libjansson.a */,
-				4DBBBF0D1B71274B0071C5BE /* libuv.a */,
 				DAB2BFC519595AE800ADD4E0 /* SystemConfiguration.framework */,
 				9F3BF73C194E91E10072B3D0 /* OpenGL.framework */,
 				9F3BF73A194E91D70072B3D0 /* QuartzCore.framework */,

@@ -277,6 +277,8 @@
 		4DF974C21B5D530800D3CDA6 /* lpvm.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DF974B61B5D530800D3CDA6 /* lpvm.h */; };
 		9F1CF4041998AC3C00497F21 /* ProjectConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F1CF4021998AC3C00497F21 /* ProjectConfig.cpp */; };
 		9F1CF4051998AC3C00497F21 /* ProjectConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F1CF4031998AC3C00497F21 /* ProjectConfig.h */; };
+		A68FA6D41C983C2200E441C5 /* bit.c in Sources */ = {isa = PBXBuildFile; fileRef = A68FA6D31C983C2200E441C5 /* bit.c */; };
+		A68FA6D81C983E3D00E441C5 /* lua-unicode.c in Sources */ = {isa = PBXBuildFile; fileRef = A68FA6D61C983E3D00E441C5 /* lua-unicode.c */; };
 		DA0D6E011999A58C00EAAB9E /* CCLabelBMFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA0D6DFF1999A58C00EAAB9E /* CCLabelBMFont.cpp */; };
 		DA0D6E021999A58C00EAAB9E /* CCLabelBMFont.h in Headers */ = {isa = PBXBuildFile; fileRef = DA0D6E001999A58C00EAAB9E /* CCLabelBMFont.h */; };
 		DA9FAA03197377AC006A0B4C /* cocos2dx_extra_luabinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA9FA9FB197377AC006A0B4C /* cocos2dx_extra_luabinding.cpp */; };
@@ -1329,6 +1331,8 @@
 		4DF974B61B5D530800D3CDA6 /* lpvm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lpvm.h; sourceTree = "<group>"; };
 		9F1CF4021998AC3C00497F21 /* ProjectConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProjectConfig.cpp; sourceTree = "<group>"; };
 		9F1CF4031998AC3C00497F21 /* ProjectConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectConfig.h; sourceTree = "<group>"; };
+		A68FA6D31C983C2200E441C5 /* bit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bit.c; sourceTree = "<group>"; };
+		A68FA6D61C983E3D00E441C5 /* lua-unicode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "lua-unicode.c"; sourceTree = "<group>"; };
 		DA0D6DFF1999A58C00EAAB9E /* CCLabelBMFont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCLabelBMFont.cpp; sourceTree = "<group>"; };
 		DA0D6E001999A58C00EAAB9E /* CCLabelBMFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLabelBMFont.h; sourceTree = "<group>"; };
 		DA9FA9FB197377AC006A0B4C /* cocos2dx_extra_luabinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cocos2dx_extra_luabinding.cpp; sourceTree = "<group>"; };
@@ -2438,6 +2442,22 @@
 			path = lpeg;
 			sourceTree = "<group>";
 		};
+		A68FA6D21C983C2200E441C5 /* lua-bit */ = {
+			isa = PBXGroup;
+			children = (
+				A68FA6D31C983C2200E441C5 /* bit.c */,
+			);
+			path = "lua-bit";
+			sourceTree = "<group>";
+		};
+		A68FA6D51C983E2600E441C5 /* unicode */ = {
+			isa = PBXGroup;
+			children = (
+				A68FA6D61C983E3D00E441C5 /* lua-unicode.c */,
+			);
+			path = unicode;
+			sourceTree = "<group>";
+		};
 		DA02C8A519861DC300E2687A /* editor-support */ = {
 			isa = PBXGroup;
 			children = (
@@ -2590,6 +2610,8 @@
 		DAF282B2196BDACB00959DA1 /* lua_extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A68FA6D51C983E2600E441C5 /* unicode */,
+				A68FA6D21C983C2200E441C5 /* lua-bit */,
 				4DC839001C1F0DCA00B1351C /* lcrypt */,
 				4DF974AB1B5D530800D3CDA6 /* lpeg */,
 				4DF974A21B5D451400D3CDA6 /* sproto */,
@@ -5014,6 +5036,7 @@
 				F4E0C06D196BA25D0053EFD7 /* Cocos2dxLuaLoader.cpp in Sources */,
 				F4E0B2D0196B9C670053EFD7 /* CCFontFNT.cpp in Sources */,
 				F4E0B2F4196B9C670053EFD7 /* CCParticleExamples.cpp in Sources */,
+				A68FA6D81C983E3D00E441C5 /* lua-unicode.c in Sources */,
 				F4E0B53F196B9C7D0053EFD7 /* CCEventAcceleration.cpp in Sources */,
 				4DC9F54F19FE115800FA1E3B /* LuaSkeletonAnimation.cpp in Sources */,
 				DAF2831E196BDACB00959DA1 /* socket_scripts.c in Sources */,
@@ -5324,6 +5347,7 @@
 				4DC839021C1F0DCA00B1351C /* lua-crypt.c in Sources */,
 				DA0D6E011999A58C00EAAB9E /* CCLabelBMFont.cpp in Sources */,
 				4D14511D1B1F0778006B0290 /* CCEventListenerController.cpp in Sources */,
+				A68FA6D41C983C2200E441C5 /* bit.c in Sources */,
 				4DC9F52619FE10D300FA1E3B /* EventData.c in Sources */,
 				4DC839041C1F0F8300B1351C /* lsha1.c in Sources */,
 				F4E0B645196B9C7D0053EFD7 /* CCGLProgramCache.cpp in Sources */,

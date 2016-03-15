@@ -171,7 +171,6 @@
 		4D93A9041B16BE800075E8A4 /* CCCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D93A9001B16BE800075E8A4 /* CCCamera.h */; };
 		4D93A9051B16BE800075E8A4 /* CCLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D93A9011B16BE800075E8A4 /* CCLight.cpp */; };
 		4D93A9061B16BE800075E8A4 /* CCLight.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D93A9021B16BE800075E8A4 /* CCLight.h */; };
-		4D9DDE1F1B7DCE7C00FCFB90 /* libTalkingDataGA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9DDE1E1B7DCE7C00FCFB90 /* libTalkingDataGA.a */; };
 		4DB52DC51B20507A00664B72 /* CCFileUtils-apple.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DB52DC01B20507A00664B72 /* CCFileUtils-apple.h */; };
 		4DB52DC61B20507A00664B72 /* CCFileUtils-apple.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DB52DC11B20507A00664B72 /* CCFileUtils-apple.mm */; };
 		4DB52DC71B20507A00664B72 /* CCLock-apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DB52DC21B20507A00664B72 /* CCLock-apple.cpp */; };
@@ -1178,7 +1177,6 @@
 		4D93A9001B16BE800075E8A4 /* CCCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCamera.h; sourceTree = "<group>"; };
 		4D93A9011B16BE800075E8A4 /* CCLight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCLight.cpp; sourceTree = "<group>"; };
 		4D93A9021B16BE800075E8A4 /* CCLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLight.h; sourceTree = "<group>"; };
-		4D9DDE1E1B7DCE7C00FCFB90 /* libTalkingDataGA.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTalkingDataGA.a; path = ../../../external/TalkingDataGameAnalytics/ios/libTalkingDataGA.a; sourceTree = "<group>"; };
 		4DB52DC01B20507A00664B72 /* CCFileUtils-apple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCFileUtils-apple.h"; sourceTree = "<group>"; };
 		4DB52DC11B20507A00664B72 /* CCFileUtils-apple.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "CCFileUtils-apple.mm"; sourceTree = "<group>"; };
 		4DB52DC21B20507A00664B72 /* CCLock-apple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "CCLock-apple.cpp"; sourceTree = "<group>"; };
@@ -1901,7 +1899,6 @@
 				A07A4CAF1783777C0073F6A7 /* Foundation.framework in Frameworks */,
 				1A570364180BD1120088DEC7 /* libpng.a in Frameworks */,
 				1A570378180BD1B40088DEC7 /* libjpeg.a in Frameworks */,
-				4D9DDE1F1B7DCE7C00FCFB90 /* libTalkingDataGA.a in Frameworks */,
 				1A5703A4180BD2350088DEC7 /* libtiff.a in Frameworks */,
 				1A5703BB180BD2800088DEC7 /* libwebp.a in Frameworks */,
 				1A57052E180BD3280088DEC7 /* libfreetype.a in Frameworks */,
@@ -1929,7 +1926,6 @@
 		1551A341158F2AB200E66CFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4D9DDE1E1B7DCE7C00FCFB90 /* libTalkingDataGA.a */,
 				4DC6CFD61AE8CC3300F40809 /* libwebp_arm64.a */,
 				4DC6CFD31AE8CBEE00F40809 /* libjpeg_arm64.a */,
 				4DC6CFD11AE8CBE200F40809 /* libtiff_arm64.a */,
@@ -4855,6 +4851,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD)";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "../../../cocos/cocos2d-prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -4930,6 +4927,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD)";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "../../../cocos/cocos2d-prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (

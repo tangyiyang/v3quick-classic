@@ -300,7 +300,6 @@ function class(classname, super)
             cls.__create = super.__create
             cls.super    = super
         else
-            print("----- derive from c object -----")
             cls.__create = super
             cls.ctor = function() end
         end
@@ -308,25 +307,19 @@ function class(classname, super)
         cls.__cname = classname
         cls.__ctype = 1
 
-        print("classname = ", classname)
 
         if classname == 'LevelLayer' then
             for k,v in pairs(cls) do
                 print ("-- clas --", k, v)
             end
-            print('super = ', super)
         end
 
         function cls.new(...)
             local instance = cls.__create(...)
 
-            if classname == 'LevelLayer' then
-                print("instance = ", instance)
-            end
             -- copy fields from class to native object
             for k,v in pairs(cls) do 
                 if classname == 'LevelLayer' then
-                    print("instance cpy = ", k, v)
                 end
                 instance[k] = v 
             end

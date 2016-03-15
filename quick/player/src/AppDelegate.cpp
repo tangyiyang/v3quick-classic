@@ -162,6 +162,8 @@ void StartupCall::startup()
     {
         Director::getInstance()->runWithScene(scene);
     }
+
+    
     
     // load script
     string env = "__LUA_STARTUP_FILE__=\"";

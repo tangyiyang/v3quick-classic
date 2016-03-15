@@ -33,7 +33,9 @@ extern "C" {
 extern int luaopen_sproto_core(lua_State *L);
 extern int luaopen_lpeg (lua_State *L);
 extern int luaopen_crypt(lua_State *L);
-
+extern int luaopen_bit(lua_State *L);
+extern int luaopen_unicode(lua_State *L);
+    
 static luaL_Reg luax_exts[] = {
 #if CC_USE_JSON
     {"cjson", luaopen_cjson_safe},
@@ -52,12 +54,17 @@ static luaL_Reg luax_exts[] = {
 // cloud wu's protocal buffer and lpeg
     {"sproto.core", luaopen_sproto_core},
     {"lpeg", luaopen_lpeg},
-
+    {"bit", luaopen_bit},
+    {"unicode", luaopen_unicode},
     {NULL, NULL}
 };
+    
+#include "ConvertUTF.h"
+#include <stdlib.h>
+#include <string.h>
 
 void luaopen_lua_extensions(lua_State *L)
-{
+{   
     // load extensions
     luaL_Reg* lib = luax_exts;
     lua_getglobal(L, "package");
