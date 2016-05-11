@@ -16,7 +16,6 @@
 		9F1C8D33194DE61E0068C99B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1C8D32194DE61E0068C99B /* Cocoa.framework */; };
 		9F1C8D78194DEB430068C99B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F1C8D77194DEB430068C99B /* MainMenu.xib */; };
 		9F1C8D7D194DECD70068C99B /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C8D7C194DECD70068C99B /* AppController.mm */; };
-		9F1C8D81194DECE80068C99B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F1C8D7E194DECE80068C99B /* Info.plist */; };
 		9F1C8D82194DECE80068C99B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C8D7F194DECE80068C99B /* main.m */; };
 		9F1C8D9B194DEE040068C99B /* PlayerProtocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C8D97194DEE040068C99B /* PlayerProtocol.cpp */; };
 		9F1C8D9C194DEE040068C99B /* PlayerServiceProtocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C8D99194DEE040068C99B /* PlayerServiceProtocol.cpp */; };
@@ -320,7 +319,7 @@
 		9F1C8D27194DE61E0068C99B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = quick;
 				TargetAttributes = {
 					9F1C8D2E194DE61E0068C99B = {
@@ -369,7 +368,6 @@
 			files = (
 				9F1C8DA4194E7B290068C99B /* Icon.icns in Resources */,
 				9F05A101194EF319003CFA1F /* ConsoleWindow.xib in Resources */,
-				9F1C8D81194DECE80068C99B /* Info.plist in Resources */,
 				9F1C8D78194DEB430068C99B /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +430,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -546,17 +545,11 @@
 					"$(QUICK_V3_ROOT)/quick/lib/lua_bindings/manual",
 					"$(QUICK_V3_ROOT)/quick/lib/lua_bindings/luajit/include",
 					"$(QUICK_V3_ROOT)/quick/lib/lua_bindings/tolua",
-					"$(QUICK_V3_ROOT)/external/libpomelo/deps/uv/include",
-					"$(QUICK_V3_ROOT)/external/libpomelo/deps/jansson/src",
-					"$(QUICK_V3_ROOT)/external/libpomelo/include",
 				);
 				INFOPLIST_FILE = Info.plist;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Build/Products/Default",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/player3-hddxhrmhqrcoksclazhccmbyzetk/Build/Products/Default-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/player3-hddxhrmhqrcoksclazhccmbyzetk/Build/Products/Default",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/player3-dfgdbwuvqnvbqycosmrparesczkv/Build/Products/Default",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_LDFLAGS = (
@@ -565,6 +558,7 @@
 					"-image_base",
 					100000000,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocos.quick.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -597,17 +591,11 @@
 					"$(QUICK_V3_ROOT)/quick/lib/lua_bindings/manual",
 					"$(QUICK_V3_ROOT)/quick/lib/lua_bindings/luajit/include",
 					"$(QUICK_V3_ROOT)/quick/lib/lua_bindings/tolua",
-					"$(QUICK_V3_ROOT)/external/libpomelo/deps/uv/include",
-					"$(QUICK_V3_ROOT)/external/libpomelo/deps/jansson/src",
-					"$(QUICK_V3_ROOT)/external/libpomelo/include",
 				);
 				INFOPLIST_FILE = Info.plist;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Build/Products/Default",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/player3-hddxhrmhqrcoksclazhccmbyzetk/Build/Products/Default-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/player3-hddxhrmhqrcoksclazhccmbyzetk/Build/Products/Default",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/player3-dfgdbwuvqnvbqycosmrparesczkv/Build/Products/Default",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_LDFLAGS = (
@@ -616,6 +604,7 @@
 					"-image_base",
 					100000000,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocos.quick.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

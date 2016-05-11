@@ -352,7 +352,8 @@ void Director::calculateDeltaTime()
         _deltaTime = 1 / 60.0f;
     }
 #endif
-
+    
+//    printf("_deltaTime = %.4f \n", _deltaTime);
     *_lastUpdate = now;
 }
 float Director::getDeltaTime() const

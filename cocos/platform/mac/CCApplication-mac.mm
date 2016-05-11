@@ -86,6 +86,7 @@ int Application::run()
         glview->pollEvents();
 
         curTime = getCurrentMillSecond();
+//        printf("curTime - lastTime  = %d\n", curTime - lastTime );
         if (curTime - lastTime < _animationInterval)
         {
             usleep(static_cast<useconds_t>((_animationInterval - curTime + lastTime)*1000));
