@@ -55,7 +55,7 @@ static luaL_Reg luax_exts[] = {
     {"sproto.core", luaopen_sproto_core},
     {"lpeg", luaopen_lpeg},
     {"bit", luaopen_bit},
-    {"unicode", luaopen_unicode},
+//    {"unicode", luaopen_unicode},
     {NULL, NULL}
 };
     

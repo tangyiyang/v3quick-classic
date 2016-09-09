@@ -49,9 +49,9 @@ std::string getCurAppPath(void)
                                                  error:&error];
     if ([error code] || env.length == 0)
     {
-        [self showAlertWithoutSheet:@"Please run \"setup_mac.sh\", set quick-cocos2d-x root path."
-                          withTitle:@"quick player error"];
-        [[NSApplication sharedApplication] terminate:self];
+//        [self showAlertWithoutSheet:@"Please run \"setup_mac.sh\", set quick-cocos2d-x root path."
+//                          withTitle:@"quick player error"];
+//        [[NSApplication sharedApplication] terminate:self];
     }
 
     env = [env stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];

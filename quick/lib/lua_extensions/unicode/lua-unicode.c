@@ -58,9 +58,9 @@ int lconvert_16_8(lua_State* L) {
     const char* utf16 = lua_tolstring(L, 1, &len);
     unsigned long code = strtol(utf16, NULL, 0);
 
-    unsigned char out[6] = "";
+    unsigned char out[7] = "";
 
-    unicode_16_to_8(code, &out[0], 6);
+    unicode_16_to_8(code, &out[0], 7);
 
     lua_pushstring(L, (char*)out);
     return 1;
