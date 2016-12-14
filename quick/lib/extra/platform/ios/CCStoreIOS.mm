@@ -112,12 +112,16 @@ static const char* const SANDBOX_RECEIPT_VERIFY_URL = "https://sandbox.itunes.ap
     }
 #endif
 
+#ifdef CC_ENABLE_PAYMENT
     productRequestDelegate_ = delegate;
     SKProductsRequest *request = [[SKProductsRequest alloc] initWithProductIdentifiers:productsId];
     request.delegate = self;
     [request autorelease];
     [request start];
     productRequest_ = request;
+#else
+    CCASSERT(false, "add CC_ENABLE_PAYMENT to your build marco to enable payment");
+#endif
 }
 
 - (void)cancelRequestProductData

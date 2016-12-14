@@ -362,8 +362,6 @@
 		DA0D6ECC19A1D9E100EAAB9E /* ProjectConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA0D6ECA19A1D9E100EAAB9E /* ProjectConfig.cpp */; };
 		DA0D6ECD19A1D9E100EAAB9E /* ProjectConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = DA0D6ECB19A1D9E100EAAB9E /* ProjectConfig.h */; };
 		DA853FA3195029B40057DF22 /* ioapi_mem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA853F9B19501BC90057DF22 /* ioapi_mem.cpp */; };
-		DA9FAA151973F1C1006A0B4C /* cocos2dx_extra_ios_iap_luabinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA9FAA0C1973F1C1006A0B4C /* cocos2dx_extra_ios_iap_luabinding.cpp */; };
-		DA9FAA161973F1C1006A0B4C /* cocos2dx_extra_ios_iap_luabinding.h in Headers */ = {isa = PBXBuildFile; fileRef = DA9FAA0D1973F1C1006A0B4C /* cocos2dx_extra_ios_iap_luabinding.h */; };
 		DA9FAA171973F1C1006A0B4C /* cocos2dx_extra_luabinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA9FAA0F1973F1C1006A0B4C /* cocos2dx_extra_luabinding.cpp */; };
 		DA9FAA181973F1C1006A0B4C /* cocos2dx_extra_luabinding.h in Headers */ = {isa = PBXBuildFile; fileRef = DA9FAA101973F1C1006A0B4C /* cocos2dx_extra_luabinding.h */; };
 		DA9FAA191973F1C1006A0B4C /* HelperFunc_luabinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA9FAA121973F1C1006A0B4C /* HelperFunc_luabinding.cpp */; };
@@ -394,12 +392,6 @@
 		DAF28DBF196D082800959DA1 /* CCNative.mm in Sources */ = {isa = PBXBuildFile; fileRef = DAF28C10196D082800959DA1 /* CCNative.mm */; };
 		DAF28DC0196D082800959DA1 /* CCNativeIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF28C11196D082800959DA1 /* CCNativeIOS.h */; };
 		DAF28DC1196D082800959DA1 /* CCNativeIOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = DAF28C12196D082800959DA1 /* CCNativeIOS.mm */; };
-		DAF28DC2196D082800959DA1 /* CCStore.mm in Sources */ = {isa = PBXBuildFile; fileRef = DAF28C13196D082800959DA1 /* CCStore.mm */; };
-		DAF28DC3196D082800959DA1 /* CCStoreIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF28C14196D082800959DA1 /* CCStoreIOS.h */; };
-		DAF28DC4196D082800959DA1 /* CCStoreIOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = DAF28C15196D082800959DA1 /* CCStoreIOS.mm */; };
-		DAF28DC5196D082800959DA1 /* CCStorePaymentTransactionWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = DAF28C16196D082800959DA1 /* CCStorePaymentTransactionWrapper.mm */; };
-		DAF28DC6196D082800959DA1 /* CCStoreReceiptVerifyRequestIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF28C17196D082800959DA1 /* CCStoreReceiptVerifyRequestIOS.h */; };
-		DAF28DC7196D082800959DA1 /* CCStoreReceiptVerifyRequestIOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = DAF28C18196D082800959DA1 /* CCStoreReceiptVerifyRequestIOS.mm */; };
 		DAF28DC8196D082800959DA1 /* SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF28C1A196D082800959DA1 /* SBJSON.h */; };
 		DAF28DC9196D082800959DA1 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF28C1B196D082800959DA1 /* SBJSON.m */; };
 		DAF28DCA196D082800959DA1 /* SBJsonBase.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF28C1C196D082800959DA1 /* SBJsonBase.h */; };
@@ -413,14 +405,6 @@
 		DAF28DD2196D082800959DA1 /* CCNetworkIOSMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = DAF28C26196D082800959DA1 /* CCNetworkIOSMac.mm */; };
 		DAF28DD3196D082800959DA1 /* ReachabilityIOSMac.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF28C27196D082800959DA1 /* ReachabilityIOSMac.h */; };
 		DAF28DD4196D082800959DA1 /* ReachabilityIOSMac.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF28C28196D082800959DA1 /* ReachabilityIOSMac.m */; };
-		DAF28DE2196D082800959DA1 /* CCStore.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF28C3A196D082800959DA1 /* CCStore.h */; };
-		DAF28DE3196D082800959DA1 /* CCStorePaymentTransaction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DAF28C3B196D082800959DA1 /* CCStorePaymentTransaction.cpp */; };
-		DAF28DE4196D082800959DA1 /* CCStorePaymentTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF28C3C196D082800959DA1 /* CCStorePaymentTransaction.h */; };
-		DAF28DE5196D082800959DA1 /* CCStorePaymentTransactionWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF28C3D196D082800959DA1 /* CCStorePaymentTransactionWrapper.h */; };
-		DAF28DE6196D082800959DA1 /* CCStoreProduct.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DAF28C3E196D082800959DA1 /* CCStoreProduct.cpp */; };
-		DAF28DE7196D082800959DA1 /* CCStoreProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF28C3F196D082800959DA1 /* CCStoreProduct.h */; };
-		DAF28DE8196D082800959DA1 /* CCStoreProductsRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF28C40196D082800959DA1 /* CCStoreProductsRequestDelegate.h */; };
-		DAF28DE9196D082800959DA1 /* CCStoreTransactionObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF28C41196D082800959DA1 /* CCStoreTransactionObserver.h */; };
 		DAF28DEA196D082800959DA1 /* lua_cocos2dx_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DAF28C45196D082800959DA1 /* lua_cocos2dx_auto.cpp */; };
 		DAF28DEB196D082800959DA1 /* lua_cocos2dx_auto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DAF28C46196D082800959DA1 /* lua_cocos2dx_auto.hpp */; };
 		DAF28DEC196D082800959DA1 /* lua_cocos2dx_extension_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DAF28C47196D082800959DA1 /* lua_cocos2dx_extension_auto.cpp */; };
@@ -1397,8 +1381,6 @@
 		DA0D6ECB19A1D9E100EAAB9E /* ProjectConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectConfig.h; sourceTree = "<group>"; };
 		DA853F9B19501BC90057DF22 /* ioapi_mem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ioapi_mem.cpp; sourceTree = "<group>"; };
 		DA853F9C19501BC90057DF22 /* ioapi_mem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi_mem.h; sourceTree = "<group>"; };
-		DA9FAA0C1973F1C1006A0B4C /* cocos2dx_extra_ios_iap_luabinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cocos2dx_extra_ios_iap_luabinding.cpp; sourceTree = "<group>"; };
-		DA9FAA0D1973F1C1006A0B4C /* cocos2dx_extra_ios_iap_luabinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cocos2dx_extra_ios_iap_luabinding.h; sourceTree = "<group>"; };
 		DA9FAA0F1973F1C1006A0B4C /* cocos2dx_extra_luabinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cocos2dx_extra_luabinding.cpp; sourceTree = "<group>"; };
 		DA9FAA101973F1C1006A0B4C /* cocos2dx_extra_luabinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cocos2dx_extra_luabinding.h; sourceTree = "<group>"; };
 		DA9FAA121973F1C1006A0B4C /* HelperFunc_luabinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelperFunc_luabinding.cpp; sourceTree = "<group>"; };
@@ -1430,12 +1412,6 @@
 		DAF28C10196D082800959DA1 /* CCNative.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCNative.mm; sourceTree = "<group>"; };
 		DAF28C11196D082800959DA1 /* CCNativeIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNativeIOS.h; sourceTree = "<group>"; };
 		DAF28C12196D082800959DA1 /* CCNativeIOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCNativeIOS.mm; sourceTree = "<group>"; };
-		DAF28C13196D082800959DA1 /* CCStore.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCStore.mm; sourceTree = "<group>"; };
-		DAF28C14196D082800959DA1 /* CCStoreIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCStoreIOS.h; sourceTree = "<group>"; };
-		DAF28C15196D082800959DA1 /* CCStoreIOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCStoreIOS.mm; sourceTree = "<group>"; };
-		DAF28C16196D082800959DA1 /* CCStorePaymentTransactionWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCStorePaymentTransactionWrapper.mm; sourceTree = "<group>"; };
-		DAF28C17196D082800959DA1 /* CCStoreReceiptVerifyRequestIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCStoreReceiptVerifyRequestIOS.h; sourceTree = "<group>"; };
-		DAF28C18196D082800959DA1 /* CCStoreReceiptVerifyRequestIOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCStoreReceiptVerifyRequestIOS.mm; sourceTree = "<group>"; };
 		DAF28C1A196D082800959DA1 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
 		DAF28C1B196D082800959DA1 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
 		DAF28C1C196D082800959DA1 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
@@ -1449,14 +1425,6 @@
 		DAF28C26196D082800959DA1 /* CCNetworkIOSMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCNetworkIOSMac.mm; sourceTree = "<group>"; };
 		DAF28C27196D082800959DA1 /* ReachabilityIOSMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReachabilityIOSMac.h; sourceTree = "<group>"; };
 		DAF28C28196D082800959DA1 /* ReachabilityIOSMac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReachabilityIOSMac.m; sourceTree = "<group>"; };
-		DAF28C3A196D082800959DA1 /* CCStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCStore.h; sourceTree = "<group>"; };
-		DAF28C3B196D082800959DA1 /* CCStorePaymentTransaction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCStorePaymentTransaction.cpp; sourceTree = "<group>"; };
-		DAF28C3C196D082800959DA1 /* CCStorePaymentTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCStorePaymentTransaction.h; sourceTree = "<group>"; };
-		DAF28C3D196D082800959DA1 /* CCStorePaymentTransactionWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCStorePaymentTransactionWrapper.h; sourceTree = "<group>"; };
-		DAF28C3E196D082800959DA1 /* CCStoreProduct.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCStoreProduct.cpp; sourceTree = "<group>"; };
-		DAF28C3F196D082800959DA1 /* CCStoreProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCStoreProduct.h; sourceTree = "<group>"; };
-		DAF28C40196D082800959DA1 /* CCStoreProductsRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCStoreProductsRequestDelegate.h; sourceTree = "<group>"; };
-		DAF28C41196D082800959DA1 /* CCStoreTransactionObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCStoreTransactionObserver.h; sourceTree = "<group>"; };
 		DAF28C45196D082800959DA1 /* lua_cocos2dx_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_auto.cpp; sourceTree = "<group>"; };
 		DAF28C46196D082800959DA1 /* lua_cocos2dx_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_cocos2dx_auto.hpp; sourceTree = "<group>"; };
 		DAF28C47196D082800959DA1 /* lua_cocos2dx_extension_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_extension_auto.cpp; sourceTree = "<group>"; };
@@ -2775,8 +2743,6 @@
 		DA9FAA091973F1C1006A0B4C /* luabinding */ = {
 			isa = PBXGroup;
 			children = (
-				DA9FAA0C1973F1C1006A0B4C /* cocos2dx_extra_ios_iap_luabinding.cpp */,
-				DA9FAA0D1973F1C1006A0B4C /* cocos2dx_extra_ios_iap_luabinding.h */,
 				DA9FAA0F1973F1C1006A0B4C /* cocos2dx_extra_luabinding.cpp */,
 				DA9FAA101973F1C1006A0B4C /* cocos2dx_extra_luabinding.h */,
 				DA9FAA121973F1C1006A0B4C /* HelperFunc_luabinding.cpp */,
@@ -2822,7 +2788,6 @@
 				DAF28C00196D082800959DA1 /* native */,
 				DAF28C03196D082800959DA1 /* network */,
 				DAF28C09196D082800959DA1 /* platform */,
-				DAF28C39196D082800959DA1 /* store */,
 			);
 			path = extra;
 			sourceTree = "<group>";
@@ -2902,12 +2867,6 @@
 				DAF28C10196D082800959DA1 /* CCNative.mm */,
 				DAF28C11196D082800959DA1 /* CCNativeIOS.h */,
 				DAF28C12196D082800959DA1 /* CCNativeIOS.mm */,
-				DAF28C13196D082800959DA1 /* CCStore.mm */,
-				DAF28C14196D082800959DA1 /* CCStoreIOS.h */,
-				DAF28C15196D082800959DA1 /* CCStoreIOS.mm */,
-				DAF28C16196D082800959DA1 /* CCStorePaymentTransactionWrapper.mm */,
-				DAF28C17196D082800959DA1 /* CCStoreReceiptVerifyRequestIOS.h */,
-				DAF28C18196D082800959DA1 /* CCStoreReceiptVerifyRequestIOS.mm */,
 				DAF28C19196D082800959DA1 /* json */,
 				DAF28C22196D082800959DA1 /* openudid */,
 			);
@@ -2946,21 +2905,6 @@
 				DAF28C28196D082800959DA1 /* ReachabilityIOSMac.m */,
 			);
 			path = ios_mac;
-			sourceTree = "<group>";
-		};
-		DAF28C39196D082800959DA1 /* store */ = {
-			isa = PBXGroup;
-			children = (
-				DAF28C3A196D082800959DA1 /* CCStore.h */,
-				DAF28C3B196D082800959DA1 /* CCStorePaymentTransaction.cpp */,
-				DAF28C3C196D082800959DA1 /* CCStorePaymentTransaction.h */,
-				DAF28C3D196D082800959DA1 /* CCStorePaymentTransactionWrapper.h */,
-				DAF28C3E196D082800959DA1 /* CCStoreProduct.cpp */,
-				DAF28C3F196D082800959DA1 /* CCStoreProduct.h */,
-				DAF28C40196D082800959DA1 /* CCStoreProductsRequestDelegate.h */,
-				DAF28C41196D082800959DA1 /* CCStoreTransactionObserver.h */,
-			);
-			path = store;
 			sourceTree = "<group>";
 		};
 		DAF28C42196D082800959DA1 /* lua_bindings */ = {
@@ -3900,9 +3844,7 @@
 				DAF292CB196D338E00959DA1 /* CCActionPageTurn3D.h in Headers */,
 				DAF292D1196D338E00959DA1 /* CCActionTween.h in Headers */,
 				4DB52EDD1B20541900664B72 /* CCRenderCommand.h in Headers */,
-				DAF28DE5196D082800959DA1 /* CCStorePaymentTransactionWrapper.h in Headers */,
 				DAF292E9196D338E00959DA1 /* CCFont.h in Headers */,
-				DAF28DC6196D082800959DA1 /* CCStoreReceiptVerifyRequestIOS.h in Headers */,
 				DAF292D3196D338E00959DA1 /* CCAnimation.h in Headers */,
 				DAF292C7196D338E00959DA1 /* CCActionInterval.h in Headers */,
 				DAF29462196D339800959DA1 /* CCCommon.h in Headers */,
@@ -3926,7 +3868,6 @@
 				4DB52DF71B20509A00664B72 /* CCGL.h in Headers */,
 				DAF28DF1196D082800959DA1 /* lua_cocos2dx_physics_auto.hpp in Headers */,
 				4D753B151B1F003200C9DA46 /* CCPlatformConfig.h in Headers */,
-				DAF28DE8196D082800959DA1 /* CCStoreProductsRequestDelegate.h in Headers */,
 				DAF29319196D338F00959DA1 /* CCParticleSystemQuad.h in Headers */,
 				49BCFAE11982699900F48FF6 /* ccFilterShader_motion_blur_vert.h in Headers */,
 				DAF293BB196D339200959DA1 /* CCNS.h in Headers */,
@@ -3960,7 +3901,6 @@
 				4DB54B8719E82CB400977D36 /* CCMenuItem.h in Headers */,
 				DAF28EAA196D082900959DA1 /* tolua_fix.h in Headers */,
 				DAF294CF196D359500959DA1 /* CCControlUtils.h in Headers */,
-				DAF28DE2196D082800959DA1 /* CCStore.h in Headers */,
 				DAF2940E196D339500959DA1 /* WebSocket.h in Headers */,
 				DAF2932F196D338F00959DA1 /* CCTMXObjectGroup.h in Headers */,
 				49BCFAC31982699900F48FF6 /* CCRGBFilter.h in Headers */,
@@ -4070,11 +4010,9 @@
 				DAF28DB8196D082800959DA1 /* CCHTTPRequestDelegate.h in Headers */,
 				DAF293C7196D339200959DA1 /* CCScriptSupport.h in Headers */,
 				DAF294D9196D359900959DA1 /* CCEditBoxImplIOS.h in Headers */,
-				DAF28DE9196D082800959DA1 /* CCStoreTransactionObserver.h in Headers */,
 				DAF294CA196D359500959DA1 /* CCControl.h in Headers */,
 				4DB52DDD1B20508800664B72 /* CCApplication-ios.h in Headers */,
 				DAF292EB196D338E00959DA1 /* CCFontAtlas.h in Headers */,
-				DAF28DC3196D082800959DA1 /* CCStoreIOS.h in Headers */,
 				4D0259401B5DEADF002BC427 /* lpvm.h in Headers */,
 				DAF292E7196D338E00959DA1 /* CCFastTMXTiledMap.h in Headers */,
 				49BCFAE41982699900F48FF6 /* ccFilterShader_sepia_frag.h in Headers */,
@@ -4136,7 +4074,6 @@
 				DAF29404196D339400959DA1 /* Quaternion.h in Headers */,
 				DAF292E1196D338E00959DA1 /* CCDrawingPrimitives.h in Headers */,
 				DAF293E6196D339300959DA1 /* cocos2d.h in Headers */,
-				DAF28DE4196D082800959DA1 /* CCStorePaymentTransaction.h in Headers */,
 				DAF29345196D338F00959DA1 /* CCBundleReader.h in Headers */,
 				4D0259621B5E16D1002BC427 /* TDCCAccount.h in Headers */,
 				49BCFADB1982699900F48FF6 /* ccFilterShader_grass_frag.h in Headers */,
@@ -4186,7 +4123,6 @@
 				4D0259281B5DEAD7002BC427 /* sproto.h in Headers */,
 				DAF294D3196D359500959DA1 /* CCScale9Sprite.h in Headers */,
 				4DC9F5DA19FE241F00FA1E3B /* SkinnedMeshAttachment.h in Headers */,
-				DA9FAA161973F1C1006A0B4C /* cocos2dx_extra_ios_iap_luabinding.h in Headers */,
 				4D753B161B1F003200C9DA46 /* CCPlatformMacros.h in Headers */,
 				DAF28EA2196D082900959DA1 /* LuaScriptHandlerMgr.h in Headers */,
 				4DB52E781B20515200664B72 /* HttpRequest.h in Headers */,
@@ -4249,7 +4185,6 @@
 				DAF29311196D338F00959DA1 /* CCParallaxNode.h in Headers */,
 				DAF28DB3196D082800959DA1 /* md5.h in Headers */,
 				49BCFAB91982699900F48FF6 /* CCGammaFilter.h in Headers */,
-				DAF28DE7196D082800959DA1 /* CCStoreProduct.h in Headers */,
 				DAF293A8196D339100959DA1 /* CCEventListenerKeyboard.h in Headers */,
 				DAF292FB196D338E00959DA1 /* CCLabel.h in Headers */,
 				DAF293AE196D339100959DA1 /* CCEventMouse.h in Headers */,
@@ -4385,7 +4320,6 @@
 				DAF293E2196D339300959DA1 /* ZipUtils.cpp in Sources */,
 				DAF28EE4196D082900959DA1 /* usocket.c in Sources */,
 				DAF293C6196D339200959DA1 /* CCScriptSupport.cpp in Sources */,
-				DA9FAA151973F1C1006A0B4C /* cocos2dx_extra_ios_iap_luabinding.cpp in Sources */,
 				DAF28DC1196D082800959DA1 /* CCNativeIOS.mm in Sources */,
 				DAF28EC2196D082900959DA1 /* lua_extensions.c in Sources */,
 				DAF2941B196D339500959DA1 /* CCPhysicsContactInfo_chipmunk.cpp in Sources */,
@@ -4408,7 +4342,6 @@
 				DAF292CA196D338E00959DA1 /* CCActionPageTurn3D.cpp in Sources */,
 				4DC9F5DD19FE241F00FA1E3B /* SlotData.c in Sources */,
 				4D025AA41B5E4ABD002BC427 /* UILayout.cpp in Sources */,
-				DAF28DC7196D082800959DA1 /* CCStoreReceiptVerifyRequestIOS.mm in Sources */,
 				DAF2937E196D339000959DA1 /* ccCArray.cpp in Sources */,
 				DAF29409196D339400959DA1 /* Vec3.cpp in Sources */,
 				DAF29320196D338F00959DA1 /* CCSprite.cpp in Sources */,
@@ -4423,7 +4356,6 @@
 				DAF292E6196D338E00959DA1 /* CCFastTMXTiledMap.cpp in Sources */,
 				DAF29322196D338F00959DA1 /* CCSpriteBatchNode.cpp in Sources */,
 				49BCFAB21982699900F48FF6 /* CCDropShadowFilter.cpp in Sources */,
-				DAF28DC4196D082800959DA1 /* CCStoreIOS.mm in Sources */,
 				DAF28EA8196D082900959DA1 /* CCLuaObjcBridge.mm in Sources */,
 				DAF2940F196D339500959DA1 /* CCPhysicsBody.cpp in Sources */,
 				DAF292F4196D338E00959DA1 /* CCGLBufferedNode.cpp in Sources */,
@@ -4468,7 +4400,6 @@
 				DAF28EB2196D082900959DA1 /* fpconv.c in Sources */,
 				DAF2938D196D339000959DA1 /* CCDirector.cpp in Sources */,
 				DAF29330196D338F00959DA1 /* CCTMXTiledMap.cpp in Sources */,
-				DAF28DC5196D082800959DA1 /* CCStorePaymentTransactionWrapper.mm in Sources */,
 				DAF2930E196D338F00959DA1 /* CCNodeGrid.cpp in Sources */,
 				DAF293D0196D339200959DA1 /* ccUTF8.cpp in Sources */,
 				DAF293CA196D339200959DA1 /* ccTypes.cpp in Sources */,
@@ -4487,7 +4418,6 @@
 				DAF294EB196D368700959DA1 /* cpSlideJoint.c in Sources */,
 				49BCFAC01982699900F48FF6 /* CCMaskFilter.cpp in Sources */,
 				DAF294E0196D368000959DA1 /* chipmunk.c in Sources */,
-				DAF28DE3196D082800959DA1 /* CCStorePaymentTransaction.cpp in Sources */,
 				4DC9F5B919FE241F00FA1E3B /* Event.c in Sources */,
 				DAF28E9B196D082900959DA1 /* lua_cocos2dx_physics_manual.cpp in Sources */,
 				DAF292FE196D338E00959DA1 /* CCLabelBMFont.cpp in Sources */,
@@ -4583,7 +4513,6 @@
 				DAF294EC196D368700959DA1 /* cpArbiter.c in Sources */,
 				DAF28EDA196D082900959DA1 /* socket_scripts.c in Sources */,
 				DAF29401196D339400959DA1 /* MathUtil.cpp in Sources */,
-				DAF28DE6196D082800959DA1 /* CCStoreProduct.cpp in Sources */,
 				4DC9F5AB19FE241F00FA1E3B /* Atlas.c in Sources */,
 				49BCFAC21982699900F48FF6 /* CCRGBFilter.cpp in Sources */,
 				DAF293AF196D339100959DA1 /* CCEventTouch.cpp in Sources */,
@@ -4601,7 +4530,6 @@
 				DAF292B8196D338E00959DA1 /* CCAction.cpp in Sources */,
 				49BCFAC61982699900F48FF6 /* CCSepiaFilter.cpp in Sources */,
 				DAF292BC196D338E00959DA1 /* CCActionCatmullRom.cpp in Sources */,
-				DAF28DC2196D082800959DA1 /* CCStore.mm in Sources */,
 				49BCFAAC1982699900F48FF6 /* CCBrightnessFilter.cpp in Sources */,
 				DAF29314196D338F00959DA1 /* CCParticleExamples.cpp in Sources */,
 				DAF293D4196D339200959DA1 /* CCValue.cpp in Sources */,

@@ -186,7 +186,9 @@ bool LuaStack::init(void)
     
     luaopen_cocos2dx_extra_luabinding(_state);
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+#ifdef CC_ENABLE_PAYMENT
     luaopen_cocos2dx_extra_ios_iap_luabinding(_state);
+#endif
 #endif
     luaopen_HelperFunc_luabinding(_state);
 #if CC_USE_PHYSICS

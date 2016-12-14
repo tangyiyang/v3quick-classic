@@ -24,7 +24,7 @@ public:
     static Store* sharedStore(void);
     static void purgeSharedStore(void);
     
-    ~Store(void);
+    virtual ~Store(void);
     
     void postInitWithTransactionObserver(StoreTransactionObserver* observer);
 #if CC_LUA_ENGINE_ENABLED > 0
