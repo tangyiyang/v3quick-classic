@@ -171,6 +171,272 @@
 		4D867A4C1B1E9E50007731FF /* CCBillBoard.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D867A441B1E9E50007731FF /* CCBillBoard.h */; };
 		4D867A4D1B1E9E50007731FF /* CCOBB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D867A451B1E9E50007731FF /* CCOBB.cpp */; };
 		4D867A4E1B1E9E50007731FF /* CCOBB.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D867A461B1E9E50007731FF /* CCOBB.h */; };
+		4DBDE9231F124CB200892290 /* lua-racknet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8141F124CB100892290 /* lua-racknet.cpp */; };
+		4DBDE9241F124CB200892290 /* lua-racknet.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8151F124CB100892290 /* lua-racknet.h */; };
+		4DBDE9251F124CB200892290 /* _FindFirst.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8171F124CB100892290 /* _FindFirst.cpp */; };
+		4DBDE9261F124CB200892290 /* _FindFirst.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8181F124CB100892290 /* _FindFirst.h */; };
+		4DBDE9271F124CB200892290 /* AutopatcherPatchContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8191F124CB100892290 /* AutopatcherPatchContext.h */; };
+		4DBDE9281F124CB200892290 /* AutopatcherRepositoryInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE81A1F124CB100892290 /* AutopatcherRepositoryInterface.h */; };
+		4DBDE9291F124CB200892290 /* Base64Encoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE81B1F124CB100892290 /* Base64Encoder.cpp */; };
+		4DBDE92A1F124CB200892290 /* Base64Encoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE81C1F124CB100892290 /* Base64Encoder.h */; };
+		4DBDE92B1F124CB200892290 /* BitStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE81D1F124CB100892290 /* BitStream.cpp */; };
+		4DBDE92C1F124CB200892290 /* BitStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE81E1F124CB100892290 /* BitStream.h */; };
+		4DBDE92D1F124CB200892290 /* CCRakNetSlidingWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE81F1F124CB100892290 /* CCRakNetSlidingWindow.cpp */; };
+		4DBDE92E1F124CB200892290 /* CCRakNetSlidingWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8201F124CB100892290 /* CCRakNetSlidingWindow.h */; };
+		4DBDE92F1F124CB200892290 /* CCRakNetUDT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8211F124CB100892290 /* CCRakNetUDT.cpp */; };
+		4DBDE9301F124CB200892290 /* CCRakNetUDT.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8221F124CB100892290 /* CCRakNetUDT.h */; };
+		4DBDE9311F124CB200892290 /* CheckSum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8231F124CB100892290 /* CheckSum.cpp */; };
+		4DBDE9321F124CB200892290 /* CheckSum.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8241F124CB100892290 /* CheckSum.h */; };
+		4DBDE9331F124CB200892290 /* CloudClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8251F124CB100892290 /* CloudClient.cpp */; };
+		4DBDE9341F124CB200892290 /* CloudClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8261F124CB100892290 /* CloudClient.h */; };
+		4DBDE9351F124CB200892290 /* CloudCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8271F124CB100892290 /* CloudCommon.cpp */; };
+		4DBDE9361F124CB200892290 /* CloudCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8281F124CB100892290 /* CloudCommon.h */; };
+		4DBDE9371F124CB200892290 /* CloudServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8291F124CB100892290 /* CloudServer.cpp */; };
+		4DBDE9381F124CB200892290 /* CloudServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE82A1F124CB100892290 /* CloudServer.h */; };
+		4DBDE9391F124CB200892290 /* CommandParserInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE82C1F124CB100892290 /* CommandParserInterface.cpp */; };
+		4DBDE93A1F124CB200892290 /* CommandParserInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE82D1F124CB100892290 /* CommandParserInterface.h */; };
+		4DBDE93B1F124CB200892290 /* ConnectionGraph2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE82E1F124CB100892290 /* ConnectionGraph2.cpp */; };
+		4DBDE93C1F124CB200892290 /* ConnectionGraph2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE82F1F124CB100892290 /* ConnectionGraph2.h */; };
+		4DBDE93D1F124CB200892290 /* ConsoleServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8301F124CB100892290 /* ConsoleServer.cpp */; };
+		4DBDE93E1F124CB200892290 /* ConsoleServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8311F124CB100892290 /* ConsoleServer.h */; };
+		4DBDE93F1F124CB200892290 /* DataCompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8321F124CB100892290 /* DataCompressor.cpp */; };
+		4DBDE9401F124CB200892290 /* DataCompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8331F124CB100892290 /* DataCompressor.h */; };
+		4DBDE9411F124CB200892290 /* DirectoryDeltaTransfer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8341F124CB100892290 /* DirectoryDeltaTransfer.cpp */; };
+		4DBDE9421F124CB200892290 /* DirectoryDeltaTransfer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8351F124CB100892290 /* DirectoryDeltaTransfer.h */; };
+		4DBDE9431F124CB200892290 /* DR_SHA1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8361F124CB100892290 /* DR_SHA1.cpp */; };
+		4DBDE9441F124CB200892290 /* DR_SHA1.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8371F124CB100892290 /* DR_SHA1.h */; };
+		4DBDE9451F124CB200892290 /* DS_BinarySearchTree.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8381F124CB100892290 /* DS_BinarySearchTree.h */; };
+		4DBDE9461F124CB200892290 /* DS_BPlusTree.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8391F124CB100892290 /* DS_BPlusTree.h */; };
+		4DBDE9471F124CB200892290 /* DS_BytePool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE83A1F124CB100892290 /* DS_BytePool.cpp */; };
+		4DBDE9481F124CB200892290 /* DS_BytePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE83B1F124CB100892290 /* DS_BytePool.h */; };
+		4DBDE9491F124CB200892290 /* DS_ByteQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE83C1F124CB100892290 /* DS_ByteQueue.cpp */; };
+		4DBDE94A1F124CB200892290 /* DS_ByteQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE83D1F124CB100892290 /* DS_ByteQueue.h */; };
+		4DBDE94B1F124CB200892290 /* DS_Hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE83E1F124CB100892290 /* DS_Hash.h */; };
+		4DBDE94C1F124CB200892290 /* DS_Heap.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE83F1F124CB100892290 /* DS_Heap.h */; };
+		4DBDE94D1F124CB200892290 /* DS_HuffmanEncodingTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8401F124CB100892290 /* DS_HuffmanEncodingTree.cpp */; };
+		4DBDE94E1F124CB200892290 /* DS_HuffmanEncodingTree.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8411F124CB100892290 /* DS_HuffmanEncodingTree.h */; };
+		4DBDE94F1F124CB200892290 /* DS_HuffmanEncodingTreeFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8421F124CB100892290 /* DS_HuffmanEncodingTreeFactory.h */; };
+		4DBDE9501F124CB200892290 /* DS_HuffmanEncodingTreeNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8431F124CB100892290 /* DS_HuffmanEncodingTreeNode.h */; };
+		4DBDE9511F124CB200892290 /* DS_LinkedList.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8441F124CB100892290 /* DS_LinkedList.h */; };
+		4DBDE9521F124CB200892290 /* DS_List.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8451F124CB100892290 /* DS_List.h */; };
+		4DBDE9531F124CB200892290 /* DS_Map.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8461F124CB100892290 /* DS_Map.h */; };
+		4DBDE9541F124CB200892290 /* DS_MemoryPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8471F124CB100892290 /* DS_MemoryPool.h */; };
+		4DBDE9551F124CB200892290 /* DS_Multilist.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8481F124CB100892290 /* DS_Multilist.h */; };
+		4DBDE9561F124CB200892290 /* DS_OrderedChannelHeap.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8491F124CB100892290 /* DS_OrderedChannelHeap.h */; };
+		4DBDE9571F124CB200892290 /* DS_OrderedList.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE84A1F124CB100892290 /* DS_OrderedList.h */; };
+		4DBDE9581F124CB200892290 /* DS_Queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE84B1F124CB100892290 /* DS_Queue.h */; };
+		4DBDE9591F124CB200892290 /* DS_QueueLinkedList.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE84C1F124CB100892290 /* DS_QueueLinkedList.h */; };
+		4DBDE95A1F124CB200892290 /* DS_RangeList.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE84D1F124CB100892290 /* DS_RangeList.h */; };
+		4DBDE95B1F124CB200892290 /* DS_Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE84E1F124CB100892290 /* DS_Table.cpp */; };
+		4DBDE95C1F124CB200892290 /* DS_Table.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE84F1F124CB100892290 /* DS_Table.h */; };
+		4DBDE95D1F124CB200892290 /* DS_ThreadsafeAllocatingQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8501F124CB100892290 /* DS_ThreadsafeAllocatingQueue.h */; };
+		4DBDE95E1F124CB200892290 /* DS_Tree.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8511F124CB100892290 /* DS_Tree.h */; };
+		4DBDE95F1F124CB200892290 /* DS_WeightedGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8521F124CB100892290 /* DS_WeightedGraph.h */; };
+		4DBDE9601F124CB200892290 /* DynDNS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8531F124CB100892290 /* DynDNS.cpp */; };
+		4DBDE9611F124CB200892290 /* DynDNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8541F124CB100892290 /* DynDNS.h */; };
+		4DBDE9621F124CB200892290 /* EmailSender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8551F124CB100892290 /* EmailSender.cpp */; };
+		4DBDE9631F124CB200892290 /* EmailSender.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8561F124CB100892290 /* EmailSender.h */; };
+		4DBDE9641F124CB200892290 /* EmptyHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8571F124CB100892290 /* EmptyHeader.h */; };
+		4DBDE9651F124CB200892290 /* EpochTimeToString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8581F124CB100892290 /* EpochTimeToString.cpp */; };
+		4DBDE9661F124CB200892290 /* EpochTimeToString.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8591F124CB100892290 /* EpochTimeToString.h */; };
+		4DBDE9671F124CB200892290 /* Export.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE85A1F124CB100892290 /* Export.h */; };
+		4DBDE9681F124CB200892290 /* FileList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE85B1F124CB100892290 /* FileList.cpp */; };
+		4DBDE9691F124CB200892290 /* FileList.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE85C1F124CB100892290 /* FileList.h */; };
+		4DBDE96A1F124CB200892290 /* FileListNodeContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE85D1F124CB100892290 /* FileListNodeContext.h */; };
+		4DBDE96B1F124CB200892290 /* FileListTransfer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE85E1F124CB100892290 /* FileListTransfer.cpp */; };
+		4DBDE96C1F124CB200892290 /* FileListTransfer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE85F1F124CB100892290 /* FileListTransfer.h */; };
+		4DBDE96D1F124CB200892290 /* FileListTransferCBInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8601F124CB100892290 /* FileListTransferCBInterface.h */; };
+		4DBDE96E1F124CB200892290 /* FileOperations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8611F124CB100892290 /* FileOperations.cpp */; };
+		4DBDE96F1F124CB200892290 /* FileOperations.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8621F124CB100892290 /* FileOperations.h */; };
+		4DBDE9701F124CB200892290 /* FormatString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8631F124CB100892290 /* FormatString.cpp */; };
+		4DBDE9711F124CB200892290 /* FormatString.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8641F124CB100892290 /* FormatString.h */; };
+		4DBDE9721F124CB200892290 /* FullyConnectedMesh2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8651F124CB100892290 /* FullyConnectedMesh2.cpp */; };
+		4DBDE9731F124CB200892290 /* FullyConnectedMesh2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8661F124CB100892290 /* FullyConnectedMesh2.h */; };
+		4DBDE9741F124CB200892290 /* Getche.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8671F124CB100892290 /* Getche.cpp */; };
+		4DBDE9751F124CB200892290 /* Getche.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8681F124CB100892290 /* Getche.h */; };
+		4DBDE9761F124CB200892290 /* Gets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8691F124CB100892290 /* Gets.cpp */; };
+		4DBDE9771F124CB200892290 /* Gets.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE86A1F124CB100892290 /* Gets.h */; };
+		4DBDE9781F124CB200892290 /* GetTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE86B1F124CB100892290 /* GetTime.cpp */; };
+		4DBDE9791F124CB200892290 /* GetTime.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE86C1F124CB100892290 /* GetTime.h */; };
+		4DBDE97A1F124CB200892290 /* gettimeofday.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE86D1F124CB100892290 /* gettimeofday.cpp */; };
+		4DBDE97B1F124CB200892290 /* gettimeofday.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE86E1F124CB100892290 /* gettimeofday.h */; };
+		4DBDE97C1F124CB200892290 /* GridSectorizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE86F1F124CB100892290 /* GridSectorizer.cpp */; };
+		4DBDE97D1F124CB200892290 /* GridSectorizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8701F124CB100892290 /* GridSectorizer.h */; };
+		4DBDE97E1F124CB200892290 /* HTTPConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8711F124CB100892290 /* HTTPConnection.cpp */; };
+		4DBDE97F1F124CB200892290 /* HTTPConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8721F124CB100892290 /* HTTPConnection.h */; };
+		4DBDE9801F124CB200892290 /* HTTPConnection2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8731F124CB100892290 /* HTTPConnection2.cpp */; };
+		4DBDE9811F124CB200892290 /* HTTPConnection2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8741F124CB100892290 /* HTTPConnection2.h */; };
+		4DBDE9821F124CB200892290 /* IncrementalReadInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8751F124CB100892290 /* IncrementalReadInterface.cpp */; };
+		4DBDE9831F124CB200892290 /* IncrementalReadInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8761F124CB100892290 /* IncrementalReadInterface.h */; };
+		4DBDE9841F124CB200892290 /* InternalPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8771F124CB100892290 /* InternalPacket.h */; };
+		4DBDE9851F124CB200892290 /* Itoa.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8781F124CB100892290 /* Itoa.cpp */; };
+		4DBDE9861F124CB200892290 /* Itoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8791F124CB100892290 /* Itoa.h */; };
+		4DBDE9871F124CB200892290 /* Kbhit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE87A1F124CB100892290 /* Kbhit.h */; };
+		4DBDE9881F124CB200892290 /* LinuxStrings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE87B1F124CB100892290 /* LinuxStrings.cpp */; };
+		4DBDE9891F124CB200892290 /* LinuxStrings.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE87C1F124CB100892290 /* LinuxStrings.h */; };
+		4DBDE98A1F124CB200892290 /* LocklessTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE87D1F124CB100892290 /* LocklessTypes.cpp */; };
+		4DBDE98B1F124CB200892290 /* LocklessTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE87E1F124CB100892290 /* LocklessTypes.h */; };
+		4DBDE98C1F124CB200892290 /* LogCommandParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE87F1F124CB100892290 /* LogCommandParser.cpp */; };
+		4DBDE98D1F124CB200892290 /* LogCommandParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8801F124CB100892290 /* LogCommandParser.h */; };
+		4DBDE98E1F124CB200892290 /* MessageFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8811F124CB100892290 /* MessageFilter.cpp */; };
+		4DBDE98F1F124CB200892290 /* MessageFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8821F124CB100892290 /* MessageFilter.h */; };
+		4DBDE9901F124CB200892290 /* MessageIdentifiers.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8831F124CB100892290 /* MessageIdentifiers.h */; };
+		4DBDE9911F124CB200892290 /* MTUSize.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8841F124CB200892290 /* MTUSize.h */; };
+		4DBDE9921F124CB200892290 /* NativeFeatureIncludes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8851F124CB200892290 /* NativeFeatureIncludes.h */; };
+		4DBDE9931F124CB200892290 /* NativeFeatureIncludesOverrides.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8861F124CB200892290 /* NativeFeatureIncludesOverrides.h */; };
+		4DBDE9941F124CB200892290 /* NativeTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8871F124CB200892290 /* NativeTypes.h */; };
+		4DBDE9951F124CB200892290 /* NatPunchthroughClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8881F124CB200892290 /* NatPunchthroughClient.cpp */; };
+		4DBDE9961F124CB200892290 /* NatPunchthroughClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8891F124CB200892290 /* NatPunchthroughClient.h */; };
+		4DBDE9971F124CB200892290 /* NatPunchthroughServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE88A1F124CB200892290 /* NatPunchthroughServer.cpp */; };
+		4DBDE9981F124CB200892290 /* NatPunchthroughServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE88B1F124CB200892290 /* NatPunchthroughServer.h */; };
+		4DBDE9991F124CB200892290 /* NatTypeDetectionClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE88C1F124CB200892290 /* NatTypeDetectionClient.cpp */; };
+		4DBDE99A1F124CB200892290 /* NatTypeDetectionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE88D1F124CB200892290 /* NatTypeDetectionClient.h */; };
+		4DBDE99B1F124CB200892290 /* NatTypeDetectionCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE88E1F124CB200892290 /* NatTypeDetectionCommon.cpp */; };
+		4DBDE99C1F124CB200892290 /* NatTypeDetectionCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE88F1F124CB200892290 /* NatTypeDetectionCommon.h */; };
+		4DBDE99D1F124CB200892290 /* NatTypeDetectionServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8901F124CB200892290 /* NatTypeDetectionServer.cpp */; };
+		4DBDE99E1F124CB200892290 /* NatTypeDetectionServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8911F124CB200892290 /* NatTypeDetectionServer.h */; };
+		4DBDE99F1F124CB200892290 /* NetworkIDManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8921F124CB200892290 /* NetworkIDManager.cpp */; };
+		4DBDE9A01F124CB200892290 /* NetworkIDManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8931F124CB200892290 /* NetworkIDManager.h */; };
+		4DBDE9A11F124CB200892290 /* NetworkIDObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8941F124CB200892290 /* NetworkIDObject.cpp */; };
+		4DBDE9A21F124CB200892290 /* NetworkIDObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8951F124CB200892290 /* NetworkIDObject.h */; };
+		4DBDE9A31F124CB200892290 /* PacketConsoleLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8961F124CB200892290 /* PacketConsoleLogger.cpp */; };
+		4DBDE9A41F124CB200892290 /* PacketConsoleLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8971F124CB200892290 /* PacketConsoleLogger.h */; };
+		4DBDE9A51F124CB200892290 /* PacketFileLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8981F124CB200892290 /* PacketFileLogger.cpp */; };
+		4DBDE9A61F124CB200892290 /* PacketFileLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8991F124CB200892290 /* PacketFileLogger.h */; };
+		4DBDE9A71F124CB200892290 /* PacketizedTCP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE89A1F124CB200892290 /* PacketizedTCP.cpp */; };
+		4DBDE9A81F124CB200892290 /* PacketizedTCP.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE89B1F124CB200892290 /* PacketizedTCP.h */; };
+		4DBDE9A91F124CB200892290 /* PacketLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE89C1F124CB200892290 /* PacketLogger.cpp */; };
+		4DBDE9AA1F124CB200892290 /* PacketLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE89D1F124CB200892290 /* PacketLogger.h */; };
+		4DBDE9AB1F124CB200892290 /* PacketOutputWindowLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE89E1F124CB200892290 /* PacketOutputWindowLogger.cpp */; };
+		4DBDE9AC1F124CB200892290 /* PacketOutputWindowLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE89F1F124CB200892290 /* PacketOutputWindowLogger.h */; };
+		4DBDE9AD1F124CB200892290 /* PacketPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8A01F124CB200892290 /* PacketPool.h */; };
+		4DBDE9AE1F124CB200892290 /* PacketPriority.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8A11F124CB200892290 /* PacketPriority.h */; };
+		4DBDE9AF1F124CB200892290 /* PluginInterface2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8A21F124CB200892290 /* PluginInterface2.cpp */; };
+		4DBDE9B01F124CB200892290 /* PluginInterface2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8A31F124CB200892290 /* PluginInterface2.h */; };
+		4DBDE9B11F124CB200892290 /* PS3Includes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8A41F124CB200892290 /* PS3Includes.h */; };
+		4DBDE9B21F124CB200892290 /* PS4Includes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8A51F124CB200892290 /* PS4Includes.cpp */; };
+		4DBDE9B31F124CB200892290 /* PS4Includes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8A61F124CB200892290 /* PS4Includes.h */; };
+		4DBDE9B41F124CB200892290 /* Rackspace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8A71F124CB200892290 /* Rackspace.cpp */; };
+		4DBDE9B51F124CB200892290 /* Rackspace.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8A81F124CB200892290 /* Rackspace.h */; };
+		4DBDE9B61F124CB200892290 /* RakAlloca.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8A91F124CB200892290 /* RakAlloca.h */; };
+		4DBDE9B71F124CB200892290 /* RakAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8AA1F124CB200892290 /* RakAssert.h */; };
+		4DBDE9B81F124CB200892290 /* RakMemoryOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8AB1F124CB200892290 /* RakMemoryOverride.cpp */; };
+		4DBDE9B91F124CB200892290 /* RakMemoryOverride.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8AC1F124CB200892290 /* RakMemoryOverride.h */; };
+		4DBDE9BA1F124CB200892290 /* RakNetCommandParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8B01F124CB200892290 /* RakNetCommandParser.cpp */; };
+		4DBDE9BB1F124CB200892290 /* RakNetCommandParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8B11F124CB200892290 /* RakNetCommandParser.h */; };
+		4DBDE9BC1F124CB200892290 /* RakNetDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8B21F124CB200892290 /* RakNetDefines.h */; };
+		4DBDE9BD1F124CB200892290 /* RakNetDefinesOverrides.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8B31F124CB200892290 /* RakNetDefinesOverrides.h */; };
+		4DBDE9BE1F124CB200892290 /* RakNetSmartPtr.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8B41F124CB200892290 /* RakNetSmartPtr.h */; };
+		4DBDE9BF1F124CB200892290 /* RakNetSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8B51F124CB200892290 /* RakNetSocket.cpp */; };
+		4DBDE9C01F124CB200892290 /* RakNetSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8B61F124CB200892290 /* RakNetSocket.h */; };
+		4DBDE9C11F124CB200892290 /* RakNetSocket2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8B71F124CB200892290 /* RakNetSocket2.cpp */; };
+		4DBDE9C21F124CB200892290 /* RakNetSocket2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8B81F124CB200892290 /* RakNetSocket2.h */; };
+		4DBDE9C31F124CB200892290 /* RakNetSocket2_360_720.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8B91F124CB200892290 /* RakNetSocket2_360_720.cpp */; };
+		4DBDE9C41F124CB200892290 /* RakNetSocket2_Berkley.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8BA1F124CB200892290 /* RakNetSocket2_Berkley.cpp */; };
+		4DBDE9C51F124CB200892290 /* RakNetSocket2_Berkley_NativeClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8BB1F124CB200892290 /* RakNetSocket2_Berkley_NativeClient.cpp */; };
+		4DBDE9C61F124CB200892290 /* RakNetSocket2_NativeClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8BC1F124CB200892290 /* RakNetSocket2_NativeClient.cpp */; };
+		4DBDE9C71F124CB200892290 /* RakNetSocket2_PS3_PS4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8BD1F124CB200892290 /* RakNetSocket2_PS3_PS4.cpp */; };
+		4DBDE9C81F124CB200892290 /* RakNetSocket2_PS4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8BE1F124CB200892290 /* RakNetSocket2_PS4.cpp */; };
+		4DBDE9C91F124CB200892290 /* RakNetSocket2_Vita.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8BF1F124CB200892290 /* RakNetSocket2_Vita.cpp */; };
+		4DBDE9CA1F124CB200892290 /* RakNetSocket2_Windows_Linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8C01F124CB200892290 /* RakNetSocket2_Windows_Linux.cpp */; };
+		4DBDE9CB1F124CB200892290 /* RakNetSocket2_Windows_Linux_360.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8C11F124CB200892290 /* RakNetSocket2_Windows_Linux_360.cpp */; };
+		4DBDE9CC1F124CB200892290 /* RakNetSocket2_WindowsStore8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8C21F124CB200892290 /* RakNetSocket2_WindowsStore8.cpp */; };
+		4DBDE9CD1F124CB200892290 /* RakNetStatistics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8C31F124CB200892290 /* RakNetStatistics.cpp */; };
+		4DBDE9CE1F124CB200892290 /* RakNetStatistics.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8C41F124CB200892290 /* RakNetStatistics.h */; };
+		4DBDE9CF1F124CB200892290 /* RakNetTime.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8C51F124CB200892290 /* RakNetTime.h */; };
+		4DBDE9D01F124CB200892290 /* RakNetTransport2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8C61F124CB200892290 /* RakNetTransport2.cpp */; };
+		4DBDE9D11F124CB200892290 /* RakNetTransport2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8C71F124CB200892290 /* RakNetTransport2.h */; };
+		4DBDE9D21F124CB200892290 /* RakNetTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8C81F124CB200892290 /* RakNetTypes.cpp */; };
+		4DBDE9D31F124CB200892290 /* RakNetTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8C91F124CB200892290 /* RakNetTypes.h */; };
+		4DBDE9D41F124CB200892290 /* RakNetVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8CA1F124CB200892290 /* RakNetVersion.h */; };
+		4DBDE9D51F124CB200892290 /* RakPeer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8CB1F124CB200892290 /* RakPeer.cpp */; };
+		4DBDE9D61F124CB200892290 /* RakPeer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8CC1F124CB200892290 /* RakPeer.h */; };
+		4DBDE9D71F124CB200892290 /* RakPeerInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8CD1F124CB200892290 /* RakPeerInterface.h */; };
+		4DBDE9D81F124CB200892290 /* RakSleep.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8CE1F124CB200892290 /* RakSleep.cpp */; };
+		4DBDE9D91F124CB200892290 /* RakSleep.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8CF1F124CB200892290 /* RakSleep.h */; };
+		4DBDE9DA1F124CB200892290 /* RakString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8D01F124CB200892290 /* RakString.cpp */; };
+		4DBDE9DB1F124CB200892290 /* RakString.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8D11F124CB200892290 /* RakString.h */; };
+		4DBDE9DC1F124CB200892290 /* RakThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8D21F124CB200892290 /* RakThread.cpp */; };
+		4DBDE9DD1F124CB200892290 /* RakThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8D31F124CB200892290 /* RakThread.h */; };
+		4DBDE9DE1F124CB200892290 /* RakWString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8D41F124CB200892290 /* RakWString.cpp */; };
+		4DBDE9DF1F124CB200892290 /* RakWString.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8D51F124CB200892290 /* RakWString.h */; };
+		4DBDE9E01F124CB200892290 /* Rand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8D61F124CB200892290 /* Rand.cpp */; };
+		4DBDE9E11F124CB200892290 /* Rand.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8D71F124CB200892290 /* Rand.h */; };
+		4DBDE9E21F124CB200892290 /* RandSync.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8D81F124CB200892290 /* RandSync.cpp */; };
+		4DBDE9E31F124CB200892290 /* RandSync.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8D91F124CB200892290 /* RandSync.h */; };
+		4DBDE9E41F124CB200892290 /* ReadyEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8DA1F124CB200892290 /* ReadyEvent.cpp */; };
+		4DBDE9E51F124CB200892290 /* ReadyEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8DB1F124CB200892290 /* ReadyEvent.h */; };
+		4DBDE9E61F124CB200892290 /* RefCountedObj.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8DC1F124CB200892290 /* RefCountedObj.h */; };
+		4DBDE9E71F124CB200892290 /* RelayPlugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8DD1F124CB200892290 /* RelayPlugin.cpp */; };
+		4DBDE9E81F124CB200892290 /* RelayPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8DE1F124CB200892290 /* RelayPlugin.h */; };
+		4DBDE9E91F124CB200892290 /* ReliabilityLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8DF1F124CB200892290 /* ReliabilityLayer.cpp */; };
+		4DBDE9EA1F124CB200892290 /* ReliabilityLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8E01F124CB200892290 /* ReliabilityLayer.h */; };
+		4DBDE9EB1F124CB200892290 /* ReplicaEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8E11F124CB200892290 /* ReplicaEnums.h */; };
+		4DBDE9EC1F124CB200892290 /* ReplicaManager3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8E21F124CB200892290 /* ReplicaManager3.cpp */; };
+		4DBDE9ED1F124CB200892290 /* ReplicaManager3.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8E31F124CB200892290 /* ReplicaManager3.h */; };
+		4DBDE9EE1F124CB200892290 /* Router2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8E41F124CB200892290 /* Router2.cpp */; };
+		4DBDE9EF1F124CB200892290 /* Router2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8E51F124CB200892290 /* Router2.h */; };
+		4DBDE9F01F124CB200892290 /* RPC4Plugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8E61F124CB200892290 /* RPC4Plugin.cpp */; };
+		4DBDE9F11F124CB200892290 /* RPC4Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8E71F124CB200892290 /* RPC4Plugin.h */; };
+		4DBDE9F21F124CB200892290 /* SecureHandshake.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8E81F124CB200892290 /* SecureHandshake.cpp */; };
+		4DBDE9F31F124CB300892290 /* SecureHandshake.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8E91F124CB200892290 /* SecureHandshake.h */; };
+		4DBDE9F41F124CB300892290 /* SendToThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8EA1F124CB200892290 /* SendToThread.cpp */; };
+		4DBDE9F51F124CB300892290 /* SendToThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8EB1F124CB200892290 /* SendToThread.h */; };
+		4DBDE9F61F124CB300892290 /* SignaledEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8EC1F124CB200892290 /* SignaledEvent.cpp */; };
+		4DBDE9F71F124CB300892290 /* SignaledEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8ED1F124CB200892290 /* SignaledEvent.h */; };
+		4DBDE9F81F124CB300892290 /* SimpleMutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8EE1F124CB200892290 /* SimpleMutex.cpp */; };
+		4DBDE9F91F124CB300892290 /* SimpleMutex.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8EF1F124CB200892290 /* SimpleMutex.h */; };
+		4DBDE9FA1F124CB300892290 /* SimpleTCPServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8F01F124CB200892290 /* SimpleTCPServer.h */; };
+		4DBDE9FB1F124CB300892290 /* SingleProducerConsumer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8F11F124CB200892290 /* SingleProducerConsumer.h */; };
+		4DBDE9FC1F124CB300892290 /* SocketDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8F21F124CB200892290 /* SocketDefines.h */; };
+		4DBDE9FD1F124CB300892290 /* SocketIncludes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8F31F124CB200892290 /* SocketIncludes.h */; };
+		4DBDE9FE1F124CB300892290 /* SocketLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8F41F124CB200892290 /* SocketLayer.cpp */; };
+		4DBDE9FF1F124CB300892290 /* SocketLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8F51F124CB200892290 /* SocketLayer.h */; };
+		4DBDEA001F124CB300892290 /* StatisticsHistory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8F61F124CB200892290 /* StatisticsHistory.cpp */; };
+		4DBDEA011F124CB300892290 /* StatisticsHistory.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8F71F124CB200892290 /* StatisticsHistory.h */; };
+		4DBDEA021F124CB300892290 /* StringCompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8F81F124CB200892290 /* StringCompressor.cpp */; };
+		4DBDEA031F124CB300892290 /* StringCompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8F91F124CB200892290 /* StringCompressor.h */; };
+		4DBDEA041F124CB300892290 /* StringTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8FA1F124CB200892290 /* StringTable.cpp */; };
+		4DBDEA051F124CB300892290 /* StringTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8FB1F124CB200892290 /* StringTable.h */; };
+		4DBDEA061F124CB300892290 /* SuperFastHash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8FC1F124CB200892290 /* SuperFastHash.cpp */; };
+		4DBDEA071F124CB300892290 /* SuperFastHash.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8FD1F124CB200892290 /* SuperFastHash.h */; };
+		4DBDEA081F124CB300892290 /* TableSerializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE8FE1F124CB200892290 /* TableSerializer.cpp */; };
+		4DBDEA091F124CB300892290 /* TableSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE8FF1F124CB200892290 /* TableSerializer.h */; };
+		4DBDEA0A1F124CB300892290 /* TCPInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE9001F124CB200892290 /* TCPInterface.cpp */; };
+		4DBDEA0B1F124CB300892290 /* TCPInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE9011F124CB200892290 /* TCPInterface.h */; };
+		4DBDEA0C1F124CB300892290 /* TeamBalancer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE9021F124CB200892290 /* TeamBalancer.cpp */; };
+		4DBDEA0D1F124CB300892290 /* TeamBalancer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE9031F124CB200892290 /* TeamBalancer.h */; };
+		4DBDEA0E1F124CB300892290 /* TeamManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE9041F124CB200892290 /* TeamManager.cpp */; };
+		4DBDEA0F1F124CB300892290 /* TeamManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE9051F124CB200892290 /* TeamManager.h */; };
+		4DBDEA101F124CB300892290 /* TelnetTransport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE9061F124CB200892290 /* TelnetTransport.cpp */; };
+		4DBDEA111F124CB300892290 /* TelnetTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE9071F124CB200892290 /* TelnetTransport.h */; };
+		4DBDEA121F124CB300892290 /* ThreadPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE9081F124CB200892290 /* ThreadPool.h */; };
+		4DBDEA131F124CB300892290 /* ThreadsafePacketLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE9091F124CB200892290 /* ThreadsafePacketLogger.cpp */; };
+		4DBDEA141F124CB300892290 /* ThreadsafePacketLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE90A1F124CB200892290 /* ThreadsafePacketLogger.h */; };
+		4DBDEA151F124CB300892290 /* TransportInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE90B1F124CB200892290 /* TransportInterface.h */; };
+		4DBDEA161F124CB300892290 /* TwoWayAuthentication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE90C1F124CB200892290 /* TwoWayAuthentication.cpp */; };
+		4DBDEA171F124CB300892290 /* TwoWayAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE90D1F124CB200892290 /* TwoWayAuthentication.h */; };
+		4DBDEA181F124CB300892290 /* UDPForwarder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE90E1F124CB200892290 /* UDPForwarder.cpp */; };
+		4DBDEA191F124CB300892290 /* UDPForwarder.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE90F1F124CB200892290 /* UDPForwarder.h */; };
+		4DBDEA1A1F124CB300892290 /* UDPProxyClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE9101F124CB200892290 /* UDPProxyClient.cpp */; };
+		4DBDEA1B1F124CB300892290 /* UDPProxyClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE9111F124CB200892290 /* UDPProxyClient.h */; };
+		4DBDEA1C1F124CB300892290 /* UDPProxyCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE9121F124CB200892290 /* UDPProxyCommon.h */; };
+		4DBDEA1D1F124CB300892290 /* UDPProxyCoordinator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE9131F124CB200892290 /* UDPProxyCoordinator.cpp */; };
+		4DBDEA1E1F124CB300892290 /* UDPProxyCoordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE9141F124CB200892290 /* UDPProxyCoordinator.h */; };
+		4DBDEA1F1F124CB300892290 /* UDPProxyServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE9151F124CB200892290 /* UDPProxyServer.cpp */; };
+		4DBDEA201F124CB300892290 /* UDPProxyServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE9161F124CB200892290 /* UDPProxyServer.h */; };
+		4DBDEA211F124CB300892290 /* VariableDeltaSerializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE9171F124CB200892290 /* VariableDeltaSerializer.cpp */; };
+		4DBDEA221F124CB300892290 /* VariableDeltaSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE9181F124CB200892290 /* VariableDeltaSerializer.h */; };
+		4DBDEA231F124CB300892290 /* VariableListDeltaTracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE9191F124CB200892290 /* VariableListDeltaTracker.cpp */; };
+		4DBDEA241F124CB300892290 /* VariableListDeltaTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE91A1F124CB200892290 /* VariableListDeltaTracker.h */; };
+		4DBDEA251F124CB300892290 /* VariadicSQLParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE91B1F124CB200892290 /* VariadicSQLParser.cpp */; };
+		4DBDEA261F124CB300892290 /* VariadicSQLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE91C1F124CB200892290 /* VariadicSQLParser.h */; };
+		4DBDEA271F124CB300892290 /* VitaIncludes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE91D1F124CB200892290 /* VitaIncludes.cpp */; };
+		4DBDEA281F124CB300892290 /* VitaIncludes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE91E1F124CB200892290 /* VitaIncludes.h */; };
+		4DBDEA291F124CB300892290 /* WindowsIncludes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE91F1F124CB200892290 /* WindowsIncludes.h */; };
+		4DBDEA2A1F124CB300892290 /* WSAStartupSingleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE9201F124CB200892290 /* WSAStartupSingleton.cpp */; };
+		4DBDEA2B1F124CB300892290 /* WSAStartupSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE9211F124CB200892290 /* WSAStartupSingleton.h */; };
+		4DBDEA2C1F124CB300892290 /* XBox360Includes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDE9221F124CB200892290 /* XBox360Includes.h */; };
 		4DC839021C1F0DCA00B1351C /* lua-crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DC839011C1F0DCA00B1351C /* lua-crypt.c */; };
 		4DC839041C1F0F8300B1351C /* lsha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DC839031C1F0F8300B1351C /* lsha1.c */; };
 		4DC9F4BA19FDF6A500FA1E3B /* lua_cocos2dx_spine_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9F4B819FDF6A500FA1E3B /* lua_cocos2dx_spine_auto.cpp */; };
@@ -1225,6 +1491,276 @@
 		4D867A441B1E9E50007731FF /* CCBillBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBillBoard.h; sourceTree = "<group>"; };
 		4D867A451B1E9E50007731FF /* CCOBB.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCOBB.cpp; sourceTree = "<group>"; };
 		4D867A461B1E9E50007731FF /* CCOBB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCOBB.h; sourceTree = "<group>"; };
+		4DBDE8141F124CB100892290 /* lua-racknet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "lua-racknet.cpp"; sourceTree = "<group>"; };
+		4DBDE8151F124CB100892290 /* lua-racknet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "lua-racknet.h"; sourceTree = "<group>"; };
+		4DBDE8171F124CB100892290 /* _FindFirst.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _FindFirst.cpp; sourceTree = "<group>"; };
+		4DBDE8181F124CB100892290 /* _FindFirst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FindFirst.h; sourceTree = "<group>"; };
+		4DBDE8191F124CB100892290 /* AutopatcherPatchContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutopatcherPatchContext.h; sourceTree = "<group>"; };
+		4DBDE81A1F124CB100892290 /* AutopatcherRepositoryInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutopatcherRepositoryInterface.h; sourceTree = "<group>"; };
+		4DBDE81B1F124CB100892290 /* Base64Encoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Base64Encoder.cpp; sourceTree = "<group>"; };
+		4DBDE81C1F124CB100892290 /* Base64Encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Encoder.h; sourceTree = "<group>"; };
+		4DBDE81D1F124CB100892290 /* BitStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BitStream.cpp; sourceTree = "<group>"; };
+		4DBDE81E1F124CB100892290 /* BitStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitStream.h; sourceTree = "<group>"; };
+		4DBDE81F1F124CB100892290 /* CCRakNetSlidingWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCRakNetSlidingWindow.cpp; sourceTree = "<group>"; };
+		4DBDE8201F124CB100892290 /* CCRakNetSlidingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRakNetSlidingWindow.h; sourceTree = "<group>"; };
+		4DBDE8211F124CB100892290 /* CCRakNetUDT.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCRakNetUDT.cpp; sourceTree = "<group>"; };
+		4DBDE8221F124CB100892290 /* CCRakNetUDT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRakNetUDT.h; sourceTree = "<group>"; };
+		4DBDE8231F124CB100892290 /* CheckSum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CheckSum.cpp; sourceTree = "<group>"; };
+		4DBDE8241F124CB100892290 /* CheckSum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckSum.h; sourceTree = "<group>"; };
+		4DBDE8251F124CB100892290 /* CloudClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CloudClient.cpp; sourceTree = "<group>"; };
+		4DBDE8261F124CB100892290 /* CloudClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudClient.h; sourceTree = "<group>"; };
+		4DBDE8271F124CB100892290 /* CloudCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CloudCommon.cpp; sourceTree = "<group>"; };
+		4DBDE8281F124CB100892290 /* CloudCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudCommon.h; sourceTree = "<group>"; };
+		4DBDE8291F124CB100892290 /* CloudServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CloudServer.cpp; sourceTree = "<group>"; };
+		4DBDE82A1F124CB100892290 /* CloudServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudServer.h; sourceTree = "<group>"; };
+		4DBDE82B1F124CB100892290 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		4DBDE82C1F124CB100892290 /* CommandParserInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CommandParserInterface.cpp; sourceTree = "<group>"; };
+		4DBDE82D1F124CB100892290 /* CommandParserInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandParserInterface.h; sourceTree = "<group>"; };
+		4DBDE82E1F124CB100892290 /* ConnectionGraph2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConnectionGraph2.cpp; sourceTree = "<group>"; };
+		4DBDE82F1F124CB100892290 /* ConnectionGraph2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionGraph2.h; sourceTree = "<group>"; };
+		4DBDE8301F124CB100892290 /* ConsoleServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConsoleServer.cpp; sourceTree = "<group>"; };
+		4DBDE8311F124CB100892290 /* ConsoleServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsoleServer.h; sourceTree = "<group>"; };
+		4DBDE8321F124CB100892290 /* DataCompressor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataCompressor.cpp; sourceTree = "<group>"; };
+		4DBDE8331F124CB100892290 /* DataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCompressor.h; sourceTree = "<group>"; };
+		4DBDE8341F124CB100892290 /* DirectoryDeltaTransfer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DirectoryDeltaTransfer.cpp; sourceTree = "<group>"; };
+		4DBDE8351F124CB100892290 /* DirectoryDeltaTransfer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryDeltaTransfer.h; sourceTree = "<group>"; };
+		4DBDE8361F124CB100892290 /* DR_SHA1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DR_SHA1.cpp; sourceTree = "<group>"; };
+		4DBDE8371F124CB100892290 /* DR_SHA1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DR_SHA1.h; sourceTree = "<group>"; };
+		4DBDE8381F124CB100892290 /* DS_BinarySearchTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_BinarySearchTree.h; sourceTree = "<group>"; };
+		4DBDE8391F124CB100892290 /* DS_BPlusTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_BPlusTree.h; sourceTree = "<group>"; };
+		4DBDE83A1F124CB100892290 /* DS_BytePool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DS_BytePool.cpp; sourceTree = "<group>"; };
+		4DBDE83B1F124CB100892290 /* DS_BytePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_BytePool.h; sourceTree = "<group>"; };
+		4DBDE83C1F124CB100892290 /* DS_ByteQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DS_ByteQueue.cpp; sourceTree = "<group>"; };
+		4DBDE83D1F124CB100892290 /* DS_ByteQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_ByteQueue.h; sourceTree = "<group>"; };
+		4DBDE83E1F124CB100892290 /* DS_Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_Hash.h; sourceTree = "<group>"; };
+		4DBDE83F1F124CB100892290 /* DS_Heap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_Heap.h; sourceTree = "<group>"; };
+		4DBDE8401F124CB100892290 /* DS_HuffmanEncodingTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DS_HuffmanEncodingTree.cpp; sourceTree = "<group>"; };
+		4DBDE8411F124CB100892290 /* DS_HuffmanEncodingTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_HuffmanEncodingTree.h; sourceTree = "<group>"; };
+		4DBDE8421F124CB100892290 /* DS_HuffmanEncodingTreeFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_HuffmanEncodingTreeFactory.h; sourceTree = "<group>"; };
+		4DBDE8431F124CB100892290 /* DS_HuffmanEncodingTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_HuffmanEncodingTreeNode.h; sourceTree = "<group>"; };
+		4DBDE8441F124CB100892290 /* DS_LinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_LinkedList.h; sourceTree = "<group>"; };
+		4DBDE8451F124CB100892290 /* DS_List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_List.h; sourceTree = "<group>"; };
+		4DBDE8461F124CB100892290 /* DS_Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_Map.h; sourceTree = "<group>"; };
+		4DBDE8471F124CB100892290 /* DS_MemoryPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_MemoryPool.h; sourceTree = "<group>"; };
+		4DBDE8481F124CB100892290 /* DS_Multilist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_Multilist.h; sourceTree = "<group>"; };
+		4DBDE8491F124CB100892290 /* DS_OrderedChannelHeap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_OrderedChannelHeap.h; sourceTree = "<group>"; };
+		4DBDE84A1F124CB100892290 /* DS_OrderedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_OrderedList.h; sourceTree = "<group>"; };
+		4DBDE84B1F124CB100892290 /* DS_Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_Queue.h; sourceTree = "<group>"; };
+		4DBDE84C1F124CB100892290 /* DS_QueueLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_QueueLinkedList.h; sourceTree = "<group>"; };
+		4DBDE84D1F124CB100892290 /* DS_RangeList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_RangeList.h; sourceTree = "<group>"; };
+		4DBDE84E1F124CB100892290 /* DS_Table.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DS_Table.cpp; sourceTree = "<group>"; };
+		4DBDE84F1F124CB100892290 /* DS_Table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_Table.h; sourceTree = "<group>"; };
+		4DBDE8501F124CB100892290 /* DS_ThreadsafeAllocatingQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_ThreadsafeAllocatingQueue.h; sourceTree = "<group>"; };
+		4DBDE8511F124CB100892290 /* DS_Tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_Tree.h; sourceTree = "<group>"; };
+		4DBDE8521F124CB100892290 /* DS_WeightedGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS_WeightedGraph.h; sourceTree = "<group>"; };
+		4DBDE8531F124CB100892290 /* DynDNS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DynDNS.cpp; sourceTree = "<group>"; };
+		4DBDE8541F124CB100892290 /* DynDNS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynDNS.h; sourceTree = "<group>"; };
+		4DBDE8551F124CB100892290 /* EmailSender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EmailSender.cpp; sourceTree = "<group>"; };
+		4DBDE8561F124CB100892290 /* EmailSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailSender.h; sourceTree = "<group>"; };
+		4DBDE8571F124CB100892290 /* EmptyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyHeader.h; sourceTree = "<group>"; };
+		4DBDE8581F124CB100892290 /* EpochTimeToString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EpochTimeToString.cpp; sourceTree = "<group>"; };
+		4DBDE8591F124CB100892290 /* EpochTimeToString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpochTimeToString.h; sourceTree = "<group>"; };
+		4DBDE85A1F124CB100892290 /* Export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Export.h; sourceTree = "<group>"; };
+		4DBDE85B1F124CB100892290 /* FileList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileList.cpp; sourceTree = "<group>"; };
+		4DBDE85C1F124CB100892290 /* FileList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileList.h; sourceTree = "<group>"; };
+		4DBDE85D1F124CB100892290 /* FileListNodeContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileListNodeContext.h; sourceTree = "<group>"; };
+		4DBDE85E1F124CB100892290 /* FileListTransfer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileListTransfer.cpp; sourceTree = "<group>"; };
+		4DBDE85F1F124CB100892290 /* FileListTransfer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileListTransfer.h; sourceTree = "<group>"; };
+		4DBDE8601F124CB100892290 /* FileListTransferCBInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileListTransferCBInterface.h; sourceTree = "<group>"; };
+		4DBDE8611F124CB100892290 /* FileOperations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileOperations.cpp; sourceTree = "<group>"; };
+		4DBDE8621F124CB100892290 /* FileOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileOperations.h; sourceTree = "<group>"; };
+		4DBDE8631F124CB100892290 /* FormatString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FormatString.cpp; sourceTree = "<group>"; };
+		4DBDE8641F124CB100892290 /* FormatString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormatString.h; sourceTree = "<group>"; };
+		4DBDE8651F124CB100892290 /* FullyConnectedMesh2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FullyConnectedMesh2.cpp; sourceTree = "<group>"; };
+		4DBDE8661F124CB100892290 /* FullyConnectedMesh2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullyConnectedMesh2.h; sourceTree = "<group>"; };
+		4DBDE8671F124CB100892290 /* Getche.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Getche.cpp; sourceTree = "<group>"; };
+		4DBDE8681F124CB100892290 /* Getche.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Getche.h; sourceTree = "<group>"; };
+		4DBDE8691F124CB100892290 /* Gets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Gets.cpp; sourceTree = "<group>"; };
+		4DBDE86A1F124CB100892290 /* Gets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gets.h; sourceTree = "<group>"; };
+		4DBDE86B1F124CB100892290 /* GetTime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GetTime.cpp; sourceTree = "<group>"; };
+		4DBDE86C1F124CB100892290 /* GetTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetTime.h; sourceTree = "<group>"; };
+		4DBDE86D1F124CB100892290 /* gettimeofday.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gettimeofday.cpp; sourceTree = "<group>"; };
+		4DBDE86E1F124CB100892290 /* gettimeofday.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gettimeofday.h; sourceTree = "<group>"; };
+		4DBDE86F1F124CB100892290 /* GridSectorizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GridSectorizer.cpp; sourceTree = "<group>"; };
+		4DBDE8701F124CB100892290 /* GridSectorizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridSectorizer.h; sourceTree = "<group>"; };
+		4DBDE8711F124CB100892290 /* HTTPConnection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HTTPConnection.cpp; sourceTree = "<group>"; };
+		4DBDE8721F124CB100892290 /* HTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPConnection.h; sourceTree = "<group>"; };
+		4DBDE8731F124CB100892290 /* HTTPConnection2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HTTPConnection2.cpp; sourceTree = "<group>"; };
+		4DBDE8741F124CB100892290 /* HTTPConnection2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPConnection2.h; sourceTree = "<group>"; };
+		4DBDE8751F124CB100892290 /* IncrementalReadInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IncrementalReadInterface.cpp; sourceTree = "<group>"; };
+		4DBDE8761F124CB100892290 /* IncrementalReadInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncrementalReadInterface.h; sourceTree = "<group>"; };
+		4DBDE8771F124CB100892290 /* InternalPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InternalPacket.h; sourceTree = "<group>"; };
+		4DBDE8781F124CB100892290 /* Itoa.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Itoa.cpp; sourceTree = "<group>"; };
+		4DBDE8791F124CB100892290 /* Itoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Itoa.h; sourceTree = "<group>"; };
+		4DBDE87A1F124CB100892290 /* Kbhit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kbhit.h; sourceTree = "<group>"; };
+		4DBDE87B1F124CB100892290 /* LinuxStrings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LinuxStrings.cpp; sourceTree = "<group>"; };
+		4DBDE87C1F124CB100892290 /* LinuxStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinuxStrings.h; sourceTree = "<group>"; };
+		4DBDE87D1F124CB100892290 /* LocklessTypes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LocklessTypes.cpp; sourceTree = "<group>"; };
+		4DBDE87E1F124CB100892290 /* LocklessTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocklessTypes.h; sourceTree = "<group>"; };
+		4DBDE87F1F124CB100892290 /* LogCommandParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LogCommandParser.cpp; sourceTree = "<group>"; };
+		4DBDE8801F124CB100892290 /* LogCommandParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCommandParser.h; sourceTree = "<group>"; };
+		4DBDE8811F124CB100892290 /* MessageFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MessageFilter.cpp; sourceTree = "<group>"; };
+		4DBDE8821F124CB100892290 /* MessageFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageFilter.h; sourceTree = "<group>"; };
+		4DBDE8831F124CB100892290 /* MessageIdentifiers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageIdentifiers.h; sourceTree = "<group>"; };
+		4DBDE8841F124CB200892290 /* MTUSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUSize.h; sourceTree = "<group>"; };
+		4DBDE8851F124CB200892290 /* NativeFeatureIncludes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeFeatureIncludes.h; sourceTree = "<group>"; };
+		4DBDE8861F124CB200892290 /* NativeFeatureIncludesOverrides.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeFeatureIncludesOverrides.h; sourceTree = "<group>"; };
+		4DBDE8871F124CB200892290 /* NativeTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeTypes.h; sourceTree = "<group>"; };
+		4DBDE8881F124CB200892290 /* NatPunchthroughClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NatPunchthroughClient.cpp; sourceTree = "<group>"; };
+		4DBDE8891F124CB200892290 /* NatPunchthroughClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NatPunchthroughClient.h; sourceTree = "<group>"; };
+		4DBDE88A1F124CB200892290 /* NatPunchthroughServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NatPunchthroughServer.cpp; sourceTree = "<group>"; };
+		4DBDE88B1F124CB200892290 /* NatPunchthroughServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NatPunchthroughServer.h; sourceTree = "<group>"; };
+		4DBDE88C1F124CB200892290 /* NatTypeDetectionClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NatTypeDetectionClient.cpp; sourceTree = "<group>"; };
+		4DBDE88D1F124CB200892290 /* NatTypeDetectionClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NatTypeDetectionClient.h; sourceTree = "<group>"; };
+		4DBDE88E1F124CB200892290 /* NatTypeDetectionCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NatTypeDetectionCommon.cpp; sourceTree = "<group>"; };
+		4DBDE88F1F124CB200892290 /* NatTypeDetectionCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NatTypeDetectionCommon.h; sourceTree = "<group>"; };
+		4DBDE8901F124CB200892290 /* NatTypeDetectionServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NatTypeDetectionServer.cpp; sourceTree = "<group>"; };
+		4DBDE8911F124CB200892290 /* NatTypeDetectionServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NatTypeDetectionServer.h; sourceTree = "<group>"; };
+		4DBDE8921F124CB200892290 /* NetworkIDManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NetworkIDManager.cpp; sourceTree = "<group>"; };
+		4DBDE8931F124CB200892290 /* NetworkIDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkIDManager.h; sourceTree = "<group>"; };
+		4DBDE8941F124CB200892290 /* NetworkIDObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NetworkIDObject.cpp; sourceTree = "<group>"; };
+		4DBDE8951F124CB200892290 /* NetworkIDObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkIDObject.h; sourceTree = "<group>"; };
+		4DBDE8961F124CB200892290 /* PacketConsoleLogger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PacketConsoleLogger.cpp; sourceTree = "<group>"; };
+		4DBDE8971F124CB200892290 /* PacketConsoleLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PacketConsoleLogger.h; sourceTree = "<group>"; };
+		4DBDE8981F124CB200892290 /* PacketFileLogger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PacketFileLogger.cpp; sourceTree = "<group>"; };
+		4DBDE8991F124CB200892290 /* PacketFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PacketFileLogger.h; sourceTree = "<group>"; };
+		4DBDE89A1F124CB200892290 /* PacketizedTCP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PacketizedTCP.cpp; sourceTree = "<group>"; };
+		4DBDE89B1F124CB200892290 /* PacketizedTCP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PacketizedTCP.h; sourceTree = "<group>"; };
+		4DBDE89C1F124CB200892290 /* PacketLogger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PacketLogger.cpp; sourceTree = "<group>"; };
+		4DBDE89D1F124CB200892290 /* PacketLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PacketLogger.h; sourceTree = "<group>"; };
+		4DBDE89E1F124CB200892290 /* PacketOutputWindowLogger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PacketOutputWindowLogger.cpp; sourceTree = "<group>"; };
+		4DBDE89F1F124CB200892290 /* PacketOutputWindowLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PacketOutputWindowLogger.h; sourceTree = "<group>"; };
+		4DBDE8A01F124CB200892290 /* PacketPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PacketPool.h; sourceTree = "<group>"; };
+		4DBDE8A11F124CB200892290 /* PacketPriority.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PacketPriority.h; sourceTree = "<group>"; };
+		4DBDE8A21F124CB200892290 /* PluginInterface2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PluginInterface2.cpp; sourceTree = "<group>"; };
+		4DBDE8A31F124CB200892290 /* PluginInterface2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PluginInterface2.h; sourceTree = "<group>"; };
+		4DBDE8A41F124CB200892290 /* PS3Includes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PS3Includes.h; sourceTree = "<group>"; };
+		4DBDE8A51F124CB200892290 /* PS4Includes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PS4Includes.cpp; sourceTree = "<group>"; };
+		4DBDE8A61F124CB200892290 /* PS4Includes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PS4Includes.h; sourceTree = "<group>"; };
+		4DBDE8A71F124CB200892290 /* Rackspace.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rackspace.cpp; sourceTree = "<group>"; };
+		4DBDE8A81F124CB200892290 /* Rackspace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rackspace.h; sourceTree = "<group>"; };
+		4DBDE8A91F124CB200892290 /* RakAlloca.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RakAlloca.h; sourceTree = "<group>"; };
+		4DBDE8AA1F124CB200892290 /* RakAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RakAssert.h; sourceTree = "<group>"; };
+		4DBDE8AB1F124CB200892290 /* RakMemoryOverride.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RakMemoryOverride.cpp; sourceTree = "<group>"; };
+		4DBDE8AC1F124CB200892290 /* RakMemoryOverride.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RakMemoryOverride.h; sourceTree = "<group>"; };
+		4DBDE8AD1F124CB200892290 /* RakNet.vcproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = RakNet.vcproj; sourceTree = "<group>"; };
+		4DBDE8AE1F124CB200892290 /* RakNet_vc8.vcproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = RakNet_vc8.vcproj; sourceTree = "<group>"; };
+		4DBDE8AF1F124CB200892290 /* RakNet_vc9.vcproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = RakNet_vc9.vcproj; sourceTree = "<group>"; };
+		4DBDE8B01F124CB200892290 /* RakNetCommandParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RakNetCommandParser.cpp; sourceTree = "<group>"; };
+		4DBDE8B11F124CB200892290 /* RakNetCommandParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RakNetCommandParser.h; sourceTree = "<group>"; };
+		4DBDE8B21F124CB200892290 /* RakNetDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RakNetDefines.h; sourceTree = "<group>"; };
+		4DBDE8B31F124CB200892290 /* RakNetDefinesOverrides.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RakNetDefinesOverrides.h; sourceTree = "<group>"; };
+		4DBDE8B41F124CB200892290 /* RakNetSmartPtr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RakNetSmartPtr.h; sourceTree = "<group>"; };
+		4DBDE8B51F124CB200892290 /* RakNetSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RakNetSocket.cpp; sourceTree = "<group>"; };
+		4DBDE8B61F124CB200892290 /* RakNetSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RakNetSocket.h; sourceTree = "<group>"; };
+		4DBDE8B71F124CB200892290 /* RakNetSocket2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RakNetSocket2.cpp; sourceTree = "<group>"; };
+		4DBDE8B81F124CB200892290 /* RakNetSocket2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RakNetSocket2.h; sourceTree = "<group>"; };
+		4DBDE8B91F124CB200892290 /* RakNetSocket2_360_720.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RakNetSocket2_360_720.cpp; sourceTree = "<group>"; };
+		4DBDE8BA1F124CB200892290 /* RakNetSocket2_Berkley.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RakNetSocket2_Berkley.cpp; sourceTree = "<group>"; };
+		4DBDE8BB1F124CB200892290 /* RakNetSocket2_Berkley_NativeClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RakNetSocket2_Berkley_NativeClient.cpp; sourceTree = "<group>"; };
+		4DBDE8BC1F124CB200892290 /* RakNetSocket2_NativeClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RakNetSocket2_NativeClient.cpp; sourceTree = "<group>"; };
+		4DBDE8BD1F124CB200892290 /* RakNetSocket2_PS3_PS4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RakNetSocket2_PS3_PS4.cpp; sourceTree = "<group>"; };
+		4DBDE8BE1F124CB200892290 /* RakNetSocket2_PS4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RakNetSocket2_PS4.cpp; sourceTree = "<group>"; };
+		4DBDE8BF1F124CB200892290 /* RakNetSocket2_Vita.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RakNetSocket2_Vita.cpp; sourceTree = "<group>"; };
+		4DBDE8C01F124CB200892290 /* RakNetSocket2_Windows_Linux.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RakNetSocket2_Windows_Linux.cpp; sourceTree = "<group>"; };
+		4DBDE8C11F124CB200892290 /* RakNetSocket2_Windows_Linux_360.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RakNetSocket2_Windows_Linux_360.cpp; sourceTree = "<group>"; };
+		4DBDE8C21F124CB200892290 /* RakNetSocket2_WindowsStore8.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RakNetSocket2_WindowsStore8.cpp; sourceTree = "<group>"; };
+		4DBDE8C31F124CB200892290 /* RakNetStatistics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RakNetStatistics.cpp; sourceTree = "<group>"; };
+		4DBDE8C41F124CB200892290 /* RakNetStatistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RakNetStatistics.h; sourceTree = "<group>"; };
+		4DBDE8C51F124CB200892290 /* RakNetTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RakNetTime.h; sourceTree = "<group>"; };
+		4DBDE8C61F124CB200892290 /* RakNetTransport2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RakNetTransport2.cpp; sourceTree = "<group>"; };
+		4DBDE8C71F124CB200892290 /* RakNetTransport2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RakNetTransport2.h; sourceTree = "<group>"; };
+		4DBDE8C81F124CB200892290 /* RakNetTypes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RakNetTypes.cpp; sourceTree = "<group>"; };
+		4DBDE8C91F124CB200892290 /* RakNetTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RakNetTypes.h; sourceTree = "<group>"; };
+		4DBDE8CA1F124CB200892290 /* RakNetVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RakNetVersion.h; sourceTree = "<group>"; };
+		4DBDE8CB1F124CB200892290 /* RakPeer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RakPeer.cpp; sourceTree = "<group>"; };
+		4DBDE8CC1F124CB200892290 /* RakPeer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RakPeer.h; sourceTree = "<group>"; };
+		4DBDE8CD1F124CB200892290 /* RakPeerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RakPeerInterface.h; sourceTree = "<group>"; };
+		4DBDE8CE1F124CB200892290 /* RakSleep.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RakSleep.cpp; sourceTree = "<group>"; };
+		4DBDE8CF1F124CB200892290 /* RakSleep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RakSleep.h; sourceTree = "<group>"; };
+		4DBDE8D01F124CB200892290 /* RakString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RakString.cpp; sourceTree = "<group>"; };
+		4DBDE8D11F124CB200892290 /* RakString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RakString.h; sourceTree = "<group>"; };
+		4DBDE8D21F124CB200892290 /* RakThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RakThread.cpp; sourceTree = "<group>"; };
+		4DBDE8D31F124CB200892290 /* RakThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RakThread.h; sourceTree = "<group>"; };
+		4DBDE8D41F124CB200892290 /* RakWString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RakWString.cpp; sourceTree = "<group>"; };
+		4DBDE8D51F124CB200892290 /* RakWString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RakWString.h; sourceTree = "<group>"; };
+		4DBDE8D61F124CB200892290 /* Rand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rand.cpp; sourceTree = "<group>"; };
+		4DBDE8D71F124CB200892290 /* Rand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rand.h; sourceTree = "<group>"; };
+		4DBDE8D81F124CB200892290 /* RandSync.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RandSync.cpp; sourceTree = "<group>"; };
+		4DBDE8D91F124CB200892290 /* RandSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandSync.h; sourceTree = "<group>"; };
+		4DBDE8DA1F124CB200892290 /* ReadyEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReadyEvent.cpp; sourceTree = "<group>"; };
+		4DBDE8DB1F124CB200892290 /* ReadyEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadyEvent.h; sourceTree = "<group>"; };
+		4DBDE8DC1F124CB200892290 /* RefCountedObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefCountedObj.h; sourceTree = "<group>"; };
+		4DBDE8DD1F124CB200892290 /* RelayPlugin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RelayPlugin.cpp; sourceTree = "<group>"; };
+		4DBDE8DE1F124CB200892290 /* RelayPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelayPlugin.h; sourceTree = "<group>"; };
+		4DBDE8DF1F124CB200892290 /* ReliabilityLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReliabilityLayer.cpp; sourceTree = "<group>"; };
+		4DBDE8E01F124CB200892290 /* ReliabilityLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReliabilityLayer.h; sourceTree = "<group>"; };
+		4DBDE8E11F124CB200892290 /* ReplicaEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplicaEnums.h; sourceTree = "<group>"; };
+		4DBDE8E21F124CB200892290 /* ReplicaManager3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReplicaManager3.cpp; sourceTree = "<group>"; };
+		4DBDE8E31F124CB200892290 /* ReplicaManager3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplicaManager3.h; sourceTree = "<group>"; };
+		4DBDE8E41F124CB200892290 /* Router2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Router2.cpp; sourceTree = "<group>"; };
+		4DBDE8E51F124CB200892290 /* Router2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Router2.h; sourceTree = "<group>"; };
+		4DBDE8E61F124CB200892290 /* RPC4Plugin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RPC4Plugin.cpp; sourceTree = "<group>"; };
+		4DBDE8E71F124CB200892290 /* RPC4Plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPC4Plugin.h; sourceTree = "<group>"; };
+		4DBDE8E81F124CB200892290 /* SecureHandshake.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SecureHandshake.cpp; sourceTree = "<group>"; };
+		4DBDE8E91F124CB200892290 /* SecureHandshake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecureHandshake.h; sourceTree = "<group>"; };
+		4DBDE8EA1F124CB200892290 /* SendToThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SendToThread.cpp; sourceTree = "<group>"; };
+		4DBDE8EB1F124CB200892290 /* SendToThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendToThread.h; sourceTree = "<group>"; };
+		4DBDE8EC1F124CB200892290 /* SignaledEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SignaledEvent.cpp; sourceTree = "<group>"; };
+		4DBDE8ED1F124CB200892290 /* SignaledEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignaledEvent.h; sourceTree = "<group>"; };
+		4DBDE8EE1F124CB200892290 /* SimpleMutex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleMutex.cpp; sourceTree = "<group>"; };
+		4DBDE8EF1F124CB200892290 /* SimpleMutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleMutex.h; sourceTree = "<group>"; };
+		4DBDE8F01F124CB200892290 /* SimpleTCPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTCPServer.h; sourceTree = "<group>"; };
+		4DBDE8F11F124CB200892290 /* SingleProducerConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleProducerConsumer.h; sourceTree = "<group>"; };
+		4DBDE8F21F124CB200892290 /* SocketDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketDefines.h; sourceTree = "<group>"; };
+		4DBDE8F31F124CB200892290 /* SocketIncludes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIncludes.h; sourceTree = "<group>"; };
+		4DBDE8F41F124CB200892290 /* SocketLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketLayer.cpp; sourceTree = "<group>"; };
+		4DBDE8F51F124CB200892290 /* SocketLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketLayer.h; sourceTree = "<group>"; };
+		4DBDE8F61F124CB200892290 /* StatisticsHistory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StatisticsHistory.cpp; sourceTree = "<group>"; };
+		4DBDE8F71F124CB200892290 /* StatisticsHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsHistory.h; sourceTree = "<group>"; };
+		4DBDE8F81F124CB200892290 /* StringCompressor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringCompressor.cpp; sourceTree = "<group>"; };
+		4DBDE8F91F124CB200892290 /* StringCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringCompressor.h; sourceTree = "<group>"; };
+		4DBDE8FA1F124CB200892290 /* StringTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringTable.cpp; sourceTree = "<group>"; };
+		4DBDE8FB1F124CB200892290 /* StringTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringTable.h; sourceTree = "<group>"; };
+		4DBDE8FC1F124CB200892290 /* SuperFastHash.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SuperFastHash.cpp; sourceTree = "<group>"; };
+		4DBDE8FD1F124CB200892290 /* SuperFastHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperFastHash.h; sourceTree = "<group>"; };
+		4DBDE8FE1F124CB200892290 /* TableSerializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TableSerializer.cpp; sourceTree = "<group>"; };
+		4DBDE8FF1F124CB200892290 /* TableSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableSerializer.h; sourceTree = "<group>"; };
+		4DBDE9001F124CB200892290 /* TCPInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TCPInterface.cpp; sourceTree = "<group>"; };
+		4DBDE9011F124CB200892290 /* TCPInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPInterface.h; sourceTree = "<group>"; };
+		4DBDE9021F124CB200892290 /* TeamBalancer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TeamBalancer.cpp; sourceTree = "<group>"; };
+		4DBDE9031F124CB200892290 /* TeamBalancer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamBalancer.h; sourceTree = "<group>"; };
+		4DBDE9041F124CB200892290 /* TeamManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TeamManager.cpp; sourceTree = "<group>"; };
+		4DBDE9051F124CB200892290 /* TeamManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamManager.h; sourceTree = "<group>"; };
+		4DBDE9061F124CB200892290 /* TelnetTransport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TelnetTransport.cpp; sourceTree = "<group>"; };
+		4DBDE9071F124CB200892290 /* TelnetTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelnetTransport.h; sourceTree = "<group>"; };
+		4DBDE9081F124CB200892290 /* ThreadPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadPool.h; sourceTree = "<group>"; };
+		4DBDE9091F124CB200892290 /* ThreadsafePacketLogger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ThreadsafePacketLogger.cpp; sourceTree = "<group>"; };
+		4DBDE90A1F124CB200892290 /* ThreadsafePacketLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadsafePacketLogger.h; sourceTree = "<group>"; };
+		4DBDE90B1F124CB200892290 /* TransportInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransportInterface.h; sourceTree = "<group>"; };
+		4DBDE90C1F124CB200892290 /* TwoWayAuthentication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TwoWayAuthentication.cpp; sourceTree = "<group>"; };
+		4DBDE90D1F124CB200892290 /* TwoWayAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoWayAuthentication.h; sourceTree = "<group>"; };
+		4DBDE90E1F124CB200892290 /* UDPForwarder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UDPForwarder.cpp; sourceTree = "<group>"; };
+		4DBDE90F1F124CB200892290 /* UDPForwarder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDPForwarder.h; sourceTree = "<group>"; };
+		4DBDE9101F124CB200892290 /* UDPProxyClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UDPProxyClient.cpp; sourceTree = "<group>"; };
+		4DBDE9111F124CB200892290 /* UDPProxyClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDPProxyClient.h; sourceTree = "<group>"; };
+		4DBDE9121F124CB200892290 /* UDPProxyCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDPProxyCommon.h; sourceTree = "<group>"; };
+		4DBDE9131F124CB200892290 /* UDPProxyCoordinator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UDPProxyCoordinator.cpp; sourceTree = "<group>"; };
+		4DBDE9141F124CB200892290 /* UDPProxyCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDPProxyCoordinator.h; sourceTree = "<group>"; };
+		4DBDE9151F124CB200892290 /* UDPProxyServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UDPProxyServer.cpp; sourceTree = "<group>"; };
+		4DBDE9161F124CB200892290 /* UDPProxyServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDPProxyServer.h; sourceTree = "<group>"; };
+		4DBDE9171F124CB200892290 /* VariableDeltaSerializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VariableDeltaSerializer.cpp; sourceTree = "<group>"; };
+		4DBDE9181F124CB200892290 /* VariableDeltaSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VariableDeltaSerializer.h; sourceTree = "<group>"; };
+		4DBDE9191F124CB200892290 /* VariableListDeltaTracker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VariableListDeltaTracker.cpp; sourceTree = "<group>"; };
+		4DBDE91A1F124CB200892290 /* VariableListDeltaTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VariableListDeltaTracker.h; sourceTree = "<group>"; };
+		4DBDE91B1F124CB200892290 /* VariadicSQLParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VariadicSQLParser.cpp; sourceTree = "<group>"; };
+		4DBDE91C1F124CB200892290 /* VariadicSQLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VariadicSQLParser.h; sourceTree = "<group>"; };
+		4DBDE91D1F124CB200892290 /* VitaIncludes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VitaIncludes.cpp; sourceTree = "<group>"; };
+		4DBDE91E1F124CB200892290 /* VitaIncludes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VitaIncludes.h; sourceTree = "<group>"; };
+		4DBDE91F1F124CB200892290 /* WindowsIncludes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowsIncludes.h; sourceTree = "<group>"; };
+		4DBDE9201F124CB200892290 /* WSAStartupSingleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WSAStartupSingleton.cpp; sourceTree = "<group>"; };
+		4DBDE9211F124CB200892290 /* WSAStartupSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAStartupSingleton.h; sourceTree = "<group>"; };
+		4DBDE9221F124CB200892290 /* XBox360Includes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBox360Includes.h; sourceTree = "<group>"; };
 		4DC839011C1F0DCA00B1351C /* lua-crypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "lua-crypt.c"; sourceTree = "<group>"; };
 		4DC839031C1F0F8300B1351C /* lsha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lsha1.c; sourceTree = "<group>"; };
 		4DC9F4B819FDF6A500FA1E3B /* lua_cocos2dx_spine_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_spine_auto.cpp; sourceTree = "<group>"; };
@@ -2324,6 +2860,291 @@
 			path = CCScrollView;
 			sourceTree = "<group>";
 		};
+		4DBDE8131F124CB100892290 /* lraknet */ = {
+			isa = PBXGroup;
+			children = (
+				4DBDE8141F124CB100892290 /* lua-racknet.cpp */,
+				4DBDE8151F124CB100892290 /* lua-racknet.h */,
+				4DBDE8161F124CB100892290 /* Source */,
+			);
+			path = lraknet;
+			sourceTree = "<group>";
+		};
+		4DBDE8161F124CB100892290 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				4DBDE8171F124CB100892290 /* _FindFirst.cpp */,
+				4DBDE8181F124CB100892290 /* _FindFirst.h */,
+				4DBDE8191F124CB100892290 /* AutopatcherPatchContext.h */,
+				4DBDE81A1F124CB100892290 /* AutopatcherRepositoryInterface.h */,
+				4DBDE81B1F124CB100892290 /* Base64Encoder.cpp */,
+				4DBDE81C1F124CB100892290 /* Base64Encoder.h */,
+				4DBDE81D1F124CB100892290 /* BitStream.cpp */,
+				4DBDE81E1F124CB100892290 /* BitStream.h */,
+				4DBDE81F1F124CB100892290 /* CCRakNetSlidingWindow.cpp */,
+				4DBDE8201F124CB100892290 /* CCRakNetSlidingWindow.h */,
+				4DBDE8211F124CB100892290 /* CCRakNetUDT.cpp */,
+				4DBDE8221F124CB100892290 /* CCRakNetUDT.h */,
+				4DBDE8231F124CB100892290 /* CheckSum.cpp */,
+				4DBDE8241F124CB100892290 /* CheckSum.h */,
+				4DBDE8251F124CB100892290 /* CloudClient.cpp */,
+				4DBDE8261F124CB100892290 /* CloudClient.h */,
+				4DBDE8271F124CB100892290 /* CloudCommon.cpp */,
+				4DBDE8281F124CB100892290 /* CloudCommon.h */,
+				4DBDE8291F124CB100892290 /* CloudServer.cpp */,
+				4DBDE82A1F124CB100892290 /* CloudServer.h */,
+				4DBDE82B1F124CB100892290 /* CMakeLists.txt */,
+				4DBDE82C1F124CB100892290 /* CommandParserInterface.cpp */,
+				4DBDE82D1F124CB100892290 /* CommandParserInterface.h */,
+				4DBDE82E1F124CB100892290 /* ConnectionGraph2.cpp */,
+				4DBDE82F1F124CB100892290 /* ConnectionGraph2.h */,
+				4DBDE8301F124CB100892290 /* ConsoleServer.cpp */,
+				4DBDE8311F124CB100892290 /* ConsoleServer.h */,
+				4DBDE8321F124CB100892290 /* DataCompressor.cpp */,
+				4DBDE8331F124CB100892290 /* DataCompressor.h */,
+				4DBDE8341F124CB100892290 /* DirectoryDeltaTransfer.cpp */,
+				4DBDE8351F124CB100892290 /* DirectoryDeltaTransfer.h */,
+				4DBDE8361F124CB100892290 /* DR_SHA1.cpp */,
+				4DBDE8371F124CB100892290 /* DR_SHA1.h */,
+				4DBDE8381F124CB100892290 /* DS_BinarySearchTree.h */,
+				4DBDE8391F124CB100892290 /* DS_BPlusTree.h */,
+				4DBDE83A1F124CB100892290 /* DS_BytePool.cpp */,
+				4DBDE83B1F124CB100892290 /* DS_BytePool.h */,
+				4DBDE83C1F124CB100892290 /* DS_ByteQueue.cpp */,
+				4DBDE83D1F124CB100892290 /* DS_ByteQueue.h */,
+				4DBDE83E1F124CB100892290 /* DS_Hash.h */,
+				4DBDE83F1F124CB100892290 /* DS_Heap.h */,
+				4DBDE8401F124CB100892290 /* DS_HuffmanEncodingTree.cpp */,
+				4DBDE8411F124CB100892290 /* DS_HuffmanEncodingTree.h */,
+				4DBDE8421F124CB100892290 /* DS_HuffmanEncodingTreeFactory.h */,
+				4DBDE8431F124CB100892290 /* DS_HuffmanEncodingTreeNode.h */,
+				4DBDE8441F124CB100892290 /* DS_LinkedList.h */,
+				4DBDE8451F124CB100892290 /* DS_List.h */,
+				4DBDE8461F124CB100892290 /* DS_Map.h */,
+				4DBDE8471F124CB100892290 /* DS_MemoryPool.h */,
+				4DBDE8481F124CB100892290 /* DS_Multilist.h */,
+				4DBDE8491F124CB100892290 /* DS_OrderedChannelHeap.h */,
+				4DBDE84A1F124CB100892290 /* DS_OrderedList.h */,
+				4DBDE84B1F124CB100892290 /* DS_Queue.h */,
+				4DBDE84C1F124CB100892290 /* DS_QueueLinkedList.h */,
+				4DBDE84D1F124CB100892290 /* DS_RangeList.h */,
+				4DBDE84E1F124CB100892290 /* DS_Table.cpp */,
+				4DBDE84F1F124CB100892290 /* DS_Table.h */,
+				4DBDE8501F124CB100892290 /* DS_ThreadsafeAllocatingQueue.h */,
+				4DBDE8511F124CB100892290 /* DS_Tree.h */,
+				4DBDE8521F124CB100892290 /* DS_WeightedGraph.h */,
+				4DBDE8531F124CB100892290 /* DynDNS.cpp */,
+				4DBDE8541F124CB100892290 /* DynDNS.h */,
+				4DBDE8551F124CB100892290 /* EmailSender.cpp */,
+				4DBDE8561F124CB100892290 /* EmailSender.h */,
+				4DBDE8571F124CB100892290 /* EmptyHeader.h */,
+				4DBDE8581F124CB100892290 /* EpochTimeToString.cpp */,
+				4DBDE8591F124CB100892290 /* EpochTimeToString.h */,
+				4DBDE85A1F124CB100892290 /* Export.h */,
+				4DBDE85B1F124CB100892290 /* FileList.cpp */,
+				4DBDE85C1F124CB100892290 /* FileList.h */,
+				4DBDE85D1F124CB100892290 /* FileListNodeContext.h */,
+				4DBDE85E1F124CB100892290 /* FileListTransfer.cpp */,
+				4DBDE85F1F124CB100892290 /* FileListTransfer.h */,
+				4DBDE8601F124CB100892290 /* FileListTransferCBInterface.h */,
+				4DBDE8611F124CB100892290 /* FileOperations.cpp */,
+				4DBDE8621F124CB100892290 /* FileOperations.h */,
+				4DBDE8631F124CB100892290 /* FormatString.cpp */,
+				4DBDE8641F124CB100892290 /* FormatString.h */,
+				4DBDE8651F124CB100892290 /* FullyConnectedMesh2.cpp */,
+				4DBDE8661F124CB100892290 /* FullyConnectedMesh2.h */,
+				4DBDE8671F124CB100892290 /* Getche.cpp */,
+				4DBDE8681F124CB100892290 /* Getche.h */,
+				4DBDE8691F124CB100892290 /* Gets.cpp */,
+				4DBDE86A1F124CB100892290 /* Gets.h */,
+				4DBDE86B1F124CB100892290 /* GetTime.cpp */,
+				4DBDE86C1F124CB100892290 /* GetTime.h */,
+				4DBDE86D1F124CB100892290 /* gettimeofday.cpp */,
+				4DBDE86E1F124CB100892290 /* gettimeofday.h */,
+				4DBDE86F1F124CB100892290 /* GridSectorizer.cpp */,
+				4DBDE8701F124CB100892290 /* GridSectorizer.h */,
+				4DBDE8711F124CB100892290 /* HTTPConnection.cpp */,
+				4DBDE8721F124CB100892290 /* HTTPConnection.h */,
+				4DBDE8731F124CB100892290 /* HTTPConnection2.cpp */,
+				4DBDE8741F124CB100892290 /* HTTPConnection2.h */,
+				4DBDE8751F124CB100892290 /* IncrementalReadInterface.cpp */,
+				4DBDE8761F124CB100892290 /* IncrementalReadInterface.h */,
+				4DBDE8771F124CB100892290 /* InternalPacket.h */,
+				4DBDE8781F124CB100892290 /* Itoa.cpp */,
+				4DBDE8791F124CB100892290 /* Itoa.h */,
+				4DBDE87A1F124CB100892290 /* Kbhit.h */,
+				4DBDE87B1F124CB100892290 /* LinuxStrings.cpp */,
+				4DBDE87C1F124CB100892290 /* LinuxStrings.h */,
+				4DBDE87D1F124CB100892290 /* LocklessTypes.cpp */,
+				4DBDE87E1F124CB100892290 /* LocklessTypes.h */,
+				4DBDE87F1F124CB100892290 /* LogCommandParser.cpp */,
+				4DBDE8801F124CB100892290 /* LogCommandParser.h */,
+				4DBDE8811F124CB100892290 /* MessageFilter.cpp */,
+				4DBDE8821F124CB100892290 /* MessageFilter.h */,
+				4DBDE8831F124CB100892290 /* MessageIdentifiers.h */,
+				4DBDE8841F124CB200892290 /* MTUSize.h */,
+				4DBDE8851F124CB200892290 /* NativeFeatureIncludes.h */,
+				4DBDE8861F124CB200892290 /* NativeFeatureIncludesOverrides.h */,
+				4DBDE8871F124CB200892290 /* NativeTypes.h */,
+				4DBDE8881F124CB200892290 /* NatPunchthroughClient.cpp */,
+				4DBDE8891F124CB200892290 /* NatPunchthroughClient.h */,
+				4DBDE88A1F124CB200892290 /* NatPunchthroughServer.cpp */,
+				4DBDE88B1F124CB200892290 /* NatPunchthroughServer.h */,
+				4DBDE88C1F124CB200892290 /* NatTypeDetectionClient.cpp */,
+				4DBDE88D1F124CB200892290 /* NatTypeDetectionClient.h */,
+				4DBDE88E1F124CB200892290 /* NatTypeDetectionCommon.cpp */,
+				4DBDE88F1F124CB200892290 /* NatTypeDetectionCommon.h */,
+				4DBDE8901F124CB200892290 /* NatTypeDetectionServer.cpp */,
+				4DBDE8911F124CB200892290 /* NatTypeDetectionServer.h */,
+				4DBDE8921F124CB200892290 /* NetworkIDManager.cpp */,
+				4DBDE8931F124CB200892290 /* NetworkIDManager.h */,
+				4DBDE8941F124CB200892290 /* NetworkIDObject.cpp */,
+				4DBDE8951F124CB200892290 /* NetworkIDObject.h */,
+				4DBDE8961F124CB200892290 /* PacketConsoleLogger.cpp */,
+				4DBDE8971F124CB200892290 /* PacketConsoleLogger.h */,
+				4DBDE8981F124CB200892290 /* PacketFileLogger.cpp */,
+				4DBDE8991F124CB200892290 /* PacketFileLogger.h */,
+				4DBDE89A1F124CB200892290 /* PacketizedTCP.cpp */,
+				4DBDE89B1F124CB200892290 /* PacketizedTCP.h */,
+				4DBDE89C1F124CB200892290 /* PacketLogger.cpp */,
+				4DBDE89D1F124CB200892290 /* PacketLogger.h */,
+				4DBDE89E1F124CB200892290 /* PacketOutputWindowLogger.cpp */,
+				4DBDE89F1F124CB200892290 /* PacketOutputWindowLogger.h */,
+				4DBDE8A01F124CB200892290 /* PacketPool.h */,
+				4DBDE8A11F124CB200892290 /* PacketPriority.h */,
+				4DBDE8A21F124CB200892290 /* PluginInterface2.cpp */,
+				4DBDE8A31F124CB200892290 /* PluginInterface2.h */,
+				4DBDE8A41F124CB200892290 /* PS3Includes.h */,
+				4DBDE8A51F124CB200892290 /* PS4Includes.cpp */,
+				4DBDE8A61F124CB200892290 /* PS4Includes.h */,
+				4DBDE8A71F124CB200892290 /* Rackspace.cpp */,
+				4DBDE8A81F124CB200892290 /* Rackspace.h */,
+				4DBDE8A91F124CB200892290 /* RakAlloca.h */,
+				4DBDE8AA1F124CB200892290 /* RakAssert.h */,
+				4DBDE8AB1F124CB200892290 /* RakMemoryOverride.cpp */,
+				4DBDE8AC1F124CB200892290 /* RakMemoryOverride.h */,
+				4DBDE8AD1F124CB200892290 /* RakNet.vcproj */,
+				4DBDE8AE1F124CB200892290 /* RakNet_vc8.vcproj */,
+				4DBDE8AF1F124CB200892290 /* RakNet_vc9.vcproj */,
+				4DBDE8B01F124CB200892290 /* RakNetCommandParser.cpp */,
+				4DBDE8B11F124CB200892290 /* RakNetCommandParser.h */,
+				4DBDE8B21F124CB200892290 /* RakNetDefines.h */,
+				4DBDE8B31F124CB200892290 /* RakNetDefinesOverrides.h */,
+				4DBDE8B41F124CB200892290 /* RakNetSmartPtr.h */,
+				4DBDE8B51F124CB200892290 /* RakNetSocket.cpp */,
+				4DBDE8B61F124CB200892290 /* RakNetSocket.h */,
+				4DBDE8B71F124CB200892290 /* RakNetSocket2.cpp */,
+				4DBDE8B81F124CB200892290 /* RakNetSocket2.h */,
+				4DBDE8B91F124CB200892290 /* RakNetSocket2_360_720.cpp */,
+				4DBDE8BA1F124CB200892290 /* RakNetSocket2_Berkley.cpp */,
+				4DBDE8BB1F124CB200892290 /* RakNetSocket2_Berkley_NativeClient.cpp */,
+				4DBDE8BC1F124CB200892290 /* RakNetSocket2_NativeClient.cpp */,
+				4DBDE8BD1F124CB200892290 /* RakNetSocket2_PS3_PS4.cpp */,
+				4DBDE8BE1F124CB200892290 /* RakNetSocket2_PS4.cpp */,
+				4DBDE8BF1F124CB200892290 /* RakNetSocket2_Vita.cpp */,
+				4DBDE8C01F124CB200892290 /* RakNetSocket2_Windows_Linux.cpp */,
+				4DBDE8C11F124CB200892290 /* RakNetSocket2_Windows_Linux_360.cpp */,
+				4DBDE8C21F124CB200892290 /* RakNetSocket2_WindowsStore8.cpp */,
+				4DBDE8C31F124CB200892290 /* RakNetStatistics.cpp */,
+				4DBDE8C41F124CB200892290 /* RakNetStatistics.h */,
+				4DBDE8C51F124CB200892290 /* RakNetTime.h */,
+				4DBDE8C61F124CB200892290 /* RakNetTransport2.cpp */,
+				4DBDE8C71F124CB200892290 /* RakNetTransport2.h */,
+				4DBDE8C81F124CB200892290 /* RakNetTypes.cpp */,
+				4DBDE8C91F124CB200892290 /* RakNetTypes.h */,
+				4DBDE8CA1F124CB200892290 /* RakNetVersion.h */,
+				4DBDE8CB1F124CB200892290 /* RakPeer.cpp */,
+				4DBDE8CC1F124CB200892290 /* RakPeer.h */,
+				4DBDE8CD1F124CB200892290 /* RakPeerInterface.h */,
+				4DBDE8CE1F124CB200892290 /* RakSleep.cpp */,
+				4DBDE8CF1F124CB200892290 /* RakSleep.h */,
+				4DBDE8D01F124CB200892290 /* RakString.cpp */,
+				4DBDE8D11F124CB200892290 /* RakString.h */,
+				4DBDE8D21F124CB200892290 /* RakThread.cpp */,
+				4DBDE8D31F124CB200892290 /* RakThread.h */,
+				4DBDE8D41F124CB200892290 /* RakWString.cpp */,
+				4DBDE8D51F124CB200892290 /* RakWString.h */,
+				4DBDE8D61F124CB200892290 /* Rand.cpp */,
+				4DBDE8D71F124CB200892290 /* Rand.h */,
+				4DBDE8D81F124CB200892290 /* RandSync.cpp */,
+				4DBDE8D91F124CB200892290 /* RandSync.h */,
+				4DBDE8DA1F124CB200892290 /* ReadyEvent.cpp */,
+				4DBDE8DB1F124CB200892290 /* ReadyEvent.h */,
+				4DBDE8DC1F124CB200892290 /* RefCountedObj.h */,
+				4DBDE8DD1F124CB200892290 /* RelayPlugin.cpp */,
+				4DBDE8DE1F124CB200892290 /* RelayPlugin.h */,
+				4DBDE8DF1F124CB200892290 /* ReliabilityLayer.cpp */,
+				4DBDE8E01F124CB200892290 /* ReliabilityLayer.h */,
+				4DBDE8E11F124CB200892290 /* ReplicaEnums.h */,
+				4DBDE8E21F124CB200892290 /* ReplicaManager3.cpp */,
+				4DBDE8E31F124CB200892290 /* ReplicaManager3.h */,
+				4DBDE8E41F124CB200892290 /* Router2.cpp */,
+				4DBDE8E51F124CB200892290 /* Router2.h */,
+				4DBDE8E61F124CB200892290 /* RPC4Plugin.cpp */,
+				4DBDE8E71F124CB200892290 /* RPC4Plugin.h */,
+				4DBDE8E81F124CB200892290 /* SecureHandshake.cpp */,
+				4DBDE8E91F124CB200892290 /* SecureHandshake.h */,
+				4DBDE8EA1F124CB200892290 /* SendToThread.cpp */,
+				4DBDE8EB1F124CB200892290 /* SendToThread.h */,
+				4DBDE8EC1F124CB200892290 /* SignaledEvent.cpp */,
+				4DBDE8ED1F124CB200892290 /* SignaledEvent.h */,
+				4DBDE8EE1F124CB200892290 /* SimpleMutex.cpp */,
+				4DBDE8EF1F124CB200892290 /* SimpleMutex.h */,
+				4DBDE8F01F124CB200892290 /* SimpleTCPServer.h */,
+				4DBDE8F11F124CB200892290 /* SingleProducerConsumer.h */,
+				4DBDE8F21F124CB200892290 /* SocketDefines.h */,
+				4DBDE8F31F124CB200892290 /* SocketIncludes.h */,
+				4DBDE8F41F124CB200892290 /* SocketLayer.cpp */,
+				4DBDE8F51F124CB200892290 /* SocketLayer.h */,
+				4DBDE8F61F124CB200892290 /* StatisticsHistory.cpp */,
+				4DBDE8F71F124CB200892290 /* StatisticsHistory.h */,
+				4DBDE8F81F124CB200892290 /* StringCompressor.cpp */,
+				4DBDE8F91F124CB200892290 /* StringCompressor.h */,
+				4DBDE8FA1F124CB200892290 /* StringTable.cpp */,
+				4DBDE8FB1F124CB200892290 /* StringTable.h */,
+				4DBDE8FC1F124CB200892290 /* SuperFastHash.cpp */,
+				4DBDE8FD1F124CB200892290 /* SuperFastHash.h */,
+				4DBDE8FE1F124CB200892290 /* TableSerializer.cpp */,
+				4DBDE8FF1F124CB200892290 /* TableSerializer.h */,
+				4DBDE9001F124CB200892290 /* TCPInterface.cpp */,
+				4DBDE9011F124CB200892290 /* TCPInterface.h */,
+				4DBDE9021F124CB200892290 /* TeamBalancer.cpp */,
+				4DBDE9031F124CB200892290 /* TeamBalancer.h */,
+				4DBDE9041F124CB200892290 /* TeamManager.cpp */,
+				4DBDE9051F124CB200892290 /* TeamManager.h */,
+				4DBDE9061F124CB200892290 /* TelnetTransport.cpp */,
+				4DBDE9071F124CB200892290 /* TelnetTransport.h */,
+				4DBDE9081F124CB200892290 /* ThreadPool.h */,
+				4DBDE9091F124CB200892290 /* ThreadsafePacketLogger.cpp */,
+				4DBDE90A1F124CB200892290 /* ThreadsafePacketLogger.h */,
+				4DBDE90B1F124CB200892290 /* TransportInterface.h */,
+				4DBDE90C1F124CB200892290 /* TwoWayAuthentication.cpp */,
+				4DBDE90D1F124CB200892290 /* TwoWayAuthentication.h */,
+				4DBDE90E1F124CB200892290 /* UDPForwarder.cpp */,
+				4DBDE90F1F124CB200892290 /* UDPForwarder.h */,
+				4DBDE9101F124CB200892290 /* UDPProxyClient.cpp */,
+				4DBDE9111F124CB200892290 /* UDPProxyClient.h */,
+				4DBDE9121F124CB200892290 /* UDPProxyCommon.h */,
+				4DBDE9131F124CB200892290 /* UDPProxyCoordinator.cpp */,
+				4DBDE9141F124CB200892290 /* UDPProxyCoordinator.h */,
+				4DBDE9151F124CB200892290 /* UDPProxyServer.cpp */,
+				4DBDE9161F124CB200892290 /* UDPProxyServer.h */,
+				4DBDE9171F124CB200892290 /* VariableDeltaSerializer.cpp */,
+				4DBDE9181F124CB200892290 /* VariableDeltaSerializer.h */,
+				4DBDE9191F124CB200892290 /* VariableListDeltaTracker.cpp */,
+				4DBDE91A1F124CB200892290 /* VariableListDeltaTracker.h */,
+				4DBDE91B1F124CB200892290 /* VariadicSQLParser.cpp */,
+				4DBDE91C1F124CB200892290 /* VariadicSQLParser.h */,
+				4DBDE91D1F124CB200892290 /* VitaIncludes.cpp */,
+				4DBDE91E1F124CB200892290 /* VitaIncludes.h */,
+				4DBDE91F1F124CB200892290 /* WindowsIncludes.h */,
+				4DBDE9201F124CB200892290 /* WSAStartupSingleton.cpp */,
+				4DBDE9211F124CB200892290 /* WSAStartupSingleton.h */,
+				4DBDE9221F124CB200892290 /* XBox360Includes.h */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		4DC839001C1F0DCA00B1351C /* lcrypt */ = {
 			isa = PBXGroup;
 			children = (
@@ -2610,6 +3431,7 @@
 		DAF282B2196BDACB00959DA1 /* lua_extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4DBDE8131F124CB100892290 /* lraknet */,
 				A68FA6D51C983E2600E441C5 /* unicode */,
 				A68FA6D21C983C2200E441C5 /* lua-bit */,
 				4DC839001C1F0DCA00B1351C /* lcrypt */,
@@ -4303,14 +5125,19 @@
 				F4E0B685196B9E4C0053EFD7 /* CCControlButton.h in Headers */,
 				4DF974A81B5D451400D3CDA6 /* msvcint.h in Headers */,
 				4D14511C1B1F0778006B0290 /* CCEventController.h in Headers */,
+				4DBDE95E1F124CB200892290 /* DS_Tree.h in Headers */,
+				4DBDE97B1F124CB200892290 /* gettimeofday.h in Headers */,
 				4DC9F52319FE10D300FA1E3B /* BoundingBoxAttachment.h in Headers */,
 				DAF28325196BDACB00959DA1 /* udp.h in Headers */,
 				F4E0BCD7196BA0450053EFD7 /* glfw3native.h in Headers */,
 				F4E0B307196B9C670053EFD7 /* CCSpriteFrameCache.h in Headers */,
 				4D025AE41B5E66EC002BC427 /* UIScale9Sprite.h in Headers */,
 				49BCFA1D197F4CE700F48FF6 /* ccFilterShader_drop_shadow_vert.h in Headers */,
+				4DBDE98D1F124CB200892290 /* LogCommandParser.h in Headers */,
+				4DBDEA151F124CB300892290 /* TransportInterface.h in Headers */,
 				F4E0B562196B9C7D0053EFD7 /* CCMap.h in Headers */,
 				49BCFA1E197F4CE700F48FF6 /* ccFilterShader_emboss_frag.h in Headers */,
+				4DBDE9961F124CB200892290 /* NatPunchthroughClient.h in Headers */,
 				F4E0B65D196B9C7D0053EFD7 /* CCTextureAtlas.h in Headers */,
 				F4895A0B199BA9F9000AA6A2 /* Runtime.h in Headers */,
 				F4E0B68A196B9E4C0053EFD7 /* CCInvocation.h in Headers */,
@@ -4324,6 +5151,7 @@
 				F4E0BB5A196BA00A0053EFD7 /* ft2build.h in Headers */,
 				F4E0B554196B9C7D0053EFD7 /* CCEventListenerMouse.h in Headers */,
 				DAF282FF196BDACB00959DA1 /* lfs.h in Headers */,
+				4DBDE9EB1F124CB200892290 /* ReplicaEnums.h in Headers */,
 				F4E0B659196B9C7D0053EFD7 /* ccShaders.h in Headers */,
 				DAF282B0196BDA7300959DA1 /* CCStoreProductsRequestDelegate.h in Headers */,
 				49BCF9FD197F4CE700F48FF6 /* CCDropShadowFilter.h in Headers */,
@@ -4334,15 +5162,21 @@
 				4DC9F53119FE10D300FA1E3B /* MeshAttachment.h in Headers */,
 				49BCFA20197F4CE700F48FF6 /* ccFilterShader_exposure_frag.h in Headers */,
 				F4E0BB28196BA00A0053EFD7 /* ftstroke.h in Headers */,
+				4DBDEA1B1F124CB300892290 /* UDPProxyClient.h in Headers */,
 				49BCFA07197F4CE700F48FF6 /* CCHazeFilter.h in Headers */,
+				4DBDE9871F124CB200892290 /* Kbhit.h in Headers */,
 				4D1451531B1F08F3006B0290 /* CCPrimitiveCommand.h in Headers */,
+				4DBDE9E61F124CB200892290 /* RefCountedObj.h in Headers */,
 				F4E0BE85196BA0C20053EFD7 /* libwebsockets.h in Headers */,
 				F48959F5199BA9F9000AA6A2 /* common.h in Headers */,
 				F4E0BE20196BA0C10053EFD7 /* pngconf.h in Headers */,
+				4DBDE9E81F124CB200892290 /* RelayPlugin.h in Headers */,
 				F48959E8199BA9F9000AA6A2 /* message_lite.h in Headers */,
+				4DBDE95C1F124CB200892290 /* DS_Table.h in Headers */,
 				F4E0B2AF196B9C660053EFD7 /* CCActionPageTurn3D.h in Headers */,
 				F48959FD199BA9F9000AA6A2 /* stringprintf.h in Headers */,
 				DAF2829B196BDA7300959DA1 /* ReachabilityIOSMac.h in Headers */,
+				4DBDEA071F124CB300892290 /* SuperFastHash.h in Headers */,
 				F4E0BD06196BA0460053EFD7 /* filestream.h in Headers */,
 				4D1451691B1F0A30006B0290 /* cocos2d-prefix.pch in Headers */,
 				F4E0B30F196B9C670053EFD7 /* CCTMXObjectGroup.h in Headers */,
@@ -4351,10 +5185,13 @@
 				F4E0BD05196BA0460053EFD7 /* document.h in Headers */,
 				F4E0B2CD196B9C670053EFD7 /* CCFontAtlasCache.h in Headers */,
 				49BCFA21197F4CE700F48FF6 /* ccFilterShader_gamma_frag.h in Headers */,
+				4DBDE9451F124CB200892290 /* DS_BinarySearchTree.h in Headers */,
 				F4E0BD0E196BA0460053EFD7 /* writer.h in Headers */,
 				F4E0B6F1196B9EEB0053EFD7 /* cpBody.h in Headers */,
 				F4E0BB0E196BA00A0053EFD7 /* ftbzip2.h in Headers */,
 				F4E0B568196B9C7D0053EFD7 /* CCProfiling.h in Headers */,
+				4DBDE9F31F124CB300892290 /* SecureHandshake.h in Headers */,
+				4DBDE9321F124CB200892290 /* CheckSum.h in Headers */,
 				F4E0BB06196BA00A0053EFD7 /* ftoption.h in Headers */,
 				F4E0BB1D196BA00A0053EFD7 /* ftlzw.h in Headers */,
 				49BCF9F7197F4CE700F48FF6 /* CCBlurFilter.h in Headers */,
@@ -4362,20 +5199,29 @@
 				F4E0BB09196BA00A0053EFD7 /* ftadvanc.h in Headers */,
 				F4E0BB40196BA00A0053EFD7 /* svbdf.h in Headers */,
 				49BCFA30197F4CE700F48FF6 /* ccFilterShader_sharpen_vert.h in Headers */,
+				4DBDE9BC1F124CB200892290 /* RakNetDefines.h in Headers */,
 				F4E0B644196B9C7D0053EFD7 /* CCGLProgram.h in Headers */,
 				F4E0B574196B9C7D0053EFD7 /* ccTypes.h in Headers */,
 				DAF282AF196BDA7300959DA1 /* CCStoreProduct.h in Headers */,
 				4D025ADE1B5E66EC002BC427 /* UILayoutManager.h in Headers */,
+				4DBDE9D31F124CB200892290 /* RakNetTypes.h in Headers */,
 				F4E0B2FB196B9C670053EFD7 /* CCProgressTimer.h in Headers */,
+				4DBDEA121F124CB300892290 /* ThreadPool.h in Headers */,
 				49BCFA18197F4CE700F48FF6 /* ccFilterShader_blur_frag.h in Headers */,
+				4DBDE9791F124CB200892290 /* GetTime.h in Headers */,
 				F4E0B681196B9E4C0053EFD7 /* ExtensionMacros.h in Headers */,
 				F4E0B6ED196B9EEB0053EFD7 /* cpSlideJoint.h in Headers */,
+				4DBDEA0B1F124CB300892290 /* TCPInterface.h in Headers */,
 				F4E0BB39196BA00A0053EFD7 /* ftserv.h in Headers */,
+				4DBDEA011F124CB300892290 /* StatisticsHistory.h in Headers */,
 				F4E0B68E196B9E4C0053EFD7 /* CCEditBox.h in Headers */,
 				F4E0B64C196B9C7D0053EFD7 /* ccGLStateCache.h in Headers */,
 				49BCFA34197F4CE700F48FF6 /* ccFilterShader_zoom_blur_frag.h in Headers */,
+				4DBDE9FA1F124CB300892290 /* SimpleTCPServer.h in Headers */,
 				F4E0B2C9196B9C660053EFD7 /* CCFont.h in Headers */,
 				F4E0B55D196B9C7D0053EFD7 /* ccFPSImages.h in Headers */,
+				4DBDE9461F124CB200892290 /* DS_BPlusTree.h in Headers */,
+				4DBDE9281F124CB200892290 /* AutopatcherRepositoryInterface.h in Headers */,
 				F4E0BB18196BA00A0053EFD7 /* ftgzip.h in Headers */,
 				49BCFA2B197F4CE700F48FF6 /* ccFilterShader_motion_blur_vert.h in Headers */,
 				DAF2827C196BDA7300959DA1 /* CCAlertViewDelegate.h in Headers */,
@@ -4383,8 +5229,10 @@
 				F4E0B56E196B9C7D0053EFD7 /* CCScheduler.h in Headers */,
 				F4E0BE63196BA0C10053EFD7 /* tinyxml2.h in Headers */,
 				F4E0B552196B9C7D0053EFD7 /* CCEventListenerKeyboard.h in Headers */,
+				4DBDE97F1F124CB200892290 /* HTTPConnection.h in Headers */,
 				4D1451351B1F07A6006B0290 /* CCStdC.h in Headers */,
 				F4E0B2AB196B9C660053EFD7 /* CCActionInterval.h in Headers */,
+				4DBDE9941F124CB200892290 /* NativeTypes.h in Headers */,
 				F4E0B505196B9C7D0053EFD7 /* Export.h in Headers */,
 				F4E0B6E2196B9EEB0053EFD7 /* chipmunk_unsafe.h in Headers */,
 				49BCFA0D197F4CE700F48FF6 /* CCRGBFilter.h in Headers */,
@@ -4392,18 +5240,24 @@
 				F4E0BCE6196BA0450053EFD7 /* jconfig.h in Headers */,
 				F4E0B2F1196B9C670053EFD7 /* CCParallaxNode.h in Headers */,
 				F4E0B518196B9C7D0053EFD7 /* CocosDenshion.h in Headers */,
+				4DBDE9DD1F124CB200892290 /* RakThread.h in Headers */,
 				4DF974B91B5D530800D3CDA6 /* lpcap.h in Headers */,
 				DAF2830F196BDACB00959DA1 /* inet.h in Headers */,
 				4D14511E1B1F0778006B0290 /* CCEventListenerController.h in Headers */,
 				F48959EA199BA9F9000AA6A2 /* repeated_field.h in Headers */,
 				F4E0BB32196BA00A0053EFD7 /* ftdebug.h in Headers */,
 				DAF28329196BDACB00959DA1 /* usocket.h in Headers */,
+				4DBDEA291F124CB300892290 /* WindowsIncludes.h in Headers */,
 				F4E0B2DB196B9C670053EFD7 /* CCLabel.h in Headers */,
 				F4E0B32B196B9C670053EFD7 /* CCSprite3D.h in Headers */,
 				49BCFA22197F4CE700F48FF6 /* ccFilterShader_gaussian_blur_frag.h in Headers */,
 				F4E0BB59196BA00A0053EFD7 /* ttunpat.h in Headers */,
+				4DBDE9751F124CB200892290 /* Getche.h in Headers */,
 				DAF28275196BDA7300959DA1 /* cocos2dx_extra.h in Headers */,
+				4DBDE9D71F124CB200892290 /* RakPeerInterface.h in Headers */,
+				4DBDE9FD1F124CB300892290 /* SocketIncludes.h in Headers */,
 				F4E0B564196B9C7D0053EFD7 /* CCNS.h in Headers */,
+				4DBDE9B91F124CB200892290 /* RakMemoryOverride.h in Headers */,
 				F4E0BE67196BA0C10053EFD7 /* ioapi_mem.h in Headers */,
 				DAF282AD196BDA7300959DA1 /* CCStorePaymentTransactionWrapper.h in Headers */,
 				DAF282AA196BDA7300959DA1 /* CCStore.h in Headers */,
@@ -4417,6 +5271,7 @@
 				F4E0BB56196BA00A0053EFD7 /* ttnameid.h in Headers */,
 				F4E0B56C196B9C7D0053EFD7 /* CCRefPtr.h in Headers */,
 				F4E0BB3E196BA00A0053EFD7 /* psaux.h in Headers */,
+				4DBDE9811F124CB200892290 /* HTTPConnection2.h in Headers */,
 				F4E0B54E196B9C7D0053EFD7 /* CCEventListenerCustom.h in Headers */,
 				4DCF3C771B1F2D460043BCD7 /* CCApplication.h in Headers */,
 				DAF2831D196BDACB00959DA1 /* socket.h in Headers */,
@@ -4432,9 +5287,13 @@
 				4D1451591B1F0915006B0290 /* CCController.h in Headers */,
 				4D025AD61B5E66EC002BC427 /* GUIExport.h in Headers */,
 				F4E0BB41196BA00A0053EFD7 /* svcid.h in Headers */,
+				4DBDE9421F124CB200892290 /* DirectoryDeltaTransfer.h in Headers */,
+				4DBDE99C1F124CB200892290 /* NatTypeDetectionCommon.h in Headers */,
 				F4E0B5F5196B9C7D0053EFD7 /* CCCommon.h in Headers */,
 				4D025AE21B5E66EC002BC427 /* UIRichText.h in Headers */,
+				4DBDE9D41F124CB200892290 /* RakNetVersion.h in Headers */,
 				F4E0B586196B9C7D0053EFD7 /* s3tc.h in Headers */,
+				4DBDE9A81F124CB200892290 /* PacketizedTCP.h in Headers */,
 				F4E0BB47196BA00A0053EFD7 /* svpfr.h in Headers */,
 				F4E0B6DF196B9EEB0053EFD7 /* chipmunk_ffi.h in Headers */,
 				F4E0B5B5196B9C7D0053EFD7 /* CCPhysicsBodyInfo_chipmunk.h in Headers */,
@@ -4444,33 +5303,48 @@
 				F4E0BE44196BA0C10053EFD7 /* tiffconf.h in Headers */,
 				F4E0BB57196BA00A0053EFD7 /* tttables.h in Headers */,
 				F4E0BB4B196BA00A0053EFD7 /* svpsinfo.h in Headers */,
+				4DBDE9271F124CB200892290 /* AutopatcherPatchContext.h in Headers */,
 				F4E0BFCF196BA25D0053EFD7 /* lauxlib.h in Headers */,
 				F4E0B6F2196B9EEB0053EFD7 /* cpPolyShape.h in Headers */,
 				49BCFA3C197F4D3600F48FF6 /* lua_cocos2dx_extension_filter_auto.hpp in Headers */,
 				F4E0B323196B9C670053EFD7 /* CCBundle3DData.h in Headers */,
 				4D711E4F19E8042F0009A0C8 /* CCMenu.h in Headers */,
+				4DBDEA171F124CB300892290 /* TwoWayAuthentication.h in Headers */,
 				F4E0B2C1196B9C660053EFD7 /* CCComponent.h in Headers */,
 				F4E0B561196B9C7D0053EFD7 /* ccMacros.h in Headers */,
 				F4E0B58A196B9C7D0053EFD7 /* utlist.h in Headers */,
+				4DBDE9EA1F124CB200892290 /* ReliabilityLayer.h in Headers */,
 				F4E0BFC7196BA25D0053EFD7 /* lua_cocos2dx_extension_auto.hpp in Headers */,
+				4DBDEA191F124CB300892290 /* UDPForwarder.h in Headers */,
 				F4E0B57F196B9C7D0053EFD7 /* CCVector.h in Headers */,
 				F4E0B2B1196B9C660053EFD7 /* CCActionProgressTimer.h in Headers */,
+				4DBDE93C1F124CB200892290 /* ConnectionGraph2.h in Headers */,
 				F4E0B6E1196B9EEB0053EFD7 /* chipmunk_types.h in Headers */,
 				F4E0B65B196B9C7D0053EFD7 /* CCTexture2D.h in Headers */,
+				4DBDE9511F124CB200892290 /* DS_LinkedList.h in Headers */,
+				4DBDE9F91F124CB300892290 /* SimpleMutex.h in Headers */,
 				F4E0B65F196B9C7D0053EFD7 /* CCTextureCache.h in Headers */,
 				DAF282FB196BDACB00959DA1 /* strbuf.h in Headers */,
 				DAF282FD196BDACB00959DA1 /* debugger.h in Headers */,
+				4DBDE9BB1F124CB200892290 /* RakNetCommandParser.h in Headers */,
 				F4E0BB26196BA00A0053EFD7 /* ftsizes.h in Headers */,
+				4DBDEA111F124CB300892290 /* TelnetTransport.h in Headers */,
 				F4E0B2DD196B9C670053EFD7 /* CCLabelAtlas.h in Headers */,
+				4DBDE9ED1F124CB200892290 /* ReplicaManager3.h in Headers */,
 				DAF28317196BDACB00959DA1 /* mime.h in Headers */,
 				F4E0BD0C196BA0460053EFD7 /* reader.h in Headers */,
+				4DBDEA031F124CB300892290 /* StringCompressor.h in Headers */,
 				F48959D7199BA9F9000AA6A2 /* ConfigParser.h in Headers */,
 				F4E0BFD2196BA25D0053EFD7 /* lualib.h in Headers */,
 				DAF2832D196BDACB00959DA1 /* lua_zlib.h in Headers */,
 				4D1451321B1F07A6006B0290 /* CCPlatformConfig.h in Headers */,
+				4DBDE9691F124CB200892290 /* FileList.h in Headers */,
 				49BCFA05197F4CE700F48FF6 /* CCGrayFilter.h in Headers */,
+				4DBDE98B1F124CB200892290 /* LocklessTypes.h in Headers */,
+				4DBDE96D1F124CB200892290 /* FileListTransferCBInterface.h in Headers */,
 				F4E0BFD1196BA25D0053EFD7 /* luaconf.h in Headers */,
 				F4E0BB35196BA00A0053EFD7 /* ftmemory.h in Headers */,
+				4DBDE96C1F124CB200892290 /* FileListTransfer.h in Headers */,
 				49BCFA25197F4CE700F48FF6 /* ccFilterShader_grass_frag.h in Headers */,
 				F41590B3196BD1D20046D7EE /* CCTouchTargetNode.h in Headers */,
 				DAF2827D196BDA7300959DA1 /* CCNative.h in Headers */,
@@ -4480,21 +5354,29 @@
 				4DC9F53519FE10D300FA1E3B /* RegionAttachment.h in Headers */,
 				F4E0B2E5196B9C670053EFD7 /* CCLayer.h in Headers */,
 				F48959DE199BA9F9000AA6A2 /* generated_message_util.h in Headers */,
+				4DBDEA091F124CB300892290 /* TableSerializer.h in Headers */,
+				4DBDE9241F124CB200892290 /* lua-racknet.h in Headers */,
 				F4E0B569196B9C7D0053EFD7 /* CCProtocols.h in Headers */,
 				49BCFA01197F4CE700F48FF6 /* CCFilter.h in Headers */,
+				4DBDE9F11F124CB200892290 /* RPC4Plugin.h in Headers */,
 				F4E0BB33196BA00A0053EFD7 /* ftdriver.h in Headers */,
 				F4E0B329196B9C670053EFD7 /* CCObjLoader.h in Headers */,
+				4DBDE9F51F124CB300892290 /* SendToThread.h in Headers */,
 				F4E0BB17196BA00A0053EFD7 /* ftgxval.h in Headers */,
 				F4E0C080196BA25D0053EFD7 /* LuaBasicConversions.h in Headers */,
 				4D14518B1B1F0CD6006B0290 /* CCString.h in Headers */,
 				F4E0B6EB196B9EEB0053EFD7 /* cpRotaryLimitJoint.h in Headers */,
+				4DBDE9841F124CB200892290 /* InternalPacket.h in Headers */,
+				4DBDE95A1F124CB200892290 /* DS_RangeList.h in Headers */,
 				4D711E5319E804560009A0C8 /* CCMenuItem.h in Headers */,
+				4DBDE9771F124CB200892290 /* Gets.h in Headers */,
 				49BCFA2E197F4CE700F48FF6 /* ccFilterShader_sepia_frag.h in Headers */,
 				F4E0B544196B9C7D0053EFD7 /* CCEventDispatcher.h in Headers */,
 				4D711E5C19E804850009A0C8 /* CCScrollView.h in Headers */,
 				4D14511F1B1F0778006B0290 /* CCGameController.h in Headers */,
 				4D1451331B1F07A6006B0290 /* CCPlatformDefine.h in Headers */,
 				4D025ADC1B5E66EC002BC427 /* UILayoutComponent.h in Headers */,
+				4DBDE9531F124CB200892290 /* DS_Map.h in Headers */,
 				F4E0BB2B196BA00A0053EFD7 /* fttrigon.h in Headers */,
 				F4E0C078196BA25D0053EFD7 /* lua_cocos2dx_physics_manual.hpp in Headers */,
 				4949C33219AC6B4100113896 /* UITextField.h in Headers */,
@@ -4509,10 +5391,13 @@
 				F4E0B532196B9C7D0053EFD7 /* ccConfig.h in Headers */,
 				F4E0BCE7196BA0450053EFD7 /* jmorecfg.h in Headers */,
 				F4E0B6F0196B9EEB0053EFD7 /* cpBB.h in Headers */,
+				4DBDE94E1F124CB200892290 /* DS_HuffmanEncodingTree.h in Headers */,
 				F4E0B31F196B9C670053EFD7 /* CCAnimation3D.h in Headers */,
 				F4E0BB3C196BA00A0053EFD7 /* ftvalid.h in Headers */,
+				4DBDEA141F124CB300892290 /* ThreadsafePacketLogger.h in Headers */,
 				F4E0BB54196BA00A0053EFD7 /* tttypes.h in Headers */,
 				F4E0B595196B9C7D0053EFD7 /* CCMathBase.h in Headers */,
+				4DBDE9341F124CB200892290 /* CloudClient.h in Headers */,
 				F4E0B589196B9C7D0053EFD7 /* uthash.h in Headers */,
 				F4E0B650196B9C7D0053EFD7 /* CCMeshCommand.h in Headers */,
 				F4E0B59F196B9C7D0053EFD7 /* TransformUtils.h in Headers */,
@@ -4521,13 +5406,21 @@
 				F48959E0199BA9F9000AA6A2 /* coded_stream.h in Headers */,
 				DAF28303196BDACB00959DA1 /* lsqlite3.h in Headers */,
 				F4E0C076196BA25D0053EFD7 /* lua_cocos2dx_manual.hpp in Headers */,
+				4DBDE9B31F124CB200892290 /* PS4Includes.h in Headers */,
+				4DBDE9521F124CB200892290 /* DS_List.h in Headers */,
 				DAF282AC196BDA7300959DA1 /* CCStorePaymentTransaction.h in Headers */,
 				4D025AE01B5E66EC002BC427 /* UILayoutParameter.h in Headers */,
+				4DBDEA2B1F124CB300892290 /* WSAStartupSingleton.h in Headers */,
+				4DBDE9711F124CB200892290 /* FormatString.h in Headers */,
 				F4E0B2C7196B9C660053EFD7 /* CCDrawNode.h in Headers */,
 				F48959F7199BA9F9000AA6A2 /* map-util.h in Headers */,
 				F4E0B57A196B9C7D0053EFD7 /* ccUTF8.h in Headers */,
 				F48959F3199BA9F9000AA6A2 /* atomicops_internals_x86_msvc.h in Headers */,
+				4DBDE9261F124CB200892290 /* _FindFirst.h in Headers */,
+				4DBDE9E31F124CB200892290 /* RandSync.h in Headers */,
+				4DBDE9BE1F124CB200892290 /* RakNetSmartPtr.h in Headers */,
 				F4E0BB44196BA00A0053EFD7 /* svkern.h in Headers */,
+				4DBDE9CF1F124CB200892290 /* RakNetTime.h in Headers */,
 				F4E0BB12196BA00A0053EFD7 /* ftcid.h in Headers */,
 				49BCF9F5197F4CE700F48FF6 /* cocos2dFilters.h in Headers */,
 				F4E0B516196B9C7D0053EFD7 /* CDXMacOSXSupport.h in Headers */,
@@ -4539,27 +5432,36 @@
 				F4E0B2B9196B9C660053EFD7 /* CCAnimationCache.h in Headers */,
 				F4E0C06C196BA25D0053EFD7 /* CCLuaValue.h in Headers */,
 				4DC9F51519FE10D300FA1E3B /* AnimationStateData.h in Headers */,
+				4DBDEA241F124CB300892290 /* VariableListDeltaTracker.h in Headers */,
 				4D025AE61B5E66EC002BC427 /* UIWidget.h in Headers */,
 				F4E0B68C196B9E4C0053EFD7 /* CCScale9Sprite.h in Headers */,
 				F4895A02199BA9F9000AA6A2 /* wire_format_lite_inl.h in Headers */,
 				49BCFA2A197F4CE700F48FF6 /* ccFilterShader_motion_blur_frag.h in Headers */,
 				F4E0BB4A196BA00A0053EFD7 /* svpscmap.h in Headers */,
 				F4E0B576196B9C7D0053EFD7 /* CCUserDefault.h in Headers */,
+				4DBDE9AC1F124CB200892290 /* PacketOutputWindowLogger.h in Headers */,
 				F4E0B315196B9C670053EFD7 /* CCTransition.h in Headers */,
 				F4E0B57E196B9C7D0053EFD7 /* CCValue.h in Headers */,
 				F4E0BB13196BA00A0053EFD7 /* fterrdef.h in Headers */,
 				F4E0B5B3196B9C7D0053EFD7 /* CCPhysicsWorld.h in Headers */,
 				4DCF3C861B1F32620043BCD7 /* CCLock-apple.h in Headers */,
+				4DBDEA1E1F124CB300892290 /* UDPProxyCoordinator.h in Headers */,
+				4DBDE9631F124CB200892290 /* EmailSender.h in Headers */,
 				F4E0BB23196BA00A0053EFD7 /* ftoutln.h in Headers */,
 				F4E0B6E3196B9EEB0053EFD7 /* cpConstraint.h in Headers */,
 				F4E0B600196B9C7D0053EFD7 /* CCThread.h in Headers */,
 				F4E0B52D196B9C7D0053EFD7 /* base64.h in Headers */,
 				F4E0B2A9196B9C660053EFD7 /* CCActionInstant.h in Headers */,
 				DAF2830B196BDACB00959DA1 /* auxiliar.h in Headers */,
+				4DBDE9581F124CB200892290 /* DS_Queue.h in Headers */,
 				F4E0BB03196BA00A0053EFD7 /* ftconfig.h in Headers */,
 				F4E0BD0D196BA0460053EFD7 /* stringbuffer.h in Headers */,
 				F4E0B5F8196B9C7D0053EFD7 /* CCFileUtils.h in Headers */,
 				F48959E1199BA9F9000AA6A2 /* coded_stream_inl.h in Headers */,
+				4DBDE99A1F124CB200892290 /* NatTypeDetectionClient.h in Headers */,
+				4DBDEA261F124CB300892290 /* VariadicSQLParser.h in Headers */,
+				4DBDE9561F124CB200892290 /* DS_OrderedChannelHeap.h in Headers */,
+				4DBDE9A41F124CB200892290 /* PacketConsoleLogger.h in Headers */,
 				49BCFA38197F4CE700F48FF6 /* FilterShaders.h in Headers */,
 				F4E0BB0F196BA00A0053EFD7 /* ftcache.h in Headers */,
 				F4E0B322196B9C670053EFD7 /* CCBundle3D.h in Headers */,
@@ -4572,6 +5474,7 @@
 				F4E0B55B196B9C7D0053EFD7 /* CCEventType.h in Headers */,
 				F4E0BE43196BA0C10053EFD7 /* tiff.h in Headers */,
 				F4E0B546196B9C7D0053EFD7 /* CCEventFocus.h in Headers */,
+				4DBDE9DF1F124CB200892290 /* RakWString.h in Headers */,
 				F4E0BB53196BA00A0053EFD7 /* t1types.h in Headers */,
 				F4E0BE74196BA0C10053EFD7 /* encode.h in Headers */,
 				F4E0BE69196BA0C10053EFD7 /* unzip.h in Headers */,
@@ -4588,6 +5491,7 @@
 				F4E0BB3F196BA00A0053EFD7 /* pshints.h in Headers */,
 				F4E0BB2F196BA00A0053EFD7 /* ftxf86.h in Headers */,
 				49BCFA26197F4CE700F48FF6 /* ccFilterShader_gray_frag.h in Headers */,
+				4DBDEA1C1F124CB300892290 /* UDPProxyCommon.h in Headers */,
 				4D711E5E19E804850009A0C8 /* CCTableView.h in Headers */,
 				F4E0B2E1196B9C670053EFD7 /* CCLabelTextFormatter.h in Headers */,
 				F48959ED199BA9F9000AA6A2 /* atomicops_internals_atomicword_compat.h in Headers */,
@@ -4596,20 +5500,26 @@
 				4D1450F71B1F06E2006B0290 /* CCProtectedNode.h in Headers */,
 				4DC9F52B19FE10D300FA1E3B /* IkConstraint.h in Headers */,
 				F4E0B5B8196B9C7D0053EFD7 /* CCPhysicsHelper_chipmunk.h in Headers */,
+				4DBDE9B11F124CB200892290 /* PS3Includes.h in Headers */,
 				DAF2827F196BDA7300959DA1 /* CCHTTPRequest.h in Headers */,
 				F4E0B584196B9C7D0053EFD7 /* ObjectFactory.h in Headers */,
+				4DBDE9BD1F124CB200892290 /* RakNetDefinesOverrides.h in Headers */,
 				F4E0B582196B9C7D0053EFD7 /* firePngData.h in Headers */,
 				F4E0B58F196B9C7D0053EFD7 /* cocos2d.h in Headers */,
 				F48959E6199BA9F9000AA6A2 /* zero_copy_stream_impl_lite.h in Headers */,
 				49BCFA17197F4CE700F48FF6 /* CCFilteredSprite.h in Headers */,
+				4DBDE9931F124CB200892290 /* NativeFeatureIncludesOverrides.h in Headers */,
 				F4E0BB45196BA00A0053EFD7 /* svmm.h in Headers */,
 				F4E0B327196B9C670053EFD7 /* CCMeshSkin.h in Headers */,
 				4DF974C21B5D530800D3CDA6 /* lpvm.h in Headers */,
+				4DBDE92A1F124CB200892290 /* Base64Encoder.h in Headers */,
 				F4E0BB31196BA00A0053EFD7 /* ftcalc.h in Headers */,
 				F4E0BB27196BA00A0053EFD7 /* ftsnames.h in Headers */,
 				F4E0BB0B196BA00A0053EFD7 /* ftbbox.h in Headers */,
+				4DBDE9C01F124CB200892290 /* RakNetSocket.h in Headers */,
 				49BCFA32197F4CE700F48FF6 /* ccFilterShader_test_vert.h in Headers */,
 				4D1451181B1F0778006B0290 /* pvr.h in Headers */,
+				4DBDE9B71F124CB200892290 /* RakAssert.h in Headers */,
 				F4E0B714196B9EEB0053EFD7 /* prime.h in Headers */,
 				F4E0B2B3196B9C660053EFD7 /* CCActionTiledGrid.h in Headers */,
 				4DC9F54C19FE10D300FA1E3B /* spine.h in Headers */,
@@ -4619,11 +5529,13 @@
 				F4E0B313196B9C670053EFD7 /* CCTMXXMLParser.h in Headers */,
 				F4E0B29F196B9C660053EFD7 /* CCActionCamera.h in Headers */,
 				49BCF9FB197F4CE700F48FF6 /* CCContrastFilter.h in Headers */,
+				4DBDE9901F124CB200892290 /* MessageIdentifiers.h in Headers */,
 				DAF2835A196CEE6D00959DA1 /* CCBundleReader.h in Headers */,
 				DA9FAA04197377AC006A0B4C /* cocos2dx_extra_luabinding.h in Headers */,
 				F4E0B5AD196B9C7D0053EFD7 /* CCPhysicsContact.h in Headers */,
 				4D025AD81B5E66EC002BC427 /* UIHelper.h in Headers */,
 				F4895A01199BA9F9000AA6A2 /* wire_format_lite.h in Headers */,
+				4DBDE9641F124CB200892290 /* EmptyHeader.h in Headers */,
 				4D14512B1B1F0792006B0290 /* HttpResponse.h in Headers */,
 				F4E0BB55196BA00A0053EFD7 /* t1tables.h in Headers */,
 				F4E0B570196B9C7D0053EFD7 /* CCScriptSupport.h in Headers */,
@@ -4632,15 +5544,19 @@
 				F4E0BB4E196BA00A0053EFD7 /* svtteng.h in Headers */,
 				F4E0BB58196BA00A0053EFD7 /* tttags.h in Headers */,
 				F48959EF199BA9F9000AA6A2 /* atomicops_internals_macosx.h in Headers */,
+				4DBDE92E1F124CB200892290 /* CCRakNetSlidingWindow.h in Headers */,
 				F4E0B5B1196B9C7D0053EFD7 /* CCPhysicsShape.h in Headers */,
 				F4895A0E199BA9F9000AA6A2 /* VisibleRect.h in Headers */,
 				F4E0B2B5196B9C660053EFD7 /* CCActionTween.h in Headers */,
 				F4E0B5BE196B9C7D0053EFD7 /* CCPhysicsWorldInfo_chipmunk.h in Headers */,
+				4DBDE99E1F124CB200892290 /* NatTypeDetectionServer.h in Headers */,
 				4D1451091B1F071D006B0290 /* cocos3d.h in Headers */,
 				4D867A4E1B1E9E50007731FF /* CCOBB.h in Headers */,
 				F4E0B305196B9C670053EFD7 /* CCSpriteFrame.h in Headers */,
+				4DBDE9551F124CB200892290 /* DS_Multilist.h in Headers */,
 				F4E0BB1B196BA00A0053EFD7 /* ftlcdfil.h in Headers */,
 				F4E0BB08196BA00A0053EFD7 /* freetype.h in Headers */,
+				4DBDE9911F124CB200892290 /* MTUSize.h in Headers */,
 				F4E0B688196B9E4C0053EFD7 /* CCControlUtils.h in Headers */,
 				F4E0B646196B9C7D0053EFD7 /* CCGLProgramCache.h in Headers */,
 				F4E0B55E196B9C7D0053EFD7 /* CCIMEDelegate.h in Headers */,
@@ -4662,6 +5578,7 @@
 				F48959F6199BA9F9000AA6A2 /* hash.h in Headers */,
 				F4E0B642196B9C7D0053EFD7 /* CCCustomCommand.h in Headers */,
 				F4E0BB3B196BA00A0053EFD7 /* fttrace.h in Headers */,
+				4DBDE9671F124CB200892290 /* Export.h in Headers */,
 				F4E0B2EB196B9C670053EFD7 /* CCMotionStreak.h in Headers */,
 				F48959EC199BA9F9000AA6A2 /* atomicops_internals_arm_gcc.h in Headers */,
 				DAF28307196BDACB00959DA1 /* lua_extensions.h in Headers */,
@@ -4676,36 +5593,47 @@
 				49BCFA31197F4CE700F48FF6 /* ccFilterShader_test_frag.h in Headers */,
 				F4E0BB38196BA00A0053EFD7 /* ftrfork.h in Headers */,
 				4DDEE35A1ACE884F00FE769A /* cocos2d-prefix.pch in Headers */,
+				4DBDE96F1F124CB200892290 /* FileOperations.h in Headers */,
 				F4E0B319196B9C670053EFD7 /* CCTransitionProgress.h in Headers */,
 				F4E0B655196B9C7D0053EFD7 /* CCRenderCommandPool.h in Headers */,
 				4D1450F51B1F06E2006B0290 /* CCClippingRectangleNode.h in Headers */,
+				4DBDE9661F124CB200892290 /* EpochTimeToString.h in Headers */,
 				4DC9F51B19FE10D300FA1E3B /* Attachment.h in Headers */,
 				DAF28277196BDA7300959DA1 /* libbase64.h in Headers */,
 				4DC9F54719FE10D300FA1E3B /* Slot.h in Headers */,
 				DAF28305196BDACB00959DA1 /* sqlite3.h in Headers */,
 				4DC9F54919FE10D300FA1E3B /* SlotData.h in Headers */,
+				4DBDE9921F124CB200892290 /* NativeFeatureIncludes.h in Headers */,
 				4D1451061B1F071D006B0290 /* CCRay.h in Headers */,
 				F4E0BE46196BA0C10053EFD7 /* tiffvers.h in Headers */,
 				DAF28327196BDACB00959DA1 /* unix.h in Headers */,
+				4DBDE9E11F124CB200892290 /* Rand.h in Headers */,
+				4DBDE9591F124CB200892290 /* DS_QueueLinkedList.h in Headers */,
 				F4E0B5F6196B9C7D0053EFD7 /* CCDevice.h in Headers */,
 				DAF2831F196BDACB00959DA1 /* socket_scripts.h in Headers */,
 				F4E0B2D9196B9C670053EFD7 /* CCGrid.h in Headers */,
 				4DF974BF1B5D530800D3CDA6 /* lptree.h in Headers */,
 				F4E0B5A9196B9C7D0053EFD7 /* WebSocket.h in Headers */,
 				F4E0B2FD196B9C670053EFD7 /* CCRenderTexture.h in Headers */,
+				4DBDE9D61F124CB200892290 /* RakPeer.h in Headers */,
+				4DBDE9611F124CB200892290 /* DynDNS.h in Headers */,
 				F4E0BE21196BA0C10053EFD7 /* pnglibconf.h in Headers */,
 				F4E0BB0D196BA00A0053EFD7 /* ftbitmap.h in Headers */,
+				4DBDE9891F124CB200892290 /* LinuxStrings.h in Headers */,
 				F4E0BB1A196BA00A0053EFD7 /* ftincrem.h in Headers */,
 				49BCFA13197F4CE700F48FF6 /* CCSharpenFilter.h in Headers */,
 				4DC9F52719FE10D300FA1E3B /* EventData.h in Headers */,
+				4DBDEA2C1F124CB300892290 /* XBox360Includes.h in Headers */,
 				F4E0BEA4196BA0C20053EFD7 /* xxtea.h in Headers */,
 				F4E0BB2A196BA00A0053EFD7 /* ftsystem.h in Headers */,
 				4DC9F55019FE115800FA1E3B /* LuaSkeletonAnimation.h in Headers */,
 				F4E0BB1E196BA00A0053EFD7 /* ftmac.h in Headers */,
 				F4E0C066196BA25D0053EFD7 /* CCLuaBridge.h in Headers */,
 				F4E0BB50196BA00A0053EFD7 /* svwinfnt.h in Headers */,
+				4DBDE9831F124CB200892290 /* IncrementalReadInterface.h in Headers */,
 				F4E0BB36196BA00A0053EFD7 /* ftobjs.h in Headers */,
 				F4E0BE45196BA0C10053EFD7 /* tiffio.h in Headers */,
+				4DBDE93E1F124CB200892290 /* ConsoleServer.h in Headers */,
 				4DC9F51319FE10D300FA1E3B /* AnimationState.h in Headers */,
 				F4E0B2C3196B9C660053EFD7 /* CCComponentContainer.h in Headers */,
 				4DC9F53D19FE10D300FA1E3B /* SkeletonData.h in Headers */,
@@ -4731,8 +5659,13 @@
 				F4E0BB07196BA00A0053EFD7 /* ftstdlib.h in Headers */,
 				F4E0B686196B9E4C0053EFD7 /* CCControlExtensions.h in Headers */,
 				DAF282F7196BDACB00959DA1 /* fpconv.h in Headers */,
+				4DBDE9381F124CB200892290 /* CloudServer.h in Headers */,
+				4DBDE9731F124CB200892290 /* FullyConnectedMesh2.h in Headers */,
+				4DBDE9AE1F124CB200892290 /* PacketPriority.h in Headers */,
 				F4E0BB3D196BA00A0053EFD7 /* internal.h in Headers */,
 				F4E0B6E7196B9EEB0053EFD7 /* cpGrooveJoint.h in Headers */,
+				4DBDE92C1F124CB200892290 /* BitStream.h in Headers */,
+				4DBDE94B1F124CB200892290 /* DS_Hash.h in Headers */,
 				F4E0BB16196BA00A0053EFD7 /* ftglyph.h in Headers */,
 				F4E0BB4D196BA00A0053EFD7 /* svttcmap.h in Headers */,
 				F4E0BB2C196BA00A0053EFD7 /* ftttdrv.h in Headers */,
@@ -4747,6 +5680,7 @@
 				DAF2829F196BDA7300959DA1 /* CCNativeMac.h in Headers */,
 				4DE050481A31A0F3003F730A /* CCFileCache.h in Headers */,
 				49BCFA27197F4CE700F48FF6 /* ccFilterShader_haze_frag.h in Headers */,
+				4DBDE9FF1F124CB300892290 /* SocketLayer.h in Headers */,
 				F4E0B53E196B9C7D0053EFD7 /* CCEvent.h in Headers */,
 				F4E0B2B7196B9C660053EFD7 /* CCAnimation.h in Headers */,
 				4DC9F52F19FE10D300FA1E3B /* Json.h in Headers */,
@@ -4756,7 +5690,10 @@
 				F4E0B2D7196B9C670053EFD7 /* CCGrabber.h in Headers */,
 				F4E0B6EA196B9EEB0053EFD7 /* cpRatchetJoint.h in Headers */,
 				4DCF3C7A1B1F2D460043BCD7 /* CCGLView.h in Headers */,
+				4DBDE9E51F124CB200892290 /* ReadyEvent.h in Headers */,
 				4D867A4C1B1E9E50007731FF /* CCBillBoard.h in Headers */,
+				4DBDE9EF1F124CB200892290 /* Router2.h in Headers */,
+				4DBDE94C1F124CB200892290 /* DS_Heap.h in Headers */,
 				F4E0BB4F196BA00A0053EFD7 /* svttglyf.h in Headers */,
 				4DCF3C831B1F32620043BCD7 /* CCFileUtils-apple.h in Headers */,
 				F4E0B54A196B9C7D0053EFD7 /* CCEventListener.h in Headers */,
@@ -4765,24 +5702,32 @@
 				F4E0B317196B9C670053EFD7 /* CCTransitionPageTurn.h in Headers */,
 				F4E0B5FE196B9C7D0053EFD7 /* CCSAXParser.h in Headers */,
 				DAF28315196BDACB00959DA1 /* luasocket_io.h in Headers */,
+				4DBDE9541F124CB200892290 /* DS_MemoryPool.h in Headers */,
 				4DF974BD1B5D530800D3CDA6 /* lpprint.h in Headers */,
 				49BCFA33197F4CE700F48FF6 /* ccFilterShader_vblur_vert.h in Headers */,
 				F4E0BB04196BA00A0053EFD7 /* ftheader.h in Headers */,
 				DAF28279196BDA7300959DA1 /* CCCrypto.h in Headers */,
+				4DBDEA0F1F124CB300892290 /* TeamManager.h in Headers */,
 				F4E0B32D196B9C670053EFD7 /* CCSprite3DMaterial.h in Headers */,
 				F4E0B648196B9C7D0053EFD7 /* CCGLProgramState.h in Headers */,
 				F41590B5196BD1D20046D7EE /* ScriptEventCenter.h in Headers */,
 				F4E0B680196B9E4C0053EFD7 /* cocos-ext.h in Headers */,
 				49BCFA28197F4CE700F48FF6 /* ccFilterShader_hblur_vert.h in Headers */,
+				4DBDE93A1F124CB200892290 /* CommandParserInterface.h in Headers */,
+				4DBDE9301F124CB200892290 /* CCRakNetUDT.h in Headers */,
+				4DBDE97D1F124CB200892290 /* GridSectorizer.h in Headers */,
 				F4E0B2D3196B9C670053EFD7 /* CCFontFreeType.h in Headers */,
 				F4E0BB21196BA00A0053EFD7 /* ftmoderr.h in Headers */,
 				F4E0B6F6196B9EEB0053EFD7 /* cpVect.h in Headers */,
 				F4E0B560196B9C7D0053EFD7 /* CCIMEDispatcher.h in Headers */,
 				F4E0B68F196B9E4C0053EFD7 /* CCEditBoxImpl.h in Headers */,
 				F4E0B640196B9C7D0053EFD7 /* CCBatchCommand.h in Headers */,
+				4DBDEA281F124CB300892290 /* VitaIncludes.h in Headers */,
+				4DBDE9361F124CB200892290 /* CloudCommon.h in Headers */,
 				F4E0B6E9196B9EEB0053EFD7 /* cpPivotJoint.h in Headers */,
 				F4E0B5FC196B9C7D0053EFD7 /* CCImage.h in Headers */,
 				F4E0B2A7196B9C660053EFD7 /* CCActionGrid3D.h in Headers */,
+				4DBDE9F71F124CB300892290 /* SignaledEvent.h in Headers */,
 				F4E0BB34196BA00A0053EFD7 /* ftgloadr.h in Headers */,
 				F4E0B657196B9C7D0053EFD7 /* CCRenderer.h in Headers */,
 				F4E0B2AD196B9C660053EFD7 /* CCActionManager.h in Headers */,
@@ -4801,12 +5746,19 @@
 				F4E0BFD0196BA25D0053EFD7 /* lua.h in Headers */,
 				4DCF3C781B1F2D460043BCD7 /* CCGL.h in Headers */,
 				49BCFA15197F4CE700F48FF6 /* CCTestFilter.h in Headers */,
+				4DBDE9C21F124CB200892290 /* RakNetSocket2.h in Headers */,
 				F4E0B694196B9E4C0053EFD7 /* CCEditBoxImplMac.h in Headers */,
 				F4E0B59D196B9C7D0053EFD7 /* Quaternion.h in Headers */,
 				F4E0BCE8196BA0450053EFD7 /* jpeglib.h in Headers */,
+				4DBDE9501F124CB200892290 /* DS_HuffmanEncodingTreeNode.h in Headers */,
+				4DBDEA0D1F124CB300892290 /* TeamBalancer.h in Headers */,
 				F4E0B5BC196B9C7D0053EFD7 /* CCPhysicsShapeInfo_chipmunk.h in Headers */,
+				4DBDE9B61F124CB200892290 /* RakAlloca.h in Headers */,
+				4DBDEA051F124CB300892290 /* StringTable.h in Headers */,
 				DA0D6E021999A58C00EAAB9E /* CCLabelBMFont.h in Headers */,
 				F4E0B5AB196B9C7D0053EFD7 /* CCPhysicsBody.h in Headers */,
+				4DBDE9DB1F124CB200892290 /* RakString.h in Headers */,
+				4DBDEA221F124CB300892290 /* VariableDeltaSerializer.h in Headers */,
 				F4895A08199BA9F9000AA6A2 /* Protos.pb.h in Headers */,
 				4DC9F54519FE10D300FA1E3B /* SkinnedMeshAttachment.h in Headers */,
 				4DC9F54119FE10D300FA1E3B /* SkeletonRenderer.h in Headers */,
@@ -4819,6 +5771,7 @@
 				F4E0B30D196B9C670053EFD7 /* CCTMXLayer.h in Headers */,
 				4DC9F51919FE10D300FA1E3B /* AtlasAttachmentLoader.h in Headers */,
 				F4E0B31B196B9C670053EFD7 /* CCTweenFunction.h in Headers */,
+				4DBDE9AD1F124CB200892290 /* PacketPool.h in Headers */,
 				F4E0B599196B9C7D0053EFD7 /* Mat4.h in Headers */,
 				F4E0B540196B9C7D0053EFD7 /* CCEventAcceleration.h in Headers */,
 				F4E0B2A3196B9C660053EFD7 /* CCActionEase.h in Headers */,
@@ -4829,6 +5782,7 @@
 				F4E0B5BA196B9C7D0053EFD7 /* CCPhysicsJointInfo_chipmunk.h in Headers */,
 				F48959EB199BA9F9000AA6A2 /* atomicops.h in Headers */,
 				F4E0B52B196B9C7D0053EFD7 /* atitc.h in Headers */,
+				4DBDE9A21F124CB200892290 /* NetworkIDObject.h in Headers */,
 				4D025AD41B5E66EC002BC427 /* CocosGUI.h in Headers */,
 				F4E0B311196B9C670053EFD7 /* CCTMXTiledMap.h in Headers */,
 				F4E0BB51196BA00A0053EFD7 /* svxf86nm.h in Headers */,
@@ -4837,70 +5791,93 @@
 				49BCFA1A197F4CE700F48FF6 /* ccFilterShader_colorramp_frag.h in Headers */,
 				F4E0B594196B9C7D0053EFD7 /* CCMath.h in Headers */,
 				DA9FAA06197377AC006A0B4C /* HelperFunc_luabinding.h in Headers */,
+				4DBDE94A1F124CB200892290 /* DS_ByteQueue.h in Headers */,
 				F4E0B572196B9C7D0053EFD7 /* CCTouch.h in Headers */,
+				4DBDE9481F124CB200892290 /* DS_BytePool.h in Headers */,
 				F4E0B52F196B9C7D0053EFD7 /* CCAutoreleasePool.h in Headers */,
 				4DCF3C9E1B1F34040043BCD7 /* CCTrianglesCommand.h in Headers */,
 				49BCFA09197F4CE700F48FF6 /* CCHueFilter.h in Headers */,
 				DAF28274196BDA7300959DA1 /* HelperFunc.h in Headers */,
 				4DC9F53719FE10D300FA1E3B /* Skeleton.h in Headers */,
 				F4E0B55A196B9C7D0053EFD7 /* CCEventTouch.h in Headers */,
+				4DBDE9FB1F124CB300892290 /* SingleProducerConsumer.h in Headers */,
 				F4E0BFC5196BA25D0053EFD7 /* lua_cocos2dx_auto.hpp in Headers */,
+				4DBDE9571F124CB200892290 /* DS_OrderedList.h in Headers */,
 				4D1451511B1F08F3006B0290 /* CCPrimitive.h in Headers */,
 				4D1451021B1F071D006B0290 /* CCAttachNode.h in Headers */,
 				F48959FB199BA9F9000AA6A2 /* stl_util.h in Headers */,
 				DAF282B1196BDA7300959DA1 /* CCStoreTransactionObserver.h in Headers */,
+				4DBDE95D1F124CB200892290 /* DS_ThreadsafeAllocatingQueue.h in Headers */,
 				4D1451081B1F071D006B0290 /* CCSkeleton3D.h in Headers */,
 				F4E0B2CB196B9C670053EFD7 /* CCFontAtlas.h in Headers */,
 				9F1CF4051998AC3C00497F21 /* ProjectConfig.h in Headers */,
 				F48959F1199BA9F9000AA6A2 /* atomicops_internals_x86_gcc.h in Headers */,
+				4DBDE96A1F124CB200892290 /* FileListNodeContext.h in Headers */,
 				F4E0BB49196BA00A0053EFD7 /* svprop.h in Headers */,
 				4D1451671B1F0A30006B0290 /* CCPlatformDefine-mac.h in Headers */,
 				4DCF3C951B1F33600043BCD7 /* CCLight.h in Headers */,
 				49BCFA36197F4CE700F48FF6 /* ccFilterShaders.h in Headers */,
+				4DBDE9441F124CB200892290 /* DR_SHA1.h in Headers */,
 				4DC9F4BB19FDF6A500FA1E3B /* lua_cocos2dx_spine_auto.hpp in Headers */,
+				4DBDE9981F124CB200892290 /* NatPunchthroughServer.h in Headers */,
+				4DBDE9861F124CB200892290 /* Itoa.h in Headers */,
+				4DBDE9CE1F124CB200892290 /* RakNetStatistics.h in Headers */,
 				DAF28280196BDA7300959DA1 /* CCHTTPRequestDelegate.h in Headers */,
 				F4E0C08A196BA25D0053EFD7 /* tolua_fix.h in Headers */,
 				F4E0BD0A196BA0460053EFD7 /* prettywriter.h in Headers */,
 				F4E0B6F4196B9EEB0053EFD7 /* cpSpace.h in Headers */,
 				4D025AD51B5E66EC002BC427 /* GUIDefine.h in Headers */,
 				49BCFA24197F4CE700F48FF6 /* ccFilterShader_gaussian_vblur_frag.h in Headers */,
+				4DBDE9B01F124CB200892290 /* PluginInterface2.h in Headers */,
 				F4E0B6E6196B9EEB0053EFD7 /* cpGearJoint.h in Headers */,
 				4DC9F53919FE10D300FA1E3B /* SkeletonAnimation.h in Headers */,
 				F4E0BB42196BA00A0053EFD7 /* svgldict.h in Headers */,
 				DAF2831B196BDACB00959DA1 /* select.h in Headers */,
 				F4E0B597196B9C7D0053EFD7 /* CCVertex.h in Headers */,
+				4DBDE9FC1F124CB300892290 /* SocketDefines.h in Headers */,
 				49BCFA1B197F4CE700F48FF6 /* ccFilterShader_contrast_frag.h in Headers */,
 				4DC9F53B19FE10D300FA1E3B /* SkeletonBounds.h in Headers */,
 				4DC9F53319FE10D300FA1E3B /* PolygonBatch.h in Headers */,
 				F4E0B2A1196B9C660053EFD7 /* CCActionCatmullRom.h in Headers */,
+				4DBDE9AA1F124CB200892290 /* PacketLogger.h in Headers */,
 				DAF2830D196BDACB00959DA1 /* except.h in Headers */,
 				F4E0C06A196BA25D0053EFD7 /* CCLuaStack.h in Headers */,
 				F4E0B2D1196B9C670053EFD7 /* CCFontFNT.h in Headers */,
 				F4E0B6E8196B9EEB0053EFD7 /* cpPinJoint.h in Headers */,
 				F4E0B6F3196B9EEB0053EFD7 /* cpShape.h in Headers */,
+				4DBDE9D91F124CB200892290 /* RakSleep.h in Headers */,
 				F4E0B558196B9C7D0053EFD7 /* CCEventMouse.h in Headers */,
 				F4E0BB14196BA00A0053EFD7 /* fterrors.h in Headers */,
 				F4E0B2BD196B9C660053EFD7 /* CCClippingNode.h in Headers */,
 				DAF282F9196BDACB00959DA1 /* lua_cjson.h in Headers */,
 				4D1451291B1F0792006B0290 /* HttpClient.h in Headers */,
+				4DBDE9A01F124CB200892290 /* NetworkIDManager.h in Headers */,
+				4DBDE95F1F124CB200892290 /* DS_WeightedGraph.h in Headers */,
 				F4E0C072196BA25D0053EFD7 /* lua_cocos2dx_extension_manual.h in Headers */,
 				DAF2827B196BDA7300959DA1 /* md5.h in Headers */,
+				4DBDEA201F124CB300892290 /* UDPProxyServer.h in Headers */,
 				F4E0B53C196B9C7D0053EFD7 /* CCDirector.h in Headers */,
 				F4E0B71A196B9F4E0053EFD7 /* ConvertUTF.h in Headers */,
 				F4E0B550196B9C7D0053EFD7 /* CCEventListenerFocus.h in Headers */,
 				F4E0B534196B9C7D0053EFD7 /* CCConfiguration.h in Headers */,
+				4DBDE98F1F124CB200892290 /* MessageFilter.h in Headers */,
 				4DC9F51D19FE10D300FA1E3B /* AttachmentLoader.h in Headers */,
 				F4E0B303196B9C670053EFD7 /* CCSpriteBatchNode.h in Headers */,
 				F4E0BB52196BA00A0053EFD7 /* sfnt.h in Headers */,
 				F4E0C068196BA25D0053EFD7 /* CCLuaEngine.h in Headers */,
+				4DBDE9D11F124CB200892290 /* RakNetTransport2.h in Headers */,
+				4DBDE94F1F124CB200892290 /* DS_HuffmanEncodingTreeFactory.h in Headers */,
 				4D711E6019E804850009A0C8 /* CCTableViewCell.h in Headers */,
 				F4E0BB19196BA00A0053EFD7 /* ftimage.h in Headers */,
 				4DC9F51F19FE10D300FA1E3B /* Bone.h in Headers */,
+				4DBDE9401F124CB200892290 /* DataCompressor.h in Headers */,
 				49BCFA11197F4CE700F48FF6 /* CCSepiaFilter.h in Headers */,
 				F4E0B2F7196B9C670053EFD7 /* CCParticleSystem.h in Headers */,
 				F4E0C08B196BA25D0053EFD7 /* tolua++.h in Headers */,
+				4DBDE9A61F124CB200892290 /* PacketFileLogger.h in Headers */,
 				49BCFA03197F4CE700F48FF6 /* CCGammaFilter.h in Headers */,
 				F4E0C07E196BA25D0053EFD7 /* Lua_web_socket.h in Headers */,
+				4DBDE9B51F124CB200892290 /* Rackspace.h in Headers */,
 				F4E0BB2E196BA00A0053EFD7 /* ftwinfnt.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4962,22 +5939,30 @@
 				F4E0B2D2196B9C670053EFD7 /* CCFontFreeType.cpp in Sources */,
 				F4895A0C199BA9F9000AA6A2 /* Shine_png.cpp in Sources */,
 				F4E0B321196B9C670053EFD7 /* CCBundle3D.cpp in Sources */,
+				4DBDE9231F124CB200892290 /* lua-racknet.cpp in Sources */,
 				F4E0B30C196B9C670053EFD7 /* CCTMXLayer.cpp in Sources */,
+				4DBDE9351F124CB200892290 /* CloudCommon.cpp in Sources */,
 				F4E0B53B196B9C7D0053EFD7 /* CCDirector.cpp in Sources */,
 				F4E0C08C196BA25D0053EFD7 /* tolua_event.c in Sources */,
 				F4E0B2C4196B9C660053EFD7 /* CCDrawingPrimitives.cpp in Sources */,
 				F4E0B59C196B9C7D0053EFD7 /* Quaternion.cpp in Sources */,
+				4DBDEA231F124CB300892290 /* VariableListDeltaTracker.cpp in Sources */,
 				F4E0B641196B9C7D0053EFD7 /* CCCustomCommand.cpp in Sources */,
 				4DC9F4BE19FDF6AF00FA1E3B /* lua_cocos2dx_spine_manual.cpp in Sources */,
 				DAF282AB196BDA7300959DA1 /* CCStorePaymentTransaction.cpp in Sources */,
 				4DC9F51A19FE10D300FA1E3B /* Attachment.c in Sources */,
+				4DBDE97E1F124CB200892290 /* HTTPConnection.cpp in Sources */,
 				DAF282F6196BDACB00959DA1 /* fpconv.c in Sources */,
+				4DBDE9A51F124CB200892290 /* PacketFileLogger.cpp in Sources */,
 				F41590B2196BD1D20046D7EE /* CCTouchTargetNode.cpp in Sources */,
 				F4E0B308196B9C670053EFD7 /* CCTextFieldTTF.cpp in Sources */,
 				F4E0B710196B9EEB0053EFD7 /* cpSpaceStep.c in Sources */,
+				4DBDE9F81F124CB300892290 /* SimpleMutex.cpp in Sources */,
 				F4E0B31C196B9C670053EFD7 /* CCAnimate3D.cpp in Sources */,
 				F4E0B592196B9C7D0053EFD7 /* CCGeometry.cpp in Sources */,
 				F4E0B682196B9E4C0053EFD7 /* CCControl.cpp in Sources */,
+				4DBDE94D1F124CB200892290 /* DS_HuffmanEncodingTree.cpp in Sources */,
+				4DBDEA161F124CB300892290 /* TwoWayAuthentication.cpp in Sources */,
 				F4E0B5A0196B9C7D0053EFD7 /* Vec2.cpp in Sources */,
 				49BCF9F6197F4CE700F48FF6 /* CCBlurFilter.cpp in Sources */,
 				DAF2829E196BDA7300959DA1 /* CCNative.mm in Sources */,
@@ -4991,7 +5976,9 @@
 				DAF28276196BDA7300959DA1 /* libbase64.c in Sources */,
 				F4E0B2EC196B9C670053EFD7 /* CCNode.cpp in Sources */,
 				F4E0B557196B9C7D0053EFD7 /* CCEventMouse.cpp in Sources */,
+				4DBDEA1D1F124CB300892290 /* UDPProxyCoordinator.cpp in Sources */,
 				4D025AD91B5E66EC002BC427 /* UILayout.cpp in Sources */,
+				4DBDE97A1F124CB200892290 /* gettimeofday.cpp in Sources */,
 				F4E0B687196B9E4C0053EFD7 /* CCControlUtils.cpp in Sources */,
 				F4E0B2DA196B9C670053EFD7 /* CCLabel.cpp in Sources */,
 				4DF974B81B5D530800D3CDA6 /* lpcap.c in Sources */,
@@ -5005,14 +5992,20 @@
 				4DC9F51219FE10D300FA1E3B /* AnimationState.c in Sources */,
 				4DC9F54419FE10D300FA1E3B /* SkinnedMeshAttachment.c in Sources */,
 				4DF974A91B5D451400D3CDA6 /* sproto.c in Sources */,
+				4DBDE9A71F124CB200892290 /* PacketizedTCP.cpp in Sources */,
 				F4E0B2B6196B9C660053EFD7 /* CCAnimation.cpp in Sources */,
 				4DCF3C9F1B1F34040043BCD7 /* CCVertexIndexBuffer.cpp in Sources */,
 				F4E0B571196B9C7D0053EFD7 /* CCTouch.cpp in Sources */,
+				4DBDE9CD1F124CB200892290 /* RakNetStatistics.cpp in Sources */,
 				F4E0B2F2196B9C670053EFD7 /* CCParticleBatchNode.cpp in Sources */,
+				4DBDE92F1F124CB200892290 /* CCRakNetUDT.cpp in Sources */,
 				F4E0C07D196BA25D0053EFD7 /* Lua_web_socket.cpp in Sources */,
+				4DBDE92D1F124CB200892290 /* CCRakNetSlidingWindow.cpp in Sources */,
 				F4E0BEA3196BA0C20053EFD7 /* xxtea.cpp in Sources */,
 				F4E0C075196BA25D0053EFD7 /* lua_cocos2dx_manual.cpp in Sources */,
+				4DBDE9E41F124CB200892290 /* ReadyEvent.cpp in Sources */,
 				4DF974BE1B5D530800D3CDA6 /* lptree.c in Sources */,
+				4DBDE9601F124CB200892290 /* DynDNS.cpp in Sources */,
 				F4E0B5B6196B9C7D0053EFD7 /* CCPhysicsContactInfo_chipmunk.cpp in Sources */,
 				F4E0B52A196B9C7D0053EFD7 /* atitc.cpp in Sources */,
 				F4E0B30A196B9C670053EFD7 /* CCTileMapAtlas.cpp in Sources */,
@@ -5020,7 +6013,9 @@
 				4D867A491B1E9E50007731FF /* CCAABB.cpp in Sources */,
 				4D1450F61B1F06E2006B0290 /* CCProtectedNode.cpp in Sources */,
 				F4E0B709196B9EEB0053EFD7 /* cpHashSet.c in Sources */,
+				4DBDE9701F124CB200892290 /* FormatString.cpp in Sources */,
 				49BCF9F8197F4CE700F48FF6 /* CCBrightnessFilter.cpp in Sources */,
+				4DBDEA021F124CB300892290 /* StringCompressor.cpp in Sources */,
 				F4E0B31E196B9C670053EFD7 /* CCAnimation3D.cpp in Sources */,
 				F4E0B71B196B9F4E0053EFD7 /* ConvertUTFWrapper.cpp in Sources */,
 				4DC9F51819FE10D300FA1E3B /* AtlasAttachmentLoader.c in Sources */,
@@ -5030,7 +6025,9 @@
 				49BCF9FC197F4CE700F48FF6 /* CCDropShadowFilter.cpp in Sources */,
 				4DC9F51619FE10D300FA1E3B /* Atlas.c in Sources */,
 				F4E0B6F9196B9EEB0053EFD7 /* cpDampedRotarySpring.c in Sources */,
+				4DBDE9EE1F124CB200892290 /* Router2.cpp in Sources */,
 				F4E0B643196B9C7D0053EFD7 /* CCGLProgram.cpp in Sources */,
+				4DBDE9C81F124CB200892290 /* RakNetSocket2_PS4.cpp in Sources */,
 				DAF2827E196BDA7300959DA1 /* CCHTTPRequest.cpp in Sources */,
 				4DCF3C9D1B1F34040043BCD7 /* CCTrianglesCommand.cpp in Sources */,
 				F4E0C06D196BA25D0053EFD7 /* Cocos2dxLuaLoader.cpp in Sources */,
@@ -5039,27 +6036,36 @@
 				A68FA6D81C983E3D00E441C5 /* lua-unicode.c in Sources */,
 				F4E0B53F196B9C7D0053EFD7 /* CCEventAcceleration.cpp in Sources */,
 				4DC9F54F19FE115800FA1E3B /* LuaSkeletonAnimation.cpp in Sources */,
+				4DBDE96B1F124CB200892290 /* FileListTransfer.cpp in Sources */,
+				4DBDE9B41F124CB200892290 /* Rackspace.cpp in Sources */,
+				4DBDE9C61F124CB200892290 /* RakNetSocket2_NativeClient.cpp in Sources */,
 				DAF2831E196BDACB00959DA1 /* socket_scripts.c in Sources */,
 				F4E0B310196B9C670053EFD7 /* CCTMXTiledMap.cpp in Sources */,
 				F4E0B2CA196B9C670053EFD7 /* CCFontAtlas.cpp in Sources */,
 				F4E0B707196B9EEB0053EFD7 /* cpBody.c in Sources */,
 				DAF28304196BDACB00959DA1 /* sqlite3.c in Sources */,
+				4DBDEA001F124CB300892290 /* StatisticsHistory.cpp in Sources */,
 				F4E0B54F196B9C7D0053EFD7 /* CCEventListenerFocus.cpp in Sources */,
 				DAF28300196BDACB00959DA1 /* lpack.c in Sources */,
 				4D1450F41B1F06E2006B0290 /* CCClippingRectangleNode.cpp in Sources */,
 				4D1451051B1F071D006B0290 /* CCRay.cpp in Sources */,
 				4DC9F52A19FE10D300FA1E3B /* IkConstraint.c in Sources */,
 				F4E0B517196B9C7D0053EFD7 /* CDXMacOSXSupport.mm in Sources */,
+				4DBDE9C41F124CB200892290 /* RakNetSocket2_Berkley.cpp in Sources */,
 				F4E0B2D4196B9C670053EFD7 /* CCGLBufferedNode.cpp in Sources */,
+				4DBDE9621F124CB200892290 /* EmailSender.cpp in Sources */,
+				4DBDE9471F124CB200892290 /* DS_BytePool.cpp in Sources */,
 				F4E0B2F6196B9C670053EFD7 /* CCParticleSystem.cpp in Sources */,
 				F4E0BE68196BA0C10053EFD7 /* unzip.cpp in Sources */,
 				F4E0B31A196B9C670053EFD7 /* CCTweenFunction.cpp in Sources */,
 				4D867A4D1B1E9E50007731FF /* CCOBB.cpp in Sources */,
 				4DCF3C941B1F33600043BCD7 /* CCLight.cpp in Sources */,
 				4D1451631B1F0A30006B0290 /* CCApplication-mac.mm in Sources */,
+				4DBDE9681F124CB200892290 /* FileList.cpp in Sources */,
 				F4E0B530196B9C7D0053EFD7 /* ccCArray.cpp in Sources */,
 				F4E0B2BA196B9C660053EFD7 /* CCAtlasNode.cpp in Sources */,
 				F48959DD199BA9F9000AA6A2 /* generated_message_util.cc in Sources */,
+				4DBDE93D1F124CB200892290 /* ConsoleServer.cpp in Sources */,
 				F4895A00199BA9F9000AA6A2 /* wire_format_lite.cc in Sources */,
 				49BCFA04197F4CE700F48FF6 /* CCGrayFilter.cpp in Sources */,
 				F4E0B52C196B9C7D0053EFD7 /* base64.cpp in Sources */,
@@ -5067,23 +6073,32 @@
 				F4E0B656196B9C7D0053EFD7 /* CCRenderer.cpp in Sources */,
 				F4E0B5FF196B9C7D0053EFD7 /* CCThread.cpp in Sources */,
 				F4E0B2BC196B9C660053EFD7 /* CCClippingNode.cpp in Sources */,
+				4DBDE9B21F124CB200892290 /* PS4Includes.cpp in Sources */,
 				F4E0B535196B9C7D0053EFD7 /* CCConsole.cpp in Sources */,
+				4DBDE9C11F124CB200892290 /* RakNetSocket2.cpp in Sources */,
 				F4E0B649196B9C7D0053EFD7 /* CCGLProgramStateCache.cpp in Sources */,
+				4DBDE9291F124CB200892290 /* Base64Encoder.cpp in Sources */,
+				4DBDE9DC1F124CB200892290 /* RakThread.cpp in Sources */,
 				DAF2829C196BDA7300959DA1 /* ReachabilityIOSMac.m in Sources */,
 				F41590B4196BD1D20046D7EE /* ScriptEventCenter.cpp in Sources */,
+				4DBDE9DA1F124CB200892290 /* RakString.cpp in Sources */,
 				DAF28355196CEE5A00959DA1 /* CCFastTMXTiledMap.cpp in Sources */,
+				4DBDE9801F124CB200892290 /* HTTPConnection2.cpp in Sources */,
 				F48959D6199BA9F9000AA6A2 /* ConfigParser.cpp in Sources */,
 				F4E0B703196B9EEB0053EFD7 /* cpArbiter.c in Sources */,
 				4DC9F52C19FE10D300FA1E3B /* IkConstraintData.c in Sources */,
 				9F1CF4041998AC3C00497F21 /* ProjectConfig.cpp in Sources */,
 				F4E0B580196B9C7D0053EFD7 /* etc1.cpp in Sources */,
+				4DBDE9CB1F124CB200892290 /* RakNetSocket2_Windows_Linux_360.cpp in Sources */,
 				F48959F0199BA9F9000AA6A2 /* atomicops_internals_x86_gcc.cc in Sources */,
 				4DC9F51E19FE10D300FA1E3B /* Bone.c in Sources */,
 				DAF28306196BDACB00959DA1 /* lua_extensions.c in Sources */,
 				F4E0B5FD196B9C7D0053EFD7 /* CCSAXParser.cpp in Sources */,
 				4DC9F51019FE10D300FA1E3B /* Animation.c in Sources */,
+				4DBDEA1F1F124CB300892290 /* UDPProxyServer.cpp in Sources */,
 				F4E0B2D6196B9C670053EFD7 /* CCGrabber.cpp in Sources */,
 				4D025AE11B5E66EC002BC427 /* UIRichText.cpp in Sources */,
+				4DBDE9F61F124CB300892290 /* SignaledEvent.cpp in Sources */,
 				4D14518A1B1F0CD6006B0290 /* CCString.cpp in Sources */,
 				F4E0B2AE196B9C660053EFD7 /* CCActionPageTurn3D.cpp in Sources */,
 				DAF2830E196BDACB00959DA1 /* inet.c in Sources */,
@@ -5106,14 +6121,18 @@
 				4D1451521B1F08F3006B0290 /* CCPrimitiveCommand.cpp in Sources */,
 				F4E0C065196BA25D0053EFD7 /* CCLuaBridge.cpp in Sources */,
 				F4E0B549196B9C7D0053EFD7 /* CCEventListener.cpp in Sources */,
+				4DBDEA1A1F124CB300892290 /* UDPProxyClient.cpp in Sources */,
 				F4E0B543196B9C7D0053EFD7 /* CCEventDispatcher.cpp in Sources */,
+				4DBDE9A91F124CB200892290 /* PacketLogger.cpp in Sources */,
 				F4895A0A199BA9F9000AA6A2 /* Runtime.cpp in Sources */,
 				4DCF3C9C1B1F34030043BCD7 /* CCPrimitive.cpp in Sources */,
 				F4E0B64F196B9C7D0053EFD7 /* CCMeshCommand.cpp in Sources */,
 				4DF974A71B5D451400D3CDA6 /* lsproto.c in Sources */,
+				4DBDE9CC1F124CB200892290 /* RakNetSocket2_WindowsStore8.cpp in Sources */,
 				4DC9F52019FE10D300FA1E3B /* BoneData.c in Sources */,
 				F4E0B59E196B9C7D0053EFD7 /* TransformUtils.cpp in Sources */,
 				4D867A3F1B1E9E43007731FF /* CCCamera.cpp in Sources */,
+				4DBDE9E01F124CB200892290 /* Rand.cpp in Sources */,
 				F4E0B2A6196B9C660053EFD7 /* CCActionGrid3D.cpp in Sources */,
 				4DC9F53619FE10D300FA1E3B /* Skeleton.c in Sources */,
 				F4E0B519196B9C7D0053EFD7 /* CocosDenshion.m in Sources */,
@@ -5123,6 +6142,7 @@
 				49BCFA35197F4CE700F48FF6 /* ccFilterShaders.cpp in Sources */,
 				F4E0B63F196B9C7D0053EFD7 /* CCBatchCommand.cpp in Sources */,
 				F48959F4199BA9F9000AA6A2 /* common.cc in Sources */,
+				4DBDEA131F124CB300892290 /* ThreadsafePacketLogger.cpp in Sources */,
 				4D1451651B1F0A30006B0290 /* CCDevice-mac.mm in Sources */,
 				F4E0B6F7196B9EEB0053EFD7 /* chipmunk.c in Sources */,
 				DAF28318196BDACB00959DA1 /* options.c in Sources */,
@@ -5132,12 +6152,16 @@
 				F4E0B541196B9C7D0053EFD7 /* CCEventCustom.cpp in Sources */,
 				F4E0B57B196B9C7D0053EFD7 /* ccUtils.cpp in Sources */,
 				F4E0B55F196B9C7D0053EFD7 /* CCIMEDispatcher.cpp in Sources */,
+				4DBDE97C1F124CB200892290 /* GridSectorizer.cpp in Sources */,
 				4D1451571B1F0915006B0290 /* CCUserDefault-apple.mm in Sources */,
 				4DC9F51C19FE10D300FA1E3B /* AttachmentLoader.c in Sources */,
+				4DBDE9DE1F124CB200892290 /* RakWString.cpp in Sources */,
 				DAF282A2196BDA7300959DA1 /* OpenUDIDMac.m in Sources */,
 				F4E0B306196B9C670053EFD7 /* CCSpriteFrameCache.cpp in Sources */,
 				F4E0B65E196B9C7D0053EFD7 /* CCTextureCache.cpp in Sources */,
+				4DBDE9741F124CB200892290 /* Getche.cpp in Sources */,
 				4DC9F54819FE10D300FA1E3B /* SlotData.c in Sources */,
+				4DBDE98A1F124CB200892290 /* LocklessTypes.cpp in Sources */,
 				F4E0B590196B9C7D0053EFD7 /* CCAffineTransform.cpp in Sources */,
 				F4E0BE64196BA0C10053EFD7 /* ioapi.cpp in Sources */,
 				DAF28310196BDACB00959DA1 /* luasocket.c in Sources */,
@@ -5147,6 +6171,7 @@
 				DAF2830C196BDACB00959DA1 /* except.c in Sources */,
 				4DC9F52E19FE10D300FA1E3B /* Json.c in Sources */,
 				F4E0B324196B9C670053EFD7 /* CCMesh.cpp in Sources */,
+				4DBDE9881F124CB200892290 /* LinuxStrings.cpp in Sources */,
 				DAF282FA196BDACB00959DA1 /* strbuf.c in Sources */,
 				F4E0B713196B9EEB0053EFD7 /* cpVect.c in Sources */,
 				F4E0B702196B9EEB0053EFD7 /* cpSlideJoint.c in Sources */,
@@ -5161,11 +6186,14 @@
 				4D711E5219E804560009A0C8 /* CCMenuItem.cpp in Sources */,
 				F4E0B2B2196B9C660053EFD7 /* CCActionTiledGrid.cpp in Sources */,
 				F4E0B6FC196B9EEB0053EFD7 /* cpGrooveJoint.c in Sources */,
+				4DBDE9EC1F124CB200892290 /* ReplicaManager3.cpp in Sources */,
 				F4E0B316196B9C670053EFD7 /* CCTransitionPageTurn.cpp in Sources */,
+				4DBDE9331F124CB200892290 /* CloudClient.cpp in Sources */,
 				49BCFA3B197F4D3600F48FF6 /* lua_cocos2dx_extension_filter_auto.cpp in Sources */,
 				F41590A9196BD1D20046D7EE /* CCScriptEventDispatcher.cpp in Sources */,
 				F4E0B304196B9C670053EFD7 /* CCSpriteFrame.cpp in Sources */,
 				4DF974BC1B5D530800D3CDA6 /* lpprint.c in Sources */,
+				4DBDE98C1F124CB200892290 /* LogCommandParser.cpp in Sources */,
 				4D711E5F19E804850009A0C8 /* CCTableViewCell.cpp in Sources */,
 				DAF28324196BDACB00959DA1 /* udp.c in Sources */,
 				F4E0B29E196B9C660053EFD7 /* CCActionCamera.cpp in Sources */,
@@ -5175,49 +6203,67 @@
 				49BCFA00197F4CE700F48FF6 /* CCFilter.cpp in Sources */,
 				F4E0B56D196B9C7D0053EFD7 /* CCScheduler.cpp in Sources */,
 				F4895A06199BA9F9000AA6A2 /* Portrait_png.cpp in Sources */,
+				4DBDEA0A1F124CB300892290 /* TCPInterface.cpp in Sources */,
 				DAF28281196BDA7300959DA1 /* CCNetwork.cpp in Sources */,
 				F4E0B2F0196B9C670053EFD7 /* CCParallaxNode.cpp in Sources */,
 				F4E0B6FF196B9EEB0053EFD7 /* cpRatchetJoint.c in Sources */,
+				4DBDE9BF1F124CB200892290 /* RakNetSocket.cpp in Sources */,
 				F4E0B563196B9C7D0053EFD7 /* CCNS.cpp in Sources */,
+				4DBDEA251F124CB300892290 /* VariadicSQLParser.cpp in Sources */,
 				F4E0B5AE196B9C7D0053EFD7 /* CCPhysicsJoint.cpp in Sources */,
 				F4E0B64D196B9C7D0053EFD7 /* CCGroupCommand.cpp in Sources */,
 				F4E0B2B8196B9C660053EFD7 /* CCAnimationCache.cpp in Sources */,
+				4DBDEA271F124CB300892290 /* VitaIncludes.cpp in Sources */,
 				F48959E7199BA9F9000AA6A2 /* message_lite.cc in Sources */,
+				4DBDE99F1F124CB200892290 /* NetworkIDManager.cpp in Sources */,
 				4DC9F53019FE10D300FA1E3B /* MeshAttachment.c in Sources */,
 				F4E0B70A196B9EEB0053EFD7 /* cpPolyShape.c in Sources */,
 				F4E0B689196B9E4C0053EFD7 /* CCInvocation.cpp in Sources */,
 				49BCFA10197F4CE700F48FF6 /* CCSepiaFilter.cpp in Sources */,
 				F4E0B545196B9C7D0053EFD7 /* CCEventFocus.cpp in Sources */,
+				4DBDE9CA1F124CB200892290 /* RakNetSocket2_Windows_Linux.cpp in Sources */,
+				4DBDE9D01F124CB200892290 /* RakNetTransport2.cpp in Sources */,
 				F4E0B302196B9C670053EFD7 /* CCSpriteBatchNode.cpp in Sources */,
 				F4E0B328196B9C670053EFD7 /* CCObjLoader.cpp in Sources */,
 				49BCF9FA197F4CE700F48FF6 /* CCContrastFilter.cpp in Sources */,
+				4DBDE93B1F124CB200892290 /* ConnectionGraph2.cpp in Sources */,
 				4DC9F53419FE10D300FA1E3B /* RegionAttachment.c in Sources */,
 				F4E0B51C196B9C7D0053EFD7 /* SimpleAudioEngine_objc.m in Sources */,
 				F4E0B68D196B9E4C0053EFD7 /* CCEditBox.cpp in Sources */,
 				F4E0B704196B9EEB0053EFD7 /* cpArray.c in Sources */,
 				4DC9F51419FE10D300FA1E3B /* AnimationStateData.c in Sources */,
+				4DBDE9A31F124CB200892290 /* PacketConsoleLogger.cpp in Sources */,
 				49BCFA37197F4CE700F48FF6 /* FilterShaders.cpp in Sources */,
 				F4E0B5A8196B9C7D0053EFD7 /* WebSocket.cpp in Sources */,
+				4DBDE9FE1F124CB300892290 /* SocketLayer.cpp in Sources */,
 				F4E0C07F196BA25D0053EFD7 /* LuaBasicConversions.cpp in Sources */,
 				DAF2829D196BDA7300959DA1 /* CCCryptoMac.mm in Sources */,
 				F4E0B653196B9C7D0053EFD7 /* CCRenderCommand.cpp in Sources */,
 				F4E0B326196B9C670053EFD7 /* CCMeshSkin.cpp in Sources */,
 				4DC9F52819FE10D300FA1E3B /* extension.c in Sources */,
+				4DBDE9491F124CB200892290 /* DS_ByteQueue.cpp in Sources */,
 				F4E0B318196B9C670053EFD7 /* CCTransitionProgress.cpp in Sources */,
 				4D1451071B1F071D006B0290 /* CCSkeleton3D.cpp in Sources */,
 				F4E0B6F8196B9EEB0053EFD7 /* cpConstraint.c in Sources */,
+				4DBDE99D1F124CB200892290 /* NatTypeDetectionServer.cpp in Sources */,
 				F4E0B5B9196B9C7D0053EFD7 /* CCPhysicsJointInfo_chipmunk.cpp in Sources */,
 				DAF28273196BDA7300959DA1 /* HelperFunc.cpp in Sources */,
 				F4E0B70C196B9EEB0053EFD7 /* cpSpace.c in Sources */,
 				DAF282FC196BDACB00959DA1 /* debugger.c in Sources */,
+				4DBDE9D51F124CB200892290 /* RakPeer.cpp in Sources */,
 				F4E0C088196BA25D0053EFD7 /* CCLuaObjcBridge.mm in Sources */,
 				49BCFA0E197F4CE700F48FF6 /* CCSaturationFilter.cpp in Sources */,
 				F4E0B708196B9EEB0053EFD7 /* cpCollision.c in Sources */,
+				4DBDE9BA1F124CB200892290 /* RakNetCommandParser.cpp in Sources */,
 				F4E0B29C196B9C660053EFD7 /* CCAction.cpp in Sources */,
+				4DBDE9B81F124CB200892290 /* RakMemoryOverride.cpp in Sources */,
+				4DBDEA211F124CB300892290 /* VariableDeltaSerializer.cpp in Sources */,
+				4DBDE9431F124CB200892290 /* DR_SHA1.cpp in Sources */,
 				4D711E5D19E804850009A0C8 /* CCTableView.cpp in Sources */,
 				F4E0B2DC196B9C670053EFD7 /* CCLabelAtlas.cpp in Sources */,
 				F4E0B2A0196B9C660053EFD7 /* CCActionCatmullRom.cpp in Sources */,
 				4D1451171B1F0778006B0290 /* pvr.cpp in Sources */,
+				4DBDE9F01F124CB200892290 /* RPC4Plugin.cpp in Sources */,
 				F48959E5199BA9F9000AA6A2 /* zero_copy_stream_impl_lite.cc in Sources */,
 				DAF282AE196BDA7300959DA1 /* CCStoreProduct.cpp in Sources */,
 				4DF974BA1B5D530800D3CDA6 /* lpcode.c in Sources */,
@@ -5233,43 +6279,61 @@
 				F4E0B54B196B9C7D0053EFD7 /* CCEventListenerAcceleration.cpp in Sources */,
 				49BCFA0A197F4CE700F48FF6 /* CCMaskFilter.cpp in Sources */,
 				4DE050471A31A0F3003F730A /* CCFileCache.cpp in Sources */,
+				4DBDE9C31F124CB200892290 /* RakNetSocket2_360_720.cpp in Sources */,
 				F4E0B598196B9C7D0053EFD7 /* Mat4.cpp in Sources */,
 				4D1451151B1F0778006B0290 /* ccRandom.cpp in Sources */,
+				4DBDE9F21F124CB200892290 /* SecureHandshake.cpp in Sources */,
 				DAF28326196BDACB00959DA1 /* unix.c in Sources */,
+				4DBDEA0C1F124CB300892290 /* TeamBalancer.cpp in Sources */,
 				4DCF3C841B1F32620043BCD7 /* CCFileUtils-apple.mm in Sources */,
 				F4E0B537196B9C7D0053EFD7 /* CCData.cpp in Sources */,
 				DA9FAA05197377AC006A0B4C /* HelperFunc_luabinding.cpp in Sources */,
 				4DC9F54A19FE10D300FA1E3B /* spine-cocos2dx.cpp in Sources */,
 				DAF28328196BDACB00959DA1 /* usocket.c in Sources */,
+				4DBDE9411F124CB200892290 /* DirectoryDeltaTransfer.cpp in Sources */,
 				DAF282A0196BDA7300959DA1 /* CCNativeMac.mm in Sources */,
+				4DBDE9E91F124CB200892290 /* ReliabilityLayer.cpp in Sources */,
 				4DCF3C851B1F32620043BCD7 /* CCLock-apple.cpp in Sources */,
 				DAF282F8196BDACB00959DA1 /* lua_cjson.c in Sources */,
 				F4E0B2E2196B9C670053EFD7 /* CCLabelTTF.cpp in Sources */,
+				4DBDE9951F124CB200892290 /* NatPunchthroughClient.cpp in Sources */,
+				4DBDE9391F124CB200892290 /* CommandParserInterface.cpp in Sources */,
 				F4E0B2C0196B9C660053EFD7 /* CCComponent.cpp in Sources */,
 				4DC9F53C19FE10D300FA1E3B /* SkeletonData.c in Sources */,
 				F4E0BE66196BA0C10053EFD7 /* ioapi_mem.cpp in Sources */,
 				F4E0B573196B9C7D0053EFD7 /* ccTypes.cpp in Sources */,
+				4DBDE9651F124CB200892290 /* EpochTimeToString.cpp in Sources */,
 				F4E0B705196B9EEB0053EFD7 /* cpBB.c in Sources */,
 				F4E0B579196B9C7D0053EFD7 /* ccUTF8.cpp in Sources */,
+				4DBDE92B1F124CB200892290 /* BitStream.cpp in Sources */,
 				F4E0B70E196B9EEB0053EFD7 /* cpSpaceHash.c in Sources */,
 				F4E0B70B196B9EEB0053EFD7 /* cpShape.c in Sources */,
+				4DBDE99B1F124CB200892290 /* NatTypeDetectionCommon.cpp in Sources */,
 				4D14512C1B1F0792006B0290 /* SocketIO.cpp in Sources */,
+				4DBDE9251F124CB200892290 /* _FindFirst.cpp in Sources */,
 				4DC9F53E19FE10D300FA1E3B /* SkeletonJson.c in Sources */,
 				F4E0B2A2196B9C660053EFD7 /* CCActionEase.cpp in Sources */,
+				4DBDE96E1F124CB200892290 /* FileOperations.cpp in Sources */,
 				F4E0B5AC196B9C7D0053EFD7 /* CCPhysicsContact.cpp in Sources */,
 				F4E0B6FB196B9EEB0053EFD7 /* cpGearJoint.c in Sources */,
 				4D025AE51B5E66EC002BC427 /* UIWidget.cpp in Sources */,
 				F4E0B695196B9E4C0053EFD7 /* CCEditBoxImplMac.mm in Sources */,
 				F4E0C067196BA25D0053EFD7 /* CCLuaEngine.cpp in Sources */,
 				F4E0B5A2196B9C7D0053EFD7 /* Vec3.cpp in Sources */,
+				4DBDE9E71F124CB200892290 /* RelayPlugin.cpp in Sources */,
 				F4E0B54D196B9C7D0053EFD7 /* CCEventListenerCustom.cpp in Sources */,
 				F4E0B559196B9C7D0053EFD7 /* CCEventTouch.cpp in Sources */,
 				F4E0B706196B9EEB0053EFD7 /* cpBBTree.c in Sources */,
 				F48959F2199BA9F9000AA6A2 /* atomicops_internals_x86_msvc.cc in Sources */,
 				F4E0B30E196B9C670053EFD7 /* CCTMXObjectGroup.cpp in Sources */,
 				4DC9F52419FE10D300FA1E3B /* Event.c in Sources */,
+				4DBDE9371F124CB200892290 /* CloudServer.cpp in Sources */,
 				F4E0B711196B9EEB0053EFD7 /* cpSpatialIndex.c in Sources */,
+				4DBDE9AF1F124CB200892290 /* PluginInterface2.cpp in Sources */,
 				4D025AD31B5E66EC002BC427 /* CocosGUI.cpp in Sources */,
+				4DBDE9C51F124CB200892290 /* RakNetSocket2_Berkley_NativeClient.cpp in Sources */,
+				4DBDE9A11F124CB200892290 /* NetworkIDObject.cpp in Sources */,
+				4DBDEA0E1F124CB300892290 /* TeamManager.cpp in Sources */,
 				4DC9F52219FE10D300FA1E3B /* BoundingBoxAttachment.c in Sources */,
 				DAF28359196CEE6D00959DA1 /* CCBundleReader.cpp in Sources */,
 				F4E0B553196B9C7D0053EFD7 /* CCEventListenerMouse.cpp in Sources */,
@@ -5278,6 +6342,7 @@
 				F4895A03199BA9F9000AA6A2 /* Landscape_png.cpp in Sources */,
 				4DC9F54019FE10D300FA1E3B /* SkeletonRenderer.cpp in Sources */,
 				DAF2830A196BDACB00959DA1 /* auxiliar.c in Sources */,
+				4DBDE93F1F124CB200892290 /* DataCompressor.cpp in Sources */,
 				F4E0B2C2196B9C660053EFD7 /* CCComponentContainer.cpp in Sources */,
 				F4E0B2A4196B9C660053EFD7 /* CCActionGrid.cpp in Sources */,
 				F4895A05199BA9F9000AA6A2 /* PlayEnable_png.cpp in Sources */,
@@ -5285,10 +6350,14 @@
 				F4E0B65C196B9C7D0053EFD7 /* CCTextureAtlas.cpp in Sources */,
 				F4E0C091196BA25D0053EFD7 /* tolua_to.c in Sources */,
 				4D025ADB1B5E66EC002BC427 /* UILayoutComponent.cpp in Sources */,
+				4DBDE95B1F124CB200892290 /* DS_Table.cpp in Sources */,
+				4DBDE9D21F124CB200892290 /* RakNetTypes.cpp in Sources */,
 				F4E0B2AC196B9C660053EFD7 /* CCActionManager.cpp in Sources */,
 				F4E0B2AA196B9C660053EFD7 /* CCActionInterval.cpp in Sources */,
 				DAF2827A196BDA7300959DA1 /* md5.c in Sources */,
+				4DBDE9721F124CB200892290 /* FullyConnectedMesh2.cpp in Sources */,
 				F4E0B700196B9EEB0053EFD7 /* cpRotaryLimitJoint.c in Sources */,
+				4DBDE9781F124CB200892290 /* GetTime.cpp in Sources */,
 				F4E0B512196B9C7D0053EFD7 /* CDAudioManager.m in Sources */,
 				F4E0C071196BA25D0053EFD7 /* lua_cocos2dx_extension_manual.cpp in Sources */,
 				F4E0B5AA196B9C7D0053EFD7 /* CCPhysicsBody.cpp in Sources */,
@@ -5298,9 +6367,13 @@
 				F4E0B59A196B9C7D0053EFD7 /* MathUtil.cpp in Sources */,
 				F4E0B70D196B9EEB0053EFD7 /* cpSpaceComponent.c in Sources */,
 				F4E0B651196B9C7D0053EFD7 /* CCQuadCommand.cpp in Sources */,
+				4DBDE9D81F124CB200892290 /* RakSleep.cpp in Sources */,
+				4DBDE9AB1F124CB200892290 /* PacketOutputWindowLogger.cpp in Sources */,
 				4949C33119AC6B4100113896 /* UITextField.cpp in Sources */,
 				DAF282FE196BDACB00959DA1 /* lfs.c in Sources */,
+				4DBDE9851F124CB200892290 /* Itoa.cpp in Sources */,
 				DAF2831C196BDACB00959DA1 /* serial.c in Sources */,
+				4DBDEA2A1F124CB300892290 /* WSAStartupSingleton.cpp in Sources */,
 				F4E0B2B4196B9C660053EFD7 /* CCActionTween.cpp in Sources */,
 				DAF28316196BDACB00959DA1 /* mime.c in Sources */,
 				F48959E9199BA9F9000AA6A2 /* repeated_field.cc in Sources */,
@@ -5311,14 +6384,19 @@
 				F4E0B575196B9C7D0053EFD7 /* CCUserDefault.cpp in Sources */,
 				F4E0B5B0196B9C7D0053EFD7 /* CCPhysicsShape.cpp in Sources */,
 				F4E0B300196B9C670053EFD7 /* CCSprite.cpp in Sources */,
+				4DBDEA081F124CB300892290 /* TableSerializer.cpp in Sources */,
 				F4E0B52E196B9C7D0053EFD7 /* CCAutoreleasePool.cpp in Sources */,
 				49BCFA0C197F4CE700F48FF6 /* CCRGBFilter.cpp in Sources */,
 				4D1451031B1F071D006B0290 /* CCMeshVertexIndexData.cpp in Sources */,
+				4DBDEA101F124CB300892290 /* TelnetTransport.cpp in Sources */,
+				4DBDE9971F124CB200892290 /* NatPunchthroughServer.cpp in Sources */,
 				DAF28322196BDACB00959DA1 /* timeout.c in Sources */,
 				F4E0B533196B9C7D0053EFD7 /* CCConfiguration.cpp in Sources */,
 				F4E0B70F196B9EEB0053EFD7 /* cpSpaceQuery.c in Sources */,
 				4D025AE31B5E66EC002BC427 /* UIScale9Sprite.cpp in Sources */,
 				DAF2829A196BDA7300959DA1 /* CCNetworkIOSMac.mm in Sources */,
+				4DBDE9821F124CB200892290 /* IncrementalReadInterface.cpp in Sources */,
+				4DBDE9311F124CB200892290 /* CheckSum.cpp in Sources */,
 				4DC9F54219FE10D300FA1E3B /* Skin.c in Sources */,
 				F4E0B56F196B9C7D0053EFD7 /* CCScriptSupport.cpp in Sources */,
 				F4895A07199BA9F9000AA6A2 /* Protos.pb.cc in Sources */,
@@ -5331,16 +6409,23 @@
 				F4E0B5B2196B9C7D0053EFD7 /* CCPhysicsWorld.cpp in Sources */,
 				F48959DB199BA9F9000AA6A2 /* extension_set.cc in Sources */,
 				4D1451581B1F0915006B0290 /* CCController.cpp in Sources */,
+				4DBDE9C91F124CB200892290 /* RakNetSocket2_Vita.cpp in Sources */,
 				DAF28278196BDA7300959DA1 /* CCCrypto.cpp in Sources */,
 				49BCFA12197F4CE700F48FF6 /* CCSharpenFilter.cpp in Sources */,
 				F4E0B658196B9C7D0053EFD7 /* ccShaders.cpp in Sources */,
 				F4E0B2E0196B9C670053EFD7 /* CCLabelTextFormatter.cpp in Sources */,
 				F4E0B2C8196B9C660053EFD7 /* CCFont.cpp in Sources */,
 				4D1451011B1F071D006B0290 /* CCAttachNode.cpp in Sources */,
+				4DBDE9991F124CB200892290 /* NatTypeDetectionClient.cpp in Sources */,
 				49BCFA06197F4CE700F48FF6 /* CCHazeFilter.cpp in Sources */,
 				4DF974C11B5D530800D3CDA6 /* lpvm.c in Sources */,
+				4DBDE98E1F124CB200892290 /* MessageFilter.cpp in Sources */,
 				F4E0B5B4196B9C7D0053EFD7 /* CCPhysicsBodyInfo_chipmunk.cpp in Sources */,
+				4DBDE9C71F124CB200892290 /* RakNetSocket2_PS3_PS4.cpp in Sources */,
 				49BCFA08197F4CE700F48FF6 /* CCHueFilter.cpp in Sources */,
+				4DBDEA041F124CB300892290 /* StringTable.cpp in Sources */,
+				4DBDEA061F124CB300892290 /* SuperFastHash.cpp in Sources */,
+				4DBDE9F41F124CB300892290 /* SendToThread.cpp in Sources */,
 				F4E0B57D196B9C7D0053EFD7 /* CCValue.cpp in Sources */,
 				49BCFA14197F4CE700F48FF6 /* CCTestFilter.cpp in Sources */,
 				F4E0B2FC196B9C670053EFD7 /* CCRenderTexture.cpp in Sources */,
@@ -5352,6 +6437,7 @@
 				4DC839041C1F0F8300B1351C /* lsha1.c in Sources */,
 				F4E0B645196B9C7D0053EFD7 /* CCGLProgramCache.cpp in Sources */,
 				F4E0B32A196B9C670053EFD7 /* CCSprite3D.cpp in Sources */,
+				4DBDEA181F124CB300892290 /* UDPForwarder.cpp in Sources */,
 				F48959F8199BA9F9000AA6A2 /* once.cc in Sources */,
 				4D1451281B1F0792006B0290 /* HttpClient.cpp in Sources */,
 				4DC9F54619FE10D300FA1E3B /* Slot.c in Sources */,
@@ -5365,6 +6451,8 @@
 				DA9FAA03197377AC006A0B4C /* cocos2dx_extra_luabinding.cpp in Sources */,
 				F4E0B5FB196B9C7D0053EFD7 /* CCImage.cpp in Sources */,
 				DAF28302196BDACB00959DA1 /* lsqlite3.c in Sources */,
+				4DBDE9E21F124CB200892290 /* RandSync.cpp in Sources */,
+				4DBDE9761F124CB200892290 /* Gets.cpp in Sources */,
 				F4E0B795196BA0030053EFD7 /* edtaa3func.cpp in Sources */,
 				F4E0B647196B9C7D0053EFD7 /* CCGLProgramState.cpp in Sources */,
 				F4E0B314196B9C670053EFD7 /* CCTransition.cpp in Sources */,

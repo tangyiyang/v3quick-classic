@@ -27,6 +27,8 @@ extern "C" {
 // lsqlite3
 #include "lsqlite3/lsqlite3.h"
 
+#include "lraknet/lua-racknet.h"
+
 // sproto
 // #include "sproto/lsproto.c"
 // #include "lpeg/lptree.c"
@@ -55,6 +57,7 @@ static luaL_Reg luax_exts[] = {
     {"sproto.core", luaopen_sproto_core},
     {"lpeg", luaopen_lpeg},
     {"bit", luaopen_bit},
+    {"raknet.core", luaopen_raknet},
 //    {"unicode", luaopen_unicode},
     {NULL, NULL}
 };
